@@ -1,0 +1,74 @@
+$fontName: Montserrat;
+$typesToGenerate: (eot, svg, ttf, woff, woff2);
+$fontWeightsAvailable: (
+  light: (
+    weight: 300,
+    style: normal,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-300',
+    local1: 'Montserrat Light',
+    local2: Montserrat-Light
+  ),
+  lightItalic: (
+    weight: 300,
+    style: italic,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-300italic',
+    local1: 'Montserrat Light Italic',
+    local2: Montserrat-LightItalic
+  ),
+  regular: (
+    weight: normal,
+    style: normal,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-regular',
+    local1: 'Montserrat Regular',
+    local2: Montserrat-Regular
+  ),
+  regularItalic: (
+    weight: normal,
+    style: italic,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-italic',
+    local1: 'Montserrat Italic',
+    local2: Montserrat-Italic
+  ),
+  semiBold: (
+    weight: 600,
+    style: normal,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-600',
+    local1: 'Montserrat SemiBold',
+    local2: Montserrat-SemiBold
+  ),
+  semiBoldItalic: (
+    weight: 600,
+    style: italic,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-600italic',
+    local1: 'Montserrat SemiBold Italic',
+    local2: Montserrat-SemiBoldItalic
+  ),
+  bold: (
+    weight: bold,
+    style: normal,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-700',
+    local1: 'Montserrat Bold',
+    local2: Montserrat-Bold
+  ),
+  boldItalic: (
+    weight: bold,
+    style: italic,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-700italic',
+    local1: 'Montserrat Bold Italic',
+    local2: Montserrat-BoldItalic
+  ),
+  extraBold: (
+    weight: 800,
+    style: normal,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-800',
+    local1: 'Montserrat ExtraBold',
+    local2: Montserrat-ExtraBold
+  ),
+  extraBoldItalic: (
+    weight: 800,
+    style: italic,
+    path: '../../../fonts/montserrat/montserrat-v13-latin-800italic',
+    local1: 'Montserrat ExtraBold Italic',
+    local2: Montserrat-ExtraBoldItalic
+  )
+);

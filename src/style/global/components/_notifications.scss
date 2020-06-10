@@ -1,0 +1,44 @@
+%sds-notifications {
+  .sds-notifications {
+    --sds-notifications-default-position: var(--sds-notifications-position);
+    --sds-notifications-default-padding: var(--sds-notifications-padding);
+    --sds-notifications-default-width: var(--sds-notifications-width);
+    --sds-notifications-default-min-width: var(--sds-notifications-min-width);
+    --sds-notifications-default-max-width: var(--sds-notifications-max-width);
+    --sds-notifications-default-top: var(--sds-notifications-top);
+    --sds-notifications-default-left: var(--sds-notifications-left);
+    --sds-notifications-default-z-index: var(--sds-notifications-z-index);
+
+    --sds-notifications-default-border: var(--sds-notifications-border);
+    --sds-notifications-default-border-radius: var(--sds-notifications-border-radius);
+    --sds-notifications-default-box-shadow: var(--sds-notifications-box-shadow);
+
+    --sds-notifications-default-text-color: var(--sds-notifications-text-color);
+    --sds-notifications-default-border-color: var(--sds-notifications-border-color);
+    --sds-notifications-default-background-color: var(--sds-notifications-background-color);
+
+    --sds-notifications-default-icon-separation: var(--sds-notifications-icon-separation);
+    --sds-notifications-default-close-control-separation: var(--sds-notifications-close-control-separation);
+    .sds-notifications--message SPAN {
+      * {
+        color: inherit;
+      }
+      A {
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &.sds-notifications--info {
+      .sds-notifications--message SPAN A {
+        text-decoration: none;
+        color: var(--sds-notifcations-inside-link-color);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

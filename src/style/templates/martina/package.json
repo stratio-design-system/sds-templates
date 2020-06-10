@@ -1,0 +1,15 @@
+{
+  "name": "@stratiods/martina",
+  "version": "4.0.0",
+  "description": "SDS Templates :: Martina Test Template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratio-design-system/sds-templates.git"
+  },
+  "author": "Nul Pàs <manu@lunaeme.com> (https://github.com/nulpas)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stratio-design-system/sds-templates/issues"
+  },
+  "homepage": "https://github.com/stratio-design-system/sds-templates/tree/master/src/style/templates/martina#readme"
+}

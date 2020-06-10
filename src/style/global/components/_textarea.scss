@@ -1,0 +1,15 @@
+@import './shared/common';
+@import './shared/mixins';
+
+%sds-textarea {
+  TEXTAREA.sds-textarea {
+    @include textInputElement() {
+      @extend %sds-textarea-disabled-component;
+    };
+
+    resize: var(--sds-textarea-resize);
+    vertical-align: top;
+    height: var(--sds-textarea-height);
+    min-height: var(--sds-textarea-height);
+  }
+}

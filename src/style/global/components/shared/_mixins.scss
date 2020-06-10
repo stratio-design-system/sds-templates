@@ -1,0 +1,123 @@
+//## Mixin for generate selection element basic structure.
+//## PARAMETERS: border-radius, position-correction-factor
+@mixin selectionElement($borderRadius, $correctionFactor) {
+  display: none;
+  & + LABEL {
+    position: relative;
+    display: inline-flex;
+    margin-right: var(--sds-selection-option-spacer);
+    padding: var(--sds-selection-icon-spacer) 0;
+    color: var(--sds-label-color);
+    cursor: pointer;
+    width: fit-content;
+    min-width: fit-content;
+    height: var(--sds-selection-icon-size);
+    min-height: var(--sds-selection-icon-size);
+    line-height: unset;
+    &:before {
+      position: relative;
+      display: inline-block;
+      box-sizing: border-box;
+      content: '';
+      left: 0;
+      top: $correctionFactor;
+      width: var(--sds-selection-icon-size);
+      max-width: var(--sds-selection-icon-size);
+      height: var(--sds-selection-icon-size);
+      max-height: var(--sds-selection-icon-size);
+      border: var(--sds-component-border);
+      border-color: var(--sds-component-border-color);
+      background-color: var(--sds-component-background-color);
+      border-radius: $borderRadius;
+      margin-right: var(--sds-selection-icon-spacer);
+    }
+  }
+  &:hover {
+    & + LABEL {
+      &:before {
+        border-color: var(--sds-component-hover-border-color);
+        background-color: var(--sds-component-hover-background-color);
+      }
+    }
+  }
+  &:disabled, &.disabled {
+    & + LABEL {
+      color: var(--sds-selection-disabled-tex-color);
+      cursor: var(--sds-component-disabled-cursor);
+      &:before {
+        border-color: var(--sds-component-disabled-border-color);
+        background-color: var(--sds-component-disabled-background-color);
+      }
+    }
+    &:checked + LABEL {
+      &:before {
+        border-color: var(--sds-selection-checked-disabled-border-color);
+        background-color: var(--sds-selection-checked-disabled-background-color);
+      }
+      &:after {
+        background-color: var(--sds-selection-internal-checked-disabled-color);
+      }
+    }
+  }
+  &:checked + LABEL {
+    &:before {
+      border-color: var(--sds-component-checked-border-color);
+      background-color: var(--sds-component-checked-background-color);
+    }
+    &:after {
+      position: absolute;
+      display: inline-block;
+      box-sizing: border-box;
+      content: '';
+      @content;
+    }
+  }
+  &.sds-selection--no-label + LABEL {
+    font-size: 0;
+    line-height: 0;
+  }
+  &.sds-selection--vertical {
+    & + LABEL {
+      display: flex;
+    }
+  }
+}
+
+//## Mixin for generate input text element basic structure.
+//## PARAMETERS: void
+@mixin textInputElement() {
+  width: var(--sds-component-width);
+  min-width: var(--sds-component-width);
+  height: var(--sds-component-height);
+  min-height: var(--sds-component-height);
+  box-sizing: border-box;
+  padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
+  border: var(--sds-component-border);
+  border-color: var(--sds-component-border-color);
+  border-radius: var(--sds-component-border-radius);
+  background: var(--sds-component-background-color);
+  color: inherit;
+  &:hover {
+    border-color: var(--sds-component-hover-border-color);
+    background-color: var(--sds-component-hover-background-color);
+  }
+  &:disabled, &.disabled {
+    @content;
+    &::placeholder {
+      color: var(--sds-component-placeholder-disabled-color);
+    }
+  }
+  &:focus, &.focus {
+    border-color: var(--sds-component-focus-border-color);
+    box-shadow: 0 0 4px 0 rgba(var(--sds-component-focus-border-color-rgb), 0.2);
+    background-color: var(--sds-component-focus-background-color);
+  }
+  &.error, &:focus.error, &.focus.error {
+    border-color: var(--sds-component-error-border-color);
+    background-color: var(--sds-component-error-background-color);
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: var(--sds-component-placeholder-color);
+  }
+}

@@ -1,0 +1,60 @@
+$fontName: 'Nunito Sans';
+$typesToGenerate: (eot, svg, ttf, woff, woff2);
+$fontWeightsAvailable: (
+  extra-light: (
+    weight: 200,
+    style: normal,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-200',
+    local1: 'Nunito Sans ExtraLight',
+    local2: NunitoSans-ExtraLight
+  ),
+  extra-light-italic: (
+    weight: 200,
+    style: italic,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-200italic',
+    local1: 'Nunito Sans ExtraLight Italic',
+    local2: NunitoSans-ExtraLightItalic
+  ),
+  regular: (
+    weight: normal,
+    style: normal,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-regular',
+    local1: 'Nunito Sans Regular',
+    local2: NunitoSans-Regular
+  ),
+  regular-italic: (
+    weight: normal,
+    style: italic,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-italic',
+    local1: 'Nunito Sans Italic',
+    local2: NunitoSans-Italic
+  ),
+  semi-bold: (
+    weight: 600,
+    style: normal,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-600',
+    local1: 'Nunito Sans SemiBold',
+    local2: NunitoSans-SemiBold
+  ),
+  semi-bold-italic: (
+    weight: 600,
+    style: italic,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-600italic',
+    local1: 'Nunito Sans SemiBold Italic',
+    local2: NunitoSans-SemiBoldItalic
+  ),
+  bold: (
+    weight: bold,
+    style: normal,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-700',
+    local1: 'Nunito Sans Bold',
+    local2: NunitoSans-Bold
+  ),
+  bold-italic: (
+    weight: bold,
+    style: italic,
+    path: '../../../fonts/nunito-sans/nunito-sans-v5-latin-700italic',
+    local1: 'Nunito Sans Bold Italic',
+    local2: NunitoSans-BoldItalic
+  )
+);

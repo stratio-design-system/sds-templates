@@ -1,0 +1,48 @@
+{
+  "name": "@stratiods/sds-templates",
+  "version": "4.0.2",
+  "description": "SDS Template System.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sh ./src/build.sh $1",
+    "build:webpack": "func() { webpack --env.TEMPLATE=$1; }; func",
+    "clear": "rimraf $1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratio-design-system/sds-templates.git"
+  },
+  "keywords": [
+    "template",
+    "css",
+    "style"
+  ],
+  "author": "Nul Pàs <manu@lunaeme.com> (https://github.com/nulpas)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stratio-design-system/sds-templates/issues"
+  },
+  "homepage": "https://github.com/stratio-design-system/sds-templates#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@types/node": "^14.0.13",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "resolve-url-loader": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "yarn": "^1.22.4"
+  }
+}

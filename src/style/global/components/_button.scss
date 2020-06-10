@@ -1,0 +1,69 @@
+%sds-button {
+  BUTTON.sds-button {
+    position: relative;
+    display: inline-flex;
+    height: var(--sds-component-height);
+    min-height: var(--sds-component-height);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
+    border: var(--sds-component-border);
+    border-color: var(--sds-button-border-color);
+    border-radius: var(--sds-component-border-radius);
+    background-color: var(--sds-button-background-color);
+    color: var(--sds-button-color);
+    & > I.sds-icon {
+      color: inherit;
+    }
+    &:hover {
+      color: var(--sds-button-hover-color);
+      border-color: var(--sds-button-hover-border-color);
+      background-color: var(--sds-button-hover-background-color);
+      & > I.sds-icon {
+        color: inherit;
+      }
+    }
+    &:active, &.pressed {
+      color: var(--sds-button-active-color);
+      border-color: var(--sds-button-active-border-color);
+      background-color: var(--sds-button-active-background-color);
+      & > I.sds-icon {
+        color: inherit;
+      }
+    }
+    &:disabled, &.disabled {
+      color: var(--sds-button-disabled-color);
+      border-color: var(--sds-button-disabled-border-color);
+      background-color: var(--sds-button-disabled-background-color);
+      cursor: var(--sds-component-disabled-cursor);
+      & > I.sds-icon {
+        color: var(--sds-button-disabled-icon-color);
+        cursor: inherit;
+      }
+    }
+
+    &.no-events {
+      cursor: wait;
+      &:hover {
+        color: var(--sds-button-color);
+        border-color: var(--sds-button-border-color);
+        background-color: var(--sds-button-background-color);
+      }
+    }
+
+    I.sds-icon {
+      font-size: inherit;
+      margin: 0 var(--sds-button-icon-spacer);
+      // height: var(--sds-button-icon-size);
+      // min-height: var(--sds-button-icon-size);
+      &.sds-button--icon-left {
+        margin-left: 0;
+      }
+      &.sds-button--icon-right {
+        margin-right: 0;
+      }
+    }
+  }
+}

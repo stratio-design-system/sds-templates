@@ -1,0 +1,48 @@
+@import '../exportable/app.mixins';
+
+%sds-tag {
+  SPAN, DIV {
+    &.sds-tag {
+      @include createFlexBox(row, center, normal, nowrap);
+      width: fit-content;
+      min-width: fit-content;
+      box-sizing: border-box;
+      color: var(--sds-tag-text-color);
+      border: var(--sds-component-border);
+      border-color: var(--sds-tag-border-color);
+      border-radius: var(--sds-component-border-radius);
+      background-color: var(--sds-tag-background-color);
+      padding: var(--sds-tag-padding-vertical) var(--sds-tag-padding-horizontal);
+      I.sds-icon {
+        display: inline-flex;
+        align-items: center;
+        color: inherit;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+
+      &.sds-tag--interactive {
+        cursor: pointer;
+        &:hover {
+          color: var(--sds-tag-hover-text-color);
+          border-color: var(--sds-tag-hover-border-color);
+          background-color: var(--sds-tag-hover-background-color);
+        }
+        &:active, &.selected {
+          color: var(--sds-tag-active-text-color);
+          border-color: var(--sds-tag-active-border-color);
+          background-color: var(--sds-tag-active-background-color);
+        }
+        &:disabled, &.disabled {
+          color: var(--sds-tag-disabled-text-color);
+          border-color: var(--sds-tag-disabled-border-color);
+          background-color: var(--sds-tag-disabled-background-color);
+          cursor: var(--sds-component-disabled-cursor);
+          I.sds-icon {
+            cursor: var(--sds-component-disabled-cursor);
+          }
+        }
+      }
+    }
+  }
+}

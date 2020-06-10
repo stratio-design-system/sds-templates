@@ -1,0 +1,12 @@
+%sds-report {
+  DIV, SPAN {
+    &.sds-report {
+      display: block;
+      color: var(--sds-report-color);
+      padding-top: var(--sds-component-vertical-spacer);
+      &.error {
+        color: var(--sds-error-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+%sds-switch {
+  INPUT[type=checkbox].sds-switch:not(.sds-switch--right) {
+    display: none;
+    & + LABEL {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: fit-content;
+      box-sizing: border-box;
+      padding: var(--sds-selection-icon-spacer) 0;
+      margin-right: var(--sds-selection-option-spacer);
+      line-height: var(--sds-switch-height);
+      color: var(--sds-label-color);
+      &:before {
+        position: relative;
+        left: 0;
+        top: 0;
+        content: '';
+        width: calc(var(--sds-switch-height) * 2);
+        height: var(--sds-switch-height);
+        background-color: var(--sds-switch-background-color);
+        border-radius: var(--sds-switch-border-radio);
+        margin-right: var(--sds-selection-icon-spacer);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(var(--sds-switch-height) - 4px);
+        height: calc(var(--sds-switch-height) - 4px);
+        top: calc(2px + var(--sds-selection-icon-spacer));
+        left: 3px;
+        border-radius: 100%;
+        background-color: var(--sds-switch-color);
+        cursor: pointer;
+        box-shadow: 0 0 4px 0 rgba(var(--sds-switch-shadow-color-rgb), 0.2);
+        transition: left 150ms ease-in-out;
+      }
+    }
+    &:active + LABEL {
+      &:after {
+        width: calc(var(--sds-switch-height) -  4px + 6px);
+        border-radius: 25px;
+        transition: none;
+      }
+    }
+    &:checked + LABEL {
+      &:before {
+        background-color: var(--sds-switch-checked-background-color);
+      }
+      &:after {
+        left: calc((var(--sds-switch-height) * 2) - (var(--sds-switch-height) - 4px) - 3px);
+      }
+    }
+    &:checked:active + LABEL {
+      &:after {
+        left: calc((var(--sds-switch-height) * 2) - var(--sds-switch-height) + 4px - 6px - 3px);
+        transition: none;
+      }
+    }
+    &:disabled + LABEL, &.disabled + LABEL {
+      color: var(--sds-selection-disabled-tex-color);
+      cursor: var(--sds-component-disabled-cursor);
+      &:before{
+        background-color: var(--sds-switch-disabled-background-color);
+        cursor: var(--sds-component-disabled-cursor);
+      }
+      &:after {
+        cursor: var(--sds-component-disabled-cursor);
+        transition: none;
+      }
+    }
+    &:disabled:checked + LABEL, &.disabled:checked + LABEL {
+      &:before {
+        background-color: var(--sds-switch-disabled-checked-background-color);
+      }
+    }
+    &:disabled:active + LABEL, &.disabled:active + LABEL {
+      &:after {
+        width: calc(var(--sds-switch-height) - 4px);
+        left: 3px;
+      }
+    }
+    &:disabled:checked:active + LABEL, &.disabled:checked:active + LABEL {
+      &:after {
+        left: calc((var(--sds-switch-height) * 2) - (var(--sds-switch-height) - 4px) - 3px);
+      }
+    }
+
+    &.sds-selection--no-label + LABEL {
+      font-size: 0;
+      line-height: 0;
+    }
+    &.sds-selection--vertical {
+      & + LABEL {
+        display: flex;
+      }
+    }
+  }
+
+  INPUT[type=checkbox].sds-switch.sds-switch--right {
+    display: none;
+    & + LABEL {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: fit-content;
+      box-sizing: border-box;
+      padding: var(--sds-selection-icon-spacer) 0;
+      margin-right: var(--sds-selection-option-spacer);
+      line-height: var(--sds-switch-height);
+      color: var(--sds-label-color);
+      &:after {
+        position: relative;
+        left: 0;
+        top: 0;
+        content: '';
+        width: calc(var(--sds-switch-height) * 2);
+        height: var(--sds-switch-height);
+        background-color: var(--sds-switch-background-color);
+        border-radius: var(--sds-switch-border-radio);
+        margin-left: var(--sds-selection-icon-spacer);
+      }
+      &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        width: calc(var(--sds-switch-height) - 4px);
+        height: calc(var(--sds-switch-height) - 4px);
+        top: calc(2px + var(--sds-selection-icon-spacer));
+        right: calc((var(--sds-switch-height) * 2) - (var(--sds-switch-height) - 4px) - 3px);
+        border-radius: 100%;
+        background-color: var(--sds-switch-color);
+        cursor: pointer;
+        box-shadow: 0 0 4px 0 rgba(var(--sds-switch-shadow-color-rgb), 0.2);
+        transition: right 150ms ease-in-out;
+      }
+    }
+    &:active + LABEL {
+      &:before {
+        width: calc(var(--sds-switch-height) -  4px + 6px);
+        border-radius: 25px;
+        transition: none;
+        right: calc((var(--sds-switch-height) * 2) - var(--sds-switch-height) + 4px - 6px - 3px);
+      }
+    }
+    &:checked + LABEL {
+      &:after {
+        background-color: var(--sds-switch-checked-background-color);
+      }
+      &:before {
+        right: 3px;
+      }
+    }
+    &:checked:active + LABEL {
+      &:before {
+        transition: none;
+      }
+    }
+    &:disabled + LABEL, &.disabled + LABEL {
+      color: var(--sds-selection-disabled-tex-color);
+      cursor: var(--sds-component-disabled-cursor);
+      &:after {
+        background-color: var(--sds-switch-disabled-background-color);
+        cursor: var(--sds-component-disabled-cursor);
+      }
+      &:before {
+        cursor: var(--sds-component-disabled-cursor);
+        transition: none;
+      }
+    }
+    &:disabled:checked + LABEL, &.disabled:checked + LABEL {
+      &:after {
+        background-color: var(--sds-switch-disabled-checked-background-color);
+      }
+    }
+    &:disabled:active + LABEL, &.disabled:active + LABEL {
+      &:before {
+        width: calc(var(--sds-switch-height) - 4px);
+        right: calc((var(--sds-switch-height) * 2) - (var(--sds-switch-height) - 4px) - 3px);
+      }
+    }
+    &:disabled:checked:active + LABEL, &.disabled:checked:active + LABEL {
+      &:before {
+        right: 3px;
+      }
+    }
+
+    &.sds-selection--no-label + LABEL {
+      font-size: 0;
+      line-height: 0;
+    }
+    &.sds-selection--vertical {
+      & + LABEL {
+        display: flex;
+      }
+    }
+  }
+}

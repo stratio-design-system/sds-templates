@@ -1,0 +1,74 @@
+$fontName: Poppins;
+$typesToGenerate: (eot, svg, ttf, woff, woff2);
+$fontWeightsAvailable: (
+  light: (
+    weight: 300,
+    style: normal,
+    path: '../../../fonts/poppins/poppins-v8-latin-300',
+    local1: 'Poppins Light',
+    local2: Poppins-Light
+  ),
+  light-italic: (
+    weight: 300,
+    style: italic,
+    path: '../../../fonts/poppins/poppins-v8-latin-300italic',
+    local1: 'Poppins Light Italic',
+    local2: Poppins-LightItalic
+  ),
+  regular: (
+    weight: normal,
+    style: normal,
+    path: '../../../fonts/poppins/poppins-v8-latin-regular',
+    local1: 'Poppins Regular',
+    local2: Poppins-Regular
+  ),
+  regular-italic: (
+    weight: normal,
+    style: italic,
+    path: '../../../fonts/poppins/poppins-v8-latin-italic',
+    local1: 'Poppins Italic',
+    local2: Poppins-Italic
+  ),
+  semi-bold: (
+    weight: 600,
+    style: normal,
+    path: '../../../fonts/poppins/poppins-v8-latin-600',
+    local1: 'Poppins SemiBold',
+    local2: Poppins-SemiBold
+  ),
+  semi-bold-italic: (
+    weight: 600,
+    style: italic,
+    path: '../../../fonts/poppins/poppins-v8-latin-600italic',
+    local1: 'Poppins SemiBold Italic',
+    local2: Poppins-SemiBoldItalic
+  ),
+  bold: (
+    weight: bold,
+    style: normal,
+    path: '../../../fonts/poppins/poppins-v8-latin-700',
+    local1: 'Poppins Bold',
+    local2: Poppins-Bold
+  ),
+  bold-italic: (
+    weight: bold,
+    style: italic,
+    path: '../../../fonts/poppins/poppins-v8-latin-700italic',
+    local1: 'Poppins Bold Italic',
+    local2: Poppins-BoldItalic
+  ),
+  extra-bold: (
+    weight: 800,
+    style: normal,
+    path: '../../../fonts/poppins/poppins-v8-latin-800',
+    local1: 'Poppins ExtraBold',
+    local2: Poppins-ExtraBold
+  ),
+  extra-bold-italic: (
+    weight: 800,
+    style: italic,
+    path: '../../../fonts/poppins/poppins-v8-latin-800italic',
+    local1: 'Poppins ExtraBold Italic',
+    local2: Poppins-ExtraBoldItalic
+  )
+);

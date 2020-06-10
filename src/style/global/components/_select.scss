@@ -1,0 +1,73 @@
+@import './shared/common';
+@import './shared/mixins';
+
+%sds-select {
+  SELECT.sds-select {
+    @include textInputElement() {
+      @extend %sds-default-disabled-component;
+    }
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: unset;
+    cursor: pointer;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  %sds-select--wrapper {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    &:after {
+      font-family: var(--sds-icon-font-family);
+      content: var(--sds-icon-arrow-bottom);
+      position: absolute;
+      font-size: inherit;
+      line-height: inherit;
+      pointer-events: none;
+      color: var(--sds-component-icon-color);
+      top: var(--sds-component-padding-vertical);
+      right: .6em;
+    }
+    & > SELECT.sds-select {
+      font-size: inherit;
+      line-height: inherit;
+      padding-right: 2em;
+    }
+    &:disabled, &.disabled {
+      cursor: var(--sds-component-disabled-cursor);
+      &:after {
+        color: var(--sds-component-icon-disabled-color);
+      }
+    }
+    &:focus:after, &.focus:after {
+      color: var(--sds-focus-color);
+    }
+    &.error:after, &:focus.error:after, &.focus.error:after {
+      color: var(--sds-error-color);
+    }
+  }
+
+  SPAN, DIV {
+    &.sds-select {
+      @extend %sds-select--wrapper;
+
+      &.sds-select--filter {
+        @extend %sds-select--wrapper;
+        &:after {
+          right: 0;
+        }
+        & > SELECT.sds-select {
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+          padding-left: 0;
+          padding-right: calc(1em + 10px);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

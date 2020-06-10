@@ -1,0 +1,48 @@
+@import '../../global/mixins';
+@import '../../global/fonts/Inter';
+@import '../../global/fonts/Stratio-Icon';
+@import '../../global/components/components';
+
+@import './backroom/variables/common';
+@import './backroom/variables/sass';
+@import './backroom/components';
+@import './backroom/font-sizes';
+@import '../stratio-product/backroom/colors';
+
+HTML {
+  &#sds-stratio-web-tpl, &.sds-stratio-web-tpl {
+    // font-size: getRelativeSize($fontSizeRoot, $viewportWidthReferenceInPX);
+    font-size: $fontSizeRoot + px;
+    line-height: $fontLineHeightFactor;
+
+    * {
+      font-family: Inter, sans-serif;
+      color: $colorSpace;
+      outline: none;
+    }
+
+    @extend %sds-typography-definition;
+
+    @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
+      // ###### HEADERS
+      @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
+
+      // ###### DEFAULT WEIGHT AND STYLE
+      .sds--bold {
+        font-weight: bold;
+      }
+
+      // ###### DEFAULT SIZE
+      .sds-font--default {
+        font-size: 1rem;
+        line-height: $fontLineHeightFactor + rem;
+      }
+    }
+
+    @include createColorsDefinition($colorsAvailable);
+    @extend %sds-icon-definition;
+    @extend %sds-global-vars;
+    @extend %sds-components;
+    @extend %sds-components-template;
+  }
+}

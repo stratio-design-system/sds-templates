@@ -1,0 +1,185 @@
+@import '../../../global/mixins';
+@import './variables/sass';
+
+@import './font-sizes';
+
+%sds-components-template {
+  LABEL {
+    &.sds-label, &.sds-label.sds-label--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  INPUT, SPAN, DIV {
+    &.sds-input {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-input--small {
+        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+      }
+    }
+  }
+
+  INPUT[type=radio], INPUT[type=checkbox] {
+    & + LABEL {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  SPAN, DIV {
+    &.sds-report {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  TEXTAREA.sds-textarea {
+    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-textarea--small {
+      --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+      --sds-textarea-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+    }
+  }
+
+  SELECT, SPAN, DIV {
+    &.sds-select {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-select--small:not(.sds-select--filter) {
+        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+      }
+      &.sds-select--filter {
+        --sds-component-width: fit-content;
+        --sds-component-padding-vertical: 0;
+      }
+      &.sds-select--placeholder {
+        color: var(--sds-component-placeholder-color);
+      }
+    }
+  }
+
+  BUTTON {
+    &.sds-button {
+      font-size: #{getRemRelativeSize(14, $fontSizeRoot)};
+      line-height: #{getRemRelativeSize(20, $fontSizeRoot)};
+
+      --sds-component-padding-horizontal: #{getRemRelativeSize(20, $fontSizeRoot)};
+      --sds-component-border-radius: var(--sds-button-border-radius);
+      &.sds-button--small {
+        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+      }
+      &.sds-button--secondary, &.sds-button--bob {
+        --sds-button-color: var(--sds-color-action);
+        --sds-button-border-color: var(--sds-color-action);
+        --sds-button-background-color: transparent;
+        --sds-button-hover-color: var(--sds-color-action-120);
+        --sds-button-hover-border-color: var(--sds-color-action-120);
+        --sds-button-hover-background-color: var(--sds-color-space-5);
+        --sds-button-active-color: var(--sds-color-action-150);
+        --sds-button-active-border-color: var(--sds-color-action-150);
+        --sds-button-active-background-color: var(--sds-color-space-10);
+      }
+      &.sds-button--third {
+        --sds-button-color: var(--sds-color-space-80);
+        --sds-button-border-color: var(--sds-color-space-5);
+        --sds-button-background-color: var(--sds-color-space-5);
+        --sds-button-hover-color: var(--sds-color-space);
+        --sds-button-hover-border-color: var(--sds-color-space-10);
+        --sds-button-hover-background-color: var(--sds-color-space-10);
+        --sds-button-active-color: var(--sds-color-space-110);
+        --sds-button-active-border-color: var(--sds-color-space-5);
+        --sds-button-active-background-color: var(--sds-color-space-5);
+      }
+      &.sds-button--critical {
+        --sds-button-color: var(--sds-color-neutral-full);
+        --sds-button-border-color: var(--sds-color-critical);
+        --sds-button-background-color: var(--sds-color-critical);
+        --sds-button-hover-color: var(--sds-color-neutral-full);
+        --sds-button-hover-border-color: var(--sds-color-critical-120);
+        --sds-button-hover-background-color: var(--sds-color-critical-120);
+        --sds-button-active-color: var(--sds-color-neutral-full);
+        --sds-button-active-border-color: var(--sds-color-critical-140);
+        --sds-button-active-background-color: var(--sds-color-critical-140);
+      }
+      &.sds-button--icon-only {
+        --sds-component-padding-horizontal: #{getRemRelativeSize(11, $fontSizeRoot)};
+        --sds-component-padding-vertical: #{getRemRelativeSize(9, $fontSizeRoot)};
+        I.sds-icon {
+          margin: #{getRemRelativeSize(2, $fontSizeRoot)} 0;
+        }
+        &.sds-button--small {
+          --sds-component-padding-horizontal: #{getRemRelativeSize(7, $fontSizeRoot)};
+          --sds-component-padding-vertical: #{getRemRelativeSize(7, $fontSizeRoot)};
+          I.sds-icon {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  SPAN, DIV {
+    &.sds-tag {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      I.sds-icon {
+        font-size: inherit;
+        line-height: #{getRemRelativeSize(14, $fontSizeRoot)};
+      }
+      &.sds-tag--medium {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        --sds-tag-padding-vertical: #{getRemRelativeSize(4, $fontSizeRoot)};
+        I.sds-icon {
+          line-height: #{getRemRelativeSize(12, $fontSizeRoot)};
+        }
+      }
+      &.sds-tag--small {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        --sds-tag-padding-vertical: #{getRemRelativeSize(2, $fontSizeRoot)};
+        I.sds-icon {
+          line-height: #{getRemRelativeSize(12, $fontSizeRoot)};
+        }
+      }
+      &.sds-tag--info {
+        color: var(--sds-tag-info-text-color);
+        border-color: var(--sds-tag-info-border-color);
+        background-color: var(--sds-tag-info-background-color);
+      }
+      &.sds-tag--critical {
+        color: var(--sds-tag-critical-text-color);
+        border-color: var(--sds-tag-critical-border-color);
+        background-color: var(--sds-tag-critical-background-color);
+      }
+      &.sds-tag--warning {
+        color: var(--sds-tag-warning-text-color);
+        border-color: var(--sds-tag-warning-border-color);
+        background-color: var(--sds-tag-warning-background-color);
+      }
+      &.sds-tag--success {
+        color: var(--sds-tag-success-text-color);
+        border-color: var(--sds-tag-success-border-color);
+        background-color: var(--sds-tag-success-background-color);
+      }
+    }
+  }
+
+  .sds-spinner {
+    &.sds-spinner--inline {
+      --sds-spinner-display: inline-flex;
+    }
+    &.sds-spinner--inherit {
+      --sds-spinner-display: inherit;
+    }
+    &.sds-spinner--12 {
+      --sds-spinner-size: #{getRemRelativeSize(12, $fontSizeRoot)};
+      --sds-spinner-line-width: 7px;
+    }
+    &.sds-spinner--16 {
+      --sds-spinner-size: #{getRemRelativeSize(16, $fontSizeRoot)};
+      --sds-spinner-line-width: 6px;
+    }
+    &.sds-spinner--20 {
+      --sds-spinner-size: #{getRemRelativeSize(20, $fontSizeRoot)};
+      --sds-spinner-line-width: 5px;
+    }
+    &.sds-spinner--inverse {
+      --sds-spinner-color: var(--sds-color-neutral-full);
+    }
+  }
+}

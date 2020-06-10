@@ -1,0 +1,76 @@
+@import './shared/mixins';
+
+%sds-checkbox {
+  INPUT[type=checkbox]:not(.sds-switch) {
+    $checkboxCorrectionFactor: 1px;
+    $checkboxIndeterminateHeight: 2px;
+
+    // ###### Needed to put "px" because only zero value in SASS variable has an unexpected behavior.
+    $checkboxIconCorrectionOverlap: 0px;
+
+    @include selectionElement(2px, $checkboxCorrectionFactor) {
+      --tempCheck01: var(--sds-selection-icon-size) / 2;
+      --tempCheck02: var(--sds-checkbox-internal-checked-size) / 2;
+      --tempCheck03: var(--sds-radio-internal-checked-size) / 2;
+      left: calc(var(--tempCheck01) - var(--tempCheck02));
+      bottom: calc(
+        var(--tempCheck01) -
+        var(--tempCheck02) -
+        #{$checkboxIconCorrectionOverlap} +
+        var(--sds-selection-icon-spacer)
+      );
+      border: none;
+      background-color: unset;
+      font-family: var(--sds-icon-font-family);
+      content: var(--sds-icon-checkbox-checked);
+      font-size: var(--sds-checkbox-internal-checked-size);
+      line-height: var(--sds-checkbox-internal-checked-size);
+      color: var(--sds-selection-internal-checked-color);
+    }
+    &:disabled, &.disabled {
+      &:checked + LABEL {
+        &:after {
+          background-color: unset;
+          color: var(--sds-selection-internal-checked-disabled-color);
+        }
+      }
+
+      &.sds-checkbox--indeterminate {
+        &:checked + LABEL {
+          &:before {
+            border-color: var(--sds-selection-checked-disabled-border-color);
+          }
+          &:after {
+            background-color: var(--sds-selection-checked-disabled-background-color);
+          }
+        }
+        }
+    }
+
+    &.sds-checkbox--indeterminate {
+      &:checked + LABEL {
+        &:before {
+          border-color: var(--sds-checkbox-indeterminate-border-color);
+          background-color: var(--sds-checkbox-indeterminate-background-color);
+        }
+        &:after {
+          left: calc(var(--tempCheck01) - var(--tempCheck03));
+          bottom: calc(
+            var(--tempCheck01) -
+            #{$checkboxIndeterminateHeight / 2} -
+            #{$checkboxCorrectionFactor} +
+            var(--sds-selection-icon-spacer)
+          );
+          width: var(--sds-radio-internal-checked-size);
+          max-width: var(--sds-radio-internal-checked-size);
+          height: $checkboxIndeterminateHeight;
+          max-height: $checkboxIndeterminateHeight;
+          min-height: $checkboxIndeterminateHeight;
+          background-color: var(--sds-checkbox-internal-indeterminate-background-color);
+          border-radius: 100%;
+          content: '';
+        }
+      }
+    }
+  }
+}

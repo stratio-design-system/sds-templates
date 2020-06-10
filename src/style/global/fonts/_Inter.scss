@@ -1,0 +1,22 @@
+@import '../mixins';
+@import '../inter-definitions';
+
+@each $key, $value in $fontWeightsAvailable {
+  @include createFontFaceRule(
+    $typesToGenerate,
+    $fontName,
+    map-get($value, weight),
+    map-get($value, style),
+    map-get($value, path),
+    map-get($value, local1),
+    map-get($value, local2)
+  );
+}
+
+%sds-typography-definition {
+  @each $key, $value in $fontWeightsAvailable {
+    .sds-font--#{$key} {
+      @include createTypographyElement(map-get($value, weight), map-get($value, style));
+    }
+  }
+}

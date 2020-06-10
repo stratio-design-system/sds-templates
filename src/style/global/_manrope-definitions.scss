@@ -1,0 +1,53 @@
+$fontName: Manrope;
+$typesToGenerate: (eot, otf, svg, ttf, woff, woff2);
+$fontWeightsAvailable: (
+  extra-light: (
+    weight: 200,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-ExtraLight',
+    local1: 'Manrope ExtraLight',
+    local2: Manrope-ExtraLight
+  ),
+  light: (
+    weight: 300,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-Light',
+    local1: 'Manrope Light',
+    local2: Manrope-Light
+  ),
+  regular: (
+    weight: normal,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-Regular',
+    local1: 'Manrope Regular',
+    local2: Manrope-Regular
+  ),
+  medium: (
+    weight: 500,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-Medium',
+    local1: 'Manrope Medium',
+    local2: Manrope-Medium
+  ),
+  semi-bold: (
+    weight: 600,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-SemiBold',
+    local1: 'Manrope SemiBold',
+    local2: Manrope-SemiBold
+  ),
+  bold: (
+    weight: bold,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-Bold',
+    local1: 'Manrope Bold',
+    local2: Manrope-Bold
+  ),
+  extra-bold: (
+    weight: 800,
+    style: normal,
+    path: '../../../fonts/manrope/Manrope-ExtraBold',
+    local1: 'Manrope ExtraBold',
+    local2: Manrope-ExtraBold
+  )
+);

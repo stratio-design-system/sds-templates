@@ -1,0 +1,125 @@
+//## Function that removes all whitespaces in a string.
+//## PARAMETERS: $string
+@function removeWhitespace($string) {
+  @while (str-index($string, ' ') != null) {
+    $_index: str-index($string, ' ');
+    $string: "#{str-slice($string, 0, $_index - 1)}#{str-slice($string, $_index + 1)}";
+  }
+  @return $string;
+}
+
+//## Function that calculates viewport percentage for size given in pixels.
+//## PARAMETERS: $pixelSize (size to calculate), $referenceViewport
+@function getRelativeSize($pixelSize, $referenceViewport) {
+  @return ($pixelSize * 100 / $referenceViewport) + vw;
+}
+
+//## Function that calculates font size root proportional for size given in pixels.
+//## PARAMETERS: $pixelSize (size to calculate), $fontSizeRoot
+@function getRemRelativeSize($pixelSize, $fontSizeRoot) {
+  @return ($pixelSize / $fontSizeRoot) + rem;
+}
+
+//## Mixin for generate @font-face css rules.
+//## PARAMETERS: $typesToGenerate, font-family, font-weight, font-style, url, local, local
+@mixin createFontFaceRule($types, $name, $weight, $style, $path, $local01: '', $local02: '') {
+  $_local01: if($local01 != '', 'local("#{$local01}"),', '');
+  $_local02: if($local02 != '', 'local(#{$local02}),', '');
+
+  $_types: ();
+  @if index($types, eot) {
+    $_types: append($_types, url('#{$path}.eot?#iefix') format('embedded-opentype'), comma);         //# IE6-IE8
+  }
+  @if index($types, otf) {
+    $_types: append($_types, url('#{$path}.otf') format('opentype'), comma);                         //# Windows & Mac
+  }
+  @if index($types, svg) {
+    $_types: append($_types, url('#{$path}.svg##{removeWhitespace($name)}') format('svg'), comma);   //# Legacy iOS
+  }
+  @if index($types, ttf) {
+    $_types: append($_types, url('#{$path}.ttf') format('truetype'), comma);                         //# Safari, Android, iOS
+  }
+  @if index($types, woff) {
+    $_types: append($_types, url('#{$path}.woff') format('woff'), comma);                            //# Modern Browsers
+  }
+  @if index($types, woff2) {
+    $_types: append($_types, url('#{$path}.woff2') format('woff2'), comma);                          //# Super Modern Browsers
+  }
+
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    @if index($types, eot) {
+      src: url('#{$path}.eot'); //# IE9 Compat Modes
+    }
+    src:
+      #{unquote($_local01)}
+      #{unquote($_local02)}
+      #{$_types};
+    @content;
+  }
+}
+
+//## Mixin for create typography class.
+//## PARAMETERS: font-weight, font-style
+@mixin createTypographyElement($weight, $style) {
+  font-weight: $weight;
+  font-style: $style;
+  @content;
+}
+
+
+//## Mixin for create font size class.
+//## PARAMETERS: font-size, line-height
+//## @DEPRECATED
+@mixin createFontSizeElement($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  @content;
+}
+
+
+//## Mixin for define font size class.
+//## PARAMETERS: font-size, html root font-size, factor to calculate line-height
+@mixin defineFontSizeElement($fontSize, $fontSizeRoot, $fontLineHeightFactor) {
+  font-size: ($fontSize / $fontSizeRoot) + rem;
+  // line-height: (ceil($calculatedFontSize * $fontLineHeightFactor * 10000) / 10000) + rem;
+  line-height: $fontLineHeightFactor;
+  @content;
+}
+
+//## Mixin to generate a complete font definition.
+//## PARAMETERS: font-size array, html root font-size, factor to calculate line-height
+@mixin createFontDefinition($fontSizeSet, $fontSizeRoot, $fontLineHeightFactor) {
+  @each $key in $fontSizeSet {
+    .sds-font--#{$key} {
+      @include defineFontSizeElement($key, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+  @content;
+}
+
+//## Mixin to generate html headers definition.
+//## PARAMETERS: headers font-size array, html root font-size, factor to calculate line-height
+@mixin createHeadersDefinition($fonSizeHeaders, $fonSizeRoot, $fontLineHeightFactor) {
+  @each $key in $fonSizeHeaders {
+    $i: index($fonSizeHeaders, $key);
+    H#{$i} {
+      font-size: $key + rem;
+      line-height: $fontLineHeightFactor;
+    }
+  }
+  @content;
+}
+
+//## Mixin to generate template color definition.
+//## PARAMETERS: template color set array
+@mixin createColorsDefinition($colorSet) {
+  @each $key, $value in $colorSet {
+    .sds-color--#{$key} { color: $value; }
+    .sds-color__bg--#{$key} { background-color: $value; }
+    .sds-color__border--#{$key} { border-color: $value; }
+  }
+  @content;
+}

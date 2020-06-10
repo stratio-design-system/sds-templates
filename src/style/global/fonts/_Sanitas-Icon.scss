@@ -1,0 +1,43 @@
+@import '../mixins';
+@import '../sanitas-icon-definitions';
+
+$iconFontFamily: 'SanitasIconsFonts';
+$typesToGenerate: (eot, svg, ttf, woff, woff2);
+
+@include createFontFaceRule($typesToGenerate, $iconFontFamily, normal, normal, '../../../fonts/sanitas-icon-set/SanitasIconsFonts');
+
+%bupa-icon__definition {
+  &, .sds-icon-text:before {
+    font-family: $iconFontFamily, Symbol, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;  //# Support for all WebKit browsers.
+    text-rendering: optimizeLegibility;   //# Support for Safari and Chrome.
+    -moz-osx-font-smoothing: grayscale;   //# Support for Firefox.
+    font-feature-settings: 'liga';        //# Support for IE.
+  }
+  &, .sds-icon-text {
+    @each $key, $value in $sanitasIconTableDefinitions {
+      &.#{$key}:before {
+        content: unquote('"\\#{$value}"');
+      }
+    }
+  }
+
+  .sds-icon-text {
+    &:before {
+      vertical-align: middle;
+      font-size: 1.142em;
+      line-height: unset;
+      margin-right: 0.35em;
+    }
+  }
+}

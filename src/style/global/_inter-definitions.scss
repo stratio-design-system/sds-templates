@@ -1,0 +1,67 @@
+$fontName: Inter;
+$typesToGenerate: (ttf);
+$fontWeightsAvailable: (
+  thin: (
+    weight: 100,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Thin',
+    local1: 'Inter Thin',
+    local2: Inter-Thin
+  ),
+  extra-light: (
+    weight: 200,
+    style: normal,
+    path: '../../../fonts/inter/Inter-ExtraLight',
+    local1: 'Inter ExtraLight',
+    local2: Inter-ExtraLight
+  ),
+  light: (
+    weight: 300,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Light',
+    local1: 'Inter Light',
+    local2: Inter-Light
+  ),
+  regular: (
+    weight: normal,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Regular',
+    local1: 'Inter Regular',
+    local2: Inter-Regular
+  ),
+  medium: (
+    weight: 500,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Medium',
+    local1: 'Inter Medium',
+    local2: Inter-Medium
+  ),
+  semi-bold: (
+    weight: 600,
+    style: normal,
+    path: '../../../fonts/inter/Inter-SemiBold',
+    local1: 'Inter SemiBold',
+    local2: Inter-SemiBold
+  ),
+  bold: (
+    weight: bold,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Bold',
+    local1: 'Inter Bold',
+    local2: Inter-Bold
+  ),
+  extra-bold: (
+    weight: 800,
+    style: normal,
+    path: '../../../fonts/inter/Inter-ExtraBold',
+    local1: 'Inter ExtraBold',
+    local2: Inter-ExtraBold
+  ),
+  black: (
+    weight: 900,
+    style: normal,
+    path: '../../../fonts/inter/Inter-Black',
+    local1: 'Inter Black',
+    local2: Inter-Black
+  )
+);

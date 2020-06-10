@@ -1,0 +1,166 @@
+@import '../../../../global/components/shared/common';
+@import '../colors';
+@import './sass';
+
+%sds-global-vars {
+  // ###### Color Scheme Definition
+
+  @each $key, $value in $colorsAvailable {
+    --sds-color-#{$key}: #{$value};
+    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+  }
+
+  // ###### Component Commons
+  --sds-component-width: fit-content;
+  --sds-component-vertical-spacer: 2px;
+
+  --sds-component-padding-vertical: 9px;
+  --sds-component-padding-horizontal: 10px;
+
+  --sds-component-border: 1px solid;
+  --sds-component-border-radius: 25px;
+
+  // ###### Generic Colors (HEX)
+  --sds-focus-color: var(--sds-color-action);
+  --sds-error-color: var(--sds-color-critical);
+
+  // ###### Component Colors (HEX)
+  --sds-component-border-color: var(--sds-color-space-40);
+  --sds-component-background-color: var(--sds-color-neutral-full);
+  --sds-component-hover-border-color: var(--sds-color-space-70);
+  --sds-component-hover-background-color: var(--sds-color-neutral-full);
+  --sds-component-focus-border-color: var(--sds-color-action);
+  --sds-component-focus-background-color: var(--sds-color-neutral-full);
+  --sds-component-error-border-color: var(--sds-color-critical);
+  --sds-component-error-background-color: var(--sds-color-neutral-full);
+  --sds-component-checked-border-color: var(--sds-color-action);
+  --sds-component-checked-background-color: var(--sds-color-action);
+
+  // ###### Component Colors (RGB Variations)
+  --sds-component-focus-border-color-rgb: var(--sds-color-action-rgb);
+
+  // ###### Component Generic DISABLED and variations
+  --sds-component-disabled-color: var(--sds-color-space-80);
+  --sds-component-disabled-border-color: var(--sds-color-space-40);
+  --sds-component-disabled-background-color: var(--sds-color-space-5);
+  --sds-component-disabled-cursor: not-allowed;
+
+  // ###### Component Generic PLACEHOLDER
+  --sds-component-placeholder-color: var(--sds-color-space-50);
+  --sds-component-placeholder-disabled-color: var(--sds-color-space-50);
+
+  // ###### Component ICON (icons inside components like .sds-input--search)
+  --sds-component-icon-color: var(--sds-color-space-80);
+  --sds-component-icon-disabled-color: var(--sds-color-space-50);
+
+  // ###### ICONS
+  --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
+  --sds-icon-search: '#{$searchIcon}';
+  --sds-icon-email: '#{$emailIcon}';
+  --sds-icon-user: '#{$userIcon}';
+  --sds-icon-password: '#{$passwordIcon}';
+  --sds-icon-action-clear: '#{$actionClearIcon}';
+  --sds-icon-arrow-bottom: '#{$arrowDownIcon}';
+  --sds-icon-checkbox-checked: '#{$checkboxCheckedIcon}';
+
+  // ###### LABEL
+  --sds-label-display: table-cell;
+  --sds-label-color: var(--sds-color-space-80);
+  --sds-label-focus-color: var(--sds-color-space-110);
+  --sds-label-error-color: var(--sds-color-space-80);
+  --sds-label-disabled-color: var(--sds-color-space-80);
+
+  // ###### REPORT
+  --sds-report-color: var(--sds-color-space-80);
+
+  // ###### Generic SELECTION elements (like radio or checkbox)
+  --sds-selection-option-spacer: 20px;
+  --sds-selection-icon-spacer: 4px;
+  --sds-selection-icon-size: 16px;
+
+  --sds-selection-disabled-tex-color: var(--sds-color-space-50);
+  --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
+  --sds-selection-checked-disabled-background-color: var(--sds-color-action-40);
+
+  --sds-selection-internal-checked-color: var(--sds-color-neutral-full);
+  --sds-selection-internal-checked-disabled-color: var(--sds-color-neutral-full);
+
+  // ###### RADIO Button
+  --sds-radio-internal-checked-size: 6px;
+
+  // ###### CHECKBOX Button
+  --sds-checkbox-internal-checked-size: 14px;
+  --sds-checkbox-indeterminate-border-color: var(--sds-color-action);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-neutral-full);
+  --sds-checkbox-internal-indeterminate-background-color: var(--sds-color-action);
+
+  // ###### TEXTAREA
+  --sds-textarea-height: 40px;
+  --sds-textarea-resize: vertical;
+
+  // ###### BUTTON
+  --sds-button-color: var(--sds-color-neutral-full);
+  --sds-button-border-color: var(--sds-color-action);
+  --sds-button-background-color: var(--sds-color-action);
+  --sds-button-hover-color: var(--sds-color-neutral-full);
+  --sds-button-hover-border-color: var(--sds-color-action-120);
+  --sds-button-hover-background-color: var(--sds-color-action-120);
+  --sds-button-active-color: var(--sds-color-neutral-full);
+  --sds-button-active-border-color: var(--sds-color-action-150);
+  --sds-button-active-background-color: var(--sds-color-action-150);
+  --sds-button-disabled-color: var(--sds-color-action-60);
+  --sds-button-disabled-border-color: var(--sds-color-action-10);
+  --sds-button-disabled-background-color: var(--sds-color-action-10);
+  --sds-button-disabled-icon-color: var(--sds-color-neutral-full);
+
+  --sds-button-icon-size: 16px;
+  --sds-button-icon-spacer: 4px;
+
+  // ###### SWITCH
+  --sds-switch-background-color: var(--sds-color-space-30);
+  --sds-switch-color: var(--sds-color-neutral-full);
+  --sds-switch-shadow-color: var(--sds-color-neutral);
+  --sds-switch-shadow-color-rgb: var(--sds-color-neutral-rgb);
+  --sds-switch-checked-background-color: var(--sds-color-action);
+  --sds-switch-disabled-background-color: var(--sds-color-space-10);
+  --sds-switch-disabled-checked-background-color: var(--sds-color-action-40);
+
+  --sds-switch-height: 22px;
+  --sds-switch-border-radio: 25px;
+
+  // ###### TAG
+  --sds-tag-text-color: var(--sds-color-space-110);
+  --sds-tag-border-color: var(--sds-color-space-10);
+  --sds-tag-background-color: var(--sds-color-space-10);
+  --sds-tag-info-text-color: var(--sds-color-action);
+  --sds-tag-info-border-color: var(--sds-color-action-10);
+  --sds-tag-info-background-color: var(--sds-color-action-10);
+  --sds-tag-critical-text-color: var(--sds-color-critical-140);
+  --sds-tag-critical-border-color: var(--sds-color-critical-10);
+  --sds-tag-critical-background-color: var(--sds-color-critical-10);
+  --sds-tag-warning-text-color: var(--sds-color-warning);
+  --sds-tag-warning-border-color: var(--sds-color-warning-10);
+  --sds-tag-warning-background-color: var(--sds-color-warning-10);
+  --sds-tag-success-text-color: var(--sds-color-success);
+  --sds-tag-success-border-color: var(--sds-color-success-10);
+  --sds-tag-success-background-color: var(--sds-color-success-10);
+
+  --sds-tag-hover-text-color: var(--sds-color-action);
+  --sds-tag-hover-border-color: var(--sds-color-action-10);
+  --sds-tag-hover-background-color: var(--sds-color-action-10);
+  --sds-tag-active-text-color: var(--sds-color-neutral-full);
+  --sds-tag-active-border-color: var(--sds-color-action);
+  --sds-tag-active-background-color: var(--sds-color-action);
+  --sds-tag-disabled-text-color: var(--sds-color-space-50);
+  --sds-tag-disabled-border-color: var(--sds-color-space-10);
+  --sds-tag-disabled-background-color: var(--sds-color-space-10);
+
+  --sds-tag-padding-horizontal: 8px;
+  --sds-tag-padding-vertical: 4px;
+
+  // ###### SPINNER
+  --sds-spinner-display: block;
+  --sds-spinner-size: 80px;
+  --sds-spinner-line-width: 3px;
+  --sds-spinner-color: var(--sds-color-action);
+}

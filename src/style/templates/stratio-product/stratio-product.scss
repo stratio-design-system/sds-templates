@@ -1,0 +1,49 @@
+@import '../../global/mixins';
+@import '../../global/fonts/Nunito';
+@import '../../global/fonts/Stratio-Icon';
+@import '../../global/components/components';
+
+@import './backroom/variables/common';
+@import './backroom/components';
+@import './backroom/font-sizes';
+@import './backroom/colors';
+
+HTML {
+  &#sds-stratio-tpl, &.sds-stratio-tpl {
+    font-size: $fontSizeRoot + px;
+    line-height: $fontLineHeightFactor;
+
+    * {
+      font-family: 'Nunito Sans', sans-serif;
+      color: $colorSpace110;
+      outline: none;
+    }
+
+    @extend %sds-typography-definition;
+
+    @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
+      // ###### HEADERS
+      @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
+
+      // ###### DEFAULT WEIGHT AND STYLE
+      .sds--bold {
+        font-weight: bold;
+      }
+      .sds--italic {
+        font-style: italic;
+      }
+
+      // ###### DEFAULT SIZE
+      .sds-font--default {
+        font-size: 1rem;
+        line-height: $fontLineHeightFactor + rem;
+      }
+    }
+
+    @include createColorsDefinition($colorsAvailable);
+    @extend %sds-icon-definition;
+    @extend %sds-global-vars;
+    @extend %sds-components;
+    @extend %sds-components-template;
+  }
+}

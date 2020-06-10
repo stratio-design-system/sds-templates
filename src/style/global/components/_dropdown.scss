@@ -1,0 +1,31 @@
+%sds-dropdown {
+  .sds-dropdown {
+    --sds-dropdown-default-position: var(--sds-dropdown-position);
+    --sds-dropdown-default-width: var(--sds-dropdown-width);
+    --sds-dropdown-default-min-width: var(--sds-dropdown-min-width);
+    --sds-dropdown-default-left: var(--sds-dropdown-left);
+    --sds-dropdown-default-top: var(--sds-dropdown-top);
+
+    --sds-dropdown-default-border: var(--sds-dropdown-border);
+    --sds-dropdown-default-border-color: var(--sds-dropdown-border-color);
+    --sds-dropdown-default-border-radius: var(--sds-dropdown-border-radius);
+
+    --sds-dropdown-default-box-shadow: var(--sds-dropdown-box-shadow);
+
+    --sds-dropdown-default-padding: var(--sds-dropdown-padding);
+    --sds-dropdown-default-margin: var(--sds-dropdown-margin);
+
+    --sds-dropdown-option-default-padding: var(--sds-dropdown-option-padding);
+    --sds-dropdown-option-default-icon-size: var(--sds-dropdown-option-icon-size);
+    --sds-dropdown-option-default-icon-spacer: var(--sds-dropdown-option-icon-spacer);
+
+    --sds-dropdown-option-default-selected-text-color: var(--sds-dropdown-option-selected-text-color);
+    --sds-dropdown-option-default-selected-background-color: var(--sds-dropdown-option-selected-background-color);
+
+    --sds-dropdown-option-default-icon-right-size: var(--sds-dropdown-option-icon-right-size);
+
+    --sds-dropdown-separator-default-border: var(--sds-dropdown-separator-border);
+    --sds-dropdown-separator-default-border-color: var(--sds-dropdown-separator-border-color);
+    --sds-dropdown-separator-default-margin: var(--sds-dropdown-separator-margin);
+  }
+}
