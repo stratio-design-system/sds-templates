@@ -25,6 +25,9 @@
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
+  INPUT[type=checkbox] + LABEL {
+    --sds-radio-internal-checked-size: 10px;
+  }
 
   SPAN, DIV {
     &.sds-report {
