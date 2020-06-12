@@ -21,6 +21,9 @@
   --sds-component-border: 1px solid;
   --sds-component-border-radius: 4px;
 
+  --sds-component-icon-left-spacer: 4px;
+  --sds-component-icon-right-spacer: 8px;
+
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action);
   --sds-error-color: var(--sds-color-critical);
@@ -92,8 +95,8 @@
   // ###### CHECKBOX Button
   --sds-checkbox-internal-checked-size: 14px;
   --sds-checkbox-indeterminate-border-color: var(--sds-color-action);
-  --sds-checkbox-indeterminate-background-color: var(--sds-color-neutral-full);
-  --sds-checkbox-internal-indeterminate-background-color: var(--sds-color-action);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-action);
+  --sds-checkbox-internal-indeterminate-background-color: var(--sds-color-neutral-full);
 
   // ###### TEXTAREA
   --sds-textarea-height: 40px;
@@ -109,13 +112,12 @@
   --sds-button-active-color: var(--sds-color-neutral-full);
   --sds-button-active-border-color: var(--sds-color-action-150);
   --sds-button-active-background-color: var(--sds-color-action-150);
-  --sds-button-disabled-color: var(--sds-color-action-60);
-  --sds-button-disabled-border-color: var(--sds-color-action-10);
-  --sds-button-disabled-background-color: var(--sds-color-action-10);
-  --sds-button-disabled-icon-color: var(--sds-color-neutral-full);
+  --sds-button-disabled-color: var(--sds-color-space-30);
+  --sds-button-disabled-border-color: var(--sds-color-space-5);
+  --sds-button-disabled-background-color: var(--sds-color-space-5);
+  --sds-button-disabled-icon-color: var(--sds-color-space-30);
 
-  --sds-button-icon-size: 16px;
-  --sds-button-icon-spacer: 4px;
+  --sds-button-icon-spacer: 8px;
 
   // ###### SWITCH
   --sds-switch-background-color: var(--sds-color-space-30);
@@ -156,8 +158,7 @@
   --sds-tag-disabled-border-color: var(--sds-color-space-10);
   --sds-tag-disabled-background-color: var(--sds-color-space-10);
 
-  --sds-tag-padding-horizontal: 8px;
-  --sds-tag-padding-vertical: 4px;
+  --sds-tag-height: 28px;
 
   // ###### SPINNER
   --sds-spinner-display: block;
@@ -196,7 +197,7 @@
 
   // ###### NOTIFICATIONS
   --sds-notifications-position: fixed;
-  --sds-notifications-padding: 10px 15px;
+  --sds-notifications-padding: 7px 15px;
   --sds-notifications-width: fit-content;
   --sds-notifications-min-width: unset;
   --sds-notifications-max-width: 50vw;

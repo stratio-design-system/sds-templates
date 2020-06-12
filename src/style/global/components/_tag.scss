@@ -1,24 +1,49 @@
 @import '../exportable/app.mixins';
 
 %sds-tag {
+  %sds-tag-icon {
+    position: absolute;
+    line-height: var(--sds-tag-height);
+    color: inherit;
+    top: -1px;
+  }
+
   SPAN, DIV {
     &.sds-tag {
-      @include createFlexBox(row, center, normal, nowrap);
+      // @include createFlexBox(row, center, normal, nowrap);
+      display: table-cell;
+      position: relative;
       width: fit-content;
       min-width: fit-content;
+      height: var(--sds-tag-height);
+      min-height: var(--sds-tag-height);
       box-sizing: border-box;
       color: var(--sds-tag-text-color);
       border: var(--sds-component-border);
       border-color: var(--sds-tag-border-color);
       border-radius: var(--sds-component-border-radius);
       background-color: var(--sds-tag-background-color);
-      padding: var(--sds-tag-padding-vertical) var(--sds-tag-padding-horizontal);
-      I.sds-icon {
-        display: inline-flex;
-        align-items: center;
-        color: inherit;
-        margin-left: 8px;
-        cursor: pointer;
+      padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
+      &.sds-tag--icon-left {
+        padding-left: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-left-spacer));
+        I.sds-icon {
+          @extend %sds-tag-icon;
+          &.sds-icon--left {
+            left: var(--sds-component-padding-horizontal);
+          }
+        }
+      }
+      &.sds-tag--icon-right {
+        padding-right: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-right-spacer));
+        I.sds-icon {
+          @extend %sds-tag-icon;
+          &.sds-icon--right {
+            right: var(--sds-component-padding-horizontal);
+          }
+          &.action {
+            cursor: pointer;
+          }
+        }
       }
 
       &.sds-tag--interactive {

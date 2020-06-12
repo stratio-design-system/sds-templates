@@ -39,12 +39,19 @@
         &:checked + LABEL {
           &:before {
             border-color: var(--sds-selection-checked-disabled-border-color);
-          }
-          &:after {
             background-color: var(--sds-selection-checked-disabled-background-color);
           }
+          &:after {
+            background-color: var(--sds-selection-internal-checked-disabled-color);
+          }
         }
-        }
+      }
+    }
+
+    &:checked:not(.sds-selection--vertical):not(:first-of-type):not(:last-of-type) + LABEL {
+      &:after {
+        left: 2px;
+      }
     }
 
     &.sds-checkbox--indeterminate {
@@ -67,7 +74,6 @@
           max-height: $checkboxIndeterminateHeight;
           min-height: $checkboxIndeterminateHeight;
           background-color: var(--sds-checkbox-internal-indeterminate-background-color);
-          border-radius: 100%;
           content: '';
         }
       }

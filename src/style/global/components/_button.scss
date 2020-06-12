@@ -1,11 +1,16 @@
 %sds-button {
+  %sds-button-icon {
+    position: absolute;
+    line-height: var(--sds-component-height);
+    color: inherit;
+    top: -2px;
+  }
+
   BUTTON.sds-button {
     position: relative;
-    display: inline-flex;
+    display: table-cell;
     height: var(--sds-component-height);
     min-height: var(--sds-component-height);
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     cursor: pointer;
     padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
@@ -44,25 +49,41 @@
       }
     }
 
+    &.sds-button--icon-left {
+      padding-left: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-left-spacer));
+      I.sds-icon {
+        @extend %sds-button-icon;
+        &.sds-icon--left {
+          left: var(--sds-component-padding-horizontal);
+        }
+      }
+    }
+    &.sds-button--icon-right {
+      padding-right: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-right-spacer));
+      I.sds-icon {
+        @extend %sds-button-icon;
+        &.sds-icon--right {
+          right: var(--sds-component-padding-horizontal);
+        }
+      }
+    }
+    &.sds-button--icon-only {
+      padding: 0;
+      width: var(--sds-component-height);
+      min-width: var(--sds-component-height);
+      I.sds-icon {
+        @extend %sds-button-icon;
+        left: calc((var(--sds-component-height) - 1.1em) / 2);
+        top: -1px;
+      }
+    }
+
     &.no-events {
       cursor: wait;
       &:hover {
         color: var(--sds-button-color);
         border-color: var(--sds-button-border-color);
         background-color: var(--sds-button-background-color);
-      }
-    }
-
-    I.sds-icon {
-      font-size: inherit;
-      margin: 0 var(--sds-button-icon-spacer);
-      // height: var(--sds-button-icon-size);
-      // min-height: var(--sds-button-icon-size);
-      &.sds-button--icon-left {
-        margin-left: 0;
-      }
-      &.sds-button--icon-right {
-        margin-right: 0;
       }
     }
   }

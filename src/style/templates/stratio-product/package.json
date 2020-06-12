@@ -1,7 +1,7 @@
 {
   "name": "@stratiods/stratio-product",
-  "version": "4.0.0",
-  "description": "SDS Templates :: Stratio Platform Template",
+  "version": "4.1.0",
+  "description": "SDS Templates :: Stratio Product Template",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stratio-design-system/sds-templates.git"

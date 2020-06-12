@@ -6,7 +6,6 @@
     @include textInputElement() {
       @extend %sds-default-disabled-component;
     }
-
     -webkit-appearance: none;
     -moz-appearance: none;
     text-overflow: unset;
@@ -24,8 +23,8 @@
       font-family: var(--sds-icon-font-family);
       content: var(--sds-icon-arrow-bottom);
       position: absolute;
-      font-size: inherit;
-      line-height: inherit;
+      font-size: 1.1em;
+      line-height: var(--sds-component-height);
       pointer-events: none;
       color: var(--sds-component-icon-color);
       top: var(--sds-component-padding-vertical);

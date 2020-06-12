@@ -15,7 +15,7 @@ HTML {
 
     * {
       font-family: 'Nunito Sans', sans-serif;
-      color: $colorSpace110;
+      color: var(--sds-color-space-110);
       outline: none;
     }
 
@@ -36,7 +36,7 @@ HTML {
       // ###### DEFAULT SIZE
       .sds-font--default {
         font-size: 1rem;
-        line-height: $fontLineHeightFactor + rem;
+        line-height: $fontLineHeightFactor;
       }
     }
 
