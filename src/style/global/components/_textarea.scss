@@ -9,7 +9,6 @@
 
     resize: var(--sds-textarea-resize);
     vertical-align: top;
-    height: var(--sds-textarea-height);
-    min-height: var(--sds-textarea-height);
+    padding-top: unset;
   }
 }

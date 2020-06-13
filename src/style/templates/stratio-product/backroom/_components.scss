@@ -36,10 +36,12 @@
   }
 
   TEXTAREA.sds-textarea {
+    padding-top: calc((var(--sds-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
     @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     &.sds-textarea--small {
       --sds-component-height: 30px;
       --sds-component-padding-horizontal: 8px;
+      padding-top: calc((var(--sds-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
