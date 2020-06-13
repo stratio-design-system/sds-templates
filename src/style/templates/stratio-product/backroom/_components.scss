@@ -120,7 +120,7 @@
       line-height: calc(var(--sds-tag-height) - 2px);
       &.sds-tag--medium {
         --sds-component-icon-spacer: 4px;
-        --sds-tag-height: 20px;
+        --sds-tag-height: 24px;
         font-size: getRemRelativeSize(12, $fontSizeRoot);
       }
       &.sds-tag--small {
