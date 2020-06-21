@@ -1,80 +1,32 @@
 @import './shared/mixins';
 
+$checked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6738 4.57069C11.4568 4.41504 11.2446 4.26814 11.0639 4.14187C11.0029 4.09874 10.9443 4.06685 10.8832 4.04373C10.5768 3.92871 10.2704 4.04373 10.0673 4.3519C9.48284 5.24204 8.89778 6.13469 8.31333 7.0242L6.99938 9.02827C6.59262 8.60758 6.18889 8.19002 5.78274 7.76995C5.60988 7.59117 5.43461 7.50178 5.24785 7.50178H5.24483C5.06109 7.50178 4.88279 7.59117 4.71296 7.76682C4.56247 7.92247 4.41499 8.075 4.26752 8.23065L4.25664 8.2419C3.91395 8.59883 3.91395 8.99077 4.25966 9.3477C4.99219 10.1053 5.72411 10.8623 6.45664 11.6199C6.4929 11.6574 6.53158 11.695 6.57328 11.7325C6.77394 11.9081 6.99092 12 7.2079 12C7.24416 12 7.28042 11.9969 7.31669 11.9912C7.56449 11.9569 7.78449 11.8012 7.95432 11.5449C9.22113 9.61274 10.4716 7.70619 11.8581 5.5896C12.1005 5.22392 12.0279 4.82323 11.6744 4.57006L11.6738 4.57069Z" fill="white"/></svg>';
+$indeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="white"/></svg>';
+
+
 %sds-checkbox {
   INPUT[type=checkbox]:not(.sds-switch) {
-    $checkboxCorrectionFactor: 1px;
-    $checkboxIndeterminateHeight: 2px;
-
-    // ###### Needed to put "px" because only zero value in SASS variable has an unexpected behavior.
-    $checkboxIconCorrectionOverlap: 0px;
-
-    @include selectionElement(2px, $checkboxCorrectionFactor) {
-      --tempCheck01: var(--sds-selection-icon-size) / 2;
-      --tempCheck02: var(--sds-checkbox-internal-checked-size) / 2;
-      --tempCheck03: var(--sds-radio-internal-checked-size) / 2;
-      left: calc(var(--tempCheck01) - var(--tempCheck02));
-      bottom: calc(
-        var(--tempCheck01) -
-        var(--tempCheck02) -
-        #{$checkboxIconCorrectionOverlap} +
-        var(--sds-selection-icon-spacer)
-      );
-      border: none;
-      background-color: unset;
-      font-family: var(--sds-icon-font-family);
-      content: var(--sds-icon-checkbox-checked);
-      font-size: var(--sds-checkbox-internal-checked-size);
-      line-height: var(--sds-checkbox-internal-checked-size);
-      color: var(--sds-selection-internal-checked-color);
-    }
-    &:disabled, &.disabled {
-      &:checked + LABEL {
-        &:after {
-          background-color: unset;
-          color: var(--sds-selection-internal-checked-disabled-color);
+    @include selectionElement('checkbox', $checked) {
+      &:disabled, &.disabled {
+        &.sds-checkbox--indeterminate {
+          &:checked + LABEL {
+            &:before {
+              border-color: var(--sds-checkbox-indeterminate-disabled-border-color);
+              background-color: var(--sds-checkbox-indeterminate-disabled-background-color);
+            }
+          }
         }
       }
 
       &.sds-checkbox--indeterminate {
         &:checked + LABEL {
           &:before {
-            border-color: var(--sds-selection-checked-disabled-border-color);
-            background-color: var(--sds-selection-checked-disabled-background-color);
+            border-color: var(--sds-checkbox-indeterminate-border-color);
+            background-color: var(--sds-checkbox-indeterminate-background-color);
           }
           &:after {
-            background-color: var(--sds-selection-internal-checked-disabled-color);
+            background-image: url($indeterminate);
           }
-        }
-      }
-    }
-
-    &:checked:not(.sds-selection--vertical):not(:first-of-type):not(:last-of-type) + LABEL {
-      &:after {
-        left: 2px;
-      }
-    }
-
-    &.sds-checkbox--indeterminate {
-      &:checked + LABEL {
-        &:before {
-          border-color: var(--sds-checkbox-indeterminate-border-color);
-          background-color: var(--sds-checkbox-indeterminate-background-color);
-        }
-        &:after {
-          left: calc(var(--tempCheck01) - var(--tempCheck03));
-          bottom: calc(
-            var(--tempCheck01) -
-            #{$checkboxIndeterminateHeight / 2} -
-            #{$checkboxCorrectionFactor} +
-            var(--sds-selection-icon-spacer)
-          );
-          width: var(--sds-radio-internal-checked-size);
-          max-width: var(--sds-radio-internal-checked-size);
-          height: $checkboxIndeterminateHeight;
-          max-height: $checkboxIndeterminateHeight;
-          min-height: $checkboxIndeterminateHeight;
-          background-color: var(--sds-checkbox-internal-indeterminate-background-color);
-          content: '';
         }
       }
     }

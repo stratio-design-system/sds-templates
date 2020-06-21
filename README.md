@@ -4,7 +4,7 @@ CSS Multi-Templates Design System.
 ## Installation
 First clone this repository:
 ```
-git clone https://github.com/stratio-design-system/sds-templates.git
+git clone https://github.com/stratio-design/sds-templates.git
 ```
 
 Install package dependencies:

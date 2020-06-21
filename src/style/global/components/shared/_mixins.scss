@@ -1,37 +1,39 @@
 //## Mixin for generate selection element basic structure.
-//## PARAMETERS: border-radius, position-correction-factor
-@mixin selectionElement($borderRadius, $correctionFactor) {
+//## PARAMETERS: selection-element, selection-element-checked
+@mixin selectionElement($selectionElement, $selectionElementChecked) {
   display: none;
   & + LABEL {
     position: relative;
     display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
     margin-right: var(--sds-selection-option-spacer);
-    padding: var(--sds-selection-icon-spacer) 0;
-    color: var(--sds-label-color);
+    padding: var(--sds-selection-icon-spacer) 0 var(--sds-selection-icon-spacer) calc(var(--sds-selection-icon-size) + var(--sds-selection-icon-spacer));
     cursor: pointer;
-    width: fit-content;
-    min-width: fit-content;
-    height: var(--sds-selection-icon-size);
-    min-height: var(--sds-selection-icon-size);
-    line-height: unset;
     &:before {
-      position: relative;
+      position: absolute;
       display: inline-block;
-      box-sizing: border-box;
       content: '';
-      left: 0;
-      top: $correctionFactor;
+      box-sizing: border-box;
       width: var(--sds-selection-icon-size);
+      min-width: var(--sds-selection-icon-size);
       max-width: var(--sds-selection-icon-size);
       height: var(--sds-selection-icon-size);
+      min-height: var(--sds-selection-icon-size);
       max-height: var(--sds-selection-icon-size);
+      left: 0;
       border: var(--sds-component-border);
       border-color: var(--sds-component-border-color);
+      @if $selectionElement == 'checkbox' {
+        border-radius: var(--sds-checkbox-border-radius);
+      }
+      @if $selectionElement == 'radio' {
+        border-radius: var(--sds-radio-border-radius);
+      }
       background-color: var(--sds-component-background-color);
-      border-radius: $borderRadius;
-      margin-right: var(--sds-selection-icon-spacer);
     }
   }
+
   &:hover {
     & + LABEL {
       &:before {
@@ -40,6 +42,7 @@
       }
     }
   }
+
   &:disabled, &.disabled {
     & + LABEL {
       color: var(--sds-selection-disabled-tex-color);
@@ -54,11 +57,9 @@
         border-color: var(--sds-selection-checked-disabled-border-color);
         background-color: var(--sds-selection-checked-disabled-background-color);
       }
-      &:after {
-        background-color: var(--sds-selection-internal-checked-disabled-color);
-      }
     }
   }
+
   &:checked + LABEL {
     &:before {
       border-color: var(--sds-component-checked-border-color);
@@ -67,20 +68,25 @@
     &:after {
       position: absolute;
       display: inline-block;
-      box-sizing: border-box;
+      left: 0;
       content: '';
-      @content;
+      width: var(--sds-selection-icon-size);
+      min-width: var(--sds-selection-icon-size);
+      max-width: var(--sds-selection-icon-size);
+      height: var(--sds-selection-icon-size);
+      min-height: var(--sds-selection-icon-size);
+      max-height: var(--sds-selection-icon-size);
+      background-image: url($selectionElementChecked);
+      background-size: var(--sds-selection-icon-size) var(--sds-selection-icon-size);
     }
   }
   &.sds-selection--no-label + LABEL {
     font-size: 0;
-    line-height: 0;
   }
-  &.sds-selection--vertical {
-    & + LABEL {
-      display: flex;
-    }
+  &.sds-selection--vertical + LABEL {
+    display: flex;
   }
+  @content;
 }
 
 //## Mixin for generate input text element basic structure.

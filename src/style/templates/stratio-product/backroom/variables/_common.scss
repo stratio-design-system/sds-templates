@@ -86,17 +86,15 @@
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
   --sds-selection-checked-disabled-background-color: var(--sds-color-action-40);
 
-  --sds-selection-internal-checked-color: var(--sds-color-neutral-full);
-  --sds-selection-internal-checked-disabled-color: var(--sds-color-neutral-full);
-
   // ###### RADIO Button
-  --sds-radio-internal-checked-size: 6px;
+  --sds-radio-border-radius: 100%;
 
   // ###### CHECKBOX Button
-  --sds-checkbox-internal-checked-size: 14px;
+  --sds-checkbox-border-radius: 2px;
   --sds-checkbox-indeterminate-border-color: var(--sds-color-action);
-  --sds-checkbox-indeterminate-background-color: var(--sds-color-action);
-  --sds-checkbox-internal-indeterminate-background-color: var(--sds-color-neutral-full);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-neutral-full);
+  --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-40);
+  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-neutral-full);
 
   // ###### TEXTAREA
   --sds-textarea-resize: vertical;

@@ -1,20 +1,9 @@
 @import './shared/mixins';
 
+$checked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="white"/></svg>';
+
 %sds-radio {
   INPUT[type=radio] {
-    $radioCorrectionFactor: 1px;
-
-    @include selectionElement(100%, $radioCorrectionFactor) {
-      --tempRadio01: calc(var(--sds-selection-icon-size) / 2);
-      --tempRadio02: calc(var(--sds-radio-internal-checked-size) / 2);
-      left: calc(var(--tempRadio01) - var(--tempRadio02));
-      bottom: calc(var(--tempRadio01) - var(--tempRadio02) - #{$radioCorrectionFactor} + var(--sds-selection-icon-spacer));
-      width: var(--sds-radio-internal-checked-size);
-      max-width: var(--sds-radio-internal-checked-size);
-      height: var(--sds-radio-internal-checked-size);
-      max-height: var(--sds-radio-internal-checked-size);
-      background-color: var(--sds-selection-internal-checked-color);
-      border-radius: 100%;
-    }
+    @include selectionElement('radio', $checked);
   }
 }

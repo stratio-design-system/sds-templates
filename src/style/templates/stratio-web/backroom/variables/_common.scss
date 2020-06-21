@@ -14,6 +14,7 @@
 
   // ###### Component Commons
   --sds-component-width: fit-content;
+  --sds-component-height: #{getRemRelativeSize(40, $fontSizeRoot)};
   --sds-component-vertical-spacer: #{getRemRelativeSize(2, $fontSizeRoot)};
 
   --sds-component-padding-vertical: #{getRemRelativeSize(9, $fontSizeRoot)};
@@ -21,6 +22,9 @@
 
   --sds-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
   --sds-component-border-radius: #{getRemRelativeSize(4, $fontSizeRoot)};
+
+  --sds-component-icon-left-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+  --sds-component-icon-right-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
 
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action);
@@ -84,17 +88,15 @@
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
   --sds-selection-checked-disabled-background-color: var(--sds-color-action-40);
 
-  --sds-selection-internal-checked-color: var(--sds-color-neutral-full);
-  --sds-selection-internal-checked-disabled-color: var(--sds-color-neutral-full);
-
   // ###### RADIO Button
-  --sds-radio-internal-checked-size: #{getRemRelativeSize(6, $fontSizeRoot)};
+  --sds-radio-border-radius: 100%;
 
   // ###### CHECKBOX Button
-  --sds-checkbox-internal-checked-size: #{getRemRelativeSize(14, $fontSizeRoot)};
+  --sds-checkbox-border-radius: #{getRemRelativeSize(2, $fontSizeRoot)};
   --sds-checkbox-indeterminate-border-color: var(--sds-color-action);
-  --sds-checkbox-indeterminate-background-color: var(--sds-color-neutral-full);
-  --sds-checkbox-internal-indeterminate-background-color: var(--sds-color-action);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-action);
+  --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-40);
+  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-action-40);
 
   // ###### TEXTAREA
   --sds-textarea-height: #{getRemRelativeSize(40, $fontSizeRoot)};

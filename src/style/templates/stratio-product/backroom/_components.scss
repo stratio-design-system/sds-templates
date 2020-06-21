@@ -1,6 +1,8 @@
 @import '../../../global/mixins';
-
 @import './font-sizes';
+
+$indeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
+$indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(156, 200, 242)"/></svg>';
 
 %sds-components-template {
   LABEL {
@@ -23,10 +25,27 @@
   INPUT[type=radio], INPUT[type=checkbox] {
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--sds-selection-icon-size) + 1px);
     }
   }
-  INPUT[type=checkbox] + LABEL {
-    --sds-radio-internal-checked-size: 10px;
+  INPUT[type=checkbox]:not(.sds-switch) {
+    &:disabled, &.disabled {
+      &.sds-checkbox--indeterminate {
+        &:checked + LABEL {
+          &:after {
+            background-image: url($indeterminateDisabled);
+          }
+        }
+      }
+    }
+
+    &.sds-checkbox--indeterminate {
+      &:checked + LABEL {
+        &:after {
+          background-image: url($indeterminate);
+        }
+      }
+    }
   }
 
   SPAN, DIV {

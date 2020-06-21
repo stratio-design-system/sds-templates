@@ -6,13 +6,13 @@
 %sds-components-template {
   LABEL {
     &.sds-label, &.sds-label.sds-label--small {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   INPUT, SPAN, DIV {
     &.sds-input {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-input--small {
         --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
       }
@@ -21,18 +21,19 @@
 
   INPUT[type=radio], INPUT[type=checkbox] {
     & + LABEL {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--sds-selection-icon-size) + 1px);
     }
   }
 
   SPAN, DIV {
     &.sds-report {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   TEXTAREA.sds-textarea {
-    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
     &.sds-textarea--small {
       --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
       --sds-textarea-height: #{getRemRelativeSize(32, $fontSizeRoot)};
@@ -41,7 +42,7 @@
 
   SELECT, SPAN, DIV {
     &.sds-select {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-select--small:not(.sds-select--filter) {
         --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
       }

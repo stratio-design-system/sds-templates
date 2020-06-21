@@ -4,12 +4,12 @@
   "description": "SDS Templates :: Stratio EY Playbook Template",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stratio-design-system/sds-templates.git"
+    "url": "git+https://github.com/stratio-design/sds-templates.git"
   },
   "author": "Nul Pàs <manu@lunaeme.com> (https://github.com/nulpas)",
   "license": "proprietary",
   "bugs": {
-    "url": "https://github.com/stratio-design-system/sds-templates/issues"
+    "url": "https://github.com/stratio-design/sds-templates/issues"
   },
-  "homepage": "https://github.com/stratio-design-system/sds-templates/tree/master/src/style/templates/ey#readme"
+  "homepage": "https://github.com/stratio-design/sds-templates/tree/master/src/style/templates/ey#readme"
 }
