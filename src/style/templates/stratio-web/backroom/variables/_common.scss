@@ -17,7 +17,7 @@
   --sds-component-height: #{getRemRelativeSize(40, $fontSizeRoot)};
   --sds-component-vertical-spacer: #{getRemRelativeSize(2, $fontSizeRoot)};
 
-  --sds-component-padding-vertical: #{getRemRelativeSize(9, $fontSizeRoot)};
+  --sds-component-padding-vertical: 0;
   --sds-component-padding-horizontal: #{getRemRelativeSize(10, $fontSizeRoot)};
 
   --sds-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
@@ -81,7 +81,7 @@
 
   // ###### Generic SELECTION elements (like radio or checkbox)
   --sds-selection-option-spacer: #{getRemRelativeSize(20, $fontSizeRoot)};
-  --sds-selection-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+  --sds-selection-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
   --sds-selection-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-50);
@@ -103,8 +103,6 @@
   --sds-textarea-resize: vertical;
 
   // ###### BUTTON
-  --sds-button-border-radius: #{getRemRelativeSize(20, $fontSizeRoot)};
-
   --sds-button-color: var(--sds-color-neutral-full);
   --sds-button-border-color: var(--sds-color-action);
   --sds-button-background-color: var(--sds-color-action);
@@ -119,8 +117,7 @@
   --sds-button-disabled-background-color: var(--sds-color-space-10);
   --sds-button-disabled-icon-color: var(--sds-color-space-30);
 
-  --sds-button-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
-  --sds-button-icon-spacer: #{getRemRelativeSize(16, $fontSizeRoot)};
+  --sds-button-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
 
   // ###### SWITCH
   --sds-switch-background-color: var(--sds-color-space-30);

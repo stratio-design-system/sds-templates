@@ -14,7 +14,9 @@
     &.sds-input {
       @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-input--small {
-        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+        --sds-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+        --sds-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       }
     }
   }
@@ -22,7 +24,6 @@
   INPUT[type=radio], INPUT[type=checkbox] {
     & + LABEL {
       @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-      line-height: calc(var(--sds-selection-icon-size) + 1px);
     }
   }
 
@@ -33,38 +34,44 @@
   }
 
   TEXTAREA.sds-textarea {
+    padding-top: calc((var(--sds-component-height) - (#{getRemRelativeSize(16, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
     @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
     &.sds-textarea--small {
-      --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
-      --sds-textarea-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+      --sds-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+      --sds-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
+      padding-top: calc((var(--sds-component-height) - (#{getRemRelativeSize(14, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   SELECT, SPAN, DIV {
-    &.sds-select {
-      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-select--small:not(.sds-select--filter) {
-        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
-      }
-      &.sds-select--filter {
-        --sds-component-width: fit-content;
-        --sds-component-padding-vertical: 0;
-      }
-      &.sds-select--placeholder {
-        color: var(--sds-component-placeholder-color);
-      }
+    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-select--small, &.sds-select--filter {
+      --sds-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+      --sds-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+    &.sds-select--filter {
+      --sds-component-width: fit-content;
+      --sds-component-padding-vertical: 0;
+    }
+    &.sds-select--placeholder {
+      color: var(--sds-component-placeholder-color);
     }
   }
 
   BUTTON {
     &.sds-button {
-      font-size: #{getRemRelativeSize(14, $fontSizeRoot)};
-      line-height: #{getRemRelativeSize(20, $fontSizeRoot)};
-
       --sds-component-padding-horizontal: #{getRemRelativeSize(20, $fontSizeRoot)};
-      --sds-component-border-radius: var(--sds-button-border-radius);
+      --sds-component-icon-left-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
+      --sds-component-border-radius: #{getRemRelativeSize(20, $fontSizeRoot)};
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-button--small {
-        --sds-component-padding-vertical: #{getRemRelativeSize(5, $fontSizeRoot)};
+        --sds-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        I.sds-icon {
+          --sds-button-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+        }
       }
       &.sds-button--secondary, &.sds-button--bob {
         --sds-button-color: var(--sds-color-action);
@@ -118,24 +125,18 @@
 
   SPAN, DIV {
     &.sds-tag {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      I.sds-icon {
-        font-size: inherit;
-        line-height: #{getRemRelativeSize(14, $fontSizeRoot)};
-      }
+      --sds-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
+      font-size: getRemRelativeSize(16, $fontSizeRoot);
+      line-height: calc(var(--sds-tag-height) - #{getRemRelativeSize(2, $fontSizeRoot)});
       &.sds-tag--medium {
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-tag-padding-vertical: #{getRemRelativeSize(4, $fontSizeRoot)};
-        I.sds-icon {
-          line-height: #{getRemRelativeSize(12, $fontSizeRoot)};
-        }
+        --sds-component-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+        --sds-tag-height: #{getRemRelativeSize(24, $fontSizeRoot)};
+        font-size: getRemRelativeSize(14, $fontSizeRoot);
       }
       &.sds-tag--small {
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-tag-padding-vertical: #{getRemRelativeSize(2, $fontSizeRoot)};
-        I.sds-icon {
-          line-height: #{getRemRelativeSize(12, $fontSizeRoot)};
-        }
+        --sds-component-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+        --sds-tag-height: #{getRemRelativeSize(18, $fontSizeRoot)};
+        font-size: getRemRelativeSize(14, $fontSizeRoot);
       }
       &.sds-tag--info {
         color: var(--sds-tag-info-text-color);
