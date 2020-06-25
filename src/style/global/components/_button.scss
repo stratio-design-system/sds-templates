@@ -73,8 +73,9 @@
       min-width: var(--sds-component-height);
       I.sds-icon {
         @extend %sds-button-icon;
-        left: calc((var(--sds-component-height) - 1.1em) / 2);
-        top: -1px;
+        left: 0;
+        top: calc(var(--sds-button-border-correction) * -1);
+        width: calc(var(--sds-component-height) - var(--sds-button-border-correction));
       }
     }
 

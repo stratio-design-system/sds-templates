@@ -118,6 +118,7 @@
   --sds-button-disabled-icon-color: var(--sds-color-space-30);
 
   --sds-button-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
+  --sds-button-border-correction: #{getRemRelativeSize(2, $fontSizeRoot)};
 
   // ###### SWITCH
   --sds-switch-background-color: var(--sds-color-space-30);

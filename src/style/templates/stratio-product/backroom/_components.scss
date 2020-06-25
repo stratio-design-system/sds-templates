@@ -28,6 +28,20 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
       line-height: calc(var(--sds-selection-icon-size) + 1px);
     }
   }
+
+  INPUT[type=radio] {
+    & + LABEL {
+      &:before {
+        top: var(--sds-selection-icon-spacer);
+      }
+    }
+    &:checked + LABEL {
+      &:after {
+        top: var(--sds-selection-icon-spacer);
+      }
+    }
+  }
+
   INPUT[type=checkbox]:not(.sds-switch) {
     &:disabled, &.disabled {
       &.sds-checkbox--indeterminate {
@@ -98,7 +112,7 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
           --sds-button-icon-spacer: 4px;
         }
       }
-      &.sds-button--icon-left, &.sds-button--icon-right {
+      &.sds-button--icon-left, &.sds-button--icon-right, &.sds-button--icon-only {
         I.sds-icon {
           top: -1px;
         }
