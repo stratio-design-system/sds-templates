@@ -87,12 +87,20 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
     &.sds-button {
       --sds-component-padding-horizontal: 20px;
       --sds-component-icon-left-spacer: 8px;
+      padding-top: 2px;
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: 1;
       &.sds-button--small {
         --sds-component-height: 30px;
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        line-height: 1;
         I.sds-icon {
           --sds-button-icon-spacer: 4px;
+        }
+      }
+      &.sds-button--icon-left, &.sds-button--icon-right {
+        I.sds-icon {
+          top: -1px;
         }
       }
       &.sds-button--secondary, &.sds-button--bob {
