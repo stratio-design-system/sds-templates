@@ -57,6 +57,7 @@
       #{unquote($_local01)}
       #{unquote($_local02)}
       #{$_types};
+    font-display: swap;
     @content;
   }
 }
