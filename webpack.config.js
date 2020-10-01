@@ -39,14 +39,16 @@ module.exports = (env) => {
               loader: 'resolve-url-loader'
             },
             {
-              loader: 'postcss-loader', options: {
-                ident: 'postcss',
-                plugins: () => [
-                  postcssPresetEnv({
-                    stage: 0,
-                    browsers: 'last 2 versions'
-                  })
-                ]
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: () => [
+                    postcssPresetEnv({
+                      stage: 0,
+                      browsers: 'last 2 versions'
+                    })
+                  ]
+                }
               }
             },
             {

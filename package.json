@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/sds-templates",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "description": "SDS Template System.",
   "main": "index.js",
   "scripts": {
@@ -25,24 +25,24 @@
   },
   "homepage": "https://github.com/stratio-design/sds-templates#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
-    "@types/node": "^14.0.13",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
+    "@types/node": "^14.11.2",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^6.0.2",
-    "css-loader": "^3.6.0",
-    "file-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^4.0.2",
     "postcss-preset-env": "^6.7.0",
     "resolve-url-loader": "^3.1.1",
     "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "yarn": "^1.22.4"
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "yarn": "^1.22.10"
   }
 }

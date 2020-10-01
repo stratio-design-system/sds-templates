@@ -194,25 +194,25 @@
   --sds-dropdown-separator-margin: 4px 0;
 
   // ###### NOTIFICATIONS
-  --sds-notifications-position: fixed;
-  --sds-notifications-padding: 7px 15px;
-  --sds-notifications-width: fit-content;
-  --sds-notifications-min-width: unset;
-  --sds-notifications-max-width: 50vw;
-  --sds-notifications-top: 0;
-  --sds-notifications-left: 0;
-  --sds-notifications-z-index: 1;
+  --sds-notification-position: fixed;
+  --sds-notification-padding: 7px 15px;
+  --sds-notification-width: fit-content;
+  --sds-notification-min-width: unset;
+  --sds-notification-max-width: 50vw;
+  --sds-notification-top: 0;
+  --sds-notification-left: 0;
+  --sds-notification-z-index: 1;
 
-  --sds-notifications-border: 1px solid;
-  --sds-notifications-border-radius: var(--sds-component-border-radius);
-  --sds-notifications-box-shadow: 0 3px 9px rgba(17, 17, 17, 0.25);
+  --sds-notification-border: 1px solid;
+  --sds-notification-border-radius: var(--sds-component-border-radius);
+  --sds-notification-box-shadow: 0 3px 9px rgba(17, 17, 17, 0.25);
 
-  --sds-notifications-text-color: var(--sds-color-space-80);
-  --sds-notifications-border-color: var(--sds-color-neutral-full);
-  --sds-notifications-background-color: var(--sds-color-neutral-full);
+  --sds-notification-text-color: var(--sds-color-space-80);
+  --sds-notification-border-color: var(--sds-color-neutral-full);
+  --sds-notification-background-color: var(--sds-color-neutral-full);
 
-  --sds-notifications-icon-separation: 10px;
-  --sds-notifications-close-control-separation: 50px;
+  --sds-notification-icon-separation: 10px;
+  --sds-notification-close-control-separation: 50px;
 
-  --sds-notifcations-inside-link-color: var(--sds-color-action);
+  sds-notification-inside-link-color: var(--sds-color-action);
 }

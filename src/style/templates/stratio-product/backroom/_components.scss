@@ -218,21 +218,21 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
     }
   }
 
-  .sds-notifications {
-    &.sds-notifications--success {
-      --sds-notifications-text-color: var(--sds-color-neutral-full);
-      --sds-notifications-border-color: var(--sds-color-success);
-      --sds-notifications-background-color: var(--sds-color-success);
+  .sds-notification {
+    &.sds-notification--success {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-success);
+      --sds-notification-background-color: var(--sds-color-success);
     }
-    &.sds-notifications--warning {
-      --sds-notifications-text-color: var(--sds-color-neutral-full);
-      --sds-notifications-border-color: var(--sds-color-warning);
-      --sds-notifications-background-color: var(--sds-color-warning);
+    &.sds-notification--warning {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-warning);
+      --sds-notification-background-color: var(--sds-color-warning);
     }
-    &.sds-notifications--critical {
-      --sds-notifications-text-color: var(--sds-color-neutral-full);
-      --sds-notifications-border-color: var(--sds-color-critical);
-      --sds-notifications-background-color: var(--sds-color-critical);
+    &.sds-notification--critical {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-critical);
+      --sds-notification-background-color: var(--sds-color-critical);
     }
   }
 }
