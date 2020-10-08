@@ -177,17 +177,21 @@
 
   --sds-dropdown-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-rgb), 0.25);
 
-  --sds-dropdown-padding: 8px 0;
+  --sds-dropdown-padding: 4px 0;
   --sds-dropdown-margin: 0;
 
+  --sds-dropdown-option-min-height: 40px;
   --sds-dropdown-option-padding: 8px 16px;
   --sds-dropdown-option-icon-size: 16px;
   --sds-dropdown-option-icon-spacer: 8px;
+  --sds-dropdown-option-label-correction: 1px;
 
-  --sds-dropdown-option-selected-text-color: inherit;
-  --sds-dropdown-option-selected-background-color: var(--sds-color-action-10);
+  --sds-dropdown-option-hover-background-color: var(--sds-color-action-10);
+
+  --sds-dropdown-option-selected-background-color: var(--sds-color-space-10);
 
   --sds-dropdown-option-icon-right-size: 14px;
+  --sds-dropdown-option-icon-right-spacer: 40px;
 
   --sds-dropdown-separator-border: var(--sds-component-border);
   --sds-dropdown-separator-border-color: var(--sds-color-space-20);
@@ -214,5 +218,5 @@
   --sds-notification-icon-separation: 10px;
   --sds-notification-close-control-separation: 50px;
 
-  sds-notification-inside-link-color: var(--sds-color-action);
+  --sds-notification-inside-link-color: var(--sds-color-action);
 }

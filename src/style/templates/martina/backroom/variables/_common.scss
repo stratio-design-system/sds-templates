@@ -178,14 +178,18 @@
   --sds-dropdown-padding: 8px 0;
   --sds-dropdown-margin: 0;
 
+  --sds-dropdown-option-min-height: 38px;
   --sds-dropdown-option-padding: 8px 16px;
   --sds-dropdown-option-icon-size: 16px;
   --sds-dropdown-option-icon-spacer: 8px;
+  --sds-dropdown-option-label-correction: 1px;
 
-  --sds-dropdown-option-selected-text-color: inherit;
+  --sds-dropdown-option-hover-background-color: var(--sds-color-neutral-8);
+
   --sds-dropdown-option-selected-background-color: var(--sds-color-action-10);
 
   --sds-dropdown-option-icon-right-size: 14px;
+  --sds-dropdown-option-icon-right-spacer: 40px;
 
   --sds-dropdown-separator-border: var(--sds-component-border);
   --sds-dropdown-separator-border-color: var(--sds-color-space-20);
