@@ -3,6 +3,7 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const CopyPlugin = require('copy-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 module.exports = (env) => {
   // ###### CHECK INTERNAL IMPORTS:
@@ -14,7 +15,12 @@ module.exports = (env) => {
   }
 
   return {
-    mode: 'development',
+    mode: 'production',
+    performance: {
+      hints: false,
+      maxEntrypointSize: 600000,
+      maxAssetSize: 600000
+    },
     entry: {
       [env['TEMPLATE']]: path.resolve(__dirname, `src/style/templates/${env['TEMPLATE']}/${env['TEMPLATE']}.scss`)
     },
@@ -70,6 +76,7 @@ module.exports = (env) => {
       ]
     },
     plugins: [
+      new FixStyleOnlyEntriesPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].css'
       }),

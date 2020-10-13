@@ -36,6 +36,7 @@ testem.log
 .npmrc
 package-lock.json
 yarn.lock
+/src/js/ts/colors.ts
 
 # System Files
 .DS_Store

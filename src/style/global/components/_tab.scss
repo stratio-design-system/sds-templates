@@ -1,0 +1,21 @@
+%sds-tab {
+  .sds-tab {
+    --sds-tab-default-width: var(--sds-tab-width);
+    --sds-tab-default-border: var(--sds-tab-border);
+    --sds-tab-default-border-color: var(--sds-tab-border-color);
+
+    --sds-tab-default-height: var(--sds-tab-height);
+
+    --sds-tab-default-cell-padding: var(--sds-tab-cell-padding);
+    --sds-tab-default-cell-margin-bottom: var(--sds-tab-cell-margin-bottom);
+    --sds-tab-default-cell-color: var(--sds-tab-cell-color);
+    --sds-tab-default-cell-hover-color: var(--sds-tab-cell-hover-color);
+    --sds-tab-default-cell-cursor: var(--sds-tab-cell-cursor);
+
+    --sds-tab-default-cell-active-padding-bottom: var(--sds-tab-cell-active-padding-bottom);
+    --sds-tab-default-cell-active-color: var(--sds-tab-cell-active-color);
+    --sds-tab-default-cell-active-border: var(--sds-tab-cell-active-border);
+    --sds-tab-default-cell-active-border-color: var(--sds-tab-cell-active-border-color);
+    --sds-tab-default-cell-active-cursor: var(--sds-tab-cell-active-cursor);
+  }
+}

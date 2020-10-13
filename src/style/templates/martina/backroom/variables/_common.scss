@@ -194,4 +194,102 @@
   --sds-dropdown-separator-border: var(--sds-component-border);
   --sds-dropdown-separator-border-color: var(--sds-color-space-20);
   --sds-dropdown-separator-margin: 4px 0;
+
+  // ###### NOTIFICATION
+  --sds-notification-position: fixed;
+  --sds-notification-padding: 7px 15px;
+  --sds-notification-width: fit-content;
+  --sds-notification-min-width: unset;
+  --sds-notification-max-width: 50vw;
+  --sds-notification-top: 0;
+  --sds-notification-left: 0;
+  --sds-notification-z-index: 1;
+
+  --sds-notification-border: var(--sds-component-border);
+  --sds-notification-border-radius: var(--sds-component-border-radius);
+  --sds-notification-box-shadow: 0 3px 9px rgba(17, 17, 17, 0.25);
+
+  --sds-notification-text-color: var(--sds-color-space-80);
+  --sds-notification-border-color: var(--sds-color-neutral-full);
+  --sds-notification-background-color: var(--sds-color-neutral-full);
+
+  --sds-notification-icon-separation: 10px;
+  --sds-notification-close-control-separation: 50px;
+
+  --sds-notification-inside-link-color: var(--sds-color-action);
+
+  // ###### LINK
+  --sds-link-color: var(--sds-color-action);
+  --sds-link-hover-color: var(--sds-color-action-120);
+
+  // ###### ALERT
+  --sds-alert-position: fixed;
+  --sds-alert-padding-vertical: 32px;
+  --sds-alert-padding-horizontal: var(--sds-alert-padding-vertical);
+  --sds-alert-width: 350px;
+  --sds-alert-min-width: var(--sds-alert-width);
+  --sds-alert-max-width: var(--sds-alert-width);
+  --sds-alert-top: 0;
+  --sds-alert-left: 0;
+  --sds-alert-z-index: 1;
+
+  --sds-alert-border: var(--sds-component-border);
+  --sds-alert-border-radius: var(--sds-component-border-radius);
+  --sds-alert-box-shadow: 0 3px 9px rgba(17, 17, 17, 0.25);
+
+  --sds-alert-close-control-color: var(--sds-color-space-80);
+  --sds-alert-close-control-top: -15px;
+  --sds-alert-close-control-right: -15px;
+
+  --sds-alert-header-separation: 12px;
+  --sds-alert-title-icon-separation: 12px;
+
+  --sds-alert-title-text-color: var(--sds-color-space-110);
+  --sds-alert-title-icon-color: var(--sds-color-action);
+  --sds-alert-title-icon-spacer: 8px;
+  --sds-alert-body-text-color: var(--sds-color-space-80);
+  --sds-alert-border-color: var(--sds-color-space-20);
+  --sds-alert-background-color: var(--sds-color-neutral-full);
+
+  --sds-alert-actions-height: 40px;
+  --sds-alert-actions-background-color: var(--sds-color-space-5);
+  --sds-alert-actions-separation: 2px;
+
+  // ###### TAB
+  $sdsTabAuxCellPaddingBottom: 4px;
+  $sdsTabAuxCellActiveBorderWidth: 2px;
+
+  --sds-tab-width: 100%;
+  --sds-tab-border: var(--sds-component-border);
+  --sds-tab-border-color: var(--sds-color-space-20);
+
+  --sds-tab-height: var(--sds-component-height);
+
+  --sds-tab-cell-padding: 0 24px #{$sdsTabAuxCellPaddingBottom} 24px;
+  --sds-tab-cell-margin-bottom: -1px;
+  --sds-tab-cell-color: var(--sds-color-action);
+  --sds-tab-cell-hover-color: var(--sds-color-action-120);
+  --sds-tab-cell-cursor: pointer;
+
+  --sds-tab-cell-active-padding-bottom: calc(#{$sdsTabAuxCellPaddingBottom} - #{$sdsTabAuxCellActiveBorderWidth});
+  --sds-tab-cell-active-color: var(--sds-color-space-110);
+  --sds-tab-cell-active-border: #{$sdsTabAuxCellActiveBorderWidth} solid;
+  --sds-tab-cell-active-border-color: var(--sds-color-space-110);
+  --sds-tab-cell-active-cursor: default;
+
+  // ###### TOGGLE BUTTON
+  $sdsToggleButtonBorderWidth: 1px;
+  --sds-toggle-button-border: #{$sdsToggleButtonBorderWidth} solid;
+  --sds-toggle-button-margin-left: calc(#{$sdsToggleButtonBorderWidth} * (-1));
+  --sds-toggle-button-border-color: var(--sds-color-space-40);
+  --sds-toggle-button-border-radius: var(--sds-component-border-radius);
+
+  --sds-toggle-button-disabled-border-color: var(--sds-color-space-20);
+
+  --sds-toggle-button-active-color: var(--sds-color-space);
+  --sds-toggle-button-active-background-color: var(--sds-color-space-10);
+
+  --sds-toggle-button-active-disabled-color: var(--sds-color-space-30);
+  --sds-toggle-button-active-disabled-border-color: var(--sds-color-space-20);
+  --sds-toggle-button-active-disabled-background-color: var(--sds-color-space-5);
 }

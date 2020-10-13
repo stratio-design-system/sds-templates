@@ -1,29 +1,37 @@
+@import './alert';
 @import './button';
 @import './checkbox';
 @import './dropdown';
 @import './input';
 @import './label';
+@import './link';
 @import './notifications';
 @import './radio';
 @import './report';
 @import './select';
 @import './spinner';
 @import './switch';
+@import './tab';
 @import './tag';
 @import './textarea';
+@import './toggle-button';
 
 %sds-components {
+  @extend %sds-alert;
   @extend %sds-button;
   @extend %sds-checkbox;
   @extend %sds-dropdown;
   @extend %sds-input;
   @extend %sds-label;
+  @extend %sds-link;
   @extend %sds-notification;
   @extend %sds-radio;
   @extend %sds-report;
   @extend %sds-select;
   @extend %sds-spinner;
   @extend %sds-switch;
+  @extend %sds-tab;
   @extend %sds-tag;
   @extend %sds-textarea;
+  @extend %sds-toggle-button;
 }

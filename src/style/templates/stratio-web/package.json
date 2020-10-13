@@ -1,7 +1,9 @@
 {
   "name": "@stratiods/stratio-web",
-  "version": "4.0.6",
+  "version": "5.0.2",
   "description": "SDS Templates :: Stratio Web Template",
+  "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stratio-design/sds-templates.git"

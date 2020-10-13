@@ -34,7 +34,8 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
   }
   .sds-icon-text {
     &:before {
-      vertical-align: middle;
+      position: relative;
+      top: 0.095em;
       font-size: 1.142em;
       line-height: unset;
       margin-right: 0.35em;

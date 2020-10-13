@@ -1,7 +1,9 @@
 {
   "name": "@stratiods/martina",
-  "version": "4.0.4",
+  "version": "5.0.2",
   "description": "SDS Templates :: Martina Test Template",
+  "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stratio-design/sds-templates.git"

@@ -8,15 +8,18 @@
       width: fit-content;
       max-width: fit-content;
       box-sizing: border-box;
+      white-space: nowrap;
       padding: var(--sds-selection-icon-spacer) 0;
       margin-right: var(--sds-selection-option-spacer);
       line-height: var(--sds-switch-height);
       color: var(--sds-label-color);
+      cursor: pointer;
       &:before {
         position: relative;
         left: 0;
         top: 0;
         content: '';
+        cursor: default;
         width: calc(var(--sds-switch-height) * 2);
         height: var(--sds-switch-height);
         background-color: var(--sds-switch-background-color);
@@ -104,6 +107,7 @@
       position: relative;
       display: inline-flex;
       align-items: center;
+      white-space: nowrap;
       width: fit-content;
       max-width: fit-content;
       box-sizing: border-box;
@@ -111,11 +115,13 @@
       margin-right: var(--sds-selection-option-spacer);
       line-height: var(--sds-switch-height);
       color: var(--sds-label-color);
+      cursor: pointer;
       &:after {
         position: relative;
         left: 0;
         top: 0;
         content: '';
+        cursor: default;
         width: calc(var(--sds-switch-height) * 2);
         height: var(--sds-switch-height);
         background-color: var(--sds-switch-background-color);

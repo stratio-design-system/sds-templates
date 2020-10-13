@@ -32,12 +32,12 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
   INPUT[type=radio] {
     & + LABEL {
       &:before {
-        top: var(--sds-selection-icon-spacer);
+        top: var(--sds-selection-icon-spacer-vertical);
       }
     }
     &:checked + LABEL {
       &:after {
-        top: var(--sds-selection-icon-spacer);
+        top: var(--sds-selection-icon-spacer-vertical);
       }
     }
   }
@@ -233,6 +233,50 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
       --sds-notification-text-color: var(--sds-color-neutral-full);
       --sds-notification-border-color: var(--sds-color-critical);
       --sds-notification-background-color: var(--sds-color-critical);
+    }
+  }
+
+  A.sds-link {
+    &.sds-link-small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  .sds-alert {
+    .sds-alert__header {
+      .sds-alert__title {
+        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+    &:not(.sds-alert--connection-lost) {
+      border-left: 4px solid var(--sds-color-action);
+    }
+    &.sds-alert--success {
+      border-left: 4px solid var(--sds-color-success);
+      --sds-alert-title-icon-color: var(--sds-color-success);
+    }
+    &.sds-alert--warning {
+      border-left: 4px solid var(--sds-color-warning);
+      --sds-alert-title-icon-color: var(--sds-color-warning);
+    }
+    &.sds-alert--critical {
+      border-left: 4px solid var(--sds-color-critical);
+      --sds-alert-title-icon-color: var(--sds-color-critical);
+    }
+    &.sds-alert--connection-lost{
+      --sds-alert-background-color: var(--sds-color-space-70);
+      --sds-alert-border-color: var(--sds-color-space-70);
+      --sds-alert-body-text-color: var(--sds-color-neutral-full);
+      --sds-alert-title-icon-color: var(--sds-color-neutral-full);
+      --sds-alert-title-text-color: var(--sds-color-neutral-full);
+    }
+  }
+
+  .sds-tab {
+    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-tab--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      --sds-tab-height: 30px;
     }
   }
 }

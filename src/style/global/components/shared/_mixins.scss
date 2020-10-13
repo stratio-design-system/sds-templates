@@ -8,8 +8,10 @@
     align-items: center;
     box-sizing: border-box;
     margin-right: var(--sds-selection-option-spacer);
-    padding: var(--sds-selection-icon-spacer) 0 var(--sds-selection-icon-spacer) calc(var(--sds-selection-icon-size) + var(--sds-selection-icon-spacer));
+    padding: var(--sds-selection-icon-spacer-vertical) 0 var(--sds-selection-icon-spacer-vertical) calc(var(--sds-selection-icon-size) + var(--sds-selection-icon-spacer));
     cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
     &:before {
       position: absolute;
       display: inline-block;

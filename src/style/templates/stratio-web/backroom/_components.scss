@@ -184,4 +184,66 @@
       --sds-spinner-color: var(--sds-color-neutral-full);
     }
   }
+
+  .sds-notification {
+    &.sds-notification--success {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-success);
+      --sds-notification-background-color: var(--sds-color-success);
+    }
+    &.sds-notification--warning {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-warning);
+      --sds-notification-background-color: var(--sds-color-warning);
+    }
+    &.sds-notification--critical {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-critical);
+      --sds-notification-background-color: var(--sds-color-critical);
+    }
+  }
+
+  A.sds-link {
+    &.sds-link-small {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  .sds-alert {
+    .sds-alert__header {
+      .sds-alert__title {
+        @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+    &:not(.sds-alert--connection-lost) {
+      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--sds-color-action);
+    }
+    &.sds-alert--success {
+      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--sds-color-success);
+      --sds-alert-title-icon-color: var(--sds-color-success);
+    }
+    &.sds-alert--warning {
+      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--sds-color-warning);
+      --sds-alert-title-icon-color: var(--sds-color-warning);
+    }
+    &.sds-alert--critical {
+      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--sds-color-critical);
+      --sds-alert-title-icon-color: var(--sds-color-critical);
+    }
+    &.sds-alert--connection-lost{
+      --sds-alert-background-color: var(--sds-color-space-70);
+      --sds-alert-border-color: var(--sds-color-space-70);
+      --sds-alert-body-text-color: var(--sds-color-neutral-full);
+      --sds-alert-title-icon-color: var(--sds-color-neutral-full);
+      --sds-alert-title-text-color: var(--sds-color-neutral-full);
+    }
+  }
+
+  .sds-tab {
+    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-tab--small {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      --sds-tab-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+    }
+  }
 }
