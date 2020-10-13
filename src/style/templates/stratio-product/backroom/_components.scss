@@ -213,6 +213,10 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
       --sds-spinner-size: 20px;
       --sds-spinner-line-width: 5px;
     }
+    &.sds-spinner--80 {
+      --sds-spinner-size: 80px;
+      --sds-spinner-line-width: 3px;
+    }
     &.sds-spinner--inverse {
       --sds-spinner-color: var(--sds-color-neutral-full);
     }

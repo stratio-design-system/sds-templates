@@ -189,6 +189,10 @@
       --sds-spinner-size: 20px;
       --sds-spinner-line-width: 5px;
     }
+    &.sds-spinner--80 {
+      --sds-spinner-size: 80px;
+      --sds-spinner-line-width: 3px;
+    }
     &.sds-spinner--inverse {
       --sds-spinner-color: var(--sds-color-neutral-full);
     }

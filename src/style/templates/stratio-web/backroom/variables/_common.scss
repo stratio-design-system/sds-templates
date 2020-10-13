@@ -165,8 +165,8 @@
 
   // ###### SPINNER
   --sds-spinner-display: block;
-  --sds-spinner-size: #{getRemRelativeSize(80, $fontSizeRoot)};
-  --sds-spinner-line-width: #{getRemRelativeSize(3, $fontSizeRoot)};
+  --sds-spinner-size: #{getRemRelativeSize(60, $fontSizeRoot)};
+  --sds-spinner-line-width: 3px;
   --sds-spinner-color: var(--sds-color-action);
 
   // ###### DROPDOWN

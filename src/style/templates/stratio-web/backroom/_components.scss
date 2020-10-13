@@ -180,6 +180,10 @@
       --sds-spinner-size: #{getRemRelativeSize(20, $fontSizeRoot)};
       --sds-spinner-line-width: 5px;
     }
+    &.sds-spinner--80 {
+      --sds-spinner-size: #{getRemRelativeSize(80, $fontSizeRoot)};
+      --sds-spinner-line-width: 3px;
+    }
     &.sds-spinner--inverse {
       --sds-spinner-color: var(--sds-color-neutral-full);
     }
