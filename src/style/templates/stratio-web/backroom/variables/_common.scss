@@ -170,7 +170,7 @@
   --sds-spinner-color: var(--sds-color-action);
 
   // ###### DROPDOWN
-  --sds-dropdown-position: fixed;
+  --sds-dropdown-position: absolute;
   --sds-dropdown-width: fit-content;
   --sds-dropdown-min-width: #{getRemRelativeSize(150, $fontSizeRoot)};
   --sds-dropdown-left: 0;
