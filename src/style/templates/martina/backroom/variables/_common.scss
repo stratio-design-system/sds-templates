@@ -78,8 +78,8 @@
   --sds-selection-icon-spacer: 4px;
   --sds-selection-icon-spacer-vertical: 4px;
   --sds-selection-icon-size: 16px;
-  --sds-selection-z-index-before: 0;
-  --sds-selection-z-index-after: 0;
+  --sds-selection-z-index-before: auto;
+  --sds-selection-z-index-after: auto;
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-50);
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);

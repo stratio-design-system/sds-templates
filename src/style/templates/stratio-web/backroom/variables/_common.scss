@@ -84,8 +84,8 @@
   --sds-selection-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
   --sds-selection-icon-spacer-vertical: #{getRemRelativeSize(4, $fontSizeRoot)};
   --sds-selection-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
-  --sds-selection-z-index-before: 0;
-  --sds-selection-z-index-after: 0;
+  --sds-selection-z-index-before: auto;
+  --sds-selection-z-index-after: auto;
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-50);
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
