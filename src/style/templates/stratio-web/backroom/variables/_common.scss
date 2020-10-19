@@ -84,6 +84,8 @@
   --sds-selection-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
   --sds-selection-icon-spacer-vertical: #{getRemRelativeSize(4, $fontSizeRoot)};
   --sds-selection-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
+  --sds-selection-z-index-before: 0;
+  --sds-selection-z-index-after: 0;
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-50);
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
@@ -173,8 +175,8 @@
   --sds-dropdown-position: absolute;
   --sds-dropdown-width: fit-content;
   --sds-dropdown-min-width: #{getRemRelativeSize(150, $fontSizeRoot)};
-  --sds-dropdown-left: 0;
   --sds-dropdown-top: 0;
+  --sds-dropdown-left: 0;
 
   --sds-dropdown-border: none;
   --sds-dropdown-border-color: unset;
@@ -186,10 +188,13 @@
   --sds-dropdown-margin: 0;
 
   --sds-dropdown-option-min-height: #{getRemRelativeSize(40, $fontSizeRoot)};
-  --sds-dropdown-option-padding: #{getRemRelativeSize(8, $fontSizeRoot)} #{getRemRelativeSize(16, $fontSizeRoot)};
+  --sds-dropdown-option-padding-vertical: #{getRemRelativeSize(8, $fontSizeRoot)};
+  --sds-dropdown-option-padding-horizontal: #{getRemRelativeSize(16, $fontSizeRoot)};
   --sds-dropdown-option-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
   --sds-dropdown-option-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
   --sds-dropdown-option-label-correction: #{getRemRelativeSize(1, $fontSizeRoot)};
+  --sds-dropdown-option-hover-color: var(--sds-color-action-10);
+  --sds-dropdown-option-border-radius: 0;
 
   --sds-dropdown-option-hover-background-color: var(--sds-color-action-10);
 

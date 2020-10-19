@@ -82,6 +82,8 @@
   --sds-selection-icon-spacer: 8px;
   --sds-selection-icon-spacer-vertical: 4px;
   --sds-selection-icon-size: 16px;
+  --sds-selection-z-index-before: 0;
+  --sds-selection-z-index-after: 0;
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-50);
   --sds-selection-checked-disabled-border-color: var(--sds-color-action-40);
@@ -169,8 +171,8 @@
   --sds-dropdown-position: absolute;
   --sds-dropdown-width: fit-content;
   --sds-dropdown-min-width: 150px;
-  --sds-dropdown-left: 0;
   --sds-dropdown-top: 0;
+  --sds-dropdown-left: 0;
 
   --sds-dropdown-border: none;
   --sds-dropdown-border-color: unset;
@@ -182,10 +184,13 @@
   --sds-dropdown-margin: 0;
 
   --sds-dropdown-option-min-height: 40px;
-  --sds-dropdown-option-padding: 8px 16px;
+  --sds-dropdown-option-padding-vertical: 8px;
+  --sds-dropdown-option-padding-horizontal: 16px;
   --sds-dropdown-option-icon-size: 16px;
   --sds-dropdown-option-icon-spacer: 8px;
   --sds-dropdown-option-label-correction: 1px;
+  --sds-dropdown-option-hover-color: var(--sds-color-action-10);
+  --sds-dropdown-option-border-radius: 0;
 
   --sds-dropdown-option-hover-background-color: var(--sds-color-action-10);
 

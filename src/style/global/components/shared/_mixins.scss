@@ -17,6 +17,7 @@
       display: inline-block;
       content: '';
       box-sizing: border-box;
+      z-index: var(--sds-selection-z-index-before);
       width: var(--sds-selection-icon-size);
       min-width: var(--sds-selection-icon-size);
       max-width: var(--sds-selection-icon-size);
@@ -72,6 +73,7 @@
       display: inline-block;
       left: 0;
       content: '';
+      z-index: var(--sds-selection-z-index-after);
       width: var(--sds-selection-icon-size);
       min-width: var(--sds-selection-icon-size);
       max-width: var(--sds-selection-icon-size);
