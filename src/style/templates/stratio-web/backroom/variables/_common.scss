@@ -187,6 +187,9 @@
   --sds-dropdown-padding: #{getRemRelativeSize(8, $fontSizeRoot)} 0;
   --sds-dropdown-margin: 0;
 
+  --sds-dropdown-option-group-min-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+  --sds-dropdown-option-group-color: var(--sds-color-space-50);
+
   --sds-dropdown-option-min-height: #{getRemRelativeSize(40, $fontSizeRoot)};
   --sds-dropdown-option-padding-vertical: #{getRemRelativeSize(8, $fontSizeRoot)};
   --sds-dropdown-option-padding-horizontal: #{getRemRelativeSize(16, $fontSizeRoot)};

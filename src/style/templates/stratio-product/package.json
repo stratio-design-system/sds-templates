@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/stratio-product",
-  "version": "5.0.6",
+  "version": "5.0.7",
   "description": "SDS Templates :: Stratio Product Template",
   "main": "index.js",
   "types": "index.d.ts",
