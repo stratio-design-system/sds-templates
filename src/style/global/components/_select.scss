@@ -57,6 +57,7 @@
         @extend %sds-select--wrapper;
         &:after {
           right: 0;
+          top: -1px;
         }
         & > SELECT.sds-select {
           border: none;
