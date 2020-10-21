@@ -46,12 +46,13 @@
 
   SELECT, SPAN, DIV {
     @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-    &.sds-select--small, &.sds-select--filter {
+    &.sds-select--small {
       --sds-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
       --sds-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
     &.sds-select--filter {
+      --sds-component-height: fit-content;
       --sds-component-width: fit-content;
       --sds-component-padding-vertical: 0;
     }

@@ -82,12 +82,13 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
   SELECT, SPAN, DIV {
     &.sds-select {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-select--small, &.sds-select--filter {
+      &.sds-select--small {
         --sds-component-height: 30px;
         --sds-component-padding-horizontal: 8px;
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
       &.sds-select--filter {
+        --sds-component-height: fit-content;
         --sds-component-width: fit-content;
         --sds-component-padding-vertical: 0;
       }
