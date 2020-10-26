@@ -10,20 +10,6 @@
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
 
-  // ###### Component Commons
-  --sds-component-width: fit-content;
-  --sds-component-height: 36px;
-  --sds-component-vertical-spacer: 2px;
-
-  --sds-component-padding-vertical: 0;
-  --sds-component-padding-horizontal: 12px;
-
-  --sds-component-border: 1px solid;
-  --sds-component-border-radius: 4px;
-
-  --sds-component-icon-left-spacer: 4px;
-  --sds-component-icon-right-spacer: 8px;
-
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action);
   --sds-error-color: var(--sds-color-critical);
@@ -33,6 +19,7 @@
   --sds-component-background-color: var(--sds-color-neutral-full);
   --sds-component-hover-border-color: var(--sds-color-space-70);
   --sds-component-hover-background-color: var(--sds-color-neutral-full);
+  --sds-component-focus-color: var(--sds-color-action-20);
   --sds-component-focus-border-color: var(--sds-color-action);
   --sds-component-focus-background-color: var(--sds-color-neutral-full);
   --sds-component-error-border-color: var(--sds-color-critical);
@@ -56,6 +43,22 @@
   // ###### Component ICON (icons inside components like .sds-input--search)
   --sds-component-icon-color: var(--sds-color-space-80);
   --sds-component-icon-disabled-color: var(--sds-color-space-50);
+
+  // ###### Component Commons
+  --sds-component-width: fit-content;
+  --sds-component-height: 36px;
+  --sds-component-vertical-spacer: 2px;
+
+  --sds-component-padding-vertical: 0;
+  --sds-component-padding-horizontal: 12px;
+
+  --sds-component-focus-box-shadow: 0 0 0 2px var(--sds-component-focus-color);
+
+  --sds-component-border: 1px solid;
+  --sds-component-border-radius: 4px;
+
+  --sds-component-icon-left-spacer: 4px;
+  --sds-component-icon-right-spacer: 8px;
 
   // ###### ICONS
   --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;

@@ -126,8 +126,8 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
         --sds-button-hover-border-color: var(--sds-color-space-80);
         --sds-button-hover-background-color: var(--sds-color-action-10);
         --sds-button-active-color: var(--sds-color-space);
-        --sds-button-active-border-color: var(--sds-color-space);
-        --sds-button-active-background-color: var(--sds-color-space-10);
+        --sds-button-active-border-color: var(--sds-color-space-80);
+        --sds-button-active-background-color: var(--sds-color-action-20);
         --sds-button-disabled-color: var(--sds-color-space-30);
         --sds-button-disabled-border-color: var(--sds-color-space-20);
         --sds-button-disabled-background-color: var(--sds-color-neutral-full);
@@ -140,8 +140,8 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
         --sds-button-hover-border-color: var(--sds-color-action-10);
         --sds-button-hover-background-color: var(--sds-color-action-10);
         --sds-button-active-color: var(--sds-color-space);
-        --sds-button-active-border-color: var(--sds-color-space-10);
-        --sds-button-active-background-color: var(--sds-color-space-10);
+        --sds-button-active-border-color: var(--sds-color-action-20);
+        --sds-button-active-background-color: var(--sds-color-action-20);
       }
       &.sds-button--critical {
         --sds-button-color: var(--sds-color-neutral-full);

@@ -10,20 +10,6 @@
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
 
-  // ###### Component Commons
-  --sds-component-width: fit-content;
-  --sds-component-vertical-spacer: 2px;
-
-  --sds-component-padding-vertical: 9px;
-  --sds-component-padding-horizontal: 10px;
-
-  --sds-component-border: 1px solid;
-  --sds-component-border-radius: 25px;
-
-  // ###### Generic Colors (HEX)
-  --sds-focus-color: var(--sds-color-action);
-  --sds-error-color: var(--sds-color-critical);
-
   // ###### Component Colors (HEX)
   --sds-component-border-color: var(--sds-color-space-40);
   --sds-component-background-color: var(--sds-color-neutral-full);
@@ -52,6 +38,22 @@
   // ###### Component ICON (icons inside components like .sds-input--search)
   --sds-component-icon-color: var(--sds-color-space-80);
   --sds-component-icon-disabled-color: var(--sds-color-space-50);
+
+  // ###### Component Commons
+  --sds-component-width: fit-content;
+  --sds-component-vertical-spacer: 2px;
+
+  --sds-component-padding-vertical: 9px;
+  --sds-component-padding-horizontal: 10px;
+
+  --sds-component-focus-box-shadow: none;
+
+  --sds-component-border: 1px solid;
+  --sds-component-border-radius: 25px;
+
+  // ###### Generic Colors (HEX)
+  --sds-focus-color: var(--sds-color-action);
+  --sds-error-color: var(--sds-color-critical);
 
   // ###### ICONS
   --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;

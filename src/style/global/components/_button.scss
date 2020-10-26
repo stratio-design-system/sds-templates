@@ -30,6 +30,9 @@
         color: inherit;
       }
     }
+    &:focus, &.focus {
+      box-shadow: var(--sds-component-focus-box-shadow);
+    }
     &:active, &.pressed {
       color: var(--sds-button-active-color);
       border-color: var(--sds-button-active-border-color);

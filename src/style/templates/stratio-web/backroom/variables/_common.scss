@@ -12,20 +12,6 @@
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
 
-  // ###### Component Commons
-  --sds-component-width: fit-content;
-  --sds-component-height: #{getRemRelativeSize(40, $fontSizeRoot)};
-  --sds-component-vertical-spacer: #{getRemRelativeSize(2, $fontSizeRoot)};
-
-  --sds-component-padding-vertical: 0;
-  --sds-component-padding-horizontal: #{getRemRelativeSize(10, $fontSizeRoot)};
-
-  --sds-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
-  --sds-component-border-radius: #{getRemRelativeSize(4, $fontSizeRoot)};
-
-  --sds-component-icon-left-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
-  --sds-component-icon-right-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
-
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action);
   --sds-error-color: var(--sds-color-critical);
@@ -35,6 +21,7 @@
   --sds-component-background-color: var(--sds-color-neutral-full);
   --sds-component-hover-border-color: var(--sds-color-space-70);
   --sds-component-hover-background-color: var(--sds-color-neutral-full);
+  --sds-component-focus-color: var(--sds-color-action-20);
   --sds-component-focus-border-color: var(--sds-color-action);
   --sds-component-focus-background-color: var(--sds-color-neutral-full);
   --sds-component-error-border-color: var(--sds-color-critical);
@@ -58,6 +45,22 @@
   // ###### Component ICON (icons inside components like .sds-input--search)
   --sds-component-icon-color: var(--sds-color-space-80);
   --sds-component-icon-disabled-color: var(--sds-color-space-50);
+
+  // ###### Component Commons
+  --sds-component-width: fit-content;
+  --sds-component-height: #{getRemRelativeSize(40, $fontSizeRoot)};
+  --sds-component-vertical-spacer: #{getRemRelativeSize(2, $fontSizeRoot)};
+
+  --sds-component-padding-vertical: 0;
+  --sds-component-padding-horizontal: #{getRemRelativeSize(10, $fontSizeRoot)};
+
+  --sds-component-focus-box-shadow: 0 0 0 2px var(--sds-component-focus-color);
+
+  --sds-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
+  --sds-component-border-radius: #{getRemRelativeSize(4, $fontSizeRoot)};
+
+  --sds-component-icon-left-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+  --sds-component-icon-right-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
 
   // ###### ICONS
   --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
