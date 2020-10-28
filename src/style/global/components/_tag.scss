@@ -48,6 +48,9 @@
 
       &.sds-tag--interactive {
         cursor: pointer;
+        &.sds-tag--selectable {
+          cursor: default;
+        }
         &:hover {
           color: var(--sds-tag-hover-text-color);
           border-color: var(--sds-tag-hover-border-color);

@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/martina",
-  "version": "5.0.11",
+  "version": "5.0.12",
   "description": "SDS Templates :: Martina Test Template",
   "main": "index.js",
   "types": "index.d.ts",

@@ -139,10 +139,10 @@
         --sds-tag-height: #{getRemRelativeSize(18, $fontSizeRoot)};
         font-size: getRemRelativeSize(14, $fontSizeRoot);
       }
-      &.sds-tag--info {
-        color: var(--sds-tag-info-text-color);
-        border-color: var(--sds-tag-info-border-color);
-        background-color: var(--sds-tag-info-background-color);
+      &.sds-tag--neutral {
+        color: var(--sds-tag-neutral-text-color);
+        border-color: var(--sds-tag-neutral-border-color);
+        background-color: var(--sds-tag-neutral-background-color);
       }
       &.sds-tag--critical {
         color: var(--sds-tag-critical-text-color);
