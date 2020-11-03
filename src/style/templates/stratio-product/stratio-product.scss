@@ -19,7 +19,7 @@ HTML {
       outline: none;
     }
 
-    @extend %sds-typography-definition;
+    @extend %sds-nunito-sans-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS

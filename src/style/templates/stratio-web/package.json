@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/stratio-web",
-  "version": "5.0.12",
+  "version": "5.0.13",
   "description": "SDS Templates :: Stratio Web Template",
   "main": "index.js",
   "types": "index.d.ts",

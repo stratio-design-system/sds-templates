@@ -9,6 +9,7 @@
   BUTTON.sds-button {
     position: relative;
     display: table-cell;
+    width: fit-content;
     height: var(--sds-component-height);
     min-height: var(--sds-component-height);
     box-sizing: border-box;

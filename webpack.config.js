@@ -33,7 +33,10 @@ module.exports = (env) => {
           test: /\.scss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: ''
+              }
             },
             {
               loader: 'css-loader',
@@ -67,12 +70,11 @@ module.exports = (env) => {
         },
         {
           test: /\.(eot|otf|svg|ttf|woff|woff2)$/i,
-          loader: 'file-loader?name=fonts/[name].[ext]'
-        },
-        // {
-        //   test: /\.(jpe?g|png|gif|svg)$/i,
-        //   loader: 'file-loader?name=assets/img/[name].[ext]'
-        // }
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]'
+          }
+        }
       ]
     },
     plugins: [

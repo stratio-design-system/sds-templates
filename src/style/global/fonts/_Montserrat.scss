@@ -13,7 +13,7 @@
   );
 }
 
-%sds-typography__base {
+%sds-montserrat-typography-definition {
   @each $key, $value in $fontWeightsAvailable {
     .sds-typo__#{$key} {
       @include createTypographyElement(map-get($value, weight), map-get($value, style));

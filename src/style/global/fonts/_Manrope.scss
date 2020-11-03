@@ -13,7 +13,7 @@
   );
 }
 
-%sds-typography-definition {
+%sds-manrope-typography-definition {
   @each $key, $value in $fontWeightsAvailable {
     .sds-font--#{$key} {
       @include createTypographyElement(map-get($value, weight), map-get($value, style));

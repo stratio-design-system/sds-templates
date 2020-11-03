@@ -13,7 +13,7 @@
   );
 }
 
-%sds-typography-definition {
+%sds-inter-typography-definition {
   @each $key, $value in $fontWeightsAvailable {
     .sds-font--#{$key} {
       @include createTypographyElement(map-get($value, weight), map-get($value, style));

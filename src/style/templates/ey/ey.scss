@@ -19,7 +19,7 @@ HTML {
       outline: none;
     }
 
-    @extend %sds-typography__base;
+    @extend %sds-poppins-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS

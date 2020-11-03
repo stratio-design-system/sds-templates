@@ -21,7 +21,7 @@ HTML {
       outline: none;
     }
 
-    @extend %sds-typography-definition;
+    @extend %sds-inter-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
