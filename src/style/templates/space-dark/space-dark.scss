@@ -1,27 +1,25 @@
 @import '../../global/mixins';
-@import '../../global/fonts/Inter';
+@import '../../global/fonts/Nunito';
 @import '../../global/fonts/Stratio-Icon';
 @import '../../global/components/components';
 
 @import './backroom/variables/common';
-@import './backroom/variables/sass';
 @import './backroom/components';
 @import './backroom/font-sizes';
-@import '../space-light/backroom/colors';
+@import './backroom/colors';
 
 HTML {
-  &#sds-stratio-web-tpl, &.sds-stratio-web-tpl {
-    // font-size: getRelativeSize($fontSizeRoot, $viewportWidthReferenceInPX);
+  &#sds-space-dark-tpl, &.sds-space-dark-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
     * {
-      font-family: Inter, sans-serif;
-      color: $colorSpace;
+      font-family: 'Nunito Sans', sans-serif;
+      color: var(--sds-color-space-6);
       outline: none;
     }
 
-    @extend %sds-inter-typography-definition;
+    @extend %sds-nunito-sans-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
@@ -31,11 +29,14 @@ HTML {
       .sds--bold {
         font-weight: bold;
       }
+      .sds--italic {
+        font-style: italic;
+      }
 
       // ###### DEFAULT SIZE
       .sds-font--default {
         font-size: 1rem;
-        line-height: $fontLineHeightFactor + rem;
+        line-height: $fontLineHeightFactor;
       }
     }
 

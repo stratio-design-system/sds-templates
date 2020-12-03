@@ -18,17 +18,31 @@
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
 
+  // ###### LAYOUT COLORS
+  --sds-lay-background-1: var(--sds-color-space-17);
+  --sds-lay-background-2: var(--sds-color-space-16);
+  --sds-lay-background-3: var(--sds-color-space-15);
+
+  --sds-lay-background-header: var(--sds-color-space-16);
+  --sds-lay-background-toolbar: var(--sds-color-space-15);
+  --sds-lay-background-sidebar: var(--sds-color-space-16);
+
+  // ###### Generic Colors (HEX)
+  --sds-focus-color: var(--sds-color-action);
+  --sds-error-color: var(--sds-color-critical);
+
   // ###### Component Colors (HEX)
-  --sds-component-border-color: var(--sds-color-space-40);
-  --sds-component-background-color: var(--sds-color-neutral-full);
-  --sds-component-hover-border-color: var(--sds-color-space-70);
-  --sds-component-hover-background-color: var(--sds-color-neutral-full);
+  --sds-component-border-color: var(--sds-color-space-7);
+  --sds-component-background-color: transparent;
+  --sds-component-hover-border-color: var(--sds-color-space-6);
+  --sds-component-hover-background-color: transparent;
+  --sds-component-focus-color: var(--sds-color-action-20);
   --sds-component-focus-border-color: var(--sds-color-action);
   --sds-component-focus-background-color: var(--sds-color-neutral-full);
   --sds-component-error-border-color: var(--sds-color-critical);
   --sds-component-error-background-color: var(--sds-color-neutral-full);
-  --sds-component-checked-border-color: var(--sds-color-action);
-  --sds-component-checked-background-color: var(--sds-color-action);
+  --sds-component-checked-border-color: var(--sds-color-space-4);
+  --sds-component-checked-background-color: var(--sds-color-space-4);
 
   // ###### Component Colors (RGB Variations)
   --sds-component-focus-border-color-rgb: var(--sds-color-action-rgb);
@@ -49,19 +63,19 @@
 
   // ###### Component Commons
   --sds-component-width: fit-content;
+  --sds-component-height: 36px;
   --sds-component-vertical-spacer: 2px;
 
-  --sds-component-padding-vertical: 9px;
-  --sds-component-padding-horizontal: 10px;
+  --sds-component-padding-vertical: 0;
+  --sds-component-padding-horizontal: 12px;
 
-  --sds-component-focus-box-shadow: none;
+  --sds-component-focus-box-shadow: 0 0 0 2px var(--sds-component-focus-color);
 
   --sds-component-border: 1px solid;
-  --sds-component-border-radius: 25px;
+  --sds-component-border-radius: 4px;
 
-  // ###### Generic Colors (HEX)
-  --sds-focus-color: var(--sds-color-action);
-  --sds-error-color: var(--sds-color-critical);
+  --sds-component-icon-left-spacer: 4px;
+  --sds-component-icon-right-spacer: 8px;
 
   // ###### ICONS
   --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
@@ -84,8 +98,8 @@
   --sds-report-color: var(--sds-color-space-80);
 
   // ###### Generic SELECTION elements (like radio or checkbox)
-  --sds-selection-option-spacer: 20px;
-  --sds-selection-icon-spacer: 4px;
+  --sds-selection-option-spacer: 24px;
+  --sds-selection-icon-spacer: 8px;
   --sds-selection-icon-spacer-vertical: 4px;
   --sds-selection-icon-size: 16px;
   --sds-selection-z-index-before: auto;
@@ -99,14 +113,13 @@
   --sds-radio-border-radius: 100%;
 
   // ###### CHECKBOX Button
-  --sds-checkbox-border-radius: 4px;
+  --sds-checkbox-border-radius: 2px;
   --sds-checkbox-indeterminate-border-color: var(--sds-color-action);
-  --sds-checkbox-indeterminate-background-color: var(--sds-color-action);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-neutral-full);
   --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-40);
-  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-action-40);
+  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-neutral-full);
 
   // ###### TEXTAREA
-  --sds-textarea-height: 40px;
   --sds-textarea-resize: vertical;
 
   // ###### BUTTON
@@ -119,13 +132,13 @@
   --sds-button-active-color: var(--sds-color-neutral-full);
   --sds-button-active-border-color: var(--sds-color-action-150);
   --sds-button-active-background-color: var(--sds-color-action-150);
-  --sds-button-disabled-color: var(--sds-color-action-60);
-  --sds-button-disabled-border-color: var(--sds-color-action-10);
-  --sds-button-disabled-background-color: var(--sds-color-action-10);
-  --sds-button-disabled-icon-color: var(--sds-color-neutral-full);
+  --sds-button-disabled-color: var(--sds-color-space-30);
+  --sds-button-disabled-border-color: var(--sds-color-space-5);
+  --sds-button-disabled-background-color: var(--sds-color-space-5);
+  --sds-button-disabled-icon-color: var(--sds-color-space-30);
 
-  --sds-button-icon-size: 16px;
-  --sds-button-icon-spacer: 4px;
+  --sds-button-icon-spacer: 8px;
+  --sds-button-border-correction: 2px;
 
   // ###### SWITCH
   --sds-switch-background-color: var(--sds-color-space-30);
@@ -140,9 +153,9 @@
   --sds-switch-border-radio: 25px;
 
   // ###### TAG
-  --sds-tag-text-color: var(--sds-color-space-110);
-  --sds-tag-border-color: var(--sds-color-space-10);
-  --sds-tag-background-color: var(--sds-color-space-10);
+  --sds-tag-text-color: var(--sds-color-space-8);
+  --sds-tag-border-color: var(--sds-color-space-14);
+  --sds-tag-background-color: var(--sds-color-space-14);
   --sds-tag-neutral-text-color: var(--sds-color-space-110);
   --sds-tag-neutral-border-color: var(--sds-color-space-20);
   --sds-tag-neutral-background-color: var(--sds-color-space-20);
@@ -166,8 +179,7 @@
   --sds-tag-disabled-border-color: var(--sds-color-space-10);
   --sds-tag-disabled-background-color: var(--sds-color-space-10);
 
-  --sds-tag-padding-horizontal: 8px;
-  --sds-tag-padding-vertical: 4px;
+  --sds-tag-height: 30px;
 
   // ###### SPINNER
   --sds-spinner-display: block;
@@ -188,13 +200,13 @@
 
   --sds-dropdown-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-rgb), 0.25);
 
-  --sds-dropdown-padding: 8px 0;
+  --sds-dropdown-padding: 4px 0;
   --sds-dropdown-margin: 0;
 
   --sds-dropdown-option-group-min-height: 30px;
   --sds-dropdown-option-group-color: var(--sds-color-space-50);
 
-  --sds-dropdown-option-min-height: 38px;
+  --sds-dropdown-option-min-height: 40px;
   --sds-dropdown-option-padding-vertical: 8px;
   --sds-dropdown-option-padding-horizontal: 16px;
   --sds-dropdown-option-icon-size: 16px;
@@ -203,9 +215,9 @@
   --sds-dropdown-option-hover-color: var(--sds-color-action-10);
   --sds-dropdown-option-border-radius: 0;
 
-  --sds-dropdown-option-hover-background-color: var(--sds-color-neutral-8);
+  --sds-dropdown-option-hover-background-color: var(--sds-color-action-10);
 
-  --sds-dropdown-option-selected-background-color: var(--sds-color-action-10);
+  --sds-dropdown-option-selected-background-color: var(--sds-color-space-10);
 
   --sds-dropdown-option-icon-right-size: 14px;
   --sds-dropdown-option-icon-right-spacer: 40px;
@@ -235,11 +247,11 @@
   --sds-notification-icon-separation: 10px;
   --sds-notification-close-control-separation: 50px;
 
-  --sds-notification-inside-link-color: var(--sds-color-action);
+  --sds-notification-inside-link-color: var(--sds-color-action-5);
 
   // ###### LINK
-  --sds-link-color: var(--sds-color-action);
-  --sds-link-hover-color: var(--sds-color-action-120);
+  --sds-link-color: var(--sds-color-action-5);
+  --sds-link-hover-color: var(--sds-color-action-4);
 
   // ###### ALERT
   --sds-alert-position: fixed;
@@ -280,20 +292,20 @@
 
   --sds-tab-width: 100%;
   --sds-tab-border: var(--sds-component-border);
-  --sds-tab-border-color: var(--sds-color-space-20);
+  --sds-tab-border-color: var(--sds-color-space-7);
 
   --sds-tab-height: var(--sds-component-height);
 
   --sds-tab-cell-padding: 0 24px #{$sdsTabAuxCellPaddingBottom} 24px;
   --sds-tab-cell-margin-bottom: -1px;
-  --sds-tab-cell-color: var(--sds-color-action);
-  --sds-tab-cell-hover-color: var(--sds-color-action-120);
+  --sds-tab-cell-color: var(--sds-color-action-5);
+  --sds-tab-cell-hover-color: var(--sds-color-action-4);
   --sds-tab-cell-cursor: pointer;
 
   --sds-tab-cell-active-padding-bottom: calc(#{$sdsTabAuxCellPaddingBottom} - #{$sdsTabAuxCellActiveBorderWidth});
-  --sds-tab-cell-active-color: var(--sds-color-space-110);
+  --sds-tab-cell-active-color: var(--sds-color-space-7);
   --sds-tab-cell-active-border: #{$sdsTabAuxCellActiveBorderWidth} solid;
-  --sds-tab-cell-active-border-color: var(--sds-color-space-110);
+  --sds-tab-cell-active-border-color: var(--sds-color-space-7);
   --sds-tab-cell-active-cursor: default;
 
   // ###### TOGGLE BUTTON

@@ -1,3 +1,3 @@
 module.exports = {
-  colors: 'stratio-product'
+  colors: 'space-light'
 };

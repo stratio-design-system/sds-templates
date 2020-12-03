@@ -1,0 +1,17 @@
+{
+  "name": "@stratiods/space-dark",
+  "version": "5.0.15",
+  "description": "SDS Templates :: Space Dark Template",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratio-design/sds-templates.git"
+  },
+  "author": "Nul Pàs <manu@lunaeme.com> (https://github.com/nulpas)",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/stratio-design/sds-templates/issues"
+  },
+  "homepage": "https://github.com/stratio-design/sds-templates/tree/master/src/style/templates/space-dark#readme"
+}

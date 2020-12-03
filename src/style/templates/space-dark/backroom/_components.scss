@@ -1,0 +1,287 @@
+@import '../../../global/mixins';
+@import './font-sizes';
+
+$indeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
+$indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(156, 200, 242)"/></svg>';
+
+%sds-components-template {
+  LABEL {
+    &.sds-label, &.sds-label.sds-label--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  INPUT, SPAN, DIV {
+    &.sds-input {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-input--small {
+        --sds-component-height: 30px;
+        --sds-component-padding-horizontal: 8px;
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+  }
+
+  INPUT[type=radio], INPUT[type=checkbox] {
+    & + LABEL {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--sds-selection-icon-size) + 1px);
+    }
+  }
+
+  INPUT[type=radio] {
+    & + LABEL {
+      &:before {
+        top: var(--sds-selection-icon-spacer-vertical);
+      }
+    }
+    &:checked + LABEL {
+      &:after {
+        top: var(--sds-selection-icon-spacer-vertical);
+      }
+    }
+  }
+
+  INPUT[type=checkbox]:not(.sds-switch) {
+    &:disabled, &.disabled {
+      &.sds-checkbox--indeterminate {
+        &:checked + LABEL {
+          &:after {
+            background-image: url($indeterminateDisabled);
+          }
+        }
+      }
+    }
+
+    &.sds-checkbox--indeterminate {
+      &:checked + LABEL {
+        &:after {
+          background-image: url($indeterminate);
+        }
+      }
+    }
+  }
+
+  SPAN, DIV {
+    &.sds-report {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  TEXTAREA.sds-textarea {
+    padding-top: calc((var(--sds-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
+    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-textarea--small {
+      --sds-component-height: 30px;
+      --sds-component-padding-horizontal: 8px;
+      padding-top: calc((var(--sds-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  SELECT, SPAN, DIV {
+    &.sds-select {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-select--small {
+        --sds-component-height: 30px;
+        --sds-component-padding-horizontal: 8px;
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      &.sds-select--filter {
+        --sds-component-height: fit-content;
+        --sds-component-width: fit-content;
+        --sds-component-padding-vertical: 0;
+      }
+      &.sds-select--placeholder {
+        color: var(--sds-component-placeholder-color);
+      }
+    }
+  }
+
+  BUTTON {
+    &.sds-button {
+      --sds-component-padding-horizontal: 20px;
+      --sds-component-icon-left-spacer: 8px;
+      padding-top: 2px;
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: 1;
+      &.sds-button--small {
+        --sds-component-height: 30px;
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        line-height: 1;
+        I.sds-icon {
+          --sds-button-icon-spacer: 4px;
+        }
+      }
+      &.sds-button--icon-left, &.sds-button--icon-right, &.sds-button--icon-only {
+        I.sds-icon {
+          top: -1px;
+        }
+      }
+      &.sds-button--secondary, &.sds-button--bob {
+        --sds-button-color: var(--sds-color-space-70);
+        --sds-button-border-color: var(--sds-color-space-40);
+        --sds-button-background-color: var(--sds-color-neutral-full);
+        --sds-button-hover-color: var(--sds-color-space-80);
+        --sds-button-hover-border-color: var(--sds-color-space-80);
+        --sds-button-hover-background-color: var(--sds-color-action-10);
+        --sds-button-active-color: var(--sds-color-space);
+        --sds-button-active-border-color: var(--sds-color-space-80);
+        --sds-button-active-background-color: var(--sds-color-action-20);
+        --sds-button-disabled-color: var(--sds-color-space-30);
+        --sds-button-disabled-border-color: var(--sds-color-space-20);
+        --sds-button-disabled-background-color: var(--sds-color-neutral-full);
+      }
+      &.sds-button--borderless {
+        --sds-button-color: var(--sds-color-space-7);
+        --sds-button-border-color: transparent;
+        --sds-button-background-color: transparent;
+        --sds-button-hover-color: var(--sds-color-space-7);
+        --sds-button-hover-border-color: transparent;
+        --sds-button-hover-background-color: rgba(var(--sds-color-space-1-rgb), .05);
+        --sds-button-active-color: var(--sds-color-space-7);
+        --sds-button-active-border-color: transparent;
+        --sds-button-active-background-color: rgba(var(--sds-color-space-1-rgb), .08);
+      }
+      &.sds-button--critical {
+        --sds-button-color: var(--sds-color-neutral-full);
+        --sds-button-border-color: var(--sds-color-critical);
+        --sds-button-background-color: var(--sds-color-critical);
+        --sds-button-hover-color: var(--sds-color-neutral-full);
+        --sds-button-hover-border-color: var(--sds-color-critical-120);
+        --sds-button-hover-background-color: var(--sds-color-critical-120);
+        --sds-button-active-color: var(--sds-color-neutral-full);
+        --sds-button-active-border-color: var(--sds-color-critical-140);
+        --sds-button-active-background-color: var(--sds-color-critical-140);
+      }
+    }
+  }
+
+  SPAN, DIV {
+    &.sds-tag {
+      --sds-component-padding-horizontal: 8px;
+      font-size: getRemRelativeSize(14, $fontSizeRoot);
+      line-height: calc(var(--sds-tag-height) - 2px);
+      &.sds-tag--medium {
+        --sds-component-icon-spacer: 4px;
+        --sds-tag-height: 24px;
+        font-size: getRemRelativeSize(12, $fontSizeRoot);
+      }
+      &.sds-tag--small {
+        --sds-component-icon-spacer: 4px;
+        --sds-tag-height: 18px;
+        font-size: getRemRelativeSize(12, $fontSizeRoot);
+      }
+      &.sds-tag--neutral {
+        color: var(--sds-tag-neutral-text-color);
+        border-color: var(--sds-tag-neutral-border-color);
+        background-color: var(--sds-tag-neutral-background-color);
+      }
+      &.sds-tag--critical {
+        color: var(--sds-tag-critical-text-color);
+        border-color: var(--sds-tag-critical-border-color);
+        background-color: var(--sds-tag-critical-background-color);
+      }
+      &.sds-tag--warning {
+        color: var(--sds-tag-warning-text-color);
+        border-color: var(--sds-tag-warning-border-color);
+        background-color: var(--sds-tag-warning-background-color);
+      }
+      &.sds-tag--success {
+        color: var(--sds-tag-success-text-color);
+        border-color: var(--sds-tag-success-border-color);
+        background-color: var(--sds-tag-success-background-color);
+      }
+    }
+  }
+
+  .sds-spinner {
+    &.sds-spinner--inline {
+      --sds-spinner-display: inline-flex;
+    }
+    &.sds-spinner--inherit {
+      --sds-spinner-display: inherit;
+    }
+    &.sds-spinner--12 {
+      --sds-spinner-size: 12px;
+      --sds-spinner-line-width: 7px;
+    }
+    &.sds-spinner--16 {
+      --sds-spinner-size: 16px;
+      --sds-spinner-line-width: 6px;
+    }
+    &.sds-spinner--20 {
+      --sds-spinner-size: 20px;
+      --sds-spinner-line-width: 5px;
+    }
+    &.sds-spinner--80 {
+      --sds-spinner-size: 80px;
+      --sds-spinner-line-width: 3px;
+    }
+    &.sds-spinner--inverse {
+      --sds-spinner-color: var(--sds-color-neutral-full);
+    }
+  }
+
+  .sds-notification {
+    &.sds-notification--success {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-success);
+      --sds-notification-background-color: var(--sds-color-success);
+    }
+    &.sds-notification--warning {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-warning);
+      --sds-notification-background-color: var(--sds-color-warning);
+    }
+    &.sds-notification--critical {
+      --sds-notification-text-color: var(--sds-color-neutral-full);
+      --sds-notification-border-color: var(--sds-color-critical);
+      --sds-notification-background-color: var(--sds-color-critical);
+    }
+  }
+
+  A.sds-link {
+    &.sds-link-small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  .sds-alert {
+    .sds-alert__header {
+      .sds-alert__title {
+        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+    &:not(.sds-alert--connection-lost) {
+      border-left: 4px solid var(--sds-color-action);
+    }
+    &.sds-alert--success {
+      border-left: 4px solid var(--sds-color-success);
+      --sds-alert-title-icon-color: var(--sds-color-success);
+    }
+    &.sds-alert--warning {
+      border-left: 4px solid var(--sds-color-warning);
+      --sds-alert-title-icon-color: var(--sds-color-warning);
+    }
+    &.sds-alert--critical {
+      border-left: 4px solid var(--sds-color-critical);
+      --sds-alert-title-icon-color: var(--sds-color-critical);
+    }
+    &.sds-alert--connection-lost{
+      --sds-alert-background-color: var(--sds-color-space-70);
+      --sds-alert-border-color: var(--sds-color-space-70);
+      --sds-alert-body-text-color: var(--sds-color-neutral-full);
+      --sds-alert-title-icon-color: var(--sds-color-neutral-full);
+      --sds-alert-title-text-color: var(--sds-color-neutral-full);
+    }
+  }
+
+  .sds-tab {
+    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-tab--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      --sds-tab-height: 30px;
+    }
+  }
+}

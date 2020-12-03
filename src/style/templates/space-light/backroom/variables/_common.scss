@@ -1,10 +1,18 @@
+@import '../../../../global/mixins';
 @import '../../../../global/components/shared/common';
+@import '../font-sizes';
 @import '../colors';
 @import './sass';
+@import '../spacing';
 
 %sds-global-vars {
-  // ###### Color Scheme Definition
+  // ###### Spacing Definition
+  @each $value in $spacings {
+    --sds-spacing-#{$value}: #{$value}px;
+    --sds-spacing-relative-#{$value}: #{getRemRelativeSize($value, $fontSizeRoot)};
+  }
 
+  // ###### Color Scheme Definition
   @each $key, $value in $colorsAvailable {
     --sds-color-#{$key}: #{$value};
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};

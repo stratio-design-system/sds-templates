@@ -3,11 +3,11 @@ Stratio Platform Template.
 
 ## Installation
 ```
-npm install @stratiods/stratio-product
+npm install @stratiods/space-light
 ```
 or
 ```
-yarn add @stratiods/stratio-product
+yarn add @stratiods/space-light
 ```
 
 Todo...
