@@ -8,7 +8,7 @@
 @import './backroom/font-sizes';
 
 HTML {
-  &#sds-space-dark-tpl, &.sds-space-dark-tpl {
+  &.sds-space-dark-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 

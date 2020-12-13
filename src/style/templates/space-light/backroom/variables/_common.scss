@@ -15,8 +15,9 @@
 
   // ###### Color Scheme Definition
   @each $key, $value in $colorsAvailable {
-    --sds-color-#{$key}: #{$value};
-    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+    $symbol: if($key==-white or $key==-black,'','-');
+    --sds-color#{$symbol}#{$key}: #{$value};
+    --sds-color#{$symbol}#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
   @each $key, $value in $templateBaseBackgroundColor {
     --sds-color-#{$key}: #{$value};
@@ -204,6 +205,7 @@
   --sds-dropdown-min-width: 150px;
   --sds-dropdown-top: 0;
   --sds-dropdown-left: 0;
+  --sds-dropdown-z-index: 2;
 
   --sds-dropdown-border: none;
   --sds-dropdown-border-color: unset;
