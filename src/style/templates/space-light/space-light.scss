@@ -6,10 +6,9 @@
 @import './backroom/variables/common';
 @import './backroom/components';
 @import './backroom/font-sizes';
-@import './backroom/colors';
 
 HTML {
-  &#sds-space-light-tpl, &.sds-space-light-tpl {
+  &.sds-space-light-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 

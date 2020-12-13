@@ -1,106 +1,119 @@
 @import '../../../global/mixins';
 @import './font-sizes';
 
-$indeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
-$indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(156, 200, 242)"/></svg>';
-
 %sds-components-template {
-  LABEL {
-    &.sds-label, &.sds-label.sds-label--small {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+  // ###### ALERT ####################################################################
+  .sds-alert {
+    .sds-alert__header {
+      .sds-alert__title {
+        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+    &:not(.sds-alert--connection-lost) {
+      border-left: 4px solid var(--sds-color-action-6);
+    }
+    &.sds-alert--success {
+      border-left: 4px solid var(--sds-success-color);
+      --sds-alert-title-icon-color: var(--sds-success-color);
+    }
+    &.sds-alert--warning {
+      border-left: 4px solid var(--sds-warning-color);
+      --sds-alert-title-icon-color: var(--sds-warning-color);
+    }
+    &.sds-alert--critical {
+      border-left: 4px solid var(--sds-error-color);
+      --sds-alert-title-icon-color: var(--sds-error-color);
+    }
+    &.sds-alert--connection-lost{
+      --sds-alert-background-color: var(--sds-color-space-7);
+      --sds-alert-border-color: var(--sds-color-space-7);
+      --sds-alert-body-text-color: var(--sds-color-white);
+      --sds-alert-title-icon-color: var(--sds-color-white);
+      --sds-alert-title-text-color: var(--sds-color-white);
     }
   }
 
-  INPUT, SPAN, DIV {
-    &.sds-input {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-input--small {
-        --sds-component-height: 30px;
-        --sds-component-padding-horizontal: 8px;
+  // ###### BADGE ####################################################################
+  .sds-badge {
+    .sds-badge__box {
+      @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
+    }
+
+    &.sds-badge--alone {
+      --sds-badge-position: relative;
+    }
+
+    &.sds-badge--large {
+      .sds-badge__box {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        --sds-badge-min-width: 24px;
+        --sds-badge-min-height: 24px;
+        --sds-badge-padding: 6px 5px;
+        --sds-badge-text-top: 0;
       }
-      &.sds-input--placeholder-color {
-        color: var(--sds-component-placeholder-color);
+    }
+    &.sds-badge--small {
+      .sds-badge__box {
+        @include defineFontSizeElement(8, $fontSizeRoot, $fontLineHeightFactor);
+        --sds-badge-min-width: 16px;
+        --sds-badge-min-height: 16px;
+        --sds-badge-padding: 3px 2px;
+        --sds-badge-text-top: 1px;
       }
+    }
+    &.sds-badge--x-small {
+      .sds-badge__box {
+        font-size: 0;
+        --sds-badge-min-width: 6px;
+        --sds-badge-min-height: 6px;
+        --sds-badge-padding: 0;
+        --sds-badge-text-top: 1px;
+      }
+    }
+
+    &.sds-badge--info {
+      --sds-badge-background-color: var(--sds-color-action-6);
+      --sds-badge-border-color: var(--sds-color-action-6);
+    }
+    &.sds-badge--success {
+      --sds-badge-background-color: var(--sds-success-color);
+      --sds-badge-border-color: var(--sds-success-color);
+    }
+    &.sds-badge--warning {
+      --sds-badge-background-color: var(--sds-warning-color);
+      --sds-badge-border-color: var(--sds-warning-color);
+    }
+    &.sds-badge--critical {
+      --sds-badge-background-color: var(--sds-error-color);
+      --sds-badge-border-color: var(--sds-error-color);
     }
   }
 
-  INPUT[type=radio], INPUT[type=checkbox] {
-    & + LABEL {
+  // ###### BREADCRUMB ###############################################################
+  .sds-breadcrumb {
+    .sds-breadcrumb__link {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      line-height: calc(var(--sds-selection-icon-size) + 1px);
     }
-  }
-
-  INPUT[type=radio] {
-    & + LABEL {
-      &:before {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
-    }
-    &:checked + LABEL {
-      &:after {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
-    }
-  }
-
-  INPUT[type=checkbox]:not(.sds-switch) {
-    &:disabled, &.disabled {
-      &.sds-checkbox--indeterminate {
-        &:checked + LABEL {
-          &:after {
-            background-image: url($indeterminateDisabled);
-          }
-        }
-      }
-    }
-
-    &.sds-checkbox--indeterminate {
-      &:checked + LABEL {
-        &:after {
-          background-image: url($indeterminate);
-        }
-      }
-    }
-  }
-
-  SPAN, DIV {
-    &.sds-report {
+    .sds-breadcrumb__separator {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
-  }
+    .sds-breadcrumb__dropdown-trigger {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
 
-  TEXTAREA.sds-textarea {
-    padding-top: calc((var(--sds-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
-    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    &.sds-textarea--small {
+    &.sds-breadcrumb--small {
       --sds-component-height: 30px;
-      --sds-component-padding-horizontal: 8px;
-      padding-top: calc((var(--sds-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-    }
-  }
-
-  SELECT, SPAN, DIV {
-    &.sds-select {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-select--small {
-        --sds-component-height: 30px;
-        --sds-component-padding-horizontal: 8px;
+      .sds-breadcrumb__link {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
-      &.sds-select--filter {
-        --sds-component-height: fit-content;
-        --sds-component-width: fit-content;
-        --sds-component-padding-vertical: 0;
-      }
-      &.sds-select--placeholder {
-        color: var(--sds-component-placeholder-color);
+      .sds-breadcrumb__dropdown-trigger {
+        @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
+        top: 0;
       }
     }
   }
 
+  // ###### BUTTON ###################################################################
   BUTTON {
     &.sds-button {
       --sds-component-padding-horizontal: 20px;
@@ -124,7 +137,7 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
       &.sds-button--secondary, &.sds-button--bob {
         --sds-button-color: var(--sds-color-space-7);
         --sds-button-border-color: var(--sds-color-space-5);
-        --sds-button-background-color: white;
+        --sds-button-background-color: var(--sds-color-white);
         --sds-button-hover-color: var(--sds-color-space-8);
         --sds-button-hover-border-color: var(--sds-color-space-8);
         --sds-button-hover-background-color: var(--sds-color-action-1);
@@ -133,12 +146,12 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
         --sds-button-active-background-color: var(--sds-color-action-2);
         --sds-button-disabled-color: var(--sds-color-space-3);
         --sds-button-disabled-border-color: var(--sds-color-space-2);
-        --sds-button-disabled-background-color: white;
+        --sds-button-disabled-background-color: var(--sds-color-white);
       }
       &.sds-button--borderless {
         --sds-button-color: var(--sds-color-space-7);
-        --sds-button-border-color: white;
-        --sds-button-background-color: white;
+        --sds-button-border-color: var(--sds-color-white);
+        --sds-button-background-color: var(--sds-color-white);
         --sds-button-hover-color: var(--sds-color-space-8);
         --sds-button-hover-border-color: var(--sds-color-action-1);
         --sds-button-hover-background-color: var(--sds-color-action-1);
@@ -147,19 +160,262 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
         --sds-button-active-background-color: var(--sds-color-action-2);
       }
       &.sds-button--critical {
-        --sds-button-color: white;
+        --sds-button-color: var(--sds-color-white);
         --sds-button-border-color: var(--sds-error-color);
         --sds-button-background-color: var(--sds-error-color);
-        --sds-button-hover-color: white;
+        --sds-button-hover-color: var(--sds-color-white);
         --sds-button-hover-border-color: var(--sds-color-coral-7);
         --sds-button-hover-background-color: var(--sds-color-coral-7);
-        --sds-button-active-color: white;
+        --sds-button-active-color: var(--sds-color-white);
         --sds-button-active-border-color: var(--sds-color-coral-8);
         --sds-button-active-background-color: var(--sds-color-coral-8);
       }
     }
   }
 
+  // ###### CHECKBOX #################################################################
+  $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
+  $checkboxIndeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(156, 200, 242)"/></svg>';
+  INPUT[type=checkbox] {
+    & + LABEL {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--sds-selection-icon-size) + 1px);
+    }
+    &:not(.sds-switch) {
+      &:disabled, &.disabled {
+        &.sds-checkbox--indeterminate {
+          &:checked + LABEL {
+            &:after {
+              --sds-checkbox-indeterminate: url('#{$checkboxIndeterminateDisabled}');
+            }
+          }
+        }
+      }
+
+      &.sds-checkbox--indeterminate {
+        &:checked + LABEL {
+          &:after {
+            --sds-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
+          }
+        }
+      }
+    }
+  }
+
+  // ###### DATEPICKER ###############################################################
+  .sds-calendar {
+    .sds-calendar__nav {
+      DIV {
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        I {
+          @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
+    }
+    .sds-calendar__container {
+      .sds-calendar__body {
+        .sds-calendar__date {
+          @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+          --sds-button-disabled-color: var(--sds-color-space-4);
+          --sds-button-disabled-background-color: transparent;
+          --sds-button-disabled-border-color: transparent;
+          --sds-component-focus-box-shadow: none;
+          --sds-component-border-radius: 40px;
+          &.sds-calendar__date--selected {
+            .sds-button {
+              --sds-button-color: var(--sds-color-space-13);
+              --sds-button-background-color: var(--sds-color-action-2);
+              --sds-button-hover-color: var(--sds-color-space-13);
+              --sds-button-hover-background-color: var(--sds-color-action-2);
+            }
+          }
+          &.sds-calendar__date--success {
+            .sds-button {
+              font-weight: bold;
+              --sds-button-color: var(--sds-color-space-17);
+              --sds-button-hover-color: var(--sds-color-space-17);
+            }
+          }
+          &.sds-calendar__date--current-day:not(.sds-calendar__date--selected) {
+            .sds-button {
+              --sds-button-color: var(--sds-color-white);
+              --sds-button-background-color: var(--sds-color-action-6);
+              --sds-button-hover-color: var(--sds-color-white);
+              --sds-button-hover-background-color: var(--sds-color-action-6);
+            }
+          }
+          &.sds-calendar__date--critical:not(.sds-calendar__date--selected):not(.sds-calendar__date--current-day) {
+            .sds-button {
+              font-weight: bold;
+              --sds-button-color: var(--sds-error-color);
+              --sds-button-background-color: var(--sds-color-coral-1);
+              --sds-button-hover-color: var(--sds-error-color);
+              --sds-button-hover-background-color: var(--sds-color-coral-2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ###### INPUT ####################################################################
+  INPUT, SPAN, DIV {
+    &.sds-input {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-input--small {
+        --sds-component-height: 30px;
+        --sds-component-padding-horizontal: 8px;
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      &.sds-input--placeholder-color {
+        color: var(--sds-component-placeholder-color);
+      }
+    }
+  }
+
+  // ###### LABEL ####################################################################
+  LABEL {
+    &.sds-label, &.sds-label.sds-label--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  // ###### LINK #####################################################################
+  A.sds-link {
+    &.sds-link-small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  // ###### MODAL ####################################################################
+  .sds-modal {
+    .sds-modal__box {
+      .sds-modal__header {
+        @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
+        font-weight: bold;
+        .sds-modal__status-icon, .sds-modal__close-control {
+          @include defineFontSizeElement(15, $fontSizeRoot, $fontLineHeightFactor);
+        }
+        .sds-modal__full-window-icon {
+          @include defineFontSizeElement(20, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
+    }
+
+    &.sds-modal--full-window {
+      .sds-modal__box {
+        .sds-modal__header {
+          align-items: center;
+          .sds-modal__close-control {
+            margin-top: 2px;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // ###### NOTIFICATION #############################################################
+  .sds-notification {
+    &.sds-notification--success {
+      --sds-notification-text-color: var(--sds-color-white);
+      --sds-notification-border-color: var(--sds-success-color);
+      --sds-notification-background-color: var(--sds-success-color);
+    }
+    &.sds-notification--warning {
+      --sds-notification-text-color: var(--sds-color-white);
+      --sds-notification-border-color: var(--sds-warning-color);
+      --sds-notification-background-color: var(--sds-warning-color);
+    }
+    &.sds-notification--critical {
+      --sds-notification-text-color: var(--sds-color-white);
+      --sds-notification-border-color: var(--sds-error-color);
+      --sds-notification-background-color: var(--sds-error-color);
+    }
+  }
+
+  // ###### RADIO Button #############################################################
+  INPUT[type=radio] {
+    & + LABEL {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--sds-selection-icon-size) + 1px);
+      &:before {
+        top: var(--sds-selection-icon-spacer-vertical);
+      }
+    }
+    &:checked + LABEL {
+      &:after {
+        top: var(--sds-selection-icon-spacer-vertical);
+      }
+    }
+  }
+
+  // ###### REPORT ###################################################################
+  SPAN, DIV {
+    &.sds-report {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  // ###### SELECT ###################################################################
+  SELECT, SPAN, DIV {
+    &.sds-select {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      &.sds-select--small {
+        --sds-component-height: 30px;
+        --sds-component-padding-horizontal: 8px;
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      &.sds-select--filter {
+        --sds-component-height: fit-content;
+        --sds-component-width: fit-content;
+        --sds-component-padding-vertical: 0;
+      }
+      &.sds-select--placeholder {
+        color: var(--sds-component-placeholder-color);
+      }
+    }
+  }
+
+  // ###### SPINNER ##################################################################
+  .sds-spinner {
+    &.sds-spinner--inline {
+      --sds-spinner-display: inline-flex;
+    }
+    &.sds-spinner--inherit {
+      --sds-spinner-display: inherit;
+    }
+    &.sds-spinner--12 {
+      --sds-spinner-size: 12px;
+      --sds-spinner-line-width: 7px;
+    }
+    &.sds-spinner--16 {
+      --sds-spinner-size: 16px;
+      --sds-spinner-line-width: 6px;
+    }
+    &.sds-spinner--20 {
+      --sds-spinner-size: 20px;
+      --sds-spinner-line-width: 5px;
+    }
+    &.sds-spinner--80 {
+      --sds-spinner-size: 80px;
+      --sds-spinner-line-width: 3px;
+    }
+    &.sds-spinner--inverse {
+      --sds-spinner-color: var(--sds-color-white);
+    }
+  }
+
+  // ###### TAB ######################################################################
+  .sds-tab {
+    @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-tab--small {
+      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      --sds-tab-height: 30px;
+    }
+  }
+
+  // ###### TAG ######################################################################
   SPAN, DIV {
     &.sds-tag {
       --sds-component-padding-horizontal: 8px;
@@ -198,96 +454,50 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
     }
   }
 
-  .sds-spinner {
-    &.sds-spinner--inline {
-      --sds-spinner-display: inline-flex;
+  // ###### TAG INPUT ################################################################
+  .sds-tag-input {
+    &.sds-input, &.sds-input.sds-input--small {
+      --sds-component-padding-vertical: 0;
+      --sds-component-padding-horizontal: 0;
     }
-    &.sds-spinner--inherit {
-      --sds-spinner-display: inherit;
+    INPUT {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
-    &.sds-spinner--12 {
-      --sds-spinner-size: 12px;
-      --sds-spinner-line-width: 7px;
-    }
-    &.sds-spinner--16 {
-      --sds-spinner-size: 16px;
-      --sds-spinner-line-width: 6px;
-    }
-    &.sds-spinner--20 {
-      --sds-spinner-size: 20px;
-      --sds-spinner-line-width: 5px;
-    }
-    &.sds-spinner--80 {
-      --sds-spinner-size: 80px;
-      --sds-spinner-line-width: 3px;
-    }
-    &.sds-spinner--inverse {
-      --sds-spinner-color: white;
-    }
-  }
-
-  .sds-notification {
-    &.sds-notification--success {
-      --sds-notification-text-color: white;
-      --sds-notification-border-color: var(--sds-success-color);
-      --sds-notification-background-color: var(--sds-success-color);
-    }
-    &.sds-notification--warning {
-      --sds-notification-text-color: white;
-      --sds-notification-border-color: var(--sds-warning-color);
-      --sds-notification-background-color: var(--sds-warning-color);
-    }
-    &.sds-notification--critical {
-      --sds-notification-text-color: white;
-      --sds-notification-border-color: var(--sds-error-color);
-      --sds-notification-background-color: var(--sds-error-color);
-    }
-  }
-
-  A.sds-link {
-    &.sds-link-small {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-    }
-  }
-
-  .sds-alert {
-    .sds-alert__header {
-      .sds-alert__title {
-        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    &.sds-input--small {
+      INPUT {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
     }
-    &:not(.sds-alert--connection-lost) {
-      border-left: 4px solid var(--sds-color-action-6);
+
+    &.disabled {
+      .sds-tag-input__input {
+        cursor: not-allowed;
+      }
     }
-    &.sds-alert--success {
-      border-left: 4px solid var(--sds-success-color);
-      --sds-alert-title-icon-color: var(--sds-success-color);
-    }
-    &.sds-alert--warning {
-      border-left: 4px solid var(--sds-warning-color);
-      --sds-alert-title-icon-color: var(--sds-warning-color);
-    }
-    &.sds-alert--critical {
-      border-left: 4px solid var(--sds-error-color);
-      --sds-alert-title-icon-color: var(--sds-error-color);
-    }
-    &.sds-alert--connection-lost{
-      --sds-alert-background-color: var(--sds-color-space-7);
-      --sds-alert-border-color: var(--sds-color-space-7);
-      --sds-alert-body-text-color: white;
-      --sds-alert-title-icon-color: white;
-      --sds-alert-title-text-color: white;
+
+    .sds-tag {
+      &.critical {
+        --sds-tag-text-color: var(--sds-error-color);
+        INPUT {
+          color: var(--sds-error-color);
+        }
+      }
     }
   }
 
-  .sds-tab {
+  // ###### TEXTAREA #################################################################
+  TEXTAREA.sds-textarea {
+    padding-top: calc((var(--sds-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
     @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    &.sds-tab--small {
+    &.sds-textarea--small {
+      --sds-component-height: 30px;
+      --sds-component-padding-horizontal: 8px;
+      padding-top: calc((var(--sds-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-      --sds-tab-height: 30px;
     }
   }
 
+  // ###### TOOLTIP ##################################################################
   .sds-tooltip {
     .sds-tooltip__box {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
@@ -364,196 +574,6 @@ $indeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" v
         &:after {
           top: -7px;
           left: -6px;
-        }
-      }
-    }
-  }
-
-  .sds-badge {
-    .sds-badge__box {
-      @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
-    }
-
-    &.sds-badge--alone {
-      --sds-badge-position: relative;
-    }
-
-    &.sds-badge--large {
-      .sds-badge__box {
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-badge-min-width: 24px;
-        --sds-badge-min-height: 24px;
-        --sds-badge-padding: 6px 5px;
-        --sds-badge-text-top: 0;
-      }
-    }
-    &.sds-badge--small {
-      .sds-badge__box {
-        @include defineFontSizeElement(8, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-badge-min-width: 16px;
-        --sds-badge-min-height: 16px;
-        --sds-badge-padding: 3px 2px;
-        --sds-badge-text-top: 1px;
-      }
-    }
-    &.sds-badge--x-small {
-      .sds-badge__box {
-        font-size: 0;
-        --sds-badge-min-width: 6px;
-        --sds-badge-min-height: 6px;
-        --sds-badge-padding: 0;
-        --sds-badge-text-top: 1px;
-      }
-    }
-
-    &.sds-badge--info {
-      --sds-badge-background-color: var(--sds-color-action-6);
-      --sds-badge-border-color: var(--sds-color-action-6);
-    }
-    &.sds-badge--success {
-      --sds-badge-background-color: var(--sds-success-color);
-      --sds-badge-border-color: var(--sds-success-color);
-    }
-    &.sds-badge--warning {
-      --sds-badge-background-color: var(--sds-warning-color);
-      --sds-badge-border-color: var(--sds-warning-color);
-    }
-    &.sds-badge--critical {
-      --sds-badge-background-color: var(--sds-error-color);
-      --sds-badge-border-color: var(--sds-error-color);
-    }
-  }
-
-  .sds-calendar {
-    .sds-calendar__nav {
-      DIV {
-        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-        I {
-          @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
-        }
-      }
-    }
-    .sds-calendar__container {
-      .sds-calendar__body {
-        .sds-calendar__date {
-          @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-          --sds-button-disabled-color: var(--sds-color-space-4);
-          --sds-button-disabled-background-color: transparent;
-          --sds-button-disabled-border-color: transparent;
-          --sds-component-focus-box-shadow: none;
-          --sds-component-border-radius: 40px;
-          &.sds-calendar__date--selected {
-            .sds-button {
-              --sds-button-color: var(--sds-color-space-13);
-              --sds-button-background-color: var(--sds-color-action-2);
-              --sds-button-hover-color: var(--sds-color-space-13);
-              --sds-button-hover-background-color: var(--sds-color-action-2);
-            }
-          }
-          &.sds-calendar__date--success {
-            .sds-button {
-              font-weight: bold;
-              --sds-button-color: var(--sds-color-space-17);
-              --sds-button-hover-color: var(--sds-color-space-17);
-            }
-          }
-          &.sds-calendar__date--current-day:not(.sds-calendar__date--selected) {
-            .sds-button {
-              --sds-button-color: white;
-              --sds-button-background-color: var(--sds-color-action-6);
-              --sds-button-hover-color: white;
-              --sds-button-hover-background-color: var(--sds-color-action-6);
-            }
-          }
-          &.sds-calendar__date--critical:not(.sds-calendar__date--selected):not(.sds-calendar__date--current-day) {
-            .sds-button {
-              font-weight: bold;
-              --sds-button-color: var(--sds-error-color);
-              --sds-button-background-color: var(--sds-color-coral-1);
-              --sds-button-hover-color: var(--sds-error-color);
-              --sds-button-hover-background-color: var(--sds-color-coral-2);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .sds-breadcrumb {
-    .sds-breadcrumb__link {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    }
-    .sds-breadcrumb__separator {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-    }
-    .sds-breadcrumb__dropdown-trigger {
-      @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-    }
-
-    &.sds-breadcrumb--small {
-      --sds-component-height: 30px;
-      .sds-breadcrumb__link {
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-      }
-      .sds-breadcrumb__dropdown-trigger {
-        @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
-        top: 0;
-      }
-    }
-  }
-
-  .sds-modal {
-    .sds-modal__box {
-      .sds-modal__header {
-        @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
-        font-weight: bold;
-        .sds-modal__status-icon, .sds-modal__close-control {
-          @include defineFontSizeElement(15, $fontSizeRoot, $fontLineHeightFactor);
-        }
-        .sds-modal__full-window-icon {
-          @include defineFontSizeElement(20, $fontSizeRoot, $fontLineHeightFactor);
-        }
-      }
-    }
-
-    &.sds-modal--full-window {
-      .sds-modal__box {
-        .sds-modal__header {
-          align-items: center;
-          .sds-modal__close-control {
-            margin-top: 2px;
-            margin-left: 0;
-          }
-        }
-      }
-    }
-  }
-
-  .sds-tag-input {
-    &.sds-input, &.sds-input.sds-input--small {
-      --sds-component-padding-vertical: 0;
-      --sds-component-padding-horizontal: 0;
-    }
-    INPUT {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    }
-    &.sds-input--small {
-      INPUT {
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-      }
-    }
-
-    &.disabled {
-      .sds-tag-input__input {
-        cursor: not-allowed;
-      }
-    }
-
-    .sds-tag {
-      &.critical {
-        --sds-tag-text-color: var(--sds-error-color);
-        INPUT {
-          color: var(--sds-error-color);
         }
       }
     }

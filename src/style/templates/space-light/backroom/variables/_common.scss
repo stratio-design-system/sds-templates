@@ -59,6 +59,18 @@
   --sds-component-icon-color: var(--sds-color-space-8);
   --sds-component-icon-disabled-color: var(--sds-color-space-6);
 
+  // ###### Generic SELECTION elements (like radio or checkbox)
+  --sds-selection-option-spacer: 24px;
+  --sds-selection-icon-spacer: 8px;
+  --sds-selection-icon-spacer-vertical: 4px;
+  --sds-selection-icon-size: 16px;
+  --sds-selection-z-index-before: auto;
+  --sds-selection-z-index-after: auto;
+
+  --sds-selection-disabled-tex-color: var(--sds-color-space-6);
+  --sds-selection-checked-disabled-border-color: var(--sds-color-action-4);
+  --sds-selection-checked-disabled-background-color: var(--sds-color-action-4);
+
   // ###### Component Commons
   --sds-component-width: fit-content;
   --sds-component-height: 36px;
@@ -86,40 +98,65 @@
   --sds-icon-arrow-bottom: '#{$arrowDownIcon}';
   --sds-icon-checkbox-checked: '#{$checkboxCheckedIcon}';
 
-  // ###### LABEL
-  --sds-label-display: table-cell;
-  --sds-label-color: var(--sds-color-space-8);
-  --sds-label-focus-color: var(--sds-color-space-17);
-  --sds-label-error-color: var(--sds-color-space-8);
-  --sds-label-disabled-color: var(--sds-color-space-8);
+  // ################################################################################################
+  // ###### COMPONENTS ##############################################################################
+  // ################################################################################################
 
-  // ###### REPORT
-  --sds-report-color: var(--sds-color-space-8);
+  // ###### ALERT
+  --sds-alert-position: fixed;
+  --sds-alert-padding-vertical: 32px;
+  --sds-alert-padding-horizontal: var(--sds-alert-padding-vertical);
+  --sds-alert-width: 350px;
+  --sds-alert-min-width: var(--sds-alert-width);
+  --sds-alert-max-width: var(--sds-alert-width);
+  --sds-alert-top: 0;
+  --sds-alert-left: 0;
+  --sds-alert-z-index: 1;
 
-  // ###### Generic SELECTION elements (like radio or checkbox)
-  --sds-selection-option-spacer: 24px;
-  --sds-selection-icon-spacer: 8px;
-  --sds-selection-icon-spacer-vertical: 4px;
-  --sds-selection-icon-size: 16px;
-  --sds-selection-z-index-before: auto;
-  --sds-selection-z-index-after: auto;
+  --sds-alert-border: var(--sds-component-border);
+  --sds-alert-border-radius: var(--sds-component-border-radius);
+  --sds-alert-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-12-rgb), 0.25);
 
-  --sds-selection-disabled-tex-color: var(--sds-color-space-6);
-  --sds-selection-checked-disabled-border-color: var(--sds-color-action-4);
-  --sds-selection-checked-disabled-background-color: var(--sds-color-action-4);
+  --sds-alert-close-control-color: var(--sds-color-space-8);
+  --sds-alert-close-control-top: -15px;
+  --sds-alert-close-control-right: -15px;
 
-  // ###### RADIO Button
-  --sds-radio-border-radius: 100%;
+  --sds-alert-header-separation: 12px;
+  --sds-alert-title-icon-separation: 12px;
 
-  // ###### CHECKBOX Button
-  --sds-checkbox-border-radius: 2px;
-  --sds-checkbox-indeterminate-border-color: var(--sds-color-action-6);
-  --sds-checkbox-indeterminate-background-color: white;
-  --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-4);
-  --sds-checkbox-indeterminate-disabled-background-color: white;
+  --sds-alert-title-text-color: var(--sds-color-space-17);
+  --sds-alert-title-icon-color: var(--sds-color-action-6);
+  --sds-alert-title-icon-spacer: 8px;
+  --sds-alert-body-text-color: var(--sds-color-space-8);
+  --sds-alert-border-color: var(--sds-color-space-3);
+  --sds-alert-background-color: white;
 
-  // ###### TEXTAREA
-  --sds-textarea-resize: vertical;
+  --sds-alert-actions-height: 40px;
+  --sds-alert-actions-background-color: var(--sds-color-space-1);
+  --sds-alert-actions-separation: 2px;
+
+  // ###### BADGE
+  --sds-badge-position: absolute;
+  --sds-badge-min-width: 20px;
+  --sds-badge-min-height: 20px;
+  --sds-badge-padding: 4px 3px;
+
+  --sds-badge-color: white;
+  --sds-badge-background-color: var(--sds-color-space-6);
+  --sds-badge-border-color: var(--sds-color-space-6);
+  --sds-badge-border-radius: 20px;
+
+  --sds-badge-text-top: 0.5px;
+
+  // ###### BREADCRUMB
+  --sds-breadcrum-item-spacing: 8px;
+
+  --sds-breadcrumb-link-color: var(--sds-color-space-8);
+  --sds-breadcrumb-link-hover-color: var(--sds-color-action-6);
+  --sds-breadcrumb-link-active-color: var(--sds-color-space-17);
+
+  --sds-breadcrum-separator-color: var(--sds-color-space-8);
+  --sds-breadcrum-dropdown-trigger-color: var(--sds-color-space-8);
 
   // ###### BUTTON
   --sds-button-color: white;
@@ -139,52 +176,27 @@
   --sds-button-icon-spacer: 8px;
   --sds-button-border-correction: 2px;
 
-  // ###### SWITCH
-  --sds-switch-background-color: var(--sds-color-space-4);
-  --sds-switch-color: white;
-  --sds-switch-shadow-color: var(--sds-color-neutral-12);
-  --sds-switch-shadow-color-rgb: var(--sds-color-neutral-12-rgb);
-  --sds-switch-checked-background-color: var(--sds-color-action-6);
-  --sds-switch-disabled-background-color: var(--sds-color-space-2);
-  --sds-switch-disabled-checked-background-color: var(--sds-color-action-4);
+  // ###### CHECKBOX
+  $checkboxChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6738 4.57069C11.4568 4.41504 11.2446 4.26814 11.0639 4.14187C11.0029 4.09874 10.9443 4.06685 10.8832 4.04373C10.5768 3.92871 10.2704 4.04373 10.0673 4.3519C9.48284 5.24204 8.89778 6.13469 8.31333 7.0242L6.99938 9.02827C6.59262 8.60758 6.18889 8.19002 5.78274 7.76995C5.60988 7.59117 5.43461 7.50178 5.24785 7.50178H5.24483C5.06109 7.50178 4.88279 7.59117 4.71296 7.76682C4.56247 7.92247 4.41499 8.075 4.26752 8.23065L4.25664 8.2419C3.91395 8.59883 3.91395 8.99077 4.25966 9.3477C4.99219 10.1053 5.72411 10.8623 6.45664 11.6199C6.4929 11.6574 6.53158 11.695 6.57328 11.7325C6.77394 11.9081 6.99092 12 7.2079 12C7.24416 12 7.28042 11.9969 7.31669 11.9912C7.56449 11.9569 7.78449 11.8012 7.95432 11.5449C9.22113 9.61274 10.4716 7.70619 11.8581 5.5896C12.1005 5.22392 12.0279 4.82323 11.6744 4.57006L11.6738 4.57069Z" fill="white"/></svg>';
+  $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="white"/></svg>';
+  --sds-checkbox-checked: url('#{$checkboxChecked}');
+  --sds-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
+  --sds-checkbox-border-radius: 2px;
+  --sds-checkbox-indeterminate-border-color: var(--sds-color-action-6);
+  --sds-checkbox-indeterminate-background-color: var(--sds-color-white);
+  --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-4);
+  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-white);
 
-  --sds-switch-height: 22px;
-  --sds-switch-border-radio: 25px;
+  // ###### DATE PICKER
+  --sds-calendar-position: absolute;
+  --sds-calendar-width: 300px;
+  --sds-calendar-z-index: 2;
 
-  // ###### TAG
-  --sds-tag-text-color: var(--sds-color-space-17);
-  --sds-tag-border-color: var(--sds-color-space-2);
-  --sds-tag-background-color: var(--sds-color-space-2);
-  --sds-tag-neutral-text-color: var(--sds-color-space-17);
-  --sds-tag-neutral-border-color: var(--sds-color-space-3);
-  --sds-tag-neutral-background-color: var(--sds-color-space-3);
-  --sds-tag-critical-text-color: var(--sds-color-coral-8);
-  --sds-tag-critical-border-color: var(--sds-color-coral-1);
-  --sds-tag-critical-background-color: var(--sds-color-coral-1);
-  --sds-tag-warning-text-color: var(--sds-warning-color);
-  --sds-tag-warning-border-color: var(--sds-color-orange-1);
-  --sds-tag-warning-background-color: var(--sds-color-orange-1);
-  --sds-tag-success-text-color: var(--sds-success-color);
-  --sds-tag-success-border-color: var(--sds-color-green-1);
-  --sds-tag-success-background-color: var(--sds-color-green-1);
+  --sds-calendar-background-color: var(--sds-color-white);
+  --sds-calendar-border-color: var(--sds-color-space-2);
 
-  --sds-tag-hover-text-color: var(--sds-color-action-6);
-  --sds-tag-hover-border-color: var(--sds-color-action-1);
-  --sds-tag-hover-background-color: var(--sds-color-action-1);
-  --sds-tag-active-text-color: white;
-  --sds-tag-active-border-color: var(--sds-color-action-6);
-  --sds-tag-active-background-color: var(--sds-color-action-6);
-  --sds-tag-disabled-text-color: var(--sds-color-space-6);
-  --sds-tag-disabled-border-color: var(--sds-color-space-2);
-  --sds-tag-disabled-background-color: var(--sds-color-space-2);
-
-  --sds-tag-height: 30px;
-
-  // ###### SPINNER
-  --sds-spinner-display: block;
-  --sds-spinner-size: 60px;
-  --sds-spinner-line-width: 3px;
-  --sds-spinner-color: var(--sds-color-action-6);
+  --sds-calendar-color: var(--sds-color-space-8);
+  --sds-calendar-hover-color: var(--sds-color-space-8);
 
   // ###### DROPDOWN
   --sds-dropdown-position: absolute;
@@ -225,6 +237,36 @@
   --sds-dropdown-separator-border-color: var(--sds-color-space-3);
   --sds-dropdown-separator-margin: 4px 0;
 
+  // ###### LABEL
+  --sds-label-display: table-cell;
+  --sds-label-color: var(--sds-color-space-8);
+  --sds-label-focus-color: var(--sds-color-space-17);
+  --sds-label-error-color: var(--sds-color-space-8);
+  --sds-label-disabled-color: var(--sds-color-space-8);
+
+  // ###### LINK
+  --sds-link-color: var(--sds-color-action-6);
+  --sds-link-hover-color: var(--sds-color-action-7);
+
+  // ###### MODAL
+  --sds-modal-overlay-position: fixed;
+  --sds-modal-overlay-width: 100vw;
+  --sds-modal-overlay-height: 100vh;
+  --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .7);
+
+  --sds-modal-z-indez: 1;
+  --sds-modal-border-radius: 0;
+
+  --sds-modal-background-color: var(--sds-color-white);
+  --sds-modal-padding: 24px;
+  --sds-modal-spacing: 12px;
+  --sds-modal-spacing-vertical: 20px;
+
+  --sds-modal-close-control-color: var(--sds-color-space-17);
+
+  --sds-modal-header-separator-color: var(--sds-color-space-3);
+  --sds-modal-header-color: var(--sds-color-space-17);
+
   // ###### NOTIFICATION
   --sds-notification-position: fixed;
   --sds-notification-padding: 7px 15px;
@@ -240,50 +282,39 @@
   --sds-notification-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-12-rgb), 0.25);
 
   --sds-notification-text-color: var(--sds-color-space-8);
-  --sds-notification-border-color: white;
-  --sds-notification-background-color: white;
+  --sds-notification-border-color: var(--sds-color-white);
+  --sds-notification-background-color: var(--sds-color-white);
 
   --sds-notification-icon-separation: 10px;
   --sds-notification-close-control-separation: 50px;
 
   --sds-notification-inside-link-color: var(--sds-color-action-6);
 
-  // ###### LINK
-  --sds-link-color: var(--sds-color-action-6);
-  --sds-link-hover-color: var(--sds-color-action-7);
+  // ###### RADIO Button
+  $radioChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="white"/></svg>';
+  --sds-radio-checked: url('#{$radioChecked}');
+  --sds-radio-border-radius: 100%;
 
-  // ###### ALERT
-  --sds-alert-position: fixed;
-  --sds-alert-padding-vertical: 32px;
-  --sds-alert-padding-horizontal: var(--sds-alert-padding-vertical);
-  --sds-alert-width: 350px;
-  --sds-alert-min-width: var(--sds-alert-width);
-  --sds-alert-max-width: var(--sds-alert-width);
-  --sds-alert-top: 0;
-  --sds-alert-left: 0;
-  --sds-alert-z-index: 1;
+  // ###### REPORT
+  --sds-report-color: var(--sds-color-space-8);
 
-  --sds-alert-border: var(--sds-component-border);
-  --sds-alert-border-radius: var(--sds-component-border-radius);
-  --sds-alert-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-12-rgb), 0.25);
+  // ###### SPINNER
+  --sds-spinner-display: block;
+  --sds-spinner-size: 60px;
+  --sds-spinner-line-width: 3px;
+  --sds-spinner-color: var(--sds-color-action-6);
 
-  --sds-alert-close-control-color: var(--sds-color-space-8);
-  --sds-alert-close-control-top: -15px;
-  --sds-alert-close-control-right: -15px;
+  // ###### SWITCH
+  --sds-switch-background-color: var(--sds-color-space-4);
+  --sds-switch-color: var(--sds-color-white);
+  --sds-switch-shadow-color: var(--sds-color-neutral-12);
+  --sds-switch-shadow-color-rgb: var(--sds-color-neutral-12-rgb);
+  --sds-switch-checked-background-color: var(--sds-color-action-6);
+  --sds-switch-disabled-background-color: var(--sds-color-space-2);
+  --sds-switch-disabled-checked-background-color: var(--sds-color-action-4);
 
-  --sds-alert-header-separation: 12px;
-  --sds-alert-title-icon-separation: 12px;
-
-  --sds-alert-title-text-color: var(--sds-color-space-17);
-  --sds-alert-title-icon-color: var(--sds-color-action-6);
-  --sds-alert-title-icon-spacer: 8px;
-  --sds-alert-body-text-color: var(--sds-color-space-8);
-  --sds-alert-border-color: var(--sds-color-space-3);
-  --sds-alert-background-color: white;
-
-  --sds-alert-actions-height: 40px;
-  --sds-alert-actions-background-color: var(--sds-color-space-1);
-  --sds-alert-actions-separation: 2px;
+  --sds-switch-height: 22px;
+  --sds-switch-border-radio: 25px;
 
   // ###### TAB
   $sdsTabAuxCellPaddingBottom: 4px;
@@ -308,6 +339,38 @@
   --sds-tab-cell-active-border-color: var(--sds-color-space-17);
   --sds-tab-cell-active-cursor: default;
 
+  // ###### TAG
+  --sds-tag-text-color: var(--sds-color-space-17);
+  --sds-tag-border-color: var(--sds-color-space-2);
+  --sds-tag-background-color: var(--sds-color-space-2);
+  --sds-tag-neutral-text-color: var(--sds-color-space-17);
+  --sds-tag-neutral-border-color: var(--sds-color-space-3);
+  --sds-tag-neutral-background-color: var(--sds-color-space-3);
+  --sds-tag-critical-text-color: var(--sds-color-coral-8);
+  --sds-tag-critical-border-color: var(--sds-color-coral-1);
+  --sds-tag-critical-background-color: var(--sds-color-coral-1);
+  --sds-tag-warning-text-color: var(--sds-warning-color);
+  --sds-tag-warning-border-color: var(--sds-color-orange-1);
+  --sds-tag-warning-background-color: var(--sds-color-orange-1);
+  --sds-tag-success-text-color: var(--sds-success-color);
+  --sds-tag-success-border-color: var(--sds-color-green-1);
+  --sds-tag-success-background-color: var(--sds-color-green-1);
+
+  --sds-tag-hover-text-color: var(--sds-color-action-6);
+  --sds-tag-hover-border-color: var(--sds-color-action-1);
+  --sds-tag-hover-background-color: var(--sds-color-action-1);
+  --sds-tag-active-text-color: white;
+  --sds-tag-active-border-color: var(--sds-color-action-6);
+  --sds-tag-active-background-color: var(--sds-color-action-6);
+  --sds-tag-disabled-text-color: var(--sds-color-space-6);
+  --sds-tag-disabled-border-color: var(--sds-color-space-2);
+  --sds-tag-disabled-background-color: var(--sds-color-space-2);
+
+  --sds-tag-height: 30px;
+
+  // ###### TEXTAREA
+  --sds-textarea-resize: vertical;
+
   // ###### TOGGLE BUTTON
   $sdsToggleButtonBorderWidth: 1px;
   --sds-toggle-button-border: #{$sdsToggleButtonBorderWidth} solid;
@@ -327,63 +390,10 @@
   // ###### TOOLTIP
   --sds-tooltip-position: fixed;
   --sds-tooltip-height: 30px;
-  --sds-tooltip-color: white;
+  --sds-tooltip-color: var(--sds-color-white);
   --sds-tooltip-background-color: var(--sds-color-space-13);
   --sds-tooltip-border-color: var(--sds-color-space-13);
   --sds-tooltip-padding: 0 8px;
 
   --sds-tooltip-arrow-position: fixed;
-
-  // ###### BADGE
-  --sds-badge-position: absolute;
-  --sds-badge-min-width: 20px;
-  --sds-badge-min-height: 20px;
-  --sds-badge-padding: 4px 3px;
-
-  --sds-badge-color: white;
-  --sds-badge-background-color: var(--sds-color-space-6);
-  --sds-badge-border-color: var(--sds-color-space-6);
-  --sds-badge-border-radius: 20px;
-
-  --sds-badge-text-top: 0.5px;
-
-  // ###### DATE PICKER
-  --sds-calendar-position: absolute;
-  --sds-calendar-width: 300px;
-  --sds-calendar-z-index: 2;
-
-  --sds-calendar-background-color: white;
-  --sds-calendar-border-color: var(--sds-color-space-2);
-
-  --sds-calendar-color: var(--sds-color-space-8);
-  --sds-calendar-hover-color: var(--sds-color-space-8);
-
-  // ###### BREADCRUMB
-  --sds-breadcrum-item-spacing: 8px;
-
-  --sds-breadcrumb-link-color: var(--sds-color-space-8);
-  --sds-breadcrumb-link-hover-color: var(--sds-color-action-6);
-  --sds-breadcrumb-link-active-color: var(--sds-color-space-17);
-
-  --sds-breadcrum-separator-color: var(--sds-color-space-8);
-  --sds-breadcrum-dropdown-trigger-color: var(--sds-color-space-8);
-
-  // ###### MODAL
-  --sds-modal-overlay-position: fixed;
-  --sds-modal-overlay-width: 100vw;
-  --sds-modal-overlay-height: 100vh;
-  --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .7);
-
-  --sds-modal-z-indez: 1;
-  --sds-modal-border-radius: 0;
-
-  --sds-modal-background-color: white;
-  --sds-modal-padding: 24px;
-  --sds-modal-spacing: 12px;
-  --sds-modal-spacing-vertical: 20px;
-
-  --sds-modal-close-control-color: var(--sds-color-space-17);
-
-  --sds-modal-header-separator-color: var(--sds-color-space-3);
-  --sds-modal-header-color: var(--sds-color-space-17);
 }

@@ -6,7 +6,6 @@
 @import './backroom/variables/common';
 @import './backroom/components';
 @import './backroom/font-sizes';
-@import './backroom/colors';
 
 HTML {
   &#sds-space-dark-tpl, &.sds-space-dark-tpl {
@@ -41,6 +40,7 @@ HTML {
     }
 
     @include createColorsDefinition($colorsAvailable);
+    @include createColorsDefinition($templateBaseBackgroundColor, 'bg');
     @extend %sds-icon-definition;
     @extend %sds-global-vars;
     @extend %sds-components;

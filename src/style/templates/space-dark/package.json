@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/space-dark",
-  "version": "5.0.15",
+  "version": "5.0.17",
   "description": "SDS Templates :: Space Dark Template",
   "main": "index.js",
   "types": "index.d.ts",

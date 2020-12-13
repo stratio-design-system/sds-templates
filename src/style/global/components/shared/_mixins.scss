@@ -1,6 +1,6 @@
 //## Mixin for generate selection element basic structure.
-//## PARAMETERS: selection-element, selection-element-checked
-@mixin selectionElement($selectionElement, $selectionElementChecked) {
+//## PARAMETERS: selection-element
+@mixin selectionElement($selectionElement) {
   display: none;
   & + LABEL {
     position: relative;
@@ -80,7 +80,12 @@
       height: var(--sds-selection-icon-size);
       min-height: var(--sds-selection-icon-size);
       max-height: var(--sds-selection-icon-size);
-      background-image: url($selectionElementChecked);
+      @if $selectionElement == 'checkbox' {
+        background-image: var(--sds-checkbox-checked);
+      }
+      @if $selectionElement == 'radio' {
+        background-image: var(--sds-radio-checked);
+      }
       background-size: var(--sds-selection-icon-size) var(--sds-selection-icon-size);
     }
   }
