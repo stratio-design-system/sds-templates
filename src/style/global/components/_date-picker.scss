@@ -1,0 +1,17 @@
+%sds-date-picker {
+  .sds-calendar {
+    --sds-calendar-default-position: var(--sds-calendar-position);
+    --sds-calendar-default-width: var(--sds-calendar-width);
+    --sds-calendar-default-border-radius: var(--sds-component-border-radius);
+    --sds-calendar-default-z-index: var(--sds-calendar-z-index);
+
+    --sds-calendar-default-background-color: var(--sds-calendar-background-color);
+    --sds-calendar-default-border: var(--sds-component-border);
+    --sds-calendar-default-border-color: var(--sds-calendar-border-color);
+
+    --sds-calendar-default-box-shadow: var(--sds-component-box-shadow);
+
+    --sds-calendar-default-color: var(--sds-calendar-color);
+    --sds-calendar-default-hover-color: var(--sds-calendar-hover-color);
+  }
+}

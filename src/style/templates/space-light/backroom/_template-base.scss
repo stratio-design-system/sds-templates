@@ -1,0 +1,10 @@
+@import 'exportable/app.base';
+
+$templateBaseBackgroundColor: (
+  background: $colorBackground,
+  background-header: $colorBackgroundHeader,
+  background-subheader: $colorBackgroundSubheader,
+  background-toolbar: $colorBackgroundToolbar,
+  background-sidebar: $colorBackgroundSidebar,
+  background-footer: $colorBackgroundFooter
+);

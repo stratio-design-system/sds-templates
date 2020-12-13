@@ -115,12 +115,20 @@
 }
 
 //## Mixin to generate template color definition.
-//## PARAMETERS: template color set array
-@mixin createColorsDefinition($colorSet) {
+//## PARAMETERS: template color set array, type of color application
+@mixin createColorsDefinition($colorSet, $type: 'all') {
   @each $key, $value in $colorSet {
-    .sds-color--#{$key} { color: $value; }
-    .sds-color__bg--#{$key} { background-color: $value; }
-    .sds-color__border--#{$key} { border-color: $value; }
+    @if $type == 'color' or $type == 'all' {
+      .sds-color--#{$key} { color: $value; }
+    }
+    @if $type == 'bg' or $type == 'all' {
+      $symbol: if($type == 'bg', '', '__bg');
+      .sds-color#{$symbol}--#{$key} { background-color: $value; }
+    }
+    @if $type == 'border' or $type == 'all' {
+      $symbol: if($type == 'border', '', '__border');
+      .sds-color#{$symbol}--#{$key} { border-color: $value; }
+    }
   }
   @content;
 }

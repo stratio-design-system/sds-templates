@@ -1,0 +1,53 @@
+%sds-modal {
+  .sds-modal {
+    --sds-modal-default-overlay-position: var(--sds-modal-overlay-position);
+    --sds-modal-default-overlay-width: var(--sds-modal-overlay-width);
+    --sds-modal-default-overlay-height: var(--sds-modal-overlay-height);
+    --sds-modal-default-overlay-background-color: var(--sds-modal-overlay-background-color);
+
+    --sds-modal-default-z-indez: var(--sds-modal-z-indez);
+    --sds-modal-default-border-radius: var(--sds-modal-border-radius);
+    --sds-modal-default-box-shadow: var(--sds-component-box-shadow);
+
+    --sds-modal-default-background-color: var(--sds-modal-background-color);
+    --sds-modal-default-padding: var(--sds-modal-padding);
+    --sds-modal-default-spacing: var(--sds-modal-spacing);
+    --sds-modal-default-spacing-vertical: var(--sds-modal-spacing-vertical);
+
+    --sds-modal-default-close-control-color: var(--sds-modal-close-control-color);
+
+    --sds-modal-default-header-separator-color: var(--sds-modal-header-separator-color);
+    --sds-modal-default-header-color: var(--sds-modal-header-color);
+
+    .sds-modal__box {
+      .sds-modal__header {
+        .sds-modal__title {
+          flex: 1;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      .sds-modal__body {
+        flex: 1;
+        scrollbar-color: #cdd6df #fff;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar-track {
+          border-radius: 30px;
+          border: solid 3px transparent;
+        }
+        &::-webkit-scrollbar {
+          width: 9px;
+          border-radius: 10px !important;
+        }
+        &::-webkit-scrollbar-thumb {
+          box-shadow: inset 0 0 10px 10px #cdd6df;
+          border-radius: 80px !important;
+          border: solid 2px transparent;
+        }
+      }
+    }
+  }
+}

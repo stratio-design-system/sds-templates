@@ -1,10 +1,14 @@
 @import './alert';
+@import './badge';
+@import './breadcrumb';
 @import './button';
 @import './checkbox';
+@import './date-picker';
 @import './dropdown';
 @import './input';
 @import './label';
 @import './link';
+@import './modal';
 @import './notification';
 @import './radio';
 @import './report';
@@ -13,17 +17,23 @@
 @import './switch';
 @import './tab';
 @import './tag';
+@import './tag-input';
 @import './textarea';
 @import './toggle-button';
+@import './tooltip';
 
 %sds-components {
   @extend %sds-alert;
+  @extend %sds-badge;
+  @extend %sds-breadcrumb;
   @extend %sds-button;
   @extend %sds-checkbox;
+  @extend %sds-date-picker;
   @extend %sds-dropdown;
   @extend %sds-input;
   @extend %sds-label;
   @extend %sds-link;
+  @extend %sds-modal;
   @extend %sds-notification;
   @extend %sds-radio;
   @extend %sds-report;
@@ -32,6 +42,8 @@
   @extend %sds-switch;
   @extend %sds-tab;
   @extend %sds-tag;
+  @extend %sds-tag-input;
   @extend %sds-textarea;
   @extend %sds-toggle-button;
+  @extend %sds-tooltip;
 }

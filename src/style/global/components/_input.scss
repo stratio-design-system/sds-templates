@@ -2,7 +2,7 @@
 @import './shared/mixins';
 
 %sds-input {
-  INPUT.sds-input {
+  .sds-input:not(.sds-wrapper) {
     @include textInputElement() {
       @extend %sds-default-disabled-component;
     }

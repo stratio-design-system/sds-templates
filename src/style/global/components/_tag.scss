@@ -10,7 +10,6 @@
 
   SPAN, DIV {
     &.sds-tag {
-      // @include createFlexBox(row, center, normal, nowrap);
       display: table-cell;
       position: relative;
       width: fit-content;

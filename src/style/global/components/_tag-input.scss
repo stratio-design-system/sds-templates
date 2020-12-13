@@ -1,0 +1,13 @@
+%sds-tag-input {
+  .sds-tag-input {
+    .sds-tag {
+      margin: 2px;
+      &.hide {
+        opacity: 0;
+      }
+      & ~ .hide {
+        position: absolute;
+      }
+    }
+  }
+}

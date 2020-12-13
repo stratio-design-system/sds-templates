@@ -34,10 +34,23 @@ lineReader.on('line', (line) => {
   }
   if (line.includes(':')) {
     const lineArray = line.split(':');
-    const color = lineArray.pop().trim().slice(0, -1);
+    const color = lineArray.pop().trim().slice(0, -1).toLowerCase();
     const name = lineArray.shift().slice(1);
     const label = _.startCase(name.slice(5));
-    colors[group].push({ name, label, color });
+    const rgb = [
+      parseInt(color.substr(1, 2), 16),
+      parseInt(color.substr(3, 2), 16),
+      parseInt(color.substr(5, 2), 16)
+    ];
+    // ###### CMYK Conversion
+    let cmyk = rgb.map(e => 1 - (e / 255));
+    const k = Math.min(cmyk[0], Math.min(cmyk[1], cmyk[2]));
+    cmyk = cmyk.map(e => (e - k) / (1 - k));
+    cmyk.push(k);
+    cmyk = cmyk.map(e => Math.round(e * 100)).map(e => e || 0);
+    // ###### CMYK Conversion - END
+    const yiq = ((rgb[0] * 299) + (rgb[1] * 587) + (rgb[2] * 114)) / 1000;
+    colors[group].push({ name, label, color, rgb, cmyk, yiq });
     colorIdsForInterface += ` ${name}: \'${name}\';`;
     colorIdsForObject += ` ${name}: \'${name}\',`;
   }
@@ -45,7 +58,7 @@ lineReader.on('line', (line) => {
 
 lineReader.on('close', () => {
   const file = fs.createWriteStream(path.resolve(__dirname, 'ts', 'colors.ts'));
-  file.write('export interface SdsColor { name: string; label: string; color: string; }');
+  file.write('export interface SdsColor { name: string; label: string; color: string; rgb: number[]; cmyk: number[]; yiq: number; }');
   file.write(`export interface SdsColorScheme { ${groupNames} }`);
   file.write(`export interface SdsColorNames { ${colorIdsForInterface} }`);
   file.write(`export const sdsColorNames: SdsColorNames = { ${colorIdsForObject} };`);
