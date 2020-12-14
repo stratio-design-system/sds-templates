@@ -1,6 +1,5 @@
 %sds-tooltip {
   .sds-tooltip {
-    z-index: 2;
     .sds-tooltip__box {
       position: var(--sds-tooltip-position);
       display: flex;
@@ -8,6 +7,7 @@
       width: fit-content;
       max-width: 250px;
       min-height: var(--sds-tooltip-height);
+      z-index: var(--sds-tooltip-z-index);
       background-color: var(--sds-tooltip-background-color);
       color: var(--sds-tooltip-color);
       border: 1px solid var(--sds-tooltip-border-color);
@@ -25,6 +25,7 @@
       position: var(--sds-tooltip-arrow-position);
       width: 0;
       height: 0;
+      z-index: var(--sds-tooltip-z-index);
       border: 6px solid transparent;
       pointer-events: none;
       &--top {

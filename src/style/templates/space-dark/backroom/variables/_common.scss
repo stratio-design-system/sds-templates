@@ -23,6 +23,14 @@
     --sds-color-#{$key}: #{$value};
     --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
+  @each $key, $value in $templateBaseBorderColor {
+    --sds-color-#{$key}: #{$value};
+    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+  }
+  @each $key, $value in $templateBaseTextColor {
+    --sds-color-#{$key}: #{$value};
+    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+  }
 
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action-6);
@@ -208,13 +216,14 @@
   --sds-dropdown-z-index: 2;
 
   --sds-dropdown-border: none;
-  --sds-dropdown-border-color: unset;
   --sds-dropdown-border-radius: var(--sds-component-border-radius);
-
-  --sds-dropdown-box-shadow: var(--sds-component-box-shadow);
-
   --sds-dropdown-padding: 4px 0;
   --sds-dropdown-margin: 0;
+  --sds-dropdown-box-shadow: var(--sds-component-box-shadow);
+
+  --sds-dropdown-text-color: var(--sds-color-space-17);
+  --sds-dropdown-border-color: unset;
+  --sds-dropdown-background-color: var(--sds-color-space-15);
 
   --sds-dropdown-option-group-min-height: 30px;
   --sds-dropdown-option-group-color: var(--sds-color-space-5);
@@ -392,6 +401,7 @@
   // ###### TOOLTIP
   --sds-tooltip-position: fixed;
   --sds-tooltip-height: 30px;
+  --sds-tooltip-z-index: 2;
   --sds-tooltip-color: var(--sds-color-white);
   --sds-tooltip-background-color: var(--sds-color-space-13);
   --sds-tooltip-border-color: var(--sds-color-space-13);

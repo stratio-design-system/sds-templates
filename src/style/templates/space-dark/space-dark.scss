@@ -14,7 +14,7 @@ HTML {
 
     * {
       font-family: 'Nunito Sans', sans-serif;
-      color: var(--sds-color-space-6);
+      color: var(--sds-color-text-default);
       outline: none;
     }
 
@@ -41,6 +41,8 @@ HTML {
 
     @include createColorsDefinition($colorsAvailable);
     @include createColorsDefinition($templateBaseBackgroundColor, 'bg');
+    @include createColorsDefinition($templateBaseBorderColor, 'border');
+    @include createColorsDefinition($templateBaseTextColor);
     @extend %sds-icon-definition;
     @extend %sds-global-vars;
     @extend %sds-components;

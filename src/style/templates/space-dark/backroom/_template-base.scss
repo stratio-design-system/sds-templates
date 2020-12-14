@@ -7,5 +7,25 @@ $templateBaseBackgroundColor: (
   background-subheader: $colorBackgroundSubheader,
   background-toolbar: $colorBackgroundToolbar,
   background-sidebar: $colorBackgroundSidebar,
-  background-footer: $colorBackgroundFooter
+  background-footer: $colorBackgroundFooter,
+  background-option-selected: $colorBackgroundOptionSelected,
+  background-option-hover: $colorBackgroundOptionHover,
+);
+
+$templateBaseBorderColor: (
+  border-divider: $colorBorderDivider,
+  border-title: $colorBorderTitle
+);
+
+$templateBaseTextColor: (
+  text-default: $colorTextDefault,
+  text-h1: $colorTextH1,
+  text-h2: $colorTextH2,
+  text-h3: $colorTextH3,
+  text-h4: $colorTextH4,
+  text-h5: $colorTextH5,
+  text-h6: $colorTextH6,
+  text-option-selected: $colorTextOptionSelected,
+  text-option-hover: $colorTextOptionHover,
+  text-fixed: $colorTextFixed
 );
