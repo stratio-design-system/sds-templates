@@ -234,10 +234,10 @@
   --sds-dropdown-option-icon-size: 16px;
   --sds-dropdown-option-icon-spacer: 8px;
   --sds-dropdown-option-label-correction: 1px;
-  --sds-dropdown-option-hover-color: var(--sds-color-action-1);
   --sds-dropdown-option-border-radius: 0;
 
-  --sds-dropdown-option-hover-background-color: var(--sds-color-action-1);
+  --sds-dropdown-option-hover-color: var(--sds-color-text-option-hover);
+  --sds-dropdown-option-hover-background-color: var(--sds-color-background-option-hover);
 
   --sds-dropdown-option-selected-background-color: var(--sds-color-space-2);
 
@@ -266,8 +266,10 @@
   --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .7);
 
   --sds-modal-z-indez: 1;
+  --sds-modal-border: none;
   --sds-modal-border-radius: 0;
 
+  --sds-modal-border-color: unset;
   --sds-modal-background-color: var(--sds-color-white);
   --sds-modal-padding: 24px;
   --sds-modal-spacing: 12px;

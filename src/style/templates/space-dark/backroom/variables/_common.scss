@@ -215,14 +215,14 @@
   --sds-dropdown-left: 0;
   --sds-dropdown-z-index: 2;
 
-  --sds-dropdown-border: none;
+  --sds-dropdown-border: var(--sds-component-border);
   --sds-dropdown-border-radius: var(--sds-component-border-radius);
   --sds-dropdown-padding: 4px 0;
   --sds-dropdown-margin: 0;
   --sds-dropdown-box-shadow: var(--sds-component-box-shadow);
 
   --sds-dropdown-text-color: var(--sds-color-space-17);
-  --sds-dropdown-border-color: unset;
+  --sds-dropdown-border-color: var(--sds-color-space-14);
   --sds-dropdown-background-color: var(--sds-color-space-15);
 
   --sds-dropdown-option-group-min-height: 30px;
@@ -234,10 +234,10 @@
   --sds-dropdown-option-icon-size: 16px;
   --sds-dropdown-option-icon-spacer: 8px;
   --sds-dropdown-option-label-correction: 1px;
-  --sds-dropdown-option-hover-color: var(--sds-color-action-1);
   --sds-dropdown-option-border-radius: 0;
 
-  --sds-dropdown-option-hover-background-color: var(--sds-color-action-1);
+  --sds-dropdown-option-hover-color: var(--sds-color-text-option-hover);
+  --sds-dropdown-option-hover-background-color: var(--sds-color-background-option-hover);
 
   --sds-dropdown-option-selected-background-color: var(--sds-color-space-2);
 
@@ -263,20 +263,22 @@
   --sds-modal-overlay-position: fixed;
   --sds-modal-overlay-width: 100vw;
   --sds-modal-overlay-height: 100vh;
-  --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .7);
+  --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .85);
 
   --sds-modal-z-indez: 1;
+  --sds-modal-border: var(--sds-component-border);
   --sds-modal-border-radius: 0;
 
-  --sds-modal-background-color: var(--sds-color-white);
+  --sds-modal-border-color: var(--sds-color-space-14);
+  --sds-modal-background-color: var(--sds-color-space-15);
   --sds-modal-padding: 24px;
   --sds-modal-spacing: 12px;
   --sds-modal-spacing-vertical: 20px;
 
-  --sds-modal-close-control-color: var(--sds-color-space-17);
+  --sds-modal-close-control-color: var(--sds-color-space-4);
 
-  --sds-modal-header-separator-color: var(--sds-color-space-3);
-  --sds-modal-header-color: var(--sds-color-space-17);
+  --sds-modal-header-separator-color: var(--sds-color-space-4);
+  --sds-modal-header-color: var(--sds-color-text-h4);
 
   // ###### NOTIFICATION
   --sds-notification-position: fixed;
