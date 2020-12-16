@@ -26,7 +26,7 @@
   "homepage": "https://github.com/stratio-design/sds-templates#readme",
   "devDependencies": {
     "@types/lodash": "^4.14.165",
-    "@types/node": "^14.14.13",
+    "@types/node": "^14.14.14",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
     "dotenv": "^8.2.0",
@@ -40,7 +40,7 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.0",
     "typescript": "^4.1.3",
-    "webpack": "^5.10.1",
+    "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0",
     "webpack-fix-style-only-entries": "^0.6.0",
     "yarn": "^1.22.10"
