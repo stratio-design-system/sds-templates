@@ -57,8 +57,12 @@
     }
     &:checked + LABEL {
       &:before {
-        border-color: var(--sds-selection-checked-disabled-border-color);
+        --sds-component-border: none;
         background-color: var(--sds-selection-checked-disabled-background-color);
+      }
+      &:after {
+        --sds-checkbox-checked: var(--sds-checkbox-checked-disabled);
+        --sds-radio-checked: var(--sds-radio-checked-disabled);
       }
     }
   }
@@ -124,7 +128,7 @@
   }
   &:focus, &.focus {
     border-color: var(--sds-component-focus-border-color);
-    box-shadow: 0 0 4px 0 rgba(var(--sds-component-focus-border-color-rgb), 0.2);
+    box-shadow: var(--sds-component-focus-box-shadow);
     background-color: var(--sds-component-focus-background-color);
   }
   &.error, &:focus.error, &.focus.error {

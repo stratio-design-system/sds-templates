@@ -40,29 +40,27 @@
 
   // ###### Component Colors (HEX)
   --sds-component-border-color: var(--sds-color-space-5);
-  --sds-component-background-color: white;
+  --sds-component-background-color: var(--sds-color-white);
+
   --sds-component-hover-border-color: var(--sds-color-space-7);
-  --sds-component-hover-background-color: white;
+  --sds-component-hover-background-color: var(--sds-color-white);
+
   --sds-component-focus-color: var(--sds-color-action-2);
   --sds-component-focus-border-color: var(--sds-color-action-6);
-  --sds-component-focus-background-color: white;
+  --sds-component-focus-background-color: var(--sds-color-white);
+
   --sds-component-error-border-color: var(--sds-error-color);
-  --sds-component-error-background-color: white;
+  --sds-component-error-background-color: var(--sds-color-white);
+
   --sds-component-checked-border-color: var(--sds-color-action-6);
   --sds-component-checked-background-color: var(--sds-color-action-6);
 
-  // ###### Component Colors (RGB Variations)
-  --sds-component-focus-border-color-rgb: var(--sds-color-action-6-rgb);
+  --sds-component-placeholder-color: var(--sds-color-space-6);
+  --sds-component-placeholder-disabled-color: var(--sds-color-space-6);
 
-  // ###### Component Generic DISABLED and variations
   --sds-component-disabled-color: var(--sds-color-space-8);
   --sds-component-disabled-border-color: var(--sds-color-space-5);
   --sds-component-disabled-background-color: var(--sds-color-space-1);
-  --sds-component-disabled-cursor: not-allowed;
-
-  // ###### Component Generic PLACEHOLDER
-  --sds-component-placeholder-color: var(--sds-color-space-6);
-  --sds-component-placeholder-disabled-color: var(--sds-color-space-6);
 
   // ###### Component ICON (icons inside components like .sds-input--search)
   --sds-component-icon-color: var(--sds-color-space-8);
@@ -77,7 +75,7 @@
   --sds-selection-z-index-after: auto;
 
   --sds-selection-disabled-tex-color: var(--sds-color-space-6);
-  --sds-selection-checked-disabled-border-color: var(--sds-color-action-4);
+  --sds-selection-checked-disabled-border-color: 0 0 0 1px var(--sds-color-action-4);
   --sds-selection-checked-disabled-background-color: var(--sds-color-action-4);
 
   // ###### Component Commons
@@ -96,6 +94,8 @@
 
   --sds-component-icon-left-spacer: 4px;
   --sds-component-icon-right-spacer: 8px;
+
+  --sds-component-disabled-cursor: not-allowed;
 
   // ###### ICONS
   --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
@@ -191,6 +191,7 @@
   --sds-checkbox-checked: url('#{$checkboxChecked}');
   --sds-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
   --sds-checkbox-border-radius: 2px;
+  --sds-checkbox-checked-disabled: var(--sds-checkbox-checked);
   --sds-checkbox-indeterminate-border-color: var(--sds-color-action-6);
   --sds-checkbox-indeterminate-background-color: var(--sds-color-white);
   --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-4);
@@ -307,6 +308,7 @@
   $radioChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="white"/></svg>';
   --sds-radio-checked: url('#{$radioChecked}');
   --sds-radio-border-radius: 100%;
+  --sds-radio-checked-disabled: var(--sds-radio-checked);
 
   // ###### REPORT
   --sds-report-color: var(--sds-color-space-8);
