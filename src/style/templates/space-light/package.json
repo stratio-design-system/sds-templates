@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/space-light",
-  "version": "5.0.22",
+  "version": "5.0.24",
   "description": "SDS Templates :: Stratio Product Template",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,5 +1,13 @@
 %sds-date-picker {
   .sds-calendar {
+    --sds-calendar-header-default-padding-vertical: var(--sds-calendar-header-padding-vertical);
+    --sds-calendar-header-default-padding-horizontal: var(--sds-calendar-header-padding-horizontal);
+    --sds-calendar-body-default-padding-vertical: var(--sds-calendar-body-padding-vertical);
+    --sds-calendar-body-default-padding-horizontal: var(--sds-calendar-body-padding-horizontal);
+    --sds-calendar-weekdays-default-spacing: var(--sds-calendar-weekdays-spacing);
+    --sds-calendar-item-default-width: var(--sds-calendar-item-width);
+    --sds-calendar-item-default-correction: var(--sds-calendar-item-correction);
+
     --sds-calendar-default-position: var(--sds-calendar-position);
     --sds-calendar-default-width: var(--sds-calendar-width);
     --sds-calendar-default-border-radius: var(--sds-component-border-radius);

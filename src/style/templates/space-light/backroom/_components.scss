@@ -347,7 +347,7 @@
 
   // ###### SELECT ###################################################################
   SELECT, SPAN, DIV {
-    &.sds-select {
+    &.sds-select:not(.sds-select--custom) {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-select--small {
         --sds-component-height: 30px;

@@ -2,7 +2,7 @@
 @import './shared/mixins';
 
 %sds-select {
-  SELECT.sds-select {
+  SELECT.sds-select:not(.sds-select--custom) {
     @include textInputElement() {
       @extend %sds-default-disabled-component;
     }
@@ -50,7 +50,7 @@
   }
 
   SPAN, DIV {
-    &.sds-select {
+    &.sds-select:not(.sds-select--custom) {
       @extend %sds-select--wrapper;
 
       &.sds-select--filter {
@@ -59,7 +59,7 @@
           right: 0;
           top: -1px;
         }
-        & > SELECT.sds-select {
+        & > SELECT.sds-select:not(.sds-select--custom) {
           border: none;
           border-radius: 0;
           background-color: transparent;

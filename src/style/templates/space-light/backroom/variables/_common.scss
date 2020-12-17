@@ -198,8 +198,16 @@
   --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-white);
 
   // ###### DATE PICKER
+  --sds-calendar-header-padding-vertical: 12px;
+  --sds-calendar-header-padding-horizontal: 12px;
+  --sds-calendar-body-padding-vertical: 16px;
+  --sds-calendar-body-padding-horizontal: 24px;
+  --sds-calendar-weekdays-spacing: 12px;
+  --sds-calendar-item-width: 36px;
+  --sds-calendar-item-correction: 0;
+
   --sds-calendar-position: absolute;
-  --sds-calendar-width: 300px;
+  --sds-calendar-width: calc((var(--sds-calendar-item-width) * 7) + (var(--sds-calendar-body-padding-horizontal) * 2));
   --sds-calendar-z-index: 2;
 
   --sds-calendar-background-color: var(--sds-color-white);

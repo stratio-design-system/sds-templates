@@ -34,7 +34,7 @@
 
   // ###### Generic Colors (HEX)
   --sds-focus-color: var(--sds-color-action-6);
-  --sds-error-color: var(--sds-color-coral-6);
+  --sds-error-color: var(--sds-color-coral-7);
   --sds-warning-color: var(--sds-color-orange-5);
   --sds-success-color: var(--sds-color-green-6);
 
@@ -171,18 +171,18 @@
 
   // ###### BUTTON
   --sds-button-color: var(--sds-color-white);
-  --sds-button-border-color: var(--sds-color-action-6);
-  --sds-button-background-color: var(--sds-color-action-6);
+  --sds-button-border-color: var(--sds-color-action-5);
+  --sds-button-background-color: var(--sds-color-action-5);
   --sds-button-hover-color: var(--sds-color-white);
-  --sds-button-hover-border-color: var(--sds-color-action-7);
-  --sds-button-hover-background-color: var(--sds-color-action-7);
+  --sds-button-hover-border-color: var(--sds-color-action-6);
+  --sds-button-hover-background-color: var(--sds-color-action-6);
   --sds-button-active-color: var(--sds-color-white);
-  --sds-button-active-border-color: var(--sds-color-action-8);
-  --sds-button-active-background-color: var(--sds-color-action-8);
-  --sds-button-disabled-color: var(--sds-color-space-4);
-  --sds-button-disabled-border-color: var(--sds-color-space-1);
-  --sds-button-disabled-background-color: var(--sds-color-space-1);
-  --sds-button-disabled-icon-color: var(--sds-color-space-4);
+  --sds-button-active-border-color: var(--sds-color-action-7);
+  --sds-button-active-background-color: var(--sds-color-action-7);
+  --sds-button-disabled-color: var(--sds-color-space-10);
+  --sds-button-disabled-border-color: transparent;
+  --sds-button-disabled-background-color: rgba(var(--sds-color-space-1-rgb), .04);
+  --sds-button-disabled-icon-color: var(--sds-color-space-10);
 
   --sds-button-icon-spacer: 8px;
   --sds-button-border-correction: 2px;
@@ -201,8 +201,16 @@
   --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-white);
 
   // ###### DATE PICKER
+  --sds-calendar-header-padding-vertical: 12px;
+  --sds-calendar-header-padding-horizontal: 12px;
+  --sds-calendar-body-padding-vertical: 16px;
+  --sds-calendar-body-padding-horizontal: 24px;
+  --sds-calendar-weekdays-spacing: 12px;
+  --sds-calendar-item-width: 36px;
+  --sds-calendar-item-correction: 0;
+
   --sds-calendar-position: absolute;
-  --sds-calendar-width: 300px;
+  --sds-calendar-width: calc((var(--sds-calendar-item-width) * 7) + (var(--sds-calendar-body-padding-horizontal) * 2));
   --sds-calendar-z-index: 2;
 
   --sds-calendar-background-color: var(--sds-color-white);
@@ -261,7 +269,7 @@
 
   // ###### LINK
   --sds-link-color: var(--sds-color-action-5);
-  --sds-link-hover-color: var(--sds-color-action-4);
+  --sds-link-hover-color: var(--sds-color-action-6);
 
   // ###### MODAL
   --sds-modal-overlay-position: fixed;

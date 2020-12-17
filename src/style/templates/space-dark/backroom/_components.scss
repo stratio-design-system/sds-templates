@@ -136,26 +136,26 @@
       }
       &.sds-button--secondary, &.sds-button--bob {
         --sds-button-color: var(--sds-color-space-7);
-        --sds-button-border-color: var(--sds-color-space-5);
-        --sds-button-background-color: var(--sds-color-white);
-        --sds-button-hover-color: var(--sds-color-space-8);
-        --sds-button-hover-border-color: var(--sds-color-space-8);
-        --sds-button-hover-background-color: var(--sds-color-action-1);
-        --sds-button-active-color: var(--sds-color-space-13);
-        --sds-button-active-border-color: var(--sds-color-space-8);
-        --sds-button-active-background-color: var(--sds-color-action-2);
-        --sds-button-disabled-color: var(--sds-color-space-4);
-        --sds-button-disabled-border-color: var(--sds-color-space-3);
-        --sds-button-disabled-background-color: var(--sds-color-white);
+        --sds-button-border-color: var(--sds-color-space-7);
+        --sds-button-background-color: transparent;
+        --sds-button-hover-color: var(--sds-color-space-6);
+        --sds-button-hover-border-color: var(--sds-color-space-6);
+        --sds-button-hover-background-color: rgba(var(--sds-color-space-1-rgb), .05);
+        --sds-button-active-color: var(--sds-color-space-5);
+        --sds-button-active-border-color: var(--sds-color-space-6);
+        --sds-button-active-background-color: rgba(var(--sds-color-space-1-rgb), .08);
+        --sds-button-disabled-color: var(--sds-color-space-10);
+        --sds-button-disabled-border-color: var(--sds-color-space-10);
+        --sds-button-disabled-background-color: transparent;
       }
       &.sds-button--borderless {
         --sds-button-color: var(--sds-color-space-7);
         --sds-button-border-color: transparent;
         --sds-button-background-color: transparent;
-        --sds-button-hover-color: var(--sds-color-space-7);
+        --sds-button-hover-color: var(--sds-color-space-6);
         --sds-button-hover-border-color: transparent;
         --sds-button-hover-background-color: rgba(var(--sds-color-space-1-rgb), .05);
-        --sds-button-active-color: var(--sds-color-space-7);
+        --sds-button-active-color: var(--sds-color-space-5);
         --sds-button-active-border-color: transparent;
         --sds-button-active-background-color: rgba(var(--sds-color-space-1-rgb), .08);
       }
@@ -164,11 +164,11 @@
         --sds-button-border-color: var(--sds-error-color);
         --sds-button-background-color: var(--sds-error-color);
         --sds-button-hover-color: var(--sds-color-white);
-        --sds-button-hover-border-color: var(--sds-color-coral-7);
-        --sds-button-hover-background-color: var(--sds-color-coral-7);
+        --sds-button-hover-border-color: var(--sds-color-coral-8);
+        --sds-button-hover-background-color: var(--sds-color-coral-8);
         --sds-button-active-color: var(--sds-color-white);
-        --sds-button-active-border-color: var(--sds-color-coral-8);
-        --sds-button-active-background-color: var(--sds-color-coral-8);
+        --sds-button-active-border-color: var(--sds-color-coral-9);
+        --sds-button-active-background-color: var(--sds-color-coral-9);
       }
     }
   }
@@ -347,7 +347,7 @@
 
   // ###### SELECT ###################################################################
   SELECT, SPAN, DIV {
-    &.sds-select {
+    &.sds-select:not(.sds-select--custom) {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       &.sds-select--small {
         --sds-component-height: 30px;

@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/sds-templates",
-  "version": "5.0.22",
+  "version": "5.0.24",
   "description": "SDS Template System.",
   "scripts": {
     "build": "sh ./src/build.sh $1",
