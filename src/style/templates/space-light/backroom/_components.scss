@@ -346,21 +346,34 @@
   }
 
   // ###### SELECT ###################################################################
-  SELECT, SPAN, DIV {
-    &.sds-select:not(.sds-select--custom) {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-select--small {
-        --sds-component-height: 30px;
-        --sds-component-padding-horizontal: 8px;
-        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-      }
-      &.sds-select--filter {
-        --sds-component-height: fit-content;
-        --sds-component-width: fit-content;
-        --sds-component-padding-vertical: 0;
-      }
-      &.sds-select--placeholder {
-        color: var(--sds-component-placeholder-color);
+  LABEL.sds-label {
+    & + SELECT, & + INPUT {
+      &.sds-select {
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        &.sds-select--small {
+          --sds-component-height: 30px;
+          --sds-component-padding-horizontal: 8px;
+          --sds-select-filter-padding-right: 8px;
+          @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        }
+        &.sds-select--filter {
+          --sds-component-height: fit-content;
+          --sds-component-width: fit-content;
+          --sds-component-padding-horizontal: 0;
+          padding-right: calc(var(--sds-select-filter-padding-right) + var(--sds-select-chevron-width));
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+          box-shadow: none;
+          &:focus, &:focus.error, &.focus, &.focus.error {
+            background-color: transparent;
+            box-shadow: none;
+          }
+          &:disabled, &.disabled {
+            background-color: transparent;
+            box-shadow: none;
+          }
+        }
       }
     }
   }

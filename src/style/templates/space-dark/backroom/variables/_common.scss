@@ -39,21 +39,25 @@
   --sds-success-color: var(--sds-color-green-6);
 
   // ###### Component Colors (HEX)
+  --sds-component-color: var(--sds-color-space-6);
   --sds-component-border-color: var(--sds-color-space-6);
   --sds-component-background-color: transparent;
 
+  --sds-component-hover-color: var(--sds-color-space-6);
   --sds-component-hover-border-color: var(--sds-color-space-4);
   --sds-component-hover-background-color: transparent;
 
-  --sds-component-focus-color: var(--sds-color-action-5);
+  --sds-component-focus-color: var(--sds-color-space-6);
+  --sds-component-focus-error-color: var(--sds-color-space-6);
   --sds-component-focus-border-color: var(--sds-color-space-4);
   --sds-component-focus-background-color: transparent;
+  --sds-component-focus-box-shadow-color: var(--sds-color-action-5);
+  --sds-component-focus-error-box-shadow-color: var(--sds-color-coral-5);
 
+  --sds-component-error-color: var(--sds-color-space-6);
   --sds-component-error-border-color: var(--sds-error-color);
   --sds-component-error-background-color: transparent;
 
-  //--sds-component-checked-border-color: var(--sds-color-space-4);
-  //--sds-component-checked-background-color: var(--sds-color-space-4);
   --sds-component-checked-border-color: var(--sds-color-action-5);
   --sds-component-checked-background-color: var(--sds-color-action-5);
 
@@ -90,6 +94,7 @@
 
   --sds-component-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-12-rgb), .25);
   --sds-component-focus-box-shadow: 0 0 0 2px rgba(var(--sds-color-action-4-rgb), .5);
+  --sds-component-focus-error-box-shadow: 0 0 0 2px rgba(var(--sds-color-coral-4-rgb), .5);
 
   --sds-component-border: 1px solid;
   --sds-component-border-radius: 4px;
@@ -324,6 +329,18 @@
 
   // ###### REPORT
   --sds-report-color: var(--sds-color-space-8);
+
+  // ###### SELECT
+  $selectChevron: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(108, 123, 139)"/></svg>';
+  $selectChevronFocus: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(7, 118, 223)"/></svg>';
+  $selectChevronError: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(239, 64, 52)"/></svg>';
+  $selectChevronDisabled: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(136, 152, 167)"/></svg>';
+  --sds-select-chevron-width: 10px;
+  --sds-select-filter-padding-right: 12px;
+  --sds-select-chevron: url('#{$selectChevron}');
+  --sds-select-chevron-focus: url('#{$selectChevronFocus}');
+  --sds-select-chevron-error: url('#{$selectChevronError}');
+  --sds-select-chevron-disabled: url('#{$selectChevronDisabled}');
 
   // ###### SPINNER
   --sds-spinner-display: block;

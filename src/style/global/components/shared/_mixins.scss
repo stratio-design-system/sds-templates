@@ -35,6 +35,12 @@
       }
       background-color: var(--sds-component-background-color);
     }
+
+    &:focus, &.focus {
+      &:before {
+        box-shadow: var(--sds-component-focus-box-shadow);
+      }
+    }
   }
 
   &:hover {
@@ -112,31 +118,52 @@
   box-sizing: border-box;
   padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
   border: var(--sds-component-border);
+  color: var(--sds-component-color, inherit);
   border-color: var(--sds-component-border-color);
   border-radius: var(--sds-component-border-radius);
   background: var(--sds-component-background-color);
-  color: inherit;
+
   &:hover {
+    color: var(--sds-component-hover-color);
     border-color: var(--sds-component-hover-border-color);
     background-color: var(--sds-component-hover-background-color);
   }
   &:disabled, &.disabled {
     @content;
-    &::placeholder {
+    &::placeholder, &.placeholder {
       color: var(--sds-component-placeholder-disabled-color);
     }
   }
   &:focus, &.focus {
+    color: var(--sds-component-focus-color);
     border-color: var(--sds-component-focus-border-color);
     box-shadow: var(--sds-component-focus-box-shadow);
     background-color: var(--sds-component-focus-background-color);
+    &::placeholder, &.placeholder {
+      color: var(--sds-component-placeholder-color);
+    }
   }
-  &.error, &:focus.error, &.focus.error {
+  &:focus.error, &.focus.error {
+    color: var(--sds-component-focus-error-color);
     border-color: var(--sds-component-error-border-color);
     background-color: var(--sds-component-error-background-color);
-    box-shadow: none;
+    box-shadow: var(--sds-component-focus-error-box-shadow);
+    &::placeholder, &.placeholder {
+      color: var(--sds-component-placeholder-color);
+    }
   }
-  &::placeholder {
+  &.error {
+    color: var(--sds-component-error-color);
+    border-color: var(--sds-component-error-border-color);
+    background-color: var(--sds-component-error-background-color);
+    &:disabled, &.disabled {
+      @content;
+      &::placeholder, &.placeholder {
+        color: var(--sds-component-placeholder-disabled-color);
+      }
+    }
+  }
+  &::placeholder, &.placeholder {
     color: var(--sds-component-placeholder-color);
   }
 }
