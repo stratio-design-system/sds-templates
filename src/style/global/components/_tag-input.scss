@@ -1,5 +1,8 @@
 %sds-tag-input {
   .sds-tag-input {
+    &.sds-input {
+      height: fit-content;
+    }
     .sds-tag {
       margin: 2px;
       &.hide {
@@ -7,6 +10,7 @@
       }
       & ~ .hide {
         position: absolute;
+        z-index: -1;
       }
     }
   }
