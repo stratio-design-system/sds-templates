@@ -136,7 +136,7 @@
       }
       &.sds-button--secondary, &.sds-button--bob {
         --sds-button-color: var(--sds-color-space-7);
-        --sds-button-border-color: var(--sds-color-space-5);
+        --sds-button-border-color: var(--sds-color-space-7);
         --sds-button-background-color: var(--sds-color-white);
         --sds-button-hover-color: var(--sds-color-space-8);
         --sds-button-hover-border-color: var(--sds-color-space-8);
@@ -327,14 +327,6 @@
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       line-height: calc(var(--sds-selection-icon-size) + 1px);
-      &:before {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
-    }
-    &:checked + LABEL {
-      &:after {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
     }
   }
 

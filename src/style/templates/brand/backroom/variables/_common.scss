@@ -1,0 +1,10 @@
+@import '../colors';
+
+%sds-global-vars {
+  // ###### Color Scheme Definition
+  @each $key, $value in $colorsAvailable {
+    $symbol: if($key==-white or $key==-black, '', '-');
+    --sds-color#{$symbol}#{$key}: #{$value};
+    --sds-color#{$symbol}#{$key}-rgb: #{red($value), green($value), blue($value)};
+  }
+}

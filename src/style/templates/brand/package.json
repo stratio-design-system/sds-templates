@@ -1,7 +1,7 @@
 {
-  "name": "@stratiods/space-light",
-  "version": "5.0.27",
-  "description": "SDS Templates :: Stratio Product Template",
+  "name": "@stratiods/brand",
+  "version": "5.0.32",
+  "description": "SDS Templates :: Stratio Brand",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": {
@@ -13,5 +13,5 @@
   "bugs": {
     "url": "https://github.com/stratio-design/sds-templates/issues"
   },
-  "homepage": "https://github.com/stratio-design/sds-templates/tree/master/src/style/templates/space-light#readme"
+  "homepage": "https://github.com/stratio-design/sds-templates/tree/master/src/style/templates/brand#readme"
 }

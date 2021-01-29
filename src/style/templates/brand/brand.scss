@@ -1,0 +1,47 @@
+@import '../../global/mixins';
+@import '../../global/fonts/Inter';
+@import '../../global/components/components';
+
+@import './backroom/variables/common';
+@import './backroom/font-sizes';
+
+HTML {
+  &.sds-brand-tpl, .sds-brand-tpl {
+    font-size: $fontSizeRoot + px;
+    line-height: $fontLineHeightFactor;
+
+    * {
+      font-family: Inter, sans-serif;
+      color: var(--sds-color-text-default);
+      outline: none;
+    }
+
+    @extend %sds-inter-typography-definition;
+    &.sds-inter *, .sds-inter *, .sds-inter {
+      font-family: Inter, sans-serif;
+      @extend %sds-inter-typography-definition;
+    }
+
+    @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
+      // ###### HEADERS
+      @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
+
+      // ###### DEFAULT WEIGHT AND STYLE
+      .sds--bold {
+        font-weight: bold;
+      }
+      .sds--italic {
+        font-style: italic;
+      }
+
+      // ###### DEFAULT SIZE
+      .sds-font--default {
+        font-size: 1rem;
+        line-height: $fontLineHeightFactor;
+      }
+    }
+
+    @include createColorsDefinition($colorsAvailable);
+    @extend %sds-global-vars;
+  }
+}

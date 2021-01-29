@@ -327,14 +327,6 @@
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       line-height: calc(var(--sds-selection-icon-size) + 1px);
-      &:before {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
-    }
-    &:checked + LABEL {
-      &:after {
-        top: var(--sds-selection-icon-spacer-vertical);
-      }
     }
   }
 
