@@ -6,8 +6,8 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
 
 @include createFontFaceRule($typesToGenerate, $iconFontFamily, normal, normal, '../../../fonts/stratio-icon-set/ico_stratio');
 
-%sds-icon-definition {
-  .sds-icon, .sds-icon-text:before {
+%npa-icon-definition {
+  .npa-icon, .npa-icon-text:before {
     font-family: $iconFontFamily, Symbol, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -25,14 +25,14 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
     font-feature-settings: 'liga';        //# Support for IE.
   }
 
-  .sds-icon, .sds-icon-text {
+  .npa-icon, .npa-icon-text {
     @each $key, $value in $iconTableDefinitions {
       &.#{$key}:before {
         content: unquote('"\\#{$value}"');
       }
     }
   }
-  .sds-icon-text {
+  .npa-icon-text {
     &:before {
       position: relative;
       top: 0.095em;

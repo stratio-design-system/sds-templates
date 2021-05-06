@@ -1,27 +1,27 @@
 @import './shared/mixins';
 
-%sds-checkbox {
-  INPUT[type=checkbox]:not(.sds-switch) {
+%npa-checkbox {
+  INPUT[type=checkbox]:not(.npa-switch) {
     @include selectionElement('checkbox') {
       &:disabled, &.disabled {
-        &.sds-checkbox--indeterminate {
+        &.npa-checkbox--indeterminate {
           &:checked + LABEL {
             &:before {
-              border-color: var(--sds-checkbox-indeterminate-disabled-border-color);
-              background-color: var(--sds-checkbox-indeterminate-disabled-background-color);
+              border-color: var(--npa-checkbox-indeterminate-disabled-border-color);
+              background-color: var(--npa-checkbox-indeterminate-disabled-background-color);
             }
           }
         }
       }
 
-      &.sds-checkbox--indeterminate {
+      &.npa-checkbox--indeterminate {
         &:checked + LABEL {
           &:before {
-            border-color: var(--sds-checkbox-indeterminate-border-color);
-            background-color: var(--sds-checkbox-indeterminate-background-color);
+            border-color: var(--npa-checkbox-indeterminate-border-color);
+            background-color: var(--npa-checkbox-indeterminate-background-color);
           }
           &:after {
-            background-image: var(--sds-checkbox-indeterminate);
+            background-image: var(--npa-checkbox-indeterminate);
           }
         }
       }

@@ -1,28 +1,28 @@
-%sds-badge {
-  .sds-badge {
-    .sds-badge__box {
-      position: var(--sds-badge-position);
+%npa-badge {
+  .npa-badge {
+    .npa-badge__box {
+      position: var(--npa-badge-position);
       display: flex;
       align-items: center;
       justify-content: center;
       width: fit-content;
       height: fit-content;
-      min-height: var(--sds-badge-min-height);
-      min-width: var(--sds-badge-min-width);
-      color: var(--sds-badge-color);
-      background-color: var(--sds-badge-background-color);
-      border: 1px solid var(--sds-badge-border-color);
-      border-radius: var(--sds-badge-border-radius);
-      padding: var(--sds-badge-padding);
+      min-height: var(--npa-badge-min-height);
+      min-width: var(--npa-badge-min-width);
+      color: var(--npa-badge-color);
+      background-color: var(--npa-badge-background-color);
+      border: 1px solid var(--npa-badge-border-color);
+      border-radius: var(--npa-badge-border-radius);
+      padding: var(--npa-badge-padding);
       box-sizing: border-box;
       z-index: 2;
 
-      .sds-badge__text {
+      .npa-badge__text {
         font-size: inherit;
         color: inherit;
         line-height: 1;
         position: relative;
-        top: var(--sds-badge-text-top);
+        top: var(--npa-badge-text-top);
       }
     }
   }

@@ -1,43 +1,43 @@
 @import '../exportable/app.mixins';
 
-%sds-tag {
-  %sds-tag-icon {
+%npa-tag {
+  %npa-tag-icon {
     position: absolute;
-    line-height: var(--sds-tag-height);
+    line-height: var(--npa-tag-height);
     color: inherit;
     top: -1px;
   }
 
   SPAN, DIV {
-    &.sds-tag {
+    &.npa-tag {
       display: table-cell;
       position: relative;
       width: fit-content;
       min-width: fit-content;
-      height: var(--sds-tag-height);
-      min-height: var(--sds-tag-height);
+      height: var(--npa-tag-height);
+      min-height: var(--npa-tag-height);
       box-sizing: border-box;
-      color: var(--sds-tag-text-color);
-      border: var(--sds-component-border);
-      border-color: var(--sds-tag-border-color);
-      border-radius: var(--sds-component-border-radius);
-      background-color: var(--sds-tag-background-color);
-      padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
-      &.sds-tag--icon-left {
-        padding-left: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-left-spacer));
-        I.sds-icon {
-          @extend %sds-tag-icon;
-          &.sds-icon--left {
-            left: var(--sds-component-padding-horizontal);
+      color: var(--npa-tag-text-color);
+      border: var(--npa-component-border);
+      border-color: var(--npa-tag-border-color);
+      border-radius: var(--npa-component-border-radius);
+      background-color: var(--npa-tag-background-color);
+      padding: var(--npa-component-padding-vertical) var(--npa-component-padding-horizontal);
+      &.npa-tag--icon-left {
+        padding-left: calc(var(--npa-component-padding-horizontal) + 1.1em + var(--npa-component-icon-left-spacer));
+        I.npa-icon {
+          @extend %npa-tag-icon;
+          &.npa-icon--left {
+            left: var(--npa-component-padding-horizontal);
           }
         }
       }
-      &.sds-tag--icon-right {
-        padding-right: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-right-spacer));
-        I.sds-icon {
-          @extend %sds-tag-icon;
-          &.sds-icon--right {
-            right: var(--sds-component-padding-horizontal);
+      &.npa-tag--icon-right {
+        padding-right: calc(var(--npa-component-padding-horizontal) + 1.1em + var(--npa-component-icon-right-spacer));
+        I.npa-icon {
+          @extend %npa-tag-icon;
+          &.npa-icon--right {
+            right: var(--npa-component-padding-horizontal);
           }
           &.action {
             cursor: pointer;
@@ -45,28 +45,28 @@
         }
       }
 
-      &.sds-tag--interactive {
+      &.npa-tag--interactive {
         cursor: pointer;
-        &.sds-tag--selectable {
+        &.npa-tag--selectable {
           cursor: default;
         }
         &:hover {
-          color: var(--sds-tag-hover-text-color);
-          border-color: var(--sds-tag-hover-border-color);
-          background-color: var(--sds-tag-hover-background-color);
+          color: var(--npa-tag-hover-text-color);
+          border-color: var(--npa-tag-hover-border-color);
+          background-color: var(--npa-tag-hover-background-color);
         }
         &:active, &.selected {
-          color: var(--sds-tag-active-text-color);
-          border-color: var(--sds-tag-active-border-color);
-          background-color: var(--sds-tag-active-background-color);
+          color: var(--npa-tag-active-text-color);
+          border-color: var(--npa-tag-active-border-color);
+          background-color: var(--npa-tag-active-background-color);
         }
         &:disabled, &.disabled {
-          color: var(--sds-tag-disabled-text-color);
-          border-color: var(--sds-tag-disabled-border-color);
-          background-color: var(--sds-tag-disabled-background-color);
-          cursor: var(--sds-component-disabled-cursor);
-          I.sds-icon {
-            cursor: var(--sds-component-disabled-cursor);
+          color: var(--npa-tag-disabled-text-color);
+          border-color: var(--npa-tag-disabled-border-color);
+          background-color: var(--npa-tag-disabled-background-color);
+          cursor: var(--npa-component-disabled-cursor);
+          I.npa-icon {
+            cursor: var(--npa-component-disabled-cursor);
           }
         }
       }

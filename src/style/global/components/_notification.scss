@@ -1,25 +1,25 @@
-%sds-notification {
-  .sds-notification {
-    --sds-notification-default-position: var(--sds-notification-position);
-    --sds-notification-default-padding: var(--sds-notification-padding);
-    --sds-notification-default-width: var(--sds-notification-width);
-    --sds-notification-default-min-width: var(--sds-notification-min-width);
-    --sds-notification-default-max-width: var(--sds-notification-max-width);
-    --sds-notification-default-top: var(--sds-notification-top);
-    --sds-notification-default-left: var(--sds-notification-left);
-    --sds-notification-default-z-index: var(--sds-notification-z-index);
+%npa-notification {
+  .npa-notification {
+    --npa-notification-default-position: var(--npa-notification-position);
+    --npa-notification-default-padding: var(--npa-notification-padding);
+    --npa-notification-default-width: var(--npa-notification-width);
+    --npa-notification-default-min-width: var(--npa-notification-min-width);
+    --npa-notification-default-max-width: var(--npa-notification-max-width);
+    --npa-notification-default-top: var(--npa-notification-top);
+    --npa-notification-default-left: var(--npa-notification-left);
+    --npa-notification-default-z-index: var(--npa-notification-z-index);
 
-    --sds-notification-default-border: var(--sds-notification-border);
-    --sds-notification-default-border-radius: var(--sds-notification-border-radius);
-    --sds-notification-default-box-shadow: var(--sds-notification-box-shadow);
+    --npa-notification-default-border: var(--npa-notification-border);
+    --npa-notification-default-border-radius: var(--npa-notification-border-radius);
+    --npa-notification-default-box-shadow: var(--npa-notification-box-shadow);
 
-    --sds-notification-default-text-color: var(--sds-notification-text-color);
-    --sds-notification-default-border-color: var(--sds-notification-border-color);
-    --sds-notification-default-background-color: var(--sds-notification-background-color);
+    --npa-notification-default-text-color: var(--npa-notification-text-color);
+    --npa-notification-default-border-color: var(--npa-notification-border-color);
+    --npa-notification-default-background-color: var(--npa-notification-background-color);
 
-    --sds-notification-default-icon-separation: var(--sds-notification-icon-separation);
-    --sds-notification-default-close-control-separation: var(--sds-notification-close-control-separation);
-    .sds-notification--message SPAN {
+    --npa-notification-default-icon-separation: var(--npa-notification-icon-separation);
+    --npa-notification-default-close-control-separation: var(--npa-notification-close-control-separation);
+    .npa-notification--message SPAN {
       * {
         color: inherit;
       }
@@ -31,10 +31,10 @@
         }
       }
     }
-    &.sds-notification--info {
-      .sds-notification--message SPAN A {
+    &.npa-notification--info {
+      .npa-notification--message SPAN A {
         text-decoration: none;
-        color: var(sds-notification-inside-link-color);
+        color: var(--npa-notification-inside-link-color);
         &:hover {
           text-decoration: underline;
         }

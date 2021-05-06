@@ -8,32 +8,32 @@
 @import './backroom/font-sizes';
 
 HTML {
-  &.sds-space-light-tpl {
+  &.npa-space-light-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
     * {
       font-family: 'Nunito Sans', sans-serif;
-      color: var(--sds-color-text-default);
+      color: var(--npa-color-text-default);
       outline: none;
     }
 
-    @extend %sds-nunito-sans-typography-definition;
+    @extend %npa-nunito-sans-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
       @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
 
       // ###### DEFAULT WEIGHT AND STYLE
-      .sds--bold {
+      .npa--bold {
         font-weight: bold;
       }
-      .sds--italic {
+      .npa--italic {
         font-style: italic;
       }
 
       // ###### DEFAULT SIZE
-      .sds-font--default {
+      .npa-font--default {
         font-size: 1rem;
         line-height: $fontLineHeightFactor;
       }
@@ -43,9 +43,9 @@ HTML {
     @include createColorsDefinition($templateBaseBackgroundColor, 'bg');
     @include createColorsDefinition($templateBaseBorderColor, 'border');
     @include createColorsDefinition($templateBaseTextColor);
-    @extend %sds-icon-definition;
-    @extend %sds-global-vars;
-    @extend %sds-components;
-    @extend %sds-components-template;
+    @extend %npa-icon-definition;
+    @extend %npa-global-vars;
+    @extend %npa-components;
+    @extend %npa-components-template;
   }
 }

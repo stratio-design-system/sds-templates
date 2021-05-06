@@ -1,49 +1,49 @@
-%sds-tooltip {
-  .sds-tooltip {
-    .sds-tooltip__box {
-      position: var(--sds-tooltip-position);
+%npa-tooltip {
+  .npa-tooltip {
+    .npa-tooltip__box {
+      position: var(--npa-tooltip-position);
       display: flex;
       align-items: center;
       width: fit-content;
       max-width: 250px;
-      min-height: var(--sds-tooltip-height);
-      z-index: var(--sds-tooltip-z-index);
-      background-color: var(--sds-tooltip-background-color);
-      color: var(--sds-tooltip-color);
-      border: 1px solid var(--sds-tooltip-border-color);
-      border-radius: var(--sds-component-border-radius);
-      box-shadow: var(--sds-component-box-shadow);
-      padding: var(--sds-tooltip-padding);
+      min-height: var(--npa-tooltip-height);
+      z-index: var(--npa-tooltip-z-index);
+      background-color: var(--npa-tooltip-background-color);
+      color: var(--npa-tooltip-color);
+      border: 1px solid var(--npa-tooltip-border-color);
+      border-radius: var(--npa-component-border-radius);
+      box-shadow: var(--npa-component-box-shadow);
+      padding: var(--npa-tooltip-padding);
       box-sizing: border-box;
-      .sds-tooltip__text {
+      .npa-tooltip__text {
         font-size: inherit;
         color: inherit;
       }
     }
 
-    .sds-tooltip__arrow {
-      position: var(--sds-tooltip-arrow-position);
+    .npa-tooltip__arrow {
+      position: var(--npa-tooltip-arrow-position);
       width: 0;
       height: 0;
-      z-index: var(--sds-tooltip-z-index);
+      z-index: var(--npa-tooltip-z-index);
       border: 6px solid transparent;
       pointer-events: none;
       &--top {
-        border-top-color: var(--sds-tooltip-border-color);
+        border-top-color: var(--npa-tooltip-border-color);
       }
       &--bottom {
-        border-bottom-color: var(--sds-tooltip-border-color);
+        border-bottom-color: var(--npa-tooltip-border-color);
       }
       &--left {
-        border-left-color: var(--sds-tooltip-border-color);
+        border-left-color: var(--npa-tooltip-border-color);
       }
       &--right {
-        border-right-color: var(--sds-tooltip-border-color);
+        border-right-color: var(--npa-tooltip-border-color);
       }
     }
 
-    .sds-tooltip--no-limit {
-      .sds-tooltip__box {
+    .npa-tooltip--no-limit {
+      .npa-tooltip__box {
         max-width: unset;
       }
     }

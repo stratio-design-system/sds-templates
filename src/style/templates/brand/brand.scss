@@ -6,20 +6,20 @@
 @import './backroom/font-sizes';
 
 HTML {
-  &.sds-brand-tpl, .sds-brand-tpl {
+  &.npa-brand-tpl, .npa-brand-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
     * {
       font-family: Inter, sans-serif;
-      color: var(--sds-color-text-default);
+      color: var(--npa-color-text-default);
       outline: none;
     }
 
-    @extend %sds-inter-typography-definition;
-    &.sds-inter *, .sds-inter *, .sds-inter {
+    @extend %npa-inter-typography-definition;
+    &.npa-inter *, .npa-inter *, .npa-inter {
       font-family: Inter, sans-serif;
-      @extend %sds-inter-typography-definition;
+      @extend %npa-inter-typography-definition;
     }
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
@@ -27,21 +27,21 @@ HTML {
       @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
 
       // ###### DEFAULT WEIGHT AND STYLE
-      .sds--bold {
+      .npa--bold {
         font-weight: bold;
       }
-      .sds--italic {
+      .npa--italic {
         font-style: italic;
       }
 
       // ###### DEFAULT SIZE
-      .sds-font--default {
+      .npa-font--default {
         font-size: 1rem;
         line-height: $fontLineHeightFactor;
       }
     }
 
     @include createColorsDefinition($colorsAvailable);
-    @extend %sds-global-vars;
+    @extend %npa-global-vars;
   }
 }

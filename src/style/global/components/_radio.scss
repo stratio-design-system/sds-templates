@@ -1,6 +1,6 @@
 @import './shared/mixins';
 
-%sds-radio {
+%npa-radio {
   INPUT[type=radio] {
     @include selectionElement('radio');
   }

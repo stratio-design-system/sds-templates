@@ -6,439 +6,439 @@
 @import './sass';
 @import '../spacing';
 
-%sds-global-vars {
+%npa-global-vars {
   // ###### Spacing Definition
   @each $value in $spacings {
-    --sds-spacing-#{$value}: #{$value}px;
-    --sds-spacing-relative-#{$value}: #{getRemRelativeSize($value, $fontSizeRoot)};
+    --npa-spacing-#{$value}: #{$value}px;
+    --npa-spacing-relative-#{$value}: #{getRemRelativeSize($value, $fontSizeRoot)};
   }
 
   // ###### Color Scheme Definition
   @each $key, $value in $colorsAvailable {
     $symbol: if($key==-white or $key==-black,'','-');
-    --sds-color#{$symbol}#{$key}: #{$value};
-    --sds-color#{$symbol}#{$key}-rgb: #{red($value), green($value), blue($value)};
+    --npa-color#{$symbol}#{$key}: #{$value};
+    --npa-color#{$symbol}#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
   @each $key, $value in $templateBaseBackgroundColor {
-    --sds-color-#{$key}: #{$value};
-    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+    --npa-color-#{$key}: #{$value};
+    --npa-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
   @each $key, $value in $templateBaseBorderColor {
-    --sds-color-#{$key}: #{$value};
-    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+    --npa-color-#{$key}: #{$value};
+    --npa-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
   @each $key, $value in $templateBaseTextColor {
-    --sds-color-#{$key}: #{$value};
-    --sds-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
+    --npa-color-#{$key}: #{$value};
+    --npa-color-#{$key}-rgb: #{red($value), green($value), blue($value)};
   }
 
   // ###### Generic Colors (HEX)
-  --sds-focus-color: var(--sds-color-action-6);
-  --sds-error-color: var(--sds-color-coral-7);
-  --sds-warning-color: var(--sds-color-orange-5);
-  --sds-success-color: var(--sds-color-green-6);
+  --npa-focus-color: var(--npa-color-action-6);
+  --npa-error-color: var(--npa-color-coral-7);
+  --npa-warning-color: var(--npa-color-orange-5);
+  --npa-success-color: var(--npa-color-green-6);
 
   // ###### Component Colors (HEX)
-  --sds-component-color: var(--sds-color-space-6);
-  --sds-component-border-color: var(--sds-color-space-6);
-  --sds-component-background-color: transparent;
+  --npa-component-color: var(--npa-color-space-6);
+  --npa-component-border-color: var(--npa-color-space-6);
+  --npa-component-background-color: transparent;
 
-  --sds-component-hover-color: var(--sds-color-space-6);
-  --sds-component-hover-border-color: var(--sds-color-space-4);
-  --sds-component-hover-background-color: transparent;
+  --npa-component-hover-color: var(--npa-color-space-6);
+  --npa-component-hover-border-color: var(--npa-color-space-4);
+  --npa-component-hover-background-color: transparent;
 
-  --sds-component-focus-color: var(--sds-color-space-6);
-  --sds-component-focus-error-color: var(--sds-color-space-6);
-  --sds-component-focus-border-color: var(--sds-color-space-4);
-  --sds-component-focus-background-color: transparent;
-  --sds-component-focus-box-shadow-color: var(--sds-color-action-5);
-  --sds-component-focus-error-box-shadow-color: var(--sds-color-coral-5);
+  --npa-component-focus-color: var(--npa-color-space-6);
+  --npa-component-focus-error-color: var(--npa-color-space-6);
+  --npa-component-focus-border-color: var(--npa-color-space-4);
+  --npa-component-focus-background-color: transparent;
+  --npa-component-focus-box-shadow-color: var(--npa-color-action-5);
+  --npa-component-focus-error-box-shadow-color: var(--npa-color-coral-5);
 
-  --sds-component-error-color: var(--sds-color-space-6);
-  --sds-component-error-border-color: var(--sds-error-color);
-  --sds-component-error-background-color: transparent;
+  --npa-component-error-color: var(--npa-color-space-6);
+  --npa-component-error-border-color: var(--npa-error-color);
+  --npa-component-error-background-color: transparent;
 
-  --sds-component-checked-border-color: var(--sds-color-action-5);
-  --sds-component-checked-background-color: var(--sds-color-action-5);
+  --npa-component-checked-border-color: var(--npa-color-action-5);
+  --npa-component-checked-background-color: var(--npa-color-action-5);
 
-  --sds-component-placeholder-color: var(--sds-color-space-8);
-  --sds-component-placeholder-disabled-color: var(--sds-color-space-10);
+  --npa-component-placeholder-color: var(--npa-color-space-8);
+  --npa-component-placeholder-disabled-color: var(--npa-color-space-10);
 
-  --sds-component-disabled-color: var(--sds-color-space-8);
-  --sds-component-disabled-border-color: var(--sds-color-space-8);
-  --sds-component-disabled-background-color: transparent;
+  --npa-component-disabled-color: var(--npa-color-space-8);
+  --npa-component-disabled-border-color: var(--npa-color-space-8);
+  --npa-component-disabled-background-color: transparent;
 
-  // ###### Component ICON (icons inside components like .sds-input--search)
-  --sds-component-icon-color: var(--sds-color-space-8);
-  --sds-component-icon-disabled-color: var(--sds-color-space-6);
+  // ###### Component ICON (icons inside components like .npa-input--search)
+  --npa-component-icon-color: var(--npa-color-space-8);
+  --npa-component-icon-disabled-color: var(--npa-color-space-6);
 
   // ###### Generic SELECTION elements (like radio or checkbox)
-  --sds-selection-option-spacer: 24px;
-  --sds-selection-icon-spacer: 8px;
-  --sds-selection-icon-spacer-vertical: 4px;
-  --sds-selection-icon-size: 16px;
-  --sds-selection-z-index-before: auto;
-  --sds-selection-z-index-after: auto;
+  --npa-selection-option-spacer: 24px;
+  --npa-selection-icon-spacer: 8px;
+  --npa-selection-icon-spacer-vertical: 4px;
+  --npa-selection-icon-size: 16px;
+  --npa-selection-z-index-before: auto;
+  --npa-selection-z-index-after: auto;
 
-  --sds-selection-disabled-tex-color: var(--sds-color-space-8);
-  --sds-selection-checked-disabled-border-color: rgba(var(--sds-color-action-5-rgb), .4);
-  --sds-selection-checked-disabled-background-color: rgba(var(--sds-color-action-5-rgb), .4);
+  --npa-selection-disabled-tex-color: var(--npa-color-space-8);
+  --npa-selection-checked-disabled-border-color: rgba(var(--npa-color-action-5-rgb), .4);
+  --npa-selection-checked-disabled-background-color: rgba(var(--npa-color-action-5-rgb), .4);
 
   // ###### Component Commons
-  --sds-component-width: fit-content;
-  --sds-component-height: 36px;
-  --sds-component-vertical-spacer: 2px;
+  --npa-component-width: fit-content;
+  --npa-component-height: 36px;
+  --npa-component-vertical-spacer: 2px;
 
-  --sds-component-padding-vertical: 0;
-  --sds-component-padding-horizontal: 12px;
+  --npa-component-padding-vertical: 0;
+  --npa-component-padding-horizontal: 12px;
 
-  --sds-component-box-shadow: 0 3px 9px 0 rgba(var(--sds-color-neutral-12-rgb), .25);
-  --sds-component-focus-box-shadow: 0 0 0 2px rgba(var(--sds-color-action-4-rgb), .5);
-  --sds-component-focus-error-box-shadow: 0 0 0 2px rgba(var(--sds-color-coral-4-rgb), .5);
+  --npa-component-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-neutral-12-rgb), .25);
+  --npa-component-focus-box-shadow: 0 0 0 2px rgba(var(--npa-color-action-4-rgb), .5);
+  --npa-component-focus-error-box-shadow: 0 0 0 2px rgba(var(--npa-color-coral-4-rgb), .5);
 
-  --sds-component-border: 1px solid;
-  --sds-component-border-radius: 4px;
+  --npa-component-border: 1px solid;
+  --npa-component-border-radius: 4px;
 
-  --sds-component-icon-left-spacer: 4px;
-  --sds-component-icon-right-spacer: 8px;
+  --npa-component-icon-left-spacer: 4px;
+  --npa-component-icon-right-spacer: 8px;
 
-  --sds-component-disabled-cursor: not-allowed;
+  --npa-component-disabled-cursor: not-allowed;
 
   // ###### ICONS
-  --sds-icon-font-family: '#{$defaultIconFontFamilySds}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
-  --sds-icon-search: '#{$searchIcon}';
-  --sds-icon-email: '#{$emailIcon}';
-  --sds-icon-user: '#{$userIcon}';
-  --sds-icon-password: '#{$passwordIcon}';
-  --sds-icon-action-clear: '#{$actionClearIcon}';
-  --sds-icon-arrow-bottom: '#{$arrowDownIcon}';
-  --sds-icon-checkbox-checked: '#{$checkboxCheckedIcon}';
+  --npa-icon-font-family: '#{$defaultIconFontFamilyNpa}', '#{$defaultIconFontFamilyEgeo}', Symbol, sans-serif;
+  --npa-icon-search: '#{$searchIcon}';
+  --npa-icon-email: '#{$emailIcon}';
+  --npa-icon-user: '#{$userIcon}';
+  --npa-icon-password: '#{$passwordIcon}';
+  --npa-icon-action-clear: '#{$actionClearIcon}';
+  --npa-icon-arrow-bottom: '#{$arrowDownIcon}';
+  --npa-icon-checkbox-checked: '#{$checkboxCheckedIcon}';
 
   // ################################################################################################
   // ###### COMPONENTS ##############################################################################
   // ################################################################################################
 
   // ###### ALERT
-  --sds-alert-position: fixed;
-  --sds-alert-padding-vertical: 32px;
-  --sds-alert-padding-horizontal: var(--sds-alert-padding-vertical);
-  --sds-alert-width: 350px;
-  --sds-alert-min-width: var(--sds-alert-width);
-  --sds-alert-max-width: var(--sds-alert-width);
-  --sds-alert-top: 0;
-  --sds-alert-left: 0;
-  --sds-alert-z-index: 1;
+  --npa-alert-position: fixed;
+  --npa-alert-padding-vertical: 32px;
+  --npa-alert-padding-horizontal: var(--npa-alert-padding-vertical);
+  --npa-alert-width: 350px;
+  --npa-alert-min-width: var(--npa-alert-width);
+  --npa-alert-max-width: var(--npa-alert-width);
+  --npa-alert-top: 0;
+  --npa-alert-left: 0;
+  --npa-alert-z-index: 1;
 
-  --sds-alert-border: var(--sds-component-border);
-  --sds-alert-border-radius: var(--sds-component-border-radius);
-  --sds-alert-box-shadow: var(--sds-component-box-shadow);
+  --npa-alert-border: var(--npa-component-border);
+  --npa-alert-border-radius: var(--npa-component-border-radius);
+  --npa-alert-box-shadow: var(--npa-component-box-shadow);
 
-  --sds-alert-close-control-color: var(--sds-color-space-8);
-  --sds-alert-close-control-top: -15px;
-  --sds-alert-close-control-right: -15px;
+  --npa-alert-close-control-color: var(--npa-color-space-8);
+  --npa-alert-close-control-top: -15px;
+  --npa-alert-close-control-right: -15px;
 
-  --sds-alert-header-separation: 12px;
-  --sds-alert-title-icon-separation: 12px;
+  --npa-alert-header-separation: 12px;
+  --npa-alert-title-icon-separation: 12px;
 
-  --sds-alert-title-text-color: var(--sds-color-space-17);
-  --sds-alert-title-icon-color: var(--sds-color-action-6);
-  --sds-alert-title-icon-spacer: 8px;
-  --sds-alert-body-text-color: var(--sds-color-space-8);
-  --sds-alert-border-color: var(--sds-color-space-3);
-  --sds-alert-background-color: var(--sds-color-white);
+  --npa-alert-title-text-color: var(--npa-color-space-17);
+  --npa-alert-title-icon-color: var(--npa-color-action-6);
+  --npa-alert-title-icon-spacer: 8px;
+  --npa-alert-body-text-color: var(--npa-color-space-8);
+  --npa-alert-border-color: var(--npa-color-space-3);
+  --npa-alert-background-color: var(--npa-color-white);
 
-  --sds-alert-actions-height: 40px;
-  --sds-alert-actions-background-color: var(--sds-color-space-5);
-  --sds-alert-actions-separation: 2px;
+  --npa-alert-actions-height: 40px;
+  --npa-alert-actions-background-color: var(--npa-color-space-5);
+  --npa-alert-actions-separation: 2px;
 
   // ###### BADGE
-  --sds-badge-position: absolute;
-  --sds-badge-min-width: 20px;
-  --sds-badge-min-height: 20px;
-  --sds-badge-padding: 4px 3px;
+  --npa-badge-position: absolute;
+  --npa-badge-min-width: 20px;
+  --npa-badge-min-height: 20px;
+  --npa-badge-padding: 4px 3px;
 
-  --sds-badge-color: white;
-  --sds-badge-background-color: var(--sds-color-space-6);
-  --sds-badge-border-color: var(--sds-color-space-6);
-  --sds-badge-border-radius: 20px;
+  --npa-badge-color: white;
+  --npa-badge-background-color: var(--npa-color-space-6);
+  --npa-badge-border-color: var(--npa-color-space-6);
+  --npa-badge-border-radius: 20px;
 
-  --sds-badge-text-top: 0.5px;
+  --npa-badge-text-top: 0.5px;
 
   // ###### BREADCRUMB
-  --sds-breadcrum-item-spacing: 8px;
+  --npa-breadcrum-item-spacing: 8px;
 
-  --sds-breadcrumb-link-color: var(--sds-color-space-8);
-  --sds-breadcrumb-link-hover-color: var(--sds-color-action-6);
-  --sds-breadcrumb-link-active-color: var(--sds-color-space-17);
+  --npa-breadcrumb-link-color: var(--npa-color-space-8);
+  --npa-breadcrumb-link-hover-color: var(--npa-color-action-6);
+  --npa-breadcrumb-link-active-color: var(--npa-color-space-17);
 
-  --sds-breadcrum-separator-color: var(--sds-color-space-8);
-  --sds-breadcrum-dropdown-trigger-color: var(--sds-color-space-8);
+  --npa-breadcrum-separator-color: var(--npa-color-space-8);
+  --npa-breadcrum-dropdown-trigger-color: var(--npa-color-space-8);
 
   // ###### BUTTON
-  --sds-button-color: var(--sds-color-white);
-  --sds-button-border-color: var(--sds-color-action-5);
-  --sds-button-background-color: var(--sds-color-action-5);
-  --sds-button-hover-color: var(--sds-color-white);
-  --sds-button-hover-border-color: var(--sds-color-action-6);
-  --sds-button-hover-background-color: var(--sds-color-action-6);
-  --sds-button-active-color: var(--sds-color-white);
-  --sds-button-active-border-color: var(--sds-color-action-7);
-  --sds-button-active-background-color: var(--sds-color-action-7);
-  --sds-button-disabled-color: var(--sds-color-space-10);
-  --sds-button-disabled-border-color: transparent;
-  --sds-button-disabled-background-color: rgba(var(--sds-color-space-1-rgb), .04);
-  --sds-button-disabled-icon-color: var(--sds-color-space-10);
+  --npa-button-color: var(--npa-color-white);
+  --npa-button-border-color: var(--npa-color-action-5);
+  --npa-button-background-color: var(--npa-color-action-5);
+  --npa-button-hover-color: var(--npa-color-white);
+  --npa-button-hover-border-color: var(--npa-color-action-6);
+  --npa-button-hover-background-color: var(--npa-color-action-6);
+  --npa-button-active-color: var(--npa-color-white);
+  --npa-button-active-border-color: var(--npa-color-action-7);
+  --npa-button-active-background-color: var(--npa-color-action-7);
+  --npa-button-disabled-color: var(--npa-color-space-10);
+  --npa-button-disabled-border-color: transparent;
+  --npa-button-disabled-background-color: rgba(var(--npa-color-space-1-rgb), .04);
+  --npa-button-disabled-icon-color: var(--npa-color-space-10);
 
-  --sds-button-icon-spacer: 8px;
-  --sds-button-border-correction: 2px;
+  --npa-button-icon-spacer: 8px;
+  --npa-button-border-correction: 2px;
 
   // ###### CHECKBOX
   $checkboxChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6738 4.57069C11.4568 4.41504 11.2446 4.26814 11.0639 4.14187C11.0029 4.09874 10.9443 4.06685 10.8832 4.04373C10.5768 3.92871 10.2704 4.04373 10.0673 4.3519C9.48284 5.24204 8.89778 6.13469 8.31333 7.0242L6.99938 9.02827C6.59262 8.60758 6.18889 8.19002 5.78274 7.76995C5.60988 7.59117 5.43461 7.50178 5.24785 7.50178H5.24483C5.06109 7.50178 4.88279 7.59117 4.71296 7.76682C4.56247 7.92247 4.41499 8.075 4.26752 8.23065L4.25664 8.2419C3.91395 8.59883 3.91395 8.99077 4.25966 9.3477C4.99219 10.1053 5.72411 10.8623 6.45664 11.6199C6.4929 11.6574 6.53158 11.695 6.57328 11.7325C6.77394 11.9081 6.99092 12 7.2079 12C7.24416 12 7.28042 11.9969 7.31669 11.9912C7.56449 11.9569 7.78449 11.8012 7.95432 11.5449C9.22113 9.61274 10.4716 7.70619 11.8581 5.5896C12.1005 5.22392 12.0279 4.82323 11.6744 4.57006L11.6738 4.57069Z" fill="rgb(234, 239, 245)"/></svg>';
   $checkboxCheckedDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6738 4.57069C11.4568 4.41504 11.2446 4.26814 11.0639 4.14187C11.0029 4.09874 10.9443 4.06685 10.8832 4.04373C10.5768 3.92871 10.2704 4.04373 10.0673 4.3519C9.48284 5.24204 8.89778 6.13469 8.31333 7.0242L6.99938 9.02827C6.59262 8.60758 6.18889 8.19002 5.78274 7.76995C5.60988 7.59117 5.43461 7.50178 5.24785 7.50178H5.24483C5.06109 7.50178 4.88279 7.59117 4.71296 7.76682C4.56247 7.92247 4.41499 8.075 4.26752 8.23065L4.25664 8.2419C3.91395 8.59883 3.91395 8.99077 4.25966 9.3477C4.99219 10.1053 5.72411 10.8623 6.45664 11.6199C6.4929 11.6574 6.53158 11.695 6.57328 11.7325C6.77394 11.9081 6.99092 12 7.2079 12C7.24416 12 7.28042 11.9969 7.31669 11.9912C7.56449 11.9569 7.78449 11.8012 7.95432 11.5449C9.22113 9.61274 10.4716 7.70619 11.8581 5.5896C12.1005 5.22392 12.0279 4.82323 11.6744 4.57006L11.6738 4.57069Z" fill="rgba(234, 239, 245, .4)"/></svg>';
   $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(33, 44, 56)"/></svg>';
-  --sds-checkbox-checked: url('#{$checkboxChecked}');
-  --sds-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
-  --sds-checkbox-border-radius: 2px;
-  --sds-checkbox-checked-disabled: url('#{$checkboxCheckedDisabled}');
-  --sds-checkbox-indeterminate-border-color: var(--sds-color-action-6);
-  --sds-checkbox-indeterminate-background-color: var(--sds-color-white);
-  --sds-checkbox-indeterminate-disabled-border-color: var(--sds-color-action-4);
-  --sds-checkbox-indeterminate-disabled-background-color: var(--sds-color-white);
+  --npa-checkbox-checked: url('#{$checkboxChecked}');
+  --npa-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
+  --npa-checkbox-border-radius: 2px;
+  --npa-checkbox-checked-disabled: url('#{$checkboxCheckedDisabled}');
+  --npa-checkbox-indeterminate-border-color: var(--npa-color-action-6);
+  --npa-checkbox-indeterminate-background-color: var(--npa-color-white);
+  --npa-checkbox-indeterminate-disabled-border-color: var(--npa-color-action-4);
+  --npa-checkbox-indeterminate-disabled-background-color: var(--npa-color-white);
 
   // ###### DATE PICKER
-  --sds-calendar-header-padding-vertical: 12px;
-  --sds-calendar-header-padding-horizontal: 12px;
-  --sds-calendar-body-padding-vertical: 16px;
-  --sds-calendar-body-padding-horizontal: 24px;
-  --sds-calendar-weekdays-spacing: 12px;
-  --sds-calendar-item-width: 36px;
-  --sds-calendar-item-correction: 0;
+  --npa-calendar-header-padding-vertical: 12px;
+  --npa-calendar-header-padding-horizontal: 12px;
+  --npa-calendar-body-padding-vertical: 16px;
+  --npa-calendar-body-padding-horizontal: 24px;
+  --npa-calendar-weekdays-spacing: 12px;
+  --npa-calendar-item-width: 36px;
+  --npa-calendar-item-correction: 0;
 
-  --sds-calendar-position: absolute;
-  --sds-calendar-width: calc((var(--sds-calendar-item-width) * 7) + (var(--sds-calendar-body-padding-horizontal) * 2));
-  --sds-calendar-z-index: 2;
+  --npa-calendar-position: absolute;
+  --npa-calendar-width: calc((var(--npa-calendar-item-width) * 7) + (var(--npa-calendar-body-padding-horizontal) * 2));
+  --npa-calendar-z-index: 2;
 
-  --sds-calendar-background-color: var(--sds-color-white);
-  --sds-calendar-border-color: var(--sds-color-space-2);
+  --npa-calendar-background-color: var(--npa-color-white);
+  --npa-calendar-border-color: var(--npa-color-space-2);
 
-  --sds-calendar-color: var(--sds-color-space-8);
-  --sds-calendar-hover-color: var(--sds-color-space-8);
+  --npa-calendar-color: var(--npa-color-space-8);
+  --npa-calendar-hover-color: var(--npa-color-space-8);
 
   // ###### DROPDOWN
-  --sds-dropdown-position: absolute;
-  --sds-dropdown-width: fit-content;
-  --sds-dropdown-min-width: 150px;
-  --sds-dropdown-top: 0;
-  --sds-dropdown-left: 0;
-  --sds-dropdown-z-index: 2;
+  --npa-dropdown-position: absolute;
+  --npa-dropdown-width: fit-content;
+  --npa-dropdown-min-width: 150px;
+  --npa-dropdown-top: 0;
+  --npa-dropdown-left: 0;
+  --npa-dropdown-z-index: 2;
 
-  --sds-dropdown-border: var(--sds-component-border);
-  --sds-dropdown-border-radius: var(--sds-component-border-radius);
-  --sds-dropdown-padding: 4px 0;
-  --sds-dropdown-margin: 0;
-  --sds-dropdown-box-shadow: var(--sds-component-box-shadow);
+  --npa-dropdown-border: var(--npa-component-border);
+  --npa-dropdown-border-radius: var(--npa-component-border-radius);
+  --npa-dropdown-padding: 4px 0;
+  --npa-dropdown-margin: 0;
+  --npa-dropdown-box-shadow: var(--npa-component-box-shadow);
 
-  --sds-dropdown-text-color: var(--sds-color-space-17);
-  --sds-dropdown-border-color: var(--sds-color-space-14);
-  --sds-dropdown-background-color: var(--sds-color-space-15);
+  --npa-dropdown-text-color: var(--npa-color-space-17);
+  --npa-dropdown-border-color: var(--npa-color-space-14);
+  --npa-dropdown-background-color: var(--npa-color-space-15);
 
-  --sds-dropdown-option-group-min-height: 30px;
-  --sds-dropdown-option-group-color: var(--sds-color-space-5);
+  --npa-dropdown-option-group-min-height: 30px;
+  --npa-dropdown-option-group-color: var(--npa-color-space-5);
 
-  --sds-dropdown-option-min-height: 40px;
-  --sds-dropdown-option-padding-vertical: 8px;
-  --sds-dropdown-option-padding-horizontal: 16px;
-  --sds-dropdown-option-icon-size: 16px;
-  --sds-dropdown-option-icon-spacer: 8px;
-  --sds-dropdown-option-label-correction: 1px;
-  --sds-dropdown-option-border-radius: 0;
+  --npa-dropdown-option-min-height: 40px;
+  --npa-dropdown-option-padding-vertical: 8px;
+  --npa-dropdown-option-padding-horizontal: 16px;
+  --npa-dropdown-option-icon-size: 16px;
+  --npa-dropdown-option-icon-spacer: 8px;
+  --npa-dropdown-option-label-correction: 1px;
+  --npa-dropdown-option-border-radius: 0;
 
-  --sds-dropdown-option-hover-color: var(--sds-color-text-option-hover);
-  --sds-dropdown-option-hover-background-color: var(--sds-color-background-option-hover);
+  --npa-dropdown-option-hover-color: var(--npa-color-text-option-hover);
+  --npa-dropdown-option-hover-background-color: var(--npa-color-background-option-hover);
 
-  --sds-dropdown-option-selected-background-color: var(--sds-color-space-2);
+  --npa-dropdown-option-selected-background-color: var(--npa-color-space-2);
 
-  --sds-dropdown-option-icon-right-size: 14px;
-  --sds-dropdown-option-icon-right-spacer: 40px;
+  --npa-dropdown-option-icon-right-size: 14px;
+  --npa-dropdown-option-icon-right-spacer: 40px;
 
-  --sds-dropdown-separator-border: var(--sds-component-border);
-  --sds-dropdown-separator-border-color: var(--sds-color-space-3);
-  --sds-dropdown-separator-margin: 4px 0;
+  --npa-dropdown-separator-border: var(--npa-component-border);
+  --npa-dropdown-separator-border-color: var(--npa-color-space-3);
+  --npa-dropdown-separator-margin: 4px 0;
 
   // ###### LABEL
-  --sds-label-display: table-cell;
-  --sds-label-color: var(--sds-color-space-8);
-  --sds-label-focus-color: var(--sds-color-space-5);
-  --sds-label-error-color: var(--sds-color-space-8);
-  --sds-label-disabled-color: var(--sds-color-space-8);
+  --npa-label-display: table-cell;
+  --npa-label-color: var(--npa-color-space-8);
+  --npa-label-focus-color: var(--npa-color-space-5);
+  --npa-label-error-color: var(--npa-color-space-8);
+  --npa-label-disabled-color: var(--npa-color-space-8);
 
   // ###### LINK
-  --sds-link-color: var(--sds-color-action-5);
-  --sds-link-hover-color: var(--sds-color-action-6);
+  --npa-link-color: var(--npa-color-action-5);
+  --npa-link-hover-color: var(--npa-color-action-6);
 
   // ###### MODAL
-  --sds-modal-overlay-position: fixed;
-  --sds-modal-overlay-width: 100vw;
-  --sds-modal-overlay-height: 100vh;
-  --sds-modal-overlay-background-color: rgba(var(--sds-color-neutral-12-rgb), .85);
+  --npa-modal-overlay-position: fixed;
+  --npa-modal-overlay-width: 100vw;
+  --npa-modal-overlay-height: 100vh;
+  --npa-modal-overlay-background-color: rgba(var(--npa-color-neutral-12-rgb), .85);
 
-  --sds-modal-z-indez: 1;
-  --sds-modal-border: var(--sds-component-border);
-  --sds-modal-border-radius: 0;
+  --npa-modal-z-indez: 1;
+  --npa-modal-border: var(--npa-component-border);
+  --npa-modal-border-radius: 0;
 
-  --sds-modal-border-color: var(--sds-color-space-14);
-  --sds-modal-background-color: var(--sds-color-space-15);
-  --sds-modal-padding: 24px;
-  --sds-modal-spacing: 12px;
-  --sds-modal-spacing-vertical: 20px;
+  --npa-modal-border-color: var(--npa-color-space-14);
+  --npa-modal-background-color: var(--npa-color-space-15);
+  --npa-modal-padding: 24px;
+  --npa-modal-spacing: 12px;
+  --npa-modal-spacing-vertical: 20px;
 
-  --sds-modal-close-control-color: var(--sds-color-space-4);
+  --npa-modal-close-control-color: var(--npa-color-space-4);
 
-  --sds-modal-header-separator-color: var(--sds-color-space-4);
-  --sds-modal-header-color: var(--sds-color-text-h4);
+  --npa-modal-header-separator-color: var(--npa-color-space-4);
+  --npa-modal-header-color: var(--npa-color-text-h4);
 
   // ###### NOTIFICATION
-  --sds-notification-position: fixed;
-  --sds-notification-padding: 7px 15px;
-  --sds-notification-width: fit-content;
-  --sds-notification-min-width: unset;
-  --sds-notification-max-width: 50vw;
-  --sds-notification-top: 0;
-  --sds-notification-left: 0;
-  --sds-notification-z-index: 1;
+  --npa-notification-position: fixed;
+  --npa-notification-padding: 7px 15px;
+  --npa-notification-width: fit-content;
+  --npa-notification-min-width: unset;
+  --npa-notification-max-width: 50vw;
+  --npa-notification-top: 0;
+  --npa-notification-left: 0;
+  --npa-notification-z-index: 1;
 
-  --sds-notification-border: var(--sds-component-border);
-  --sds-notification-border-radius: var(--sds-component-border-radius);
-  --sds-notification-box-shadow: var(--sds-component-box-shadow);
+  --npa-notification-border: var(--npa-component-border);
+  --npa-notification-border-radius: var(--npa-component-border-radius);
+  --npa-notification-box-shadow: var(--npa-component-box-shadow);
 
-  --sds-notification-text-color: var(--sds-color-space-8);
-  --sds-notification-border-color: var(--sds-color-white);
-  --sds-notification-background-color: var(--sds-color-white);
+  --npa-notification-text-color: var(--npa-color-space-8);
+  --npa-notification-border-color: var(--npa-color-white);
+  --npa-notification-background-color: var(--npa-color-white);
 
-  --sds-notification-icon-separation: 10px;
-  --sds-notification-close-control-separation: 50px;
+  --npa-notification-icon-separation: 10px;
+  --npa-notification-close-control-separation: 50px;
 
-  --sds-notification-inside-link-color: var(--sds-color-action-5);
+  --npa-notification-inside-link-color: var(--npa-color-action-5);
 
   // ###### RADIO Button
   $radioChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="rgb(234, 239, 245)"/></svg>';
   $radioCheckedDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="rgba(234, 239, 245, .4)"/></svg>';
-  --sds-radio-checked: url('#{$radioChecked}');
-  --sds-radio-border-radius: 100%;
-  --sds-radio-checked-disabled: url('#{$radioCheckedDisabled}');
+  --npa-radio-checked: url('#{$radioChecked}');
+  --npa-radio-border-radius: 100%;
+  --npa-radio-checked-disabled: url('#{$radioCheckedDisabled}');
 
   // ###### REPORT
-  --sds-report-color: var(--sds-color-space-8);
+  --npa-report-color: var(--npa-color-space-8);
 
   // ###### SELECT
   $selectChevron: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(108, 123, 139)"/></svg>';
   $selectChevronFocus: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(7, 118, 223)"/></svg>';
   $selectChevronError: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(239, 64, 52)"/></svg>';
   $selectChevronDisabled: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(136, 152, 167)"/></svg>';
-  --sds-select-chevron-width: 10px;
-  --sds-select-filter-padding-right: 12px;
-  --sds-select-chevron: url('#{$selectChevron}');
-  --sds-select-chevron-focus: url('#{$selectChevronFocus}');
-  --sds-select-chevron-error: url('#{$selectChevronError}');
-  --sds-select-chevron-disabled: url('#{$selectChevronDisabled}');
+  --npa-select-chevron-width: 10px;
+  --npa-select-filter-padding-right: 12px;
+  --npa-select-chevron: url('#{$selectChevron}');
+  --npa-select-chevron-focus: url('#{$selectChevronFocus}');
+  --npa-select-chevron-error: url('#{$selectChevronError}');
+  --npa-select-chevron-disabled: url('#{$selectChevronDisabled}');
 
   // ###### SPINNER
-  --sds-spinner-display: block;
-  --sds-spinner-size: 60px;
-  --sds-spinner-line-width: 3px;
-  --sds-spinner-color: var(--sds-color-action-6);
+  --npa-spinner-display: block;
+  --npa-spinner-size: 60px;
+  --npa-spinner-line-width: 3px;
+  --npa-spinner-color: var(--npa-color-action-6);
 
   // ###### SWITCH
-  --sds-switch-background-color: var(--sds-color-space-4);
-  --sds-switch-color: var(--sds-color-white);
-  --sds-switch-shadow-color: var(--sds-color-neutral-12);
-  --sds-switch-shadow-color-rgb: var(--sds-color-neutral-12-rgb);
-  --sds-switch-checked-background-color: var(--sds-color-action-6);
-  --sds-switch-disabled-background-color: var(--sds-color-space-2);
-  --sds-switch-disabled-checked-background-color: var(--sds-color-action-4);
+  --npa-switch-background-color: var(--npa-color-space-4);
+  --npa-switch-color: var(--npa-color-white);
+  --npa-switch-shadow-color: var(--npa-color-neutral-12);
+  --npa-switch-shadow-color-rgb: var(--npa-color-neutral-12-rgb);
+  --npa-switch-checked-background-color: var(--npa-color-action-6);
+  --npa-switch-disabled-background-color: var(--npa-color-space-2);
+  --npa-switch-disabled-checked-background-color: var(--npa-color-action-4);
 
-  --sds-switch-height: 22px;
-  --sds-switch-border-radio: 25px;
+  --npa-switch-height: 22px;
+  --npa-switch-border-radio: 25px;
 
   // ###### TAB
-  $sdsTabAuxCellPaddingBottom: 4px;
-  $sdsTabAuxCellActiveBorderWidth: 2px;
+  $npaTabAuxCellPaddingBottom: 4px;
+  $npaTabAuxCellActiveBorderWidth: 2px;
 
-  --sds-tab-width: 100%;
-  --sds-tab-border: var(--sds-component-border);
-  --sds-tab-border-color: var(--sds-color-space-7);
+  --npa-tab-width: 100%;
+  --npa-tab-border: var(--npa-component-border);
+  --npa-tab-border-color: var(--npa-color-space-7);
 
-  --sds-tab-height: var(--sds-component-height);
+  --npa-tab-height: var(--npa-component-height);
 
-  --sds-tab-cell-padding: 0 24px #{$sdsTabAuxCellPaddingBottom} 24px;
-  --sds-tab-cell-margin-bottom: -1px;
-  --sds-tab-cell-color: var(--sds-color-action-5);
-  --sds-tab-cell-hover-color: var(--sds-color-action-4);
-  --sds-tab-cell-hover-border-color: var(--sds-color-space-4);
-  --sds-tab-cell-cursor: pointer;
+  --npa-tab-cell-padding: 0 24px #{$npaTabAuxCellPaddingBottom} 24px;
+  --npa-tab-cell-margin-bottom: -1px;
+  --npa-tab-cell-color: var(--npa-color-action-5);
+  --npa-tab-cell-hover-color: var(--npa-color-action-4);
+  --npa-tab-cell-hover-border-color: var(--npa-color-space-4);
+  --npa-tab-cell-cursor: pointer;
 
-  --sds-tab-cell-active-padding-bottom: calc(#{$sdsTabAuxCellPaddingBottom} - #{$sdsTabAuxCellActiveBorderWidth});
-  --sds-tab-cell-active-color: var(--sds-color-space-7);
-  --sds-tab-cell-active-border: #{$sdsTabAuxCellActiveBorderWidth} solid;
-  --sds-tab-cell-active-border-color: var(--sds-color-space-7);
-  --sds-tab-cell-active-cursor: default;
+  --npa-tab-cell-active-padding-bottom: calc(#{$npaTabAuxCellPaddingBottom} - #{$npaTabAuxCellActiveBorderWidth});
+  --npa-tab-cell-active-color: var(--npa-color-space-7);
+  --npa-tab-cell-active-border: #{$npaTabAuxCellActiveBorderWidth} solid;
+  --npa-tab-cell-active-border-color: var(--npa-color-space-7);
+  --npa-tab-cell-active-cursor: default;
 
   // ###### TAG
-  --sds-tag-text-color: var(--sds-color-space-8);
-  --sds-tag-border-color: var(--sds-color-space-14);
-  --sds-tag-background-color: var(--sds-color-space-14);
-  --sds-tag-neutral-text-color: var(--sds-color-space-17);
-  --sds-tag-neutral-border-color: var(--sds-color-space-3);
-  --sds-tag-neutral-background-color: var(--sds-color-space-3);
-  --sds-tag-critical-text-color: var(--sds-color-coral-8);
-  --sds-tag-critical-border-color: var(--sds-color-coral-1);
-  --sds-tag-critical-background-color: var(--sds-color-coral-1);
-  --sds-tag-warning-text-color: var(--sds-warning-color);
-  --sds-tag-warning-border-color: var(--sds-color-orange-1);
-  --sds-tag-warning-background-color: var(--sds-color-orange-1);
-  --sds-tag-success-text-color: var(--sds-success-color);
-  --sds-tag-success-border-color: var(--sds-color-green-1);
-  --sds-tag-success-background-color: var(--sds-color-green-1);
+  --npa-tag-text-color: var(--npa-color-space-8);
+  --npa-tag-border-color: var(--npa-color-space-14);
+  --npa-tag-background-color: var(--npa-color-space-14);
+  --npa-tag-neutral-text-color: var(--npa-color-space-17);
+  --npa-tag-neutral-border-color: var(--npa-color-space-3);
+  --npa-tag-neutral-background-color: var(--npa-color-space-3);
+  --npa-tag-critical-text-color: var(--npa-color-coral-8);
+  --npa-tag-critical-border-color: var(--npa-color-coral-1);
+  --npa-tag-critical-background-color: var(--npa-color-coral-1);
+  --npa-tag-warning-text-color: var(--npa-warning-color);
+  --npa-tag-warning-border-color: var(--npa-color-orange-1);
+  --npa-tag-warning-background-color: var(--npa-color-orange-1);
+  --npa-tag-success-text-color: var(--npa-success-color);
+  --npa-tag-success-border-color: var(--npa-color-green-1);
+  --npa-tag-success-background-color: var(--npa-color-green-1);
 
-  --sds-tag-hover-text-color: var(--sds-color-action-6);
-  --sds-tag-hover-border-color: var(--sds-color-action-1);
-  --sds-tag-hover-background-color: var(--sds-color-action-1);
-  --sds-tag-active-text-color: var(--sds-color-white);
-  --sds-tag-active-border-color: var(--sds-color-action-6);
-  --sds-tag-active-background-color: var(--sds-color-action-6);
-  --sds-tag-disabled-text-color: var(--sds-color-space-6);
-  --sds-tag-disabled-border-color: var(--sds-color-space-2);
-  --sds-tag-disabled-background-color: var(--sds-color-space-2);
+  --npa-tag-hover-text-color: var(--npa-color-action-6);
+  --npa-tag-hover-border-color: var(--npa-color-action-1);
+  --npa-tag-hover-background-color: var(--npa-color-action-1);
+  --npa-tag-active-text-color: var(--npa-color-white);
+  --npa-tag-active-border-color: var(--npa-color-action-6);
+  --npa-tag-active-background-color: var(--npa-color-action-6);
+  --npa-tag-disabled-text-color: var(--npa-color-space-6);
+  --npa-tag-disabled-border-color: var(--npa-color-space-2);
+  --npa-tag-disabled-background-color: var(--npa-color-space-2);
 
-  --sds-tag-height: 30px;
+  --npa-tag-height: 30px;
 
   // ###### TEXTAREA
-  --sds-textarea-resize: vertical;
+  --npa-textarea-resize: vertical;
 
   // ###### TOGGLE BUTTON
-  $sdsToggleButtonBorderWidth: 1px;
-  --sds-toggle-button-border: #{$sdsToggleButtonBorderWidth} solid;
-  --sds-toggle-button-margin-left: calc(#{$sdsToggleButtonBorderWidth} * (-1));
-  --sds-toggle-button-border-color: var(--sds-color-space-5);
-  --sds-toggle-button-border-radius: var(--sds-component-border-radius);
+  $npaToggleButtonBorderWidth: 1px;
+  --npa-toggle-button-border: #{$npaToggleButtonBorderWidth} solid;
+  --npa-toggle-button-margin-left: calc(#{$npaToggleButtonBorderWidth} * (-1));
+  --npa-toggle-button-border-color: var(--npa-color-space-5);
+  --npa-toggle-button-border-radius: var(--npa-component-border-radius);
 
-  --sds-toggle-button-disabled-border-color: var(--sds-color-space-3);
+  --npa-toggle-button-disabled-border-color: var(--npa-color-space-3);
 
-  --sds-toggle-button-active-color: var(--sds-color-space-13);
-  --sds-toggle-button-active-background-color: var(--sds-color-space-2);
+  --npa-toggle-button-active-color: var(--npa-color-space-13);
+  --npa-toggle-button-active-background-color: var(--npa-color-space-2);
 
-  --sds-toggle-button-active-disabled-color: var(--sds-color-space-4);
-  --sds-toggle-button-active-disabled-border-color: var(--sds-color-space-3);
-  --sds-toggle-button-active-disabled-background-color: var(--sds-color-space-1);
+  --npa-toggle-button-active-disabled-color: var(--npa-color-space-4);
+  --npa-toggle-button-active-disabled-border-color: var(--npa-color-space-3);
+  --npa-toggle-button-active-disabled-background-color: var(--npa-color-space-1);
 
   // ###### TOOLTIP
-  --sds-tooltip-position: fixed;
-  --sds-tooltip-height: 30px;
-  --sds-tooltip-z-index: 2;
-  --sds-tooltip-color: var(--sds-color-white);
-  --sds-tooltip-background-color: var(--sds-color-space-13);
-  --sds-tooltip-border-color: var(--sds-color-space-13);
-  --sds-tooltip-padding: 0 8px;
+  --npa-tooltip-position: fixed;
+  --npa-tooltip-height: 30px;
+  --npa-tooltip-z-index: 2;
+  --npa-tooltip-color: var(--npa-color-white);
+  --npa-tooltip-background-color: var(--npa-color-space-13);
+  --npa-tooltip-border-color: var(--npa-color-space-13);
+  --npa-tooltip-padding: 0 8px;
 
-  --sds-tooltip-arrow-position: fixed;
+  --npa-tooltip-arrow-position: fixed;
 }

@@ -1,29 +1,29 @@
-%sds-modal {
-  .sds-modal {
-    --sds-modal-default-overlay-position: var(--sds-modal-overlay-position);
-    --sds-modal-default-overlay-width: var(--sds-modal-overlay-width);
-    --sds-modal-default-overlay-height: var(--sds-modal-overlay-height);
-    --sds-modal-default-overlay-background-color: var(--sds-modal-overlay-background-color);
+%npa-modal {
+  .npa-modal {
+    --npa-modal-default-overlay-position: var(--npa-modal-overlay-position);
+    --npa-modal-default-overlay-width: var(--npa-modal-overlay-width);
+    --npa-modal-default-overlay-height: var(--npa-modal-overlay-height);
+    --npa-modal-default-overlay-background-color: var(--npa-modal-overlay-background-color);
 
-    --sds-modal-default-z-indez: var(--sds-modal-z-indez);
-    --sds-modal-default-border: var(--sds-modal-border);
-    --sds-modal-default-border-radius: var(--sds-modal-border-radius);
-    --sds-modal-default-box-shadow: var(--sds-component-box-shadow);
+    --npa-modal-default-z-indez: var(--npa-modal-z-indez);
+    --npa-modal-default-border: var(--npa-modal-border);
+    --npa-modal-default-border-radius: var(--npa-modal-border-radius);
+    --npa-modal-default-box-shadow: var(--npa-component-box-shadow);
 
-    --sds-modal-default-border-color: var(--sds-modal-border-color);
-    --sds-modal-default-background-color: var(--sds-modal-background-color);
-    --sds-modal-default-padding: var(--sds-modal-padding);
-    --sds-modal-default-spacing: var(--sds-modal-spacing);
-    --sds-modal-default-spacing-vertical: var(--sds-modal-spacing-vertical);
+    --npa-modal-default-border-color: var(--npa-modal-border-color);
+    --npa-modal-default-background-color: var(--npa-modal-background-color);
+    --npa-modal-default-padding: var(--npa-modal-padding);
+    --npa-modal-default-spacing: var(--npa-modal-spacing);
+    --npa-modal-default-spacing-vertical: var(--npa-modal-spacing-vertical);
 
-    --sds-modal-default-close-control-color: var(--sds-modal-close-control-color);
+    --npa-modal-default-close-control-color: var(--npa-modal-close-control-color);
 
-    --sds-modal-default-header-separator-color: var(--sds-modal-header-separator-color);
-    --sds-modal-default-header-color: var(--sds-modal-header-color);
+    --npa-modal-default-header-separator-color: var(--npa-modal-header-separator-color);
+    --npa-modal-default-header-color: var(--npa-modal-header-color);
 
-    .sds-modal__box {
-      .sds-modal__header {
-        .sds-modal__title {
+    .npa-modal__box {
+      .npa-modal__header {
+        .npa-modal__title {
           flex: 1;
           overflow: hidden;
           display: -webkit-box;
@@ -32,7 +32,7 @@
         }
       }
 
-      .sds-modal__body {
+      .npa-modal__body {
         flex: 1;
         scrollbar-color: #cdd6df #fff;
         scrollbar-width: thin;

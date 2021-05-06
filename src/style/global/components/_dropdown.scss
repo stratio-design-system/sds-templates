@@ -1,43 +1,43 @@
-%sds-dropdown {
-  .sds-dropdown {
-    --sds-dropdown-default-position: var(--sds-dropdown-position);
-    --sds-dropdown-default-width: var(--sds-dropdown-width);
-    --sds-dropdown-default-min-width: var(--sds-dropdown-min-width);
-    --sds-dropdown-default-left: var(--sds-dropdown-left);
-    --sds-dropdown-default-top: var(--sds-dropdown-top);
-    --sds-dropdown-default-z-index: var(--sds-dropdown-z-index);
+%npa-dropdown {
+  .npa-dropdown {
+    --npa-dropdown-default-position: var(--npa-dropdown-position);
+    --npa-dropdown-default-width: var(--npa-dropdown-width);
+    --npa-dropdown-default-min-width: var(--npa-dropdown-min-width);
+    --npa-dropdown-default-left: var(--npa-dropdown-left);
+    --npa-dropdown-default-top: var(--npa-dropdown-top);
+    --npa-dropdown-default-z-index: var(--npa-dropdown-z-index);
 
-    --sds-dropdown-default-border: var(--sds-dropdown-border);
-    --sds-dropdown-default-border-radius: var(--sds-dropdown-border-radius);
-    --sds-dropdown-default-padding: var(--sds-dropdown-padding);
-    --sds-dropdown-default-margin: var(--sds-dropdown-margin);
-    --sds-dropdown-default-box-shadow: var(--sds-dropdown-box-shadow);
+    --npa-dropdown-default-border: var(--npa-dropdown-border);
+    --npa-dropdown-default-border-radius: var(--npa-dropdown-border-radius);
+    --npa-dropdown-default-padding: var(--npa-dropdown-padding);
+    --npa-dropdown-default-margin: var(--npa-dropdown-margin);
+    --npa-dropdown-default-box-shadow: var(--npa-dropdown-box-shadow);
 
-    --sds-dropdown-default-text-color: var(--sds-dropdown-text-color);
-    --sds-dropdown-default-border-color: var(--sds-dropdown-border-color);
-    --sds-dropdown-default-background-color: var(--sds-dropdown-background-color);
+    --npa-dropdown-default-text-color: var(--npa-dropdown-text-color);
+    --npa-dropdown-default-border-color: var(--npa-dropdown-border-color);
+    --npa-dropdown-default-background-color: var(--npa-dropdown-background-color);
 
-    --sds-dropdown-option-default-group-min-height: var(--sds-dropdown-option-group-min-height);
-    --sds-dropdown-option-default-group-color: var(--sds-dropdown-option-group-color);
+    --npa-dropdown-option-default-group-min-height: var(--npa-dropdown-option-group-min-height);
+    --npa-dropdown-option-default-group-color: var(--npa-dropdown-option-group-color);
 
-    --sds-dropdown-option-default-min-height: var(--sds-dropdown-option-min-height);
-    --sds-dropdown-option-default-padding-vertical: var(--sds-dropdown-option-padding-vertical);
-    --sds-dropdown-option-default-padding-horizontal: var(--sds-dropdown-option-padding-horizontal);
-    --sds-dropdown-option-default-icon-size: var(--sds-dropdown-option-icon-size);
-    --sds-dropdown-option-default-icon-spacer: var(--sds-dropdown-option-icon-spacer);
-    --sds-dropdown-option-default-label-correction: var(--sds-dropdown-option-label-correction);
-    --sds-dropdown-option-default-border-radius: var(--sds-dropdown-option-border-radius);
+    --npa-dropdown-option-default-min-height: var(--npa-dropdown-option-min-height);
+    --npa-dropdown-option-default-padding-vertical: var(--npa-dropdown-option-padding-vertical);
+    --npa-dropdown-option-default-padding-horizontal: var(--npa-dropdown-option-padding-horizontal);
+    --npa-dropdown-option-default-icon-size: var(--npa-dropdown-option-icon-size);
+    --npa-dropdown-option-default-icon-spacer: var(--npa-dropdown-option-icon-spacer);
+    --npa-dropdown-option-default-label-correction: var(--npa-dropdown-option-label-correction);
+    --npa-dropdown-option-default-border-radius: var(--npa-dropdown-option-border-radius);
 
-    --sds-dropdown-option-default-hover-color: var(--sds-dropdown-option-hover-color);
-    --sds-dropdown-option-default-hover-background-color: var(--sds-dropdown-option-hover-background-color);
+    --npa-dropdown-option-default-hover-color: var(--npa-dropdown-option-hover-color);
+    --npa-dropdown-option-default-hover-background-color: var(--npa-dropdown-option-hover-background-color);
 
-    --sds-dropdown-option-default-selected-background-color: var(--sds-dropdown-option-selected-background-color);
+    --npa-dropdown-option-default-selected-background-color: var(--npa-dropdown-option-selected-background-color);
 
-    --sds-dropdown-option-default-icon-right-size: var(--sds-dropdown-option-icon-right-size);
-    --sds-dropdown-option-default-icon-right-spacer: var(--sds-dropdown-option-icon-right-spacer);
+    --npa-dropdown-option-default-icon-right-size: var(--npa-dropdown-option-icon-right-size);
+    --npa-dropdown-option-default-icon-right-spacer: var(--npa-dropdown-option-icon-right-spacer);
 
-    --sds-dropdown-separator-default-border: var(--sds-dropdown-separator-border);
-    --sds-dropdown-separator-default-border-color: var(--sds-dropdown-separator-border-color);
-    --sds-dropdown-separator-default-margin: var(--sds-dropdown-separator-margin);
+    --npa-dropdown-separator-default-border: var(--npa-dropdown-separator-border);
+    --npa-dropdown-separator-default-border-color: var(--npa-dropdown-separator-border-color);
+    --npa-dropdown-separator-default-margin: var(--npa-dropdown-separator-margin);
   }
 }

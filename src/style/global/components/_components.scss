@@ -22,28 +22,28 @@
 @import './toggle-button';
 @import './tooltip';
 
-%sds-components {
-  @extend %sds-alert;
-  @extend %sds-badge;
-  @extend %sds-breadcrumb;
-  @extend %sds-button;
-  @extend %sds-checkbox;
-  @extend %sds-date-picker;
-  @extend %sds-dropdown;
-  @extend %sds-input;
-  @extend %sds-label;
-  @extend %sds-link;
-  @extend %sds-modal;
-  @extend %sds-notification;
-  @extend %sds-radio;
-  @extend %sds-report;
-  @extend %sds-select;
-  @extend %sds-spinner;
-  @extend %sds-switch;
-  @extend %sds-tab;
-  @extend %sds-tag;
-  @extend %sds-tag-input;
-  @extend %sds-textarea;
-  @extend %sds-toggle-button;
-  @extend %sds-tooltip;
+%npa-components {
+  @extend %npa-alert;
+  @extend %npa-badge;
+  @extend %npa-breadcrumb;
+  @extend %npa-button;
+  @extend %npa-checkbox;
+  @extend %npa-date-picker;
+  @extend %npa-dropdown;
+  @extend %npa-input;
+  @extend %npa-label;
+  @extend %npa-link;
+  @extend %npa-modal;
+  @extend %npa-notification;
+  @extend %npa-radio;
+  @extend %npa-report;
+  @extend %npa-select;
+  @extend %npa-spinner;
+  @extend %npa-switch;
+  @extend %npa-tab;
+  @extend %npa-tag;
+  @extend %npa-tag-input;
+  @extend %npa-textarea;
+  @extend %npa-toggle-button;
+  @extend %npa-tooltip;
 }

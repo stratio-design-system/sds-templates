@@ -7,7 +7,7 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
 @include createFontFaceRule($typesToGenerate, $iconFontFamily, normal, normal, '../../../fonts/sanitas-icon-set/SanitasIconsFonts');
 
 %bupa-icon__definition {
-  &, .sds-icon-text:before {
+  &, .npa-icon-text:before {
     font-family: $iconFontFamily, Symbol, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -24,7 +24,7 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
     -moz-osx-font-smoothing: grayscale;   //# Support for Firefox.
     font-feature-settings: 'liga';        //# Support for IE.
   }
-  &, .sds-icon-text {
+  &, .npa-icon-text {
     @each $key, $value in $sanitasIconTableDefinitions {
       &.#{$key}:before {
         content: unquote('"\\#{$value}"');
@@ -32,7 +32,7 @@ $typesToGenerate: (eot, svg, ttf, woff, woff2);
     }
   }
 
-  .sds-icon-text {
+  .npa-icon-text {
     &:before {
       vertical-align: middle;
       font-size: 1.142em;

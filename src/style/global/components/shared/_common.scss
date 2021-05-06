@@ -1,12 +1,12 @@
 // ###### Blocks
-%sds-default-disabled-component {
-  color: var(--sds-component-disabled-color);
-  border-color: var(--sds-component-disabled-border-color);
-  background-color: var(--sds-component-disabled-background-color);
-  cursor: var(--sds-component-disabled-cursor);
+%npa-default-disabled-component {
+  color: var(--npa-component-disabled-color);
+  border-color: var(--npa-component-disabled-border-color);
+  background-color: var(--npa-component-disabled-background-color);
+  cursor: var(--npa-component-disabled-cursor);
 }
 
-%sds-textarea-disabled-component {
-  @extend %sds-default-disabled-component;
+%npa-textarea-disabled-component {
+  @extend %npa-default-disabled-component;
   resize: none;
 }

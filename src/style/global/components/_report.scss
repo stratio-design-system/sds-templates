@@ -1,11 +1,11 @@
-%sds-report {
+%npa-report {
   DIV, SPAN {
-    &.sds-report {
+    &.npa-report {
       display: block;
-      color: var(--sds-report-color);
-      padding-top: var(--sds-component-vertical-spacer);
+      color: var(--npa-report-color);
+      padding-top: var(--npa-component-vertical-spacer);
       &.error {
-        color: var(--sds-error-color);
+        color: var(--npa-error-color);
       }
     }
   }

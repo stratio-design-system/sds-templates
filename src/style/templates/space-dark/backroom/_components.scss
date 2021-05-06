@@ -1,112 +1,112 @@
 @import '../../../global/mixins';
 @import './font-sizes';
 
-%sds-components-template {
+%npa-components-template {
   // ###### ALERT ####################################################################
-  .sds-alert {
-    .sds-alert__header {
-      .sds-alert__title {
+  .npa-alert {
+    .npa-alert__header {
+      .npa-alert__title {
         @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       }
     }
-    &:not(.sds-alert--connection-lost) {
-      border-left: 4px solid var(--sds-color-action-6);
+    &:not(.npa-alert--connection-lost) {
+      border-left: 4px solid var(--npa-color-action-6);
     }
-    &.sds-alert--success {
-      border-left: 4px solid var(--sds-success-color);
-      --sds-alert-title-icon-color: var(--sds-success-color);
+    &.npa-alert--success {
+      border-left: 4px solid var(--npa-success-color);
+      --npa-alert-title-icon-color: var(--npa-success-color);
     }
-    &.sds-alert--warning {
-      border-left: 4px solid var(--sds-warning-color);
-      --sds-alert-title-icon-color: var(--sds-warning-color);
+    &.npa-alert--warning {
+      border-left: 4px solid var(--npa-warning-color);
+      --npa-alert-title-icon-color: var(--npa-warning-color);
     }
-    &.sds-alert--critical {
-      border-left: 4px solid var(--sds-error-color);
-      --sds-alert-title-icon-color: var(--sds-error-color);
+    &.npa-alert--critical {
+      border-left: 4px solid var(--npa-error-color);
+      --npa-alert-title-icon-color: var(--npa-error-color);
     }
-    &.sds-alert--connection-lost{
-      --sds-alert-background-color: var(--sds-color-space-7);
-      --sds-alert-border-color: var(--sds-color-space-7);
-      --sds-alert-body-text-color: var(--sds-color-white);
-      --sds-alert-title-icon-color: var(--sds-color-white);
-      --sds-alert-title-text-color: var(--sds-color-white);
+    &.npa-alert--connection-lost{
+      --npa-alert-background-color: var(--npa-color-space-7);
+      --npa-alert-border-color: var(--npa-color-space-7);
+      --npa-alert-body-text-color: var(--npa-color-white);
+      --npa-alert-title-icon-color: var(--npa-color-white);
+      --npa-alert-title-text-color: var(--npa-color-white);
     }
   }
 
   // ###### BADGE ####################################################################
-  .sds-badge {
-    .sds-badge__box {
+  .npa-badge {
+    .npa-badge__box {
       @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
     }
 
-    &.sds-badge--alone {
-      --sds-badge-position: relative;
+    &.npa-badge--alone {
+      --npa-badge-position: relative;
     }
 
-    &.sds-badge--large {
-      .sds-badge__box {
+    &.npa-badge--large {
+      .npa-badge__box {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-badge-min-width: 24px;
-        --sds-badge-min-height: 24px;
-        --sds-badge-padding: 6px 5px;
-        --sds-badge-text-top: 0;
+        --npa-badge-min-width: 24px;
+        --npa-badge-min-height: 24px;
+        --npa-badge-padding: 6px 5px;
+        --npa-badge-text-top: 0;
       }
     }
-    &.sds-badge--small {
-      .sds-badge__box {
+    &.npa-badge--small {
+      .npa-badge__box {
         @include defineFontSizeElement(8, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-badge-min-width: 16px;
-        --sds-badge-min-height: 16px;
-        --sds-badge-padding: 3px 2px;
-        --sds-badge-text-top: 1px;
+        --npa-badge-min-width: 16px;
+        --npa-badge-min-height: 16px;
+        --npa-badge-padding: 3px 2px;
+        --npa-badge-text-top: 1px;
       }
     }
-    &.sds-badge--x-small {
-      .sds-badge__box {
+    &.npa-badge--x-small {
+      .npa-badge__box {
         font-size: 0;
-        --sds-badge-min-width: 6px;
-        --sds-badge-min-height: 6px;
-        --sds-badge-padding: 0;
-        --sds-badge-text-top: 1px;
+        --npa-badge-min-width: 6px;
+        --npa-badge-min-height: 6px;
+        --npa-badge-padding: 0;
+        --npa-badge-text-top: 1px;
       }
     }
 
-    &.sds-badge--info {
-      --sds-badge-background-color: var(--sds-color-action-6);
-      --sds-badge-border-color: var(--sds-color-action-6);
+    &.npa-badge--info {
+      --npa-badge-background-color: var(--npa-color-action-6);
+      --npa-badge-border-color: var(--npa-color-action-6);
     }
-    &.sds-badge--success {
-      --sds-badge-background-color: var(--sds-success-color);
-      --sds-badge-border-color: var(--sds-success-color);
+    &.npa-badge--success {
+      --npa-badge-background-color: var(--npa-success-color);
+      --npa-badge-border-color: var(--npa-success-color);
     }
-    &.sds-badge--warning {
-      --sds-badge-background-color: var(--sds-warning-color);
-      --sds-badge-border-color: var(--sds-warning-color);
+    &.npa-badge--warning {
+      --npa-badge-background-color: var(--npa-warning-color);
+      --npa-badge-border-color: var(--npa-warning-color);
     }
-    &.sds-badge--critical {
-      --sds-badge-background-color: var(--sds-error-color);
-      --sds-badge-border-color: var(--sds-error-color);
+    &.npa-badge--critical {
+      --npa-badge-background-color: var(--npa-error-color);
+      --npa-badge-border-color: var(--npa-error-color);
     }
   }
 
   // ###### BREADCRUMB ###############################################################
-  .sds-breadcrumb {
-    .sds-breadcrumb__link {
+  .npa-breadcrumb {
+    .npa-breadcrumb__link {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
-    .sds-breadcrumb__separator {
+    .npa-breadcrumb__separator {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
-    .sds-breadcrumb__dropdown-trigger {
+    .npa-breadcrumb__dropdown-trigger {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
 
-    &.sds-breadcrumb--small {
-      --sds-component-height: 30px;
-      .sds-breadcrumb__link {
+    &.npa-breadcrumb--small {
+      --npa-component-height: 30px;
+      .npa-breadcrumb__link {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
-      .sds-breadcrumb__dropdown-trigger {
+      .npa-breadcrumb__dropdown-trigger {
         @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
         top: 0;
       }
@@ -115,60 +115,60 @@
 
   // ###### BUTTON ###################################################################
   BUTTON {
-    &.sds-button {
-      --sds-component-padding-horizontal: 20px;
-      --sds-component-icon-left-spacer: 8px;
+    &.npa-button {
+      --npa-component-padding-horizontal: 20px;
+      --npa-component-icon-left-spacer: 8px;
       padding-top: 2px;
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       line-height: 1;
-      &.sds-button--small {
-        --sds-component-height: 30px;
+      &.npa-button--small {
+        --npa-component-height: 30px;
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
         line-height: 1;
-        I.sds-icon {
-          --sds-button-icon-spacer: 4px;
+        I.npa-icon {
+          --npa-button-icon-spacer: 4px;
         }
       }
-      &.sds-button--icon-left, &.sds-button--icon-right, &.sds-button--icon-only {
-        I.sds-icon {
+      &.npa-button--icon-left, &.npa-button--icon-right, &.npa-button--icon-only {
+        I.npa-icon {
           top: -1px;
         }
       }
-      &.sds-button--secondary, &.sds-button--bob {
-        --sds-button-color: var(--sds-color-space-7);
-        --sds-button-border-color: var(--sds-color-space-7);
-        --sds-button-background-color: transparent;
-        --sds-button-hover-color: var(--sds-color-space-6);
-        --sds-button-hover-border-color: var(--sds-color-space-6);
-        --sds-button-hover-background-color: rgba(var(--sds-color-space-1-rgb), .05);
-        --sds-button-active-color: var(--sds-color-space-5);
-        --sds-button-active-border-color: var(--sds-color-space-6);
-        --sds-button-active-background-color: rgba(var(--sds-color-space-1-rgb), .08);
-        --sds-button-disabled-color: var(--sds-color-space-10);
-        --sds-button-disabled-border-color: var(--sds-color-space-10);
-        --sds-button-disabled-background-color: transparent;
+      &.npa-button--secondary, &.npa-button--bob {
+        --npa-button-color: var(--npa-color-space-7);
+        --npa-button-border-color: var(--npa-color-space-7);
+        --npa-button-background-color: transparent;
+        --npa-button-hover-color: var(--npa-color-space-6);
+        --npa-button-hover-border-color: var(--npa-color-space-6);
+        --npa-button-hover-background-color: rgba(var(--npa-color-space-1-rgb), .05);
+        --npa-button-active-color: var(--npa-color-space-5);
+        --npa-button-active-border-color: var(--npa-color-space-6);
+        --npa-button-active-background-color: rgba(var(--npa-color-space-1-rgb), .08);
+        --npa-button-disabled-color: var(--npa-color-space-10);
+        --npa-button-disabled-border-color: var(--npa-color-space-10);
+        --npa-button-disabled-background-color: transparent;
       }
-      &.sds-button--borderless {
-        --sds-button-color: var(--sds-color-space-7);
-        --sds-button-border-color: transparent;
-        --sds-button-background-color: transparent;
-        --sds-button-hover-color: var(--sds-color-space-6);
-        --sds-button-hover-border-color: transparent;
-        --sds-button-hover-background-color: rgba(var(--sds-color-space-1-rgb), .05);
-        --sds-button-active-color: var(--sds-color-space-5);
-        --sds-button-active-border-color: transparent;
-        --sds-button-active-background-color: rgba(var(--sds-color-space-1-rgb), .08);
+      &.npa-button--borderless {
+        --npa-button-color: var(--npa-color-space-7);
+        --npa-button-border-color: transparent;
+        --npa-button-background-color: transparent;
+        --npa-button-hover-color: var(--npa-color-space-6);
+        --npa-button-hover-border-color: transparent;
+        --npa-button-hover-background-color: rgba(var(--npa-color-space-1-rgb), .05);
+        --npa-button-active-color: var(--npa-color-space-5);
+        --npa-button-active-border-color: transparent;
+        --npa-button-active-background-color: rgba(var(--npa-color-space-1-rgb), .08);
       }
-      &.sds-button--critical {
-        --sds-button-color: var(--sds-color-white);
-        --sds-button-border-color: var(--sds-error-color);
-        --sds-button-background-color: var(--sds-error-color);
-        --sds-button-hover-color: var(--sds-color-white);
-        --sds-button-hover-border-color: var(--sds-color-coral-8);
-        --sds-button-hover-background-color: var(--sds-color-coral-8);
-        --sds-button-active-color: var(--sds-color-white);
-        --sds-button-active-border-color: var(--sds-color-coral-9);
-        --sds-button-active-background-color: var(--sds-color-coral-9);
+      &.npa-button--critical {
+        --npa-button-color: var(--npa-color-white);
+        --npa-button-border-color: var(--npa-error-color);
+        --npa-button-background-color: var(--npa-error-color);
+        --npa-button-hover-color: var(--npa-color-white);
+        --npa-button-hover-border-color: var(--npa-color-coral-8);
+        --npa-button-hover-background-color: var(--npa-color-coral-8);
+        --npa-button-active-color: var(--npa-color-white);
+        --npa-button-active-border-color: var(--npa-color-coral-9);
+        --npa-button-active-background-color: var(--npa-color-coral-9);
       }
     }
   }
@@ -179,23 +179,23 @@
   INPUT[type=checkbox] {
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      line-height: calc(var(--sds-selection-icon-size) + 1px);
+      line-height: calc(var(--npa-selection-icon-size) + 1px);
     }
-    &:not(.sds-switch) {
+    &:not(.npa-switch) {
       &:disabled, &.disabled {
-        &.sds-checkbox--indeterminate {
+        &.npa-checkbox--indeterminate {
           &:checked + LABEL {
             &:after {
-              --sds-checkbox-indeterminate: url('#{$checkboxIndeterminateDisabled}');
+              --npa-checkbox-indeterminate: url('#{$checkboxIndeterminateDisabled}');
             }
           }
         }
       }
 
-      &.sds-checkbox--indeterminate {
+      &.npa-checkbox--indeterminate {
         &:checked + LABEL {
           &:after {
-            --sds-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
+            --npa-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
           }
         }
       }
@@ -203,8 +203,8 @@
   }
 
   // ###### DATEPICKER ###############################################################
-  .sds-calendar {
-    .sds-calendar__nav {
+  .npa-calendar {
+    .npa-calendar__nav {
       DIV {
         @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
         I {
@@ -212,45 +212,45 @@
         }
       }
     }
-    .sds-calendar__container {
-      .sds-calendar__body {
-        .sds-calendar__date {
+    .npa-calendar__container {
+      .npa-calendar__body {
+        .npa-calendar__date {
           @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-          --sds-button-disabled-color: var(--sds-color-space-4);
-          --sds-button-disabled-background-color: transparent;
-          --sds-button-disabled-border-color: transparent;
-          --sds-component-focus-box-shadow: none;
-          --sds-component-border-radius: 40px;
-          &.sds-calendar__date--selected {
-            .sds-button {
-              --sds-button-color: var(--sds-color-space-13);
-              --sds-button-background-color: var(--sds-color-action-2);
-              --sds-button-hover-color: var(--sds-color-space-13);
-              --sds-button-hover-background-color: var(--sds-color-action-2);
+          --npa-button-disabled-color: var(--npa-color-space-4);
+          --npa-button-disabled-background-color: transparent;
+          --npa-button-disabled-border-color: transparent;
+          --npa-component-focus-box-shadow: none;
+          --npa-component-border-radius: 40px;
+          &.npa-calendar__date--selected {
+            .npa-button {
+              --npa-button-color: var(--npa-color-space-13);
+              --npa-button-background-color: var(--npa-color-action-2);
+              --npa-button-hover-color: var(--npa-color-space-13);
+              --npa-button-hover-background-color: var(--npa-color-action-2);
             }
           }
-          &.sds-calendar__date--success {
-            .sds-button {
+          &.npa-calendar__date--success {
+            .npa-button {
               font-weight: bold;
-              --sds-button-color: var(--sds-color-space-17);
-              --sds-button-hover-color: var(--sds-color-space-17);
+              --npa-button-color: var(--npa-color-space-17);
+              --npa-button-hover-color: var(--npa-color-space-17);
             }
           }
-          &.sds-calendar__date--current-day:not(.sds-calendar__date--selected) {
-            .sds-button {
-              --sds-button-color: var(--sds-color-white);
-              --sds-button-background-color: var(--sds-color-action-6);
-              --sds-button-hover-color: var(--sds-color-white);
-              --sds-button-hover-background-color: var(--sds-color-action-6);
+          &.npa-calendar__date--current-day:not(.npa-calendar__date--selected) {
+            .npa-button {
+              --npa-button-color: var(--npa-color-white);
+              --npa-button-background-color: var(--npa-color-action-6);
+              --npa-button-hover-color: var(--npa-color-white);
+              --npa-button-hover-background-color: var(--npa-color-action-6);
             }
           }
-          &.sds-calendar__date--critical:not(.sds-calendar__date--selected):not(.sds-calendar__date--current-day) {
-            .sds-button {
+          &.npa-calendar__date--critical:not(.npa-calendar__date--selected):not(.npa-calendar__date--current-day) {
+            .npa-button {
               font-weight: bold;
-              --sds-button-color: var(--sds-error-color);
-              --sds-button-background-color: var(--sds-color-coral-1);
-              --sds-button-hover-color: var(--sds-error-color);
-              --sds-button-hover-background-color: var(--sds-color-coral-2);
+              --npa-button-color: var(--npa-error-color);
+              --npa-button-background-color: var(--npa-color-coral-1);
+              --npa-button-hover-color: var(--npa-error-color);
+              --npa-button-hover-background-color: var(--npa-color-coral-2);
             }
           }
         }
@@ -260,43 +260,43 @@
 
   // ###### INPUT ####################################################################
   INPUT, SPAN, DIV {
-    &.sds-input {
+    &.npa-input {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      &.sds-input--small {
-        --sds-component-height: 30px;
-        --sds-component-padding-horizontal: 8px;
+      &.npa-input--small {
+        --npa-component-height: 30px;
+        --npa-component-padding-horizontal: 8px;
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
-      &.sds-input--placeholder-color {
-        color: var(--sds-component-placeholder-color);
+      &.npa-input--placeholder-color {
+        color: var(--npa-component-placeholder-color);
       }
     }
   }
 
   // ###### LABEL ####################################################################
   LABEL {
-    &.sds-label, &.sds-label.sds-label--small {
+    &.npa-label, &.npa-label.npa-label--small {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   // ###### LINK #####################################################################
-  A.sds-link {
-    &.sds-link-small {
+  A.npa-link {
+    &.npa-link-small {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   // ###### MODAL ####################################################################
-  .sds-modal {
-    .sds-modal__box {
-      .sds-modal__header {
+  .npa-modal {
+    .npa-modal__box {
+      .npa-modal__header {
         @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
         font-weight: bold;
-        .sds-modal__status-icon, .sds-modal__close-control {
+        .npa-modal__status-icon, .npa-modal__close-control {
           @include defineFontSizeElement(15, $fontSizeRoot, $fontLineHeightFactor);
         }
-        .sds-modal__full-window-icon {
+        .npa-modal__full-window-icon {
           @include defineFontSizeElement(20, $fontSizeRoot, $fontLineHeightFactor);
         }
       }
@@ -304,21 +304,21 @@
   }
 
   // ###### NOTIFICATION #############################################################
-  .sds-notification {
-    &.sds-notification--success {
-      --sds-notification-text-color: var(--sds-color-white);
-      --sds-notification-border-color: var(--sds-success-color);
-      --sds-notification-background-color: var(--sds-success-color);
+  .npa-notification {
+    &.npa-notification--success {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-success-color);
+      --npa-notification-background-color: var(--npa-success-color);
     }
-    &.sds-notification--warning {
-      --sds-notification-text-color: var(--sds-color-white);
-      --sds-notification-border-color: var(--sds-warning-color);
-      --sds-notification-background-color: var(--sds-warning-color);
+    &.npa-notification--warning {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-warning-color);
+      --npa-notification-background-color: var(--npa-warning-color);
     }
-    &.sds-notification--critical {
-      --sds-notification-text-color: var(--sds-color-white);
-      --sds-notification-border-color: var(--sds-error-color);
-      --sds-notification-background-color: var(--sds-error-color);
+    &.npa-notification--critical {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-error-color);
+      --npa-notification-background-color: var(--npa-error-color);
     }
   }
 
@@ -326,33 +326,33 @@
   INPUT[type=radio] {
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      line-height: calc(var(--sds-selection-icon-size) + 1px);
+      line-height: calc(var(--npa-selection-icon-size) + 1px);
     }
   }
 
   // ###### REPORT ###################################################################
   SPAN, DIV {
-    &.sds-report {
+    &.npa-report {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   // ###### SELECT ###################################################################
-  LABEL.sds-label {
+  LABEL.npa-label {
     & + SELECT, & + INPUT {
-      &.sds-select {
+      &.npa-select {
         @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-        &.sds-select--small {
-          --sds-component-height: 30px;
-          --sds-component-padding-horizontal: 8px;
-          --sds-select-filter-padding-right: 8px;
+        &.npa-select--small {
+          --npa-component-height: 30px;
+          --npa-component-padding-horizontal: 8px;
+          --npa-select-filter-padding-right: 8px;
           @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
         }
-        &.sds-select--filter {
-          --sds-component-height: fit-content;
-          --sds-component-width: fit-content;
-          --sds-component-padding-horizontal: 0;
-          padding-right: calc(var(--sds-select-filter-padding-right) + var(--sds-select-chevron-width));
+        &.npa-select--filter {
+          --npa-component-height: fit-content;
+          --npa-component-width: fit-content;
+          --npa-component-padding-horizontal: 0;
+          padding-right: calc(var(--npa-select-filter-padding-right) + var(--npa-select-chevron-width));
           border: none;
           border-radius: 0;
           background-color: transparent;
@@ -371,135 +371,135 @@
   }
 
   // ###### SPINNER ##################################################################
-  .sds-spinner {
-    &.sds-spinner--inline {
-      --sds-spinner-display: inline-flex;
+  .npa-spinner {
+    &.npa-spinner--inline {
+      --npa-spinner-display: inline-flex;
     }
-    &.sds-spinner--inherit {
-      --sds-spinner-display: inherit;
+    &.npa-spinner--inherit {
+      --npa-spinner-display: inherit;
     }
-    &.sds-spinner--12 {
-      --sds-spinner-size: 12px;
-      --sds-spinner-line-width: 7px;
+    &.npa-spinner--12 {
+      --npa-spinner-size: 12px;
+      --npa-spinner-line-width: 7px;
     }
-    &.sds-spinner--16 {
-      --sds-spinner-size: 16px;
-      --sds-spinner-line-width: 6px;
+    &.npa-spinner--16 {
+      --npa-spinner-size: 16px;
+      --npa-spinner-line-width: 6px;
     }
-    &.sds-spinner--20 {
-      --sds-spinner-size: 20px;
-      --sds-spinner-line-width: 5px;
+    &.npa-spinner--20 {
+      --npa-spinner-size: 20px;
+      --npa-spinner-line-width: 5px;
     }
-    &.sds-spinner--80 {
-      --sds-spinner-size: 80px;
-      --sds-spinner-line-width: 3px;
+    &.npa-spinner--80 {
+      --npa-spinner-size: 80px;
+      --npa-spinner-line-width: 3px;
     }
-    &.sds-spinner--inverse {
-      --sds-spinner-color: var(--sds-color-white);
+    &.npa-spinner--inverse {
+      --npa-spinner-color: var(--npa-color-white);
     }
   }
 
   // ###### TAB ######################################################################
-  .sds-tab {
+  .npa-tab {
     @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    &.sds-tab--small {
+    &.npa-tab--small {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-      --sds-tab-height: 30px;
+      --npa-tab-height: 30px;
     }
   }
 
   // ###### TAG ######################################################################
   SPAN, DIV {
-    &.sds-tag {
-      --sds-component-padding-horizontal: 8px;
+    &.npa-tag {
+      --npa-component-padding-horizontal: 8px;
       font-size: getRemRelativeSize(14, $fontSizeRoot);
-      line-height: calc(var(--sds-tag-height) - 2px);
-      &.sds-tag--medium {
-        --sds-component-icon-spacer: 4px;
-        --sds-tag-height: 24px;
+      line-height: calc(var(--npa-tag-height) - 2px);
+      &.npa-tag--medium {
+        --npa-component-icon-spacer: 4px;
+        --npa-tag-height: 24px;
         font-size: getRemRelativeSize(12, $fontSizeRoot);
       }
-      &.sds-tag--small {
-        --sds-component-icon-spacer: 4px;
-        --sds-tag-height: 18px;
+      &.npa-tag--small {
+        --npa-component-icon-spacer: 4px;
+        --npa-tag-height: 18px;
         font-size: getRemRelativeSize(12, $fontSizeRoot);
       }
-      &.sds-tag--neutral {
-        color: var(--sds-tag-neutral-text-color);
-        border-color: var(--sds-tag-neutral-border-color);
-        background-color: var(--sds-tag-neutral-background-color);
+      &.npa-tag--neutral {
+        color: var(--npa-tag-neutral-text-color);
+        border-color: var(--npa-tag-neutral-border-color);
+        background-color: var(--npa-tag-neutral-background-color);
       }
-      &.sds-tag--critical {
-        color: var(--sds-tag-critical-text-color);
-        border-color: var(--sds-tag-critical-border-color);
-        background-color: var(--sds-tag-critical-background-color);
+      &.npa-tag--critical {
+        color: var(--npa-tag-critical-text-color);
+        border-color: var(--npa-tag-critical-border-color);
+        background-color: var(--npa-tag-critical-background-color);
       }
-      &.sds-tag--warning {
-        color: var(--sds-tag-warning-text-color);
-        border-color: var(--sds-tag-warning-border-color);
-        background-color: var(--sds-tag-warning-background-color);
+      &.npa-tag--warning {
+        color: var(--npa-tag-warning-text-color);
+        border-color: var(--npa-tag-warning-border-color);
+        background-color: var(--npa-tag-warning-background-color);
       }
-      &.sds-tag--success {
-        color: var(--sds-tag-success-text-color);
-        border-color: var(--sds-tag-success-border-color);
-        background-color: var(--sds-tag-success-background-color);
+      &.npa-tag--success {
+        color: var(--npa-tag-success-text-color);
+        border-color: var(--npa-tag-success-border-color);
+        background-color: var(--npa-tag-success-background-color);
       }
     }
   }
 
   // ###### TAG INPUT ################################################################
-  .sds-tag-input {
-    &.sds-input, &.sds-input.sds-input--small {
-      --sds-component-padding-vertical: 0;
-      --sds-component-padding-horizontal: 0;
+  .npa-tag-input {
+    &.npa-input, &.npa-input.npa-input--small {
+      --npa-component-padding-vertical: 0;
+      --npa-component-padding-horizontal: 0;
     }
     INPUT {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
-    &.sds-input--small {
+    &.npa-input--small {
       INPUT {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       }
     }
 
     &.disabled {
-      .sds-tag-input__input {
+      .npa-tag-input__input {
         cursor: not-allowed;
       }
     }
 
-    .sds-tag {
+    .npa-tag {
       &.critical {
-        --sds-tag-text-color: var(--sds-error-color);
+        --npa-tag-text-color: var(--npa-error-color);
         INPUT {
-          color: var(--sds-error-color);
+          color: var(--npa-error-color);
         }
       }
     }
   }
 
   // ###### TEXTAREA #################################################################
-  TEXTAREA.sds-textarea {
-    padding-top: calc((var(--sds-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
+  TEXTAREA.npa-textarea {
+    padding-top: calc((var(--npa-component-height) - (14px * #{$fontLineHeightFactor})) / 2);
     @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    &.sds-textarea--small {
-      --sds-component-height: 30px;
-      --sds-component-padding-horizontal: 8px;
-      padding-top: calc((var(--sds-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
+    &.npa-textarea--small {
+      --npa-component-height: 30px;
+      --npa-component-padding-horizontal: 8px;
+      padding-top: calc((var(--npa-component-height) - (12px * #{$fontLineHeightFactor})) / 2);
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
   // ###### TOOLTIP ##################################################################
-  .sds-tooltip {
-    .sds-tooltip__box {
+  .npa-tooltip {
+    .npa-tooltip__box {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
-    &.sds-tooltip--light {
-      --sds-tooltip-color: var(--sds-color-space-7);
-      --sds-tooltip-background-color: var(--sds-color-white);
-      --sds-tooltip-border-color: var(--sds-color-space-4);
-      .sds-tooltip__arrow:after {
+    &.npa-tooltip--light {
+      --npa-tooltip-color: var(--npa-color-space-7);
+      --npa-tooltip-background-color: var(--npa-color-white);
+      --npa-tooltip-border-color: var(--npa-color-space-4);
+      .npa-tooltip__arrow:after {
         content: '';
         position: absolute;
         top: -6.2px;
@@ -508,42 +508,42 @@
         height: 0;
         border: 7px solid transparent;
       }
-      .sds-tooltip__arrow--top {
+      .npa-tooltip__arrow--top {
         &:after {
-          border-top-color: var(--sds-tooltip-background-color);
+          border-top-color: var(--npa-tooltip-background-color);
           top: -8.2px;
         }
       }
-      .sds-tooltip__arrow--bottom {
+      .npa-tooltip__arrow--bottom {
         &:after {
-          border-bottom-color: var(--sds-tooltip-background-color);
+          border-bottom-color: var(--npa-tooltip-background-color);
         }
       }
-      .sds-tooltip__arrow--left {
+      .npa-tooltip__arrow--left {
         &:after {
-          border-left-color: var(--sds-tooltip-background-color);
+          border-left-color: var(--npa-tooltip-background-color);
           top: -7px;
           left: -8px;
         }
       }
-      .sds-tooltip__arrow--right {
+      .npa-tooltip__arrow--right {
         &:after {
-          border-right-color: var(--sds-tooltip-background-color);
+          border-right-color: var(--npa-tooltip-background-color);
           top: -7px;
           left: -6px;
         }
       }
     }
-    &.sds-tooltip--small {
-      .sds-tooltip__box {
+    &.npa-tooltip--small {
+      .npa-tooltip__box {
         @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
-        --sds-tooltip-default-height: 24px;
-        .sds-tooltip__text {
+        --npa-tooltip-default-height: 24px;
+        .npa-tooltip__text {
           position: relative;
           top: 1px;
         }
       }
-      .sds-tooltip__arrow:after {
+      .npa-tooltip__arrow:after {
         content: '';
         position: absolute;
         top: -8.2px;
@@ -551,19 +551,19 @@
         width: 0;
         height: 0;
       }
-      .sds-tooltip__arrow--bottom {
+      .npa-tooltip__arrow--bottom {
         &:after {
           top: -6px;
           left: -7px;
         }
       }
-      .sds-tooltip__arrow--left {
+      .npa-tooltip__arrow--left {
         &:after {
           top: -7px;
           left: -8px;
         }
       }
-      .sds-tooltip__arrow--right {
+      .npa-tooltip__arrow--right {
         &:after {
           top: -7px;
           left: -6px;

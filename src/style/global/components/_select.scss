@@ -1,11 +1,11 @@
 @import './shared/common';
 @import './shared/mixins';
 
-%sds-select {
-  LABEL.sds-label {
-    & + SELECT.sds-select, & + INPUT.sds-select {
+%npa-select {
+  LABEL.npa-label {
+    & + SELECT.npa-select, & + INPUT.npa-select {
       @include textInputElement() {
-        @extend %sds-default-disabled-component;
+        @extend %npa-default-disabled-component;
       }
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -16,28 +16,28 @@
       }
 
       position: relative;
-      padding-right: calc((var(--sds-component-padding-horizontal) * 2) + var(--sds-select-chevron-width));
-      background: transparent var(--sds-select-chevron) no-repeat right var(--sds-component-padding-horizontal) center;
-      background-size: var(--sds-select-chevron-width);
+      padding-right: calc((var(--npa-component-padding-horizontal) * 2) + var(--npa-select-chevron-width));
+      background: transparent var(--npa-select-chevron) no-repeat right var(--npa-component-padding-horizontal) center;
+      background-size: var(--npa-select-chevron-width);
       &:disabled, &.disabled {
-        background-image: var(--sds-select-chevron-disabled);
+        background-image: var(--npa-select-chevron-disabled);
       }
       &:focus, &.focus {
-        background-image: var(--sds-select-chevron-focus);
+        background-image: var(--npa-select-chevron-focus);
       }
       &.error, &:focus.error, &.focus.error {
-        background-image: var(--sds-select-chevron-error);
+        background-image: var(--npa-select-chevron-error);
         &:disabled, &.disabled {
-          background-image: var(--sds-select-chevron-disabled);
+          background-image: var(--npa-select-chevron-disabled);
         }
       }
     }
   }
 
-  .sds-select__custom {
-    width: var(--sds-component-width);
-    min-width: var(--sds-component-width);
-    LABEL.sds-label {
+  .npa-select__custom {
+    width: var(--npa-component-width);
+    min-width: var(--npa-component-width);
+    LABEL.npa-label {
       padding-bottom: 0;
     }
   }

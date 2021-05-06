@@ -1,94 +1,94 @@
-%sds-button {
-  %sds-button-icon {
+%npa-button {
+  %npa-button-icon {
     position: absolute;
-    line-height: var(--sds-component-height);
+    line-height: var(--npa-component-height);
     color: inherit;
     top: -2px;
   }
 
-  BUTTON.sds-button {
+  BUTTON.npa-button {
     position: relative;
     display: table-cell;
     width: fit-content;
-    height: var(--sds-component-height);
-    min-height: var(--sds-component-height);
+    height: var(--npa-component-height);
+    min-height: var(--npa-component-height);
     box-sizing: border-box;
     cursor: pointer;
-    padding: var(--sds-component-padding-vertical) var(--sds-component-padding-horizontal);
-    border: var(--sds-component-border);
-    border-color: var(--sds-button-border-color);
-    border-radius: var(--sds-component-border-radius);
-    background-color: var(--sds-button-background-color);
-    color: var(--sds-button-color);
-    & > I.sds-icon {
+    padding: var(--npa-component-padding-vertical) var(--npa-component-padding-horizontal);
+    border: var(--npa-component-border);
+    border-color: var(--npa-button-border-color);
+    border-radius: var(--npa-component-border-radius);
+    background-color: var(--npa-button-background-color);
+    color: var(--npa-button-color);
+    & > I.npa-icon {
       color: inherit;
     }
     &:hover {
-      color: var(--sds-button-hover-color);
-      border-color: var(--sds-button-hover-border-color);
-      background-color: var(--sds-button-hover-background-color);
-      & > I.sds-icon {
+      color: var(--npa-button-hover-color);
+      border-color: var(--npa-button-hover-border-color);
+      background-color: var(--npa-button-hover-background-color);
+      & > I.npa-icon {
         color: inherit;
       }
     }
     &:focus, &.focus {
-      box-shadow: var(--sds-component-focus-box-shadow);
+      box-shadow: var(--npa-component-focus-box-shadow);
     }
     &:active, &.pressed {
-      color: var(--sds-button-active-color);
-      border-color: var(--sds-button-active-border-color);
-      background-color: var(--sds-button-active-background-color);
-      & > I.sds-icon {
+      color: var(--npa-button-active-color);
+      border-color: var(--npa-button-active-border-color);
+      background-color: var(--npa-button-active-background-color);
+      & > I.npa-icon {
         color: inherit;
       }
     }
     &:disabled, &.disabled {
-      color: var(--sds-button-disabled-color);
-      border-color: var(--sds-button-disabled-border-color);
-      background-color: var(--sds-button-disabled-background-color);
-      cursor: var(--sds-component-disabled-cursor);
-      & > I.sds-icon {
-        color: var(--sds-button-disabled-icon-color);
+      color: var(--npa-button-disabled-color);
+      border-color: var(--npa-button-disabled-border-color);
+      background-color: var(--npa-button-disabled-background-color);
+      cursor: var(--npa-component-disabled-cursor);
+      & > I.npa-icon {
+        color: var(--npa-button-disabled-icon-color);
         cursor: inherit;
       }
     }
 
-    &.sds-button--icon-left {
-      padding-left: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-left-spacer));
-      I.sds-icon {
-        @extend %sds-button-icon;
-        &.sds-icon--left {
-          left: var(--sds-component-padding-horizontal);
+    &.npa-button--icon-left {
+      padding-left: calc(var(--npa-component-padding-horizontal) + 1.1em + var(--npa-component-icon-left-spacer));
+      I.npa-icon {
+        @extend %npa-button-icon;
+        &.npa-icon--left {
+          left: var(--npa-component-padding-horizontal);
         }
       }
     }
-    &.sds-button--icon-right {
-      padding-right: calc(var(--sds-component-padding-horizontal) + 1.1em + var(--sds-component-icon-right-spacer));
-      I.sds-icon {
-        @extend %sds-button-icon;
-        &.sds-icon--right {
-          right: var(--sds-component-padding-horizontal);
+    &.npa-button--icon-right {
+      padding-right: calc(var(--npa-component-padding-horizontal) + 1.1em + var(--npa-component-icon-right-spacer));
+      I.npa-icon {
+        @extend %npa-button-icon;
+        &.npa-icon--right {
+          right: var(--npa-component-padding-horizontal);
         }
       }
     }
-    &.sds-button--icon-only {
+    &.npa-button--icon-only {
       padding: 0;
-      width: var(--sds-component-height);
-      min-width: var(--sds-component-height);
-      I.sds-icon {
-        @extend %sds-button-icon;
+      width: var(--npa-component-height);
+      min-width: var(--npa-component-height);
+      I.npa-icon {
+        @extend %npa-button-icon;
         left: 0;
-        top: calc(var(--sds-button-border-correction) * -1);
-        width: calc(var(--sds-component-height) - var(--sds-button-border-correction));
+        top: calc(var(--npa-button-border-correction) * -1);
+        width: calc(var(--npa-component-height) - var(--npa-button-border-correction));
       }
     }
 
     &.no-events {
       cursor: wait;
       &:hover {
-        color: var(--sds-button-color);
-        border-color: var(--sds-button-border-color);
-        background-color: var(--sds-button-background-color);
+        color: var(--npa-button-color);
+        border-color: var(--npa-button-border-color);
+        background-color: var(--npa-button-background-color);
       }
     }
   }

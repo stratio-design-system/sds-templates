@@ -1,21 +1,21 @@
-%sds-toggle-button {
-  .sds-toggle-button {
-    --sds-toggle-button-default-border: var(--sds-toggle-button-border);
-    --sds-toggle-button-default-margin-left: var(--sds-toggle-button-margin-left);
-    --sds-toggle-button-default-border-color: var(--sds-toggle-button-border-color);
-    --sds-toggle-button-default-border-radius: var(--sds-toggle-button-border-radius);
+%npa-toggle-button {
+  .npa-toggle-button {
+    --npa-toggle-button-default-border: var(--npa-toggle-button-border);
+    --npa-toggle-button-default-margin-left: var(--npa-toggle-button-margin-left);
+    --npa-toggle-button-default-border-color: var(--npa-toggle-button-border-color);
+    --npa-toggle-button-default-border-radius: var(--npa-toggle-button-border-radius);
 
-    .sds-toggle-button__button {
+    .npa-toggle-button__button {
       &:disabled, &.disabled {
-        border-color: var(--sds-toggle-button-disabled-border-color);
+        border-color: var(--npa-toggle-button-disabled-border-color);
       }
       &--active, &--active:hover {
-        color: var(--sds-toggle-button-active-color);
-        background-color: var(--sds-toggle-button-active-background-color);
+        color: var(--npa-toggle-button-active-color);
+        background-color: var(--npa-toggle-button-active-background-color);
         &:disabled, &.disabled {
-          color: var(--sds-toggle-button-active-disabled-color);
-          border-color: var(--sds-toggle-button-active-disabled-border-color);
-          background-color: var(--sds-toggle-button-active-disabled-background-color);
+          color: var(--npa-toggle-button-active-disabled-color);
+          border-color: var(--npa-toggle-button-active-disabled-border-color);
+          background-color: var(--npa-toggle-button-active-disabled-background-color);
         }
       }
     }

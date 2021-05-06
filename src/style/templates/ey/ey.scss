@@ -9,7 +9,7 @@
 @import './backroom/colors';
 
 HTML {
-  &#sds-ey-tpl, &.sds-ey-tpl {
+  &#npa-ey-tpl, &.npa-ey-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
@@ -19,32 +19,32 @@ HTML {
       outline: none;
     }
 
-    @extend %sds-poppins-typography-definition;
+    @extend %npa-poppins-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
       @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
 
       // ###### DEFAULT WEIGHT AND STYLE
-      .sds--bold {
+      .npa--bold {
         font-weight: bold;
       }
-      .sds--italic {
+      .npa--italic {
         font-style: italic;
       }
 
       // ###### DEFAULT SIZE
-      .sds-font--default {
+      .npa-font--default {
         font-size: 1rem;
         line-height: $fontLineHeightFactor + rem;
       }
     }
 
     @include createColorsDefinition($colorsAvailable);
-    @extend %sds-icon-definition;
-    @extend %sds-global-vars;
-    @extend %sds-components;
-    @extend %sds-components-template;
+    @extend %npa-icon-definition;
+    @extend %npa-global-vars;
+    @extend %npa-components;
+    @extend %npa-components-template;
   }
 }
 

@@ -13,9 +13,9 @@
   );
 }
 
-%sds-poppins-typography-definition {
+%npa-poppins-typography-definition {
   @each $key, $value in $fontWeightsAvailable {
-    .sds-typo__#{$key} {
+    .npa-typo__#{$key} {
       @include createTypographyElement(map-get($value, weight), map-get($value, style));
     }
   }

@@ -1,13 +1,13 @@
 @import './shared/common';
 @import './shared/mixins';
 
-%sds-textarea {
-  TEXTAREA.sds-textarea {
+%npa-textarea {
+  TEXTAREA.npa-textarea {
     @include textInputElement() {
-      @extend %sds-textarea-disabled-component;
+      @extend %npa-textarea-disabled-component;
     };
 
-    resize: var(--sds-textarea-resize);
+    resize: var(--npa-textarea-resize);
     vertical-align: top;
     padding-top: unset;
   }

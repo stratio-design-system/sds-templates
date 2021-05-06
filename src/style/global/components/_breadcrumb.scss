@@ -1,13 +1,13 @@
-%sds-breadcrumb {
-  .sds-breadcrumb {
-    --sds-breadcrum-default-height: var(--sds-component-height);
-    --sds-breadcrum-default-item-spacing: var(--sds-breadcrum-item-spacing);
+%npa-breadcrumb {
+  .npa-breadcrumb {
+    --npa-breadcrum-default-height: var(--npa-component-height);
+    --npa-breadcrum-default-item-spacing: var(--npa-breadcrum-item-spacing);
 
-    --sds-breadcrumb-default-link-color: var(--sds-breadcrumb-link-color);
-    --sds-breadcrumb-default-link-hover-color: var(--sds-breadcrumb-link-hover-color);
-    --sds-breadcrumb-default-link-active-color: var(--sds-breadcrumb-link-active-color);
+    --npa-breadcrumb-default-link-color: var(--npa-breadcrumb-link-color);
+    --npa-breadcrumb-default-link-hover-color: var(--npa-breadcrumb-link-hover-color);
+    --npa-breadcrumb-default-link-active-color: var(--npa-breadcrumb-link-active-color);
 
-    --sds-breadcrum-default-separator-color: var(--sds-breadcrum-separator-color);
-    --sds-breadcrum-default-dropdown-trigger-color: var(--sds-breadcrum-dropdown-trigger-color);
+    --npa-breadcrum-default-separator-color: var(--npa-breadcrum-separator-color);
+    --npa-breadcrum-default-dropdown-trigger-color: var(--npa-breadcrum-dropdown-trigger-color);
   }
 }

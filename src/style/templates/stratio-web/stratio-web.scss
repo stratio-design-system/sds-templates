@@ -10,39 +10,39 @@
 @import '../space-light/backroom/colors';
 
 HTML {
-  &#sds-stratio-web-tpl, &.sds-stratio-web-tpl {
+  &#npa-stratio-web-tpl, &.npa-stratio-web-tpl {
     // font-size: getRelativeSize($fontSizeRoot, $viewportWidthReferenceInPX);
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
     * {
       font-family: Inter, sans-serif;
-      color: $colorSpace;
+      color: $colorSpace13;
       outline: none;
     }
 
-    @extend %sds-inter-typography-definition;
+    @extend %npa-inter-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
       @include createHeadersDefinition($fontSizesHeaders, $fontSizeRoot, $fontLineHeightFactor);
 
       // ###### DEFAULT WEIGHT AND STYLE
-      .sds--bold {
+      .npa--bold {
         font-weight: bold;
       }
 
       // ###### DEFAULT SIZE
-      .sds-font--default {
+      .npa-font--default {
         font-size: 1rem;
         line-height: $fontLineHeightFactor + rem;
       }
     }
 
     @include createColorsDefinition($colorsAvailable);
-    @extend %sds-icon-definition;
-    @extend %sds-global-vars;
-    @extend %sds-components;
-    @extend %sds-components-template;
+    @extend %npa-icon-definition;
+    @extend %npa-global-vars;
+    @extend %npa-components;
+    @extend %npa-components-template;
   }
 }

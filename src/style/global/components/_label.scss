@@ -1,18 +1,18 @@
 @import 'shared/common';
 
-%sds-label {
-  LABEL.sds-label {
-    display: var(--sds-label-display);
-    color: var(--sds-label-color);
-    padding-bottom: var(--sds-component-vertical-spacer);
+%npa-label {
+  LABEL.npa-label {
+    display: var(--npa-label-display);
+    color: var(--npa-label-color);
+    padding-bottom: var(--npa-component-vertical-spacer);
     &.disabled {
-      color: var(--sds-label-disabled-color);
+      color: var(--npa-label-disabled-color);
     }
     &.error {
-      color: var(--sds-label-error-color);
+      color: var(--npa-label-error-color);
     }
     &.focus {
-      color: var(--sds-label-focus-color);
+      color: var(--npa-label-focus-color);
     }
   }
 }

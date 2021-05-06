@@ -1,25 +1,25 @@
-%sds-date-picker {
-  .sds-calendar {
-    --sds-calendar-header-default-padding-vertical: var(--sds-calendar-header-padding-vertical);
-    --sds-calendar-header-default-padding-horizontal: var(--sds-calendar-header-padding-horizontal);
-    --sds-calendar-body-default-padding-vertical: var(--sds-calendar-body-padding-vertical);
-    --sds-calendar-body-default-padding-horizontal: var(--sds-calendar-body-padding-horizontal);
-    --sds-calendar-weekdays-default-spacing: var(--sds-calendar-weekdays-spacing);
-    --sds-calendar-item-default-width: var(--sds-calendar-item-width);
-    --sds-calendar-item-default-correction: var(--sds-calendar-item-correction);
+%npa-date-picker {
+  .npa-calendar {
+    --npa-calendar-header-default-padding-vertical: var(--npa-calendar-header-padding-vertical);
+    --npa-calendar-header-default-padding-horizontal: var(--npa-calendar-header-padding-horizontal);
+    --npa-calendar-body-default-padding-vertical: var(--npa-calendar-body-padding-vertical);
+    --npa-calendar-body-default-padding-horizontal: var(--npa-calendar-body-padding-horizontal);
+    --npa-calendar-weekdays-default-spacing: var(--npa-calendar-weekdays-spacing);
+    --npa-calendar-item-default-width: var(--npa-calendar-item-width);
+    --npa-calendar-item-default-correction: var(--npa-calendar-item-correction);
 
-    --sds-calendar-default-position: var(--sds-calendar-position);
-    --sds-calendar-default-width: var(--sds-calendar-width);
-    --sds-calendar-default-border-radius: var(--sds-component-border-radius);
-    --sds-calendar-default-z-index: var(--sds-calendar-z-index);
+    --npa-calendar-default-position: var(--npa-calendar-position);
+    --npa-calendar-default-width: var(--npa-calendar-width);
+    --npa-calendar-default-border-radius: var(--npa-component-border-radius);
+    --npa-calendar-default-z-index: var(--npa-calendar-z-index);
 
-    --sds-calendar-default-background-color: var(--sds-calendar-background-color);
-    --sds-calendar-default-border: var(--sds-component-border);
-    --sds-calendar-default-border-color: var(--sds-calendar-border-color);
+    --npa-calendar-default-background-color: var(--npa-calendar-background-color);
+    --npa-calendar-default-border: var(--npa-component-border);
+    --npa-calendar-default-border-color: var(--npa-calendar-border-color);
 
-    --sds-calendar-default-box-shadow: var(--sds-component-box-shadow);
+    --npa-calendar-default-box-shadow: var(--npa-component-box-shadow);
 
-    --sds-calendar-default-color: var(--sds-calendar-color);
-    --sds-calendar-default-hover-color: var(--sds-calendar-hover-color);
+    --npa-calendar-default-color: var(--npa-calendar-color);
+    --npa-calendar-default-hover-color: var(--npa-calendar-hover-color);
   }
 }

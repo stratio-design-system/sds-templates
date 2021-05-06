@@ -1,21 +1,21 @@
-%sds-link {
-  A.sds-link {
-    color: var(--sds-link-color);
+%npa-link {
+  A.npa-link {
+    color: var(--npa-link-color);
     cursor: pointer;
     text-decoration: none;
     &:hover {
-      color: var(--sds-link-hover-color);
+      color: var(--npa-link-hover-color);
       text-decoration: none;
     }
 
-    &.sds-link-hover-underline {
+    &.npa-link-hover-underline {
       text-decoration: none;
       &:hover {
         text-decoration: underline;
       }
     }
 
-    &.sds-link-hover-underline-inverse {
+    &.npa-link-hover-underline-inverse {
       text-decoration: underline;
       &:hover {
         text-decoration: none;
