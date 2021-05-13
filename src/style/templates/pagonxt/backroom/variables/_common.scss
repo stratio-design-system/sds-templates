@@ -1,8 +1,8 @@
 @import '../../../../global/mixins';
 @import '../../../../global/components/shared/common';
-@import '../../../space-light/backroom/colors';
-@import '../../../space-light/backroom/template-base';
 @import '../font-sizes';
+@import '../colors';
+@import '../template-base';
 @import './sass';
 @import '../spacing';
 
@@ -35,42 +35,42 @@
   // ###### Generic Colors (HEX)
   --npa-focus-color: var(--npa-color-action-6);
   --npa-error-color: var(--npa-color-coral-6);
-  --npa-warning-color: var(--npa-color-orange-5);
-  --npa-success-color: var(--npa-color-green-6);
+  --npa-warning-color: var(--npa-color-peach-6);
+  --npa-success-color: var(--npa-color-action-8);
 
   // ###### Component Colors (HEX)
-  --npa-component-color: var(--npa-color-space-17);
-  --npa-component-border-color: var(--npa-color-space-5);
+  --npa-component-color: var(--npa-color-neutral-10);
+  --npa-component-border-color: var(--npa-color-white);
   --npa-component-background-color: var(--npa-color-white);
 
-  --npa-component-hover-color: var(--npa-color-space-17);
-  --npa-component-hover-border-color: var(--npa-color-space-7);
+  --npa-component-hover-color: var(--npa-color-neutral-10);
+  --npa-component-hover-border-color: var(--npa-color-white);
   --npa-component-hover-background-color: var(--npa-color-white);
 
-  --npa-component-focus-color: var(--npa-color-space-17);
-  --npa-component-focus-error-color: var(--npa-color-space-17);
+  --npa-component-focus-color: var(--npa-color-neutral-10);
+  --npa-component-focus-error-color: var(--npa-color-neutral-10);
   --npa-component-focus-border-color: var(--npa-color-action-6);
   --npa-component-focus-background-color: var(--npa-color-white);
-  --npa-component-focus-box-shadow-color: var(--npa-color-action-2);
+  --npa-component-focus-box-shadow-color: var(--npa-color-action-6);
   --npa-component-focus-error-box-shadow-color: var(--npa-color-coral-2);
 
-  --npa-component-error-color: var(--npa-color-space-17);
+  --npa-component-error-color: var(--npa-color-neutral-10);
   --npa-component-error-border-color: var(--npa-error-color);
   --npa-component-error-background-color: var(--npa-color-white);
 
   --npa-component-checked-border-color: var(--npa-color-action-6);
   --npa-component-checked-background-color: var(--npa-color-action-6);
 
-  --npa-component-placeholder-color: var(--npa-color-space-6);
-  --npa-component-placeholder-disabled-color: var(--npa-color-space-6);
+  --npa-component-placeholder-color: var(--npa-color-neutral-7);
+  --npa-component-placeholder-disabled-color: var(--npa-color-neutral-5);
 
   --npa-component-disabled-color: var(--npa-color-space-6);
   --npa-component-disabled-border-color: var(--npa-color-space-4);
   --npa-component-disabled-background-color: var(--npa-color-space-1);
 
   // ###### Component ICON (icons inside components like .npa-input--search)
-  --npa-component-icon-color: var(--npa-color-space-7);
-  --npa-component-icon-disabled-color: var(--npa-color-space-6);
+  --npa-component-icon-color: var(--npa-color-neutral-10);
+  --npa-component-icon-disabled-color: var(--npa-color-neutral-5);
 
   // ###### Generic SELECTION elements (like radio or checkbox)
   --npa-selection-option-spacer: 24px;
@@ -81,26 +81,26 @@
   --npa-selection-z-index-after: auto;
 
   --npa-selection-disabled-tex-color: var(--npa-color-space-6);
-  --npa-selection-checked-disabled-border-color: var(--npa-color-action-4);
+  --npa-selection-checked-disabled-border-color: 0 0 0 1px var(--npa-color-action-4);
   --npa-selection-checked-disabled-background-color: var(--npa-color-action-4);
 
   // ###### Component Commons
   --npa-component-width: fit-content;
-  --npa-component-height: #{getRemRelativeSize(36, $fontSizeRoot)};
-  --npa-component-vertical-spacer: #{getRemRelativeSize(2, $fontSizeRoot)};
+  --npa-component-height: 36px;
+  --npa-component-vertical-spacer: 2px;
 
   --npa-component-padding-vertical: 0;
-  --npa-component-padding-horizontal: #{getRemRelativeSize(12, $fontSizeRoot)};
+  --npa-component-padding-horizontal: 12px;
 
-  --npa-component-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-neutral-12-rgb), 0.25);
+  --npa-component-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-black-rgb), 0.25);
   --npa-component-focus-box-shadow: 0 0 0 2px var(--npa-component-focus-box-shadow-color);
   --npa-component-focus-error-box-shadow: 0 0 0 2px var(--npa-component-focus-error-box-shadow-color);
 
-  --npa-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
-  --npa-component-border-radius: #{getRemRelativeSize(4, $fontSizeRoot)};
+  --npa-component-border: 1px solid;
+  --npa-component-border-radius: 4px;
 
-  --npa-component-icon-left-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
-  --npa-component-icon-right-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
+  --npa-component-icon-left-spacer: 4px;
+  --npa-component-icon-right-spacer: 8px;
 
   --npa-component-disabled-cursor: not-allowed;
 
@@ -120,9 +120,9 @@
 
   // ###### ALERT
   --npa-alert-position: fixed;
-  --npa-alert-padding-vertical: #{getRemRelativeSize(32, $fontSizeRoot)};
+  --npa-alert-padding-vertical: 32px;
   --npa-alert-padding-horizontal: var(--npa-alert-padding-vertical);
-  --npa-alert-width: #{getRemRelativeSize(350, $fontSizeRoot)};
+  --npa-alert-width: 350px;
   --npa-alert-min-width: var(--npa-alert-width);
   --npa-alert-max-width: var(--npa-alert-width);
   --npa-alert-top: 0;
@@ -134,70 +134,70 @@
   --npa-alert-box-shadow: var(--npa-component-box-shadow);
 
   --npa-alert-close-control-color: var(--npa-color-space-8);
-  --npa-alert-close-control-top: #{getRemRelativeSize(-15, $fontSizeRoot)};
-  --npa-alert-close-control-right: #{getRemRelativeSize(-15, $fontSizeRoot)};
+  --npa-alert-close-control-top: -15px;
+  --npa-alert-close-control-right: -15px;
 
-  --npa-alert-header-separation: #{getRemRelativeSize(12, $fontSizeRoot)};
-  --npa-alert-title-icon-separation: #{getRemRelativeSize(12, $fontSizeRoot)};
+  --npa-alert-header-separation: 12px;
+  --npa-alert-title-icon-separation: 12px;
 
   --npa-alert-title-text-color: var(--npa-color-space-17);
   --npa-alert-title-icon-color: var(--npa-color-action-6);
-  --npa-alert-title-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
+  --npa-alert-title-icon-spacer: 8px;
   --npa-alert-body-text-color: var(--npa-color-space-8);
   --npa-alert-border-color: var(--npa-color-space-3);
   --npa-alert-background-color: white;
 
-  --npa-alert-actions-height: #{getRemRelativeSize(40, $fontSizeRoot)};
+  --npa-alert-actions-height: 40px;
   --npa-alert-actions-background-color: var(--npa-color-space-1);
-  --npa-alert-actions-separation: #{getRemRelativeSize(2, $fontSizeRoot)};
+  --npa-alert-actions-separation: 2px;
 
   // ###### BADGE
   --npa-badge-position: absolute;
-  --npa-badge-min-width: #{getRemRelativeSize(20, $fontSizeRoot)};
-  --npa-badge-min-height: #{getRemRelativeSize(20, $fontSizeRoot)};
-  --npa-badge-padding: #{getRemRelativeSize(4, $fontSizeRoot)} #{getRemRelativeSize(3, $fontSizeRoot)};
+  --npa-badge-min-width: 20px;
+  --npa-badge-min-height: 20px;
+  --npa-badge-padding: 4px 3px;
 
   --npa-badge-color: white;
   --npa-badge-background-color: var(--npa-color-space-6);
   --npa-badge-border-color: var(--npa-color-space-6);
-  --npa-badge-border-radius: #{getRemRelativeSize(20, $fontSizeRoot)};
+  --npa-badge-border-radius: 20px;
 
-  --npa-badge-text-top: #{getRemRelativeSize(0.5, $fontSizeRoot)};
+  --npa-badge-text-top: 0.5px;
 
   // ###### BREADCRUMB
-  --npa-breadcrum-item-spacing: #{getRemRelativeSize(8, $fontSizeRoot)};
+  --npa-breadcrum-item-spacing: 8px;
 
-  --npa-breadcrumb-link-color: var(--npa-color-space-8);
+  --npa-breadcrumb-link-color: var(--npa-color-action-6);
   --npa-breadcrumb-link-hover-color: var(--npa-color-action-6);
-  --npa-breadcrumb-link-active-color: var(--npa-color-space-17);
+  --npa-breadcrumb-link-active-color: var(--npa-color-white);
 
-  --npa-breadcrum-separator-color: var(--npa-color-space-8);
-  --npa-breadcrum-dropdown-trigger-color: var(--npa-color-space-8);
+  --npa-breadcrum-separator-color: var(--npa-color-neutral-4);
+  --npa-breadcrum-dropdown-trigger-color: var(--npa-color-neutral-4);
 
   // ###### BUTTON
-  --npa-button-color: white;
-  --npa-button-border-color: var(--npa-color-action-6);
+  --npa-button-color: var(--npa-color-neutral-10);
+  --npa-button-border-color: var(--npa-color-neutral-10);
   --npa-button-background-color: var(--npa-color-action-6);
-  --npa-button-hover-color: white;
-  --npa-button-hover-border-color: var(--npa-color-action-7);
-  --npa-button-hover-background-color: var(--npa-color-action-7);
-  --npa-button-active-color: white;
-  --npa-button-active-border-color: var(--npa-color-action-8);
-  --npa-button-active-background-color: var(--npa-color-action-8);
-  --npa-button-disabled-color: var(--npa-color-space-4);
-  --npa-button-disabled-border-color: var(--npa-color-space-1);
-  --npa-button-disabled-background-color: var(--npa-color-space-1);
-  --npa-button-disabled-icon-color: var(--npa-color-space-4);
+  --npa-button-hover-color: var(--npa-color-neutral-10);
+  --npa-button-hover-border-color: var(--npa-color-action-5);
+  --npa-button-hover-background-color: var(--npa-color-action-5);
+  --npa-button-active-color: var(--npa-color-neutral-10);
+  --npa-button-active-border-color: var(--npa-color-action-4);
+  --npa-button-active-background-color: var(--npa-color-action-4);
+  --npa-button-disabled-color: var(--npa-color-neutral-8);
+  --npa-button-disabled-border-color: var(--npa-color-neutral-4);
+  --npa-button-disabled-background-color: var(--npa-color-neutral-4);
+  --npa-button-disabled-icon-color: var(--npa-color-neutral-8);
 
-  --npa-button-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
-  --npa-button-border-correction: #{getRemRelativeSize(2, $fontSizeRoot)};
+  --npa-button-icon-spacer: 8px;
+  --npa-button-border-correction: 2px;
 
   // ###### CHECKBOX
   $checkboxChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6738 4.57069C11.4568 4.41504 11.2446 4.26814 11.0639 4.14187C11.0029 4.09874 10.9443 4.06685 10.8832 4.04373C10.5768 3.92871 10.2704 4.04373 10.0673 4.3519C9.48284 5.24204 8.89778 6.13469 8.31333 7.0242L6.99938 9.02827C6.59262 8.60758 6.18889 8.19002 5.78274 7.76995C5.60988 7.59117 5.43461 7.50178 5.24785 7.50178H5.24483C5.06109 7.50178 4.88279 7.59117 4.71296 7.76682C4.56247 7.92247 4.41499 8.075 4.26752 8.23065L4.25664 8.2419C3.91395 8.59883 3.91395 8.99077 4.25966 9.3477C4.99219 10.1053 5.72411 10.8623 6.45664 11.6199C6.4929 11.6574 6.53158 11.695 6.57328 11.7325C6.77394 11.9081 6.99092 12 7.2079 12C7.24416 12 7.28042 11.9969 7.31669 11.9912C7.56449 11.9569 7.78449 11.8012 7.95432 11.5449C9.22113 9.61274 10.4716 7.70619 11.8581 5.5896C12.1005 5.22392 12.0279 4.82323 11.6744 4.57006L11.6738 4.57069Z" fill="white"/></svg>';
   $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="white"/></svg>';
   --npa-checkbox-checked: url('#{$checkboxChecked}');
   --npa-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
-  --npa-checkbox-border-radius: #{getRemRelativeSize(2, $fontSizeRoot)};
+  --npa-checkbox-border-radius: 2px;
   --npa-checkbox-checked-disabled: var(--npa-checkbox-checked);
   --npa-checkbox-indeterminate-border-color: var(--npa-color-action-6);
   --npa-checkbox-indeterminate-background-color: var(--npa-color-white);
@@ -205,12 +205,12 @@
   --npa-checkbox-indeterminate-disabled-background-color: var(--npa-color-white);
 
   // ###### DATE PICKER
-  --npa-calendar-header-padding-vertical: #{getRemRelativeSize(12, $fontSizeRoot)};
-  --npa-calendar-header-padding-horizontal: #{getRemRelativeSize(12, $fontSizeRoot)};
-  --npa-calendar-body-padding-vertical: #{getRemRelativeSize(16, $fontSizeRoot)};
-  --npa-calendar-body-padding-horizontal: #{getRemRelativeSize(24, $fontSizeRoot)};
-  --npa-calendar-weekdays-spacing: #{getRemRelativeSize(12, $fontSizeRoot)};
-  --npa-calendar-item-width: #{getRemRelativeSize(36, $fontSizeRoot)};
+  --npa-calendar-header-padding-vertical: 12px;
+  --npa-calendar-header-padding-horizontal: 12px;
+  --npa-calendar-body-padding-vertical: 16px;
+  --npa-calendar-body-padding-horizontal: 24px;
+  --npa-calendar-weekdays-spacing: 12px;
+  --npa-calendar-item-width: 36px;
   --npa-calendar-item-correction: 0;
 
   --npa-calendar-position: absolute;
@@ -226,43 +226,43 @@
   // ###### DROPDOWN
   --npa-dropdown-position: absolute;
   --npa-dropdown-width: fit-content;
-  --npa-dropdown-min-width: #{getRemRelativeSize(150, $fontSizeRoot)};
+  --npa-dropdown-min-width: 150px;
   --npa-dropdown-top: 0;
   --npa-dropdown-left: 0;
   --npa-dropdown-z-index: 2;
 
   --npa-dropdown-border: none;
   --npa-dropdown-border-radius: var(--npa-component-border-radius);
-  --npa-dropdown-padding: #{getRemRelativeSize(4, $fontSizeRoot)} 0;
+  --npa-dropdown-padding: 4px 0;
   --npa-dropdown-margin: 0;
   --npa-dropdown-box-shadow: var(--npa-component-box-shadow);
 
-  --npa-dropdown-text-color: var(--npa-color-space-17);
+  --npa-dropdown-text-color: var(--npa-color-neutral-10);
   --npa-dropdown-border-color: unset;
   --npa-dropdown-background-color: var(--npa-color-white);
 
-  --npa-dropdown-option-group-min-height: #{getRemRelativeSize(30, $fontSizeRoot)};
-  --npa-dropdown-option-group-color: var(--npa-color-space-6);
+  --npa-dropdown-option-group-min-height: 30px;
+  --npa-dropdown-option-group-color: var(--npa-color-neutral-7);
 
-  --npa-dropdown-option-min-height: #{getRemRelativeSize(40, $fontSizeRoot)};
-  --npa-dropdown-option-padding-vertical: #{getRemRelativeSize(8, $fontSizeRoot)};
-  --npa-dropdown-option-padding-horizontal: #{getRemRelativeSize(16, $fontSizeRoot)};
-  --npa-dropdown-option-icon-size: #{getRemRelativeSize(16, $fontSizeRoot)};
-  --npa-dropdown-option-icon-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
-  --npa-dropdown-option-label-correction: #{getRemRelativeSize(1, $fontSizeRoot)};
+  --npa-dropdown-option-min-height: 40px;
+  --npa-dropdown-option-padding-vertical: 8px;
+  --npa-dropdown-option-padding-horizontal: 16px;
+  --npa-dropdown-option-icon-size: 16px;
+  --npa-dropdown-option-icon-spacer: 8px;
+  --npa-dropdown-option-label-correction: 1px;
   --npa-dropdown-option-border-radius: 0;
 
-  --npa-dropdown-option-hover-color: var(--npa-color-text-option-hover);
-  --npa-dropdown-option-hover-background-color: var(--npa-color-background-option-hover);
+  --npa-dropdown-option-hover-color: var(--npa-color-neutral-10);
+  --npa-dropdown-option-hover-background-color: var(--npa-color-action-3);
 
-  --npa-dropdown-option-selected-background-color: var(--npa-color-space-2);
+  --npa-dropdown-option-selected-background-color: var(--npa-color-neutral-4);
 
-  --npa-dropdown-option-icon-right-size: #{getRemRelativeSize(14, $fontSizeRoot)};
-  --npa-dropdown-option-icon-right-spacer: #{getRemRelativeSize(40, $fontSizeRoot)};
+  --npa-dropdown-option-icon-right-size: 14px;
+  --npa-dropdown-option-icon-right-spacer: 40px;
 
   --npa-dropdown-separator-border: var(--npa-component-border);
-  --npa-dropdown-separator-border-color: var(--npa-color-space-3);
-  --npa-dropdown-separator-margin: #{getRemRelativeSize(4, $fontSizeRoot)} 0;
+  --npa-dropdown-separator-border-color: var(--npa-color-neutral-5);
+  --npa-dropdown-separator-margin: 4px 0;
 
   // ###### LABEL
   --npa-label-display: table-cell;
@@ -273,7 +273,7 @@
 
   // ###### LINK
   --npa-link-color: var(--npa-color-action-6);
-  --npa-link-hover-color: var(--npa-color-action-7);
+  --npa-link-hover-color: var(--npa-color-action-6);
 
   // ###### MODAL
   --npa-modal-overlay-position: fixed;
@@ -287,9 +287,9 @@
 
   --npa-modal-border-color: unset;
   --npa-modal-background-color: var(--npa-color-white);
-  --npa-modal-padding: #{getRemRelativeSize(24, $fontSizeRoot)};
-  --npa-modal-spacing: #{getRemRelativeSize(12, $fontSizeRoot)};
-  --npa-modal-spacing-vertical: #{getRemRelativeSize(20, $fontSizeRoot)};
+  --npa-modal-padding: 24px;
+  --npa-modal-spacing: 12px;
+  --npa-modal-spacing-vertical: 20px;
 
   --npa-modal-close-control-color: var(--npa-color-space-17);
 
@@ -298,7 +298,7 @@
 
   // ###### NOTIFICATION
   --npa-notification-position: fixed;
-  --npa-notification-padding: #{getRemRelativeSize(7, $fontSizeRoot)} #{getRemRelativeSize(15, $fontSizeRoot)};
+  --npa-notification-padding: 7px 15px;
   --npa-notification-width: fit-content;
   --npa-notification-min-width: unset;
   --npa-notification-max-width: 50vw;
@@ -314,8 +314,8 @@
   --npa-notification-border-color: var(--npa-color-white);
   --npa-notification-background-color: var(--npa-color-white);
 
-  --npa-notification-icon-separation: #{getRemRelativeSize(10, $fontSizeRoot)};
-  --npa-notification-close-control-separation: #{getRemRelativeSize(50, $fontSizeRoot)};
+  --npa-notification-icon-separation: 10px;
+  --npa-notification-close-control-separation: 50px;
 
   --npa-notification-inside-link-color: var(--npa-color-action-6);
 
@@ -333,8 +333,8 @@
   $selectChevronFocus: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(7, 118, 223)"/></svg>';
   $selectChevronError: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(239, 64, 52)"/></svg>';
   $selectChevronDisabled: 'data:image/svg+xml; utf8, <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.209209 0.209209C0.488155 -0.0697365 0.940416 -0.0697365 1.21936 0.209209L5 3.98985L8.78064 0.209209C9.05958 -0.0697365 9.51184 -0.0697365 9.79079 0.209209C10.0697 0.488155 10.0697 0.940416 9.79079 1.21936L5.50508 5.50508C5.22613 5.78402 4.77387 5.78402 4.49492 5.50508L0.209209 1.21936C-0.0697365 0.940416 -0.0697365 0.488155 0.209209 0.209209Z" fill="rgb(136, 152, 167)"/></svg>';
-  --npa-select-chevron-width: #{getRemRelativeSize(10, $fontSizeRoot)};
-  --npa-select-filter-padding-right: #{getRemRelativeSize(12, $fontSizeRoot)};
+  --npa-select-chevron-width: 10px;
+  --npa-select-filter-padding-right: 12px;
   --npa-select-chevron: url('#{$selectChevron}');
   --npa-select-chevron-focus: url('#{$selectChevronFocus}');
   --npa-select-chevron-error: url('#{$selectChevronError}');
@@ -342,7 +342,7 @@
 
   // ###### SPINNER
   --npa-spinner-display: block;
-  --npa-spinner-size: #{getRemRelativeSize(60, $fontSizeRoot)};
+  --npa-spinner-size: 60px;
   --npa-spinner-line-width: 3px;
   --npa-spinner-color: var(--npa-color-action-6);
 
@@ -355,12 +355,12 @@
   --npa-switch-disabled-background-color: var(--npa-color-space-2);
   --npa-switch-disabled-checked-background-color: var(--npa-color-action-4);
 
-  --npa-switch-height: #{getRemRelativeSize(22, $fontSizeRoot)};
-  --npa-switch-border-radio: #{getRemRelativeSize(25, $fontSizeRoot)};
+  --npa-switch-height: 22px;
+  --npa-switch-border-radio: 25px;
 
   // ###### TAB
-  $npaTabAuxCellPaddingBottom: getRemRelativeSize(4, $fontSizeRoot);
-  $npaTabAuxCellActiveBorderWidth: getRemRelativeSize(2, $fontSizeRoot);
+  $npaTabAuxCellPaddingBottom: 4px;
+  $npaTabAuxCellActiveBorderWidth: 2px;
 
   --npa-tab-width: 100%;
   --npa-tab-border: var(--npa-component-border);
@@ -368,8 +368,8 @@
 
   --npa-tab-height: var(--npa-component-height);
 
-  --npa-tab-cell-padding: 0 #{getRemRelativeSize(24, $fontSizeRoot)} #{$npaTabAuxCellPaddingBottom} #{getRemRelativeSize(24, $fontSizeRoot)};
-  --npa-tab-cell-margin-bottom: #{getRemRelativeSize(-1, $fontSizeRoot)};
+  --npa-tab-cell-padding: 0 24px #{$npaTabAuxCellPaddingBottom} 24px;
+  --npa-tab-cell-margin-bottom: -1px;
   --npa-tab-cell-color: var(--npa-color-action-6);
   --npa-tab-cell-hover-color: var(--npa-color-action-7);
   --npa-tab-cell-hover-border-color: var(--npa-color-space-4);
@@ -384,49 +384,49 @@
   // ###### TABLE
   --npa-table-height: fit-content;
 
-  --npa-table-column-gap: var(--npa-spacing-relative-24);
-  --npa-table-column-padding: 0 var(--npa-spacing-relative-12);
+  --npa-table-column-gap: var(--npa-spacing-24);
+  --npa-table-column-padding: 0 var(--npa-spacing-12);
 
-  --npa-table-header-height: var(--npa-spacing-relative-40);
-  --npa-table-header-border-width: 0 0 #{getRemRelativeSize(1, $fontSizeRoot)} 0;
+  --npa-table-header-height: 40px;
+  --npa-table-header-border-width: 0 0 1px 0;
   --npa-table-header-border-style: solid;
   --npa-table-header-border-color: var(--npa-color-space-6);
 
   --npa-table-header-cell-align: center;
   --npa-table-header-cell-justify: normal;
-  --npa-table-header-cell-icon-size: var(--npa-spacing-relative-12);
-  --npa-table-header-cell-icon-spacing: var(--npa-spacing-relative-8);
+  --npa-table-header-cell-icon-size: var(--npa-spacing-12);
+  --npa-table-header-cell-icon-spacing: var(--npa-spacing-8);
   --npa-table-header-cell-text-transform: none;
   --npa-table-header-cell-color: var(--npa-color-space-8);
   --npa-table-header-cell-icon-color: var(--npa-color-space-8);
 
-  --npa-table-body-height: calc(100% - var(--npa-table-header-height) - #{getRemRelativeSize(1, $fontSizeRoot)});
-  --npa-table-body-spinner-top-spacing: var(--npa-spacing-relative-40);
+  --npa-table-body-height: calc(100% - var(--npa-table-header-height) - 1px);
+  --npa-table-body-spinner-top-spacing: var(--npa-spacing-40);
 
   --npa-table-row-height: var(--npa-spacing-40);
 
   --npa-table-row-background-color: var(--npa-color-white);
-  --npa-table-row-border-width: 0 0 #{getRemRelativeSize(1, $fontSizeRoot)} 0;
+  --npa-table-row-border-width: 0 0 1px 0;
   --npa-table-row-border-style: solid;
   --npa-table-row-border-color: var(--npa-color-space-3);
 
   --npa-table-row-hover-background-color: var(--npa-color-action-1);
-  --npa-table-row-hover-border-width: 0 0 #{getRemRelativeSize(1, $fontSizeRoot)} 0;
+  --npa-table-row-hover-border-width: 0 0 1px 0;
   --npa-table-row-hover-border-style: solid;
   --npa-table-row-hover-border-color: var(--npa-color-space-3);
 
-  --npa-table-row-spinner-container-height: var(--npa-spacing-relative-40);
-  --npa-table-row-spinner-padding: var(--npa-spacing-relative-12);
+  --npa-table-row-spinner-container-height: var(--npa-spacing-40);
+  --npa-table-row-spinner-padding: var(--npa-spacing-12);
 
   --npa-table-row-cell-align: center;
   --npa-table-row-cell-justify: normal;
-  --npa-table-row-cell-icon-spacing: var(--npa-spacing-relative-8);
+  --npa-table-row-cell-icon-spacing: var(--npa-spacing-8);
   --npa-table-row-cell-color: var(--npa-color-space-17);
 
   //# NPA TABLE ACTIONS:
   --npa-table-actions-default-align: center;
   --npa-table-actions-default-justify: normal;
-  --npa-table-actions-default-spacing: var(--npa-spacing-relative-12);
+  --npa-table-actions-default-spacing: var(--npa-spacing-12);
 
   --npa-table-actions-trigger-dropdown-default-color: var(--npa-color-space-8);
   --npa-table-actions-trigger-dropdown-default-hover-color: var(--npa-color-space-17);
@@ -458,13 +458,13 @@
   --npa-tag-disabled-border-color: var(--npa-color-space-2);
   --npa-tag-disabled-background-color: var(--npa-color-space-2);
 
-  --npa-tag-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+  --npa-tag-height: 30px;
 
   // ###### TEXTAREA
   --npa-textarea-resize: vertical;
 
   // ###### TOGGLE BUTTON
-  $npaToggleButtonBorderWidth: getRemRelativeSize(1, $fontSizeRoot);
+  $npaToggleButtonBorderWidth: 1px;
   --npa-toggle-button-border: #{$npaToggleButtonBorderWidth} solid;
   --npa-toggle-button-margin-left: calc(#{$npaToggleButtonBorderWidth} * (-1));
   --npa-toggle-button-border-color: var(--npa-color-space-5);
@@ -481,12 +481,12 @@
 
   // ###### TOOLTIP
   --npa-tooltip-position: fixed;
-  --npa-tooltip-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+  --npa-tooltip-height: 30px;
   --npa-tooltip-z-index: 2;
   --npa-tooltip-color: var(--npa-color-white);
   --npa-tooltip-background-color: var(--npa-color-space-13);
   --npa-tooltip-border-color: var(--npa-color-space-13);
-  --npa-tooltip-padding: 0 var(--npa-spacing-relative-8);
+  --npa-tooltip-padding: 0 8px;
 
   --npa-tooltip-arrow-position: fixed;
 }

@@ -1,0 +1,22 @@
+@import 'exportable/app.base';
+
+$templateBaseBackgroundColor: (
+  background: $colorBackground,
+  background-header: $colorBackgroundHeader,
+  background-sidebar: $colorBackgroundSidebar,
+  background-option-selected: $colorBackgroundOptionSelected,
+  background-option-hover: $colorBackgroundOptionHover,
+  background-card: $colorBackgroundCard,
+  background-card-hover: $colorBackgroundCardHover
+);
+
+$templateBaseBorderColor: (
+  border-divider: $colorBorderDivider,
+  border-table-rows: $colorBorderTableRows
+);
+
+$templateBaseTextColor: (
+  text-default: $colorTextDefault,
+  text-cards: $colorTextCards,
+  text-link: $colorTextLink
+);

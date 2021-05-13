@@ -1,0 +1,17 @@
+{
+  "name": "@stratiods/pagonxt",
+  "version": "5.1.10",
+  "description": "SDS Templates :: Santander PagoNxt Template",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratio-design/sds-templates.git"
+  },
+  "author": "Nul Pàs <manu@lunaeme.com> (https://github.com/nulpas)",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/stratio-design/sds-templates/issues"
+  },
+  "homepage": "https://github.com/stratio-design/sds-templates/tree/master/src/style/templates/pagonxt#readme"
+}

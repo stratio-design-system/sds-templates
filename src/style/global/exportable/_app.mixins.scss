@@ -16,3 +16,25 @@
   -webkit-justify-content: $justifyContent;
   @content;
 }
+
+//## Mixin for apply styles to scrollbar.
+//## PARAMETERS: scrollbar-color
+@mixin styleScrollbar($scrollbarColor) {
+  &::-webkit-scrollbar-track {
+    border-radius: 30px;
+    border: solid 3px transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    border-radius: 10px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px $scrollbarColor;
+    border-radius: 80px !important;
+    border: solid 2px transparent;
+  }
+  @content;
+}

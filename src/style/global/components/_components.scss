@@ -16,6 +16,7 @@
 @import './spinner';
 @import './switch';
 @import './tab';
+@import './table';
 @import './tag';
 @import './tag-input';
 @import './textarea';
@@ -41,6 +42,7 @@
   @extend %npa-spinner;
   @extend %npa-switch;
   @extend %npa-tab;
+  @extend %npa-table;
   @extend %npa-tag;
   @extend %npa-tag-input;
   @extend %npa-textarea;

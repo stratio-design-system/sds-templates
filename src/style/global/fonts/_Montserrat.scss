@@ -15,7 +15,7 @@
 
 %npa-montserrat-typography-definition {
   @each $key, $value in $fontWeightsAvailable {
-    .npa-typo__#{$key} {
+    .npa-font--#{$key} {
       @include createTypographyElement(map-get($value, weight), map-get($value, style));
     }
   }

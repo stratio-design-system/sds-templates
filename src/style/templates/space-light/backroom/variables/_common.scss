@@ -81,7 +81,7 @@
   --npa-selection-z-index-after: auto;
 
   --npa-selection-disabled-tex-color: var(--npa-color-space-6);
-  --npa-selection-checked-disabled-border-color: 0 0 0 1px var(--npa-color-action-4);
+  --npa-selection-checked-disabled-border-color: var(--npa-color-action-4);
   --npa-selection-checked-disabled-background-color: var(--npa-color-action-4);
 
   // ###### Component Commons
@@ -131,7 +131,7 @@
 
   --npa-alert-border: var(--npa-component-border);
   --npa-alert-border-radius: var(--npa-component-border-radius);
-  --npa-alert-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-neutral-12-rgb), 0.25);
+  --npa-alert-box-shadow: var(--npa-component-box-shadow);
 
   --npa-alert-close-control-color: var(--npa-color-space-8);
   --npa-alert-close-control-top: -15px;
@@ -308,7 +308,7 @@
 
   --npa-notification-border: var(--npa-component-border);
   --npa-notification-border-radius: var(--npa-component-border-radius);
-  --npa-notification-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-neutral-12-rgb), 0.25);
+  --npa-notification-box-shadow: var(--npa-component-box-shadow);
 
   --npa-notification-text-color: var(--npa-color-space-8);
   --npa-notification-border-color: var(--npa-color-white);
@@ -380,6 +380,56 @@
   --npa-tab-cell-active-border: #{$npaTabAuxCellActiveBorderWidth} solid;
   --npa-tab-cell-active-border-color: var(--npa-color-space-17);
   --npa-tab-cell-active-cursor: default;
+
+  // ###### TABLE
+  --npa-table-height: fit-content;
+
+  --npa-table-column-gap: var(--npa-spacing-24);
+  --npa-table-column-padding: 0 var(--npa-spacing-12);
+
+  --npa-table-header-height: 40px;
+  --npa-table-header-border-width: 0 0 1px 0;
+  --npa-table-header-border-style: solid;
+  --npa-table-header-border-color: var(--npa-color-space-6);
+
+  --npa-table-header-cell-align: center;
+  --npa-table-header-cell-justify: normal;
+  --npa-table-header-cell-icon-size: var(--npa-spacing-12);
+  --npa-table-header-cell-icon-spacing: var(--npa-spacing-8);
+  --npa-table-header-cell-text-transform: none;
+  --npa-table-header-cell-color: var(--npa-color-space-8);
+  --npa-table-header-cell-icon-color: var(--npa-color-space-8);
+
+  --npa-table-body-height: calc(100% - var(--npa-table-header-height) - 1px);
+  --npa-table-body-spinner-top-spacing: var(--npa-spacing-40);
+
+  --npa-table-row-height: var(--npa-spacing-40);
+
+  --npa-table-row-background-color: var(--npa-color-white);
+  --npa-table-row-border-width: 0 0 1px 0;
+  --npa-table-row-border-style: solid;
+  --npa-table-row-border-color: var(--npa-color-space-3);
+
+  --npa-table-row-hover-background-color: var(--npa-color-action-1);
+  --npa-table-row-hover-border-width: 0 0 1px 0;
+  --npa-table-row-hover-border-style: solid;
+  --npa-table-row-hover-border-color: var(--npa-color-space-3);
+
+  --npa-table-row-spinner-container-height: var(--npa-spacing-40);
+  --npa-table-row-spinner-padding: var(--npa-spacing-12);
+
+  --npa-table-row-cell-align: center;
+  --npa-table-row-cell-justify: normal;
+  --npa-table-row-cell-icon-spacing: var(--npa-spacing-8);
+  --npa-table-row-cell-color: var(--npa-color-space-17);
+
+  //# NPA TABLE ACTIONS:
+  --npa-table-actions-default-align: center;
+  --npa-table-actions-default-justify: normal;
+  --npa-table-actions-default-spacing: var(--npa-spacing-12);
+
+  --npa-table-actions-trigger-dropdown-default-color: var(--npa-color-space-8);
+  --npa-table-actions-trigger-dropdown-default-hover-color: var(--npa-color-space-17);
 
   // ###### TAG
   --npa-tag-text-color: var(--npa-color-space-17);

@@ -119,6 +119,9 @@
     &.npa-button {
       --npa-component-padding-horizontal: 20px;
       --npa-component-icon-left-spacer: 8px;
+      --npa-component-border-radius: 0;
+      --npa-component-height: 50px;
+      --npa-component-focus-box-shadow: unset;
       padding-top: 2px;
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       line-height: 1;
@@ -136,18 +139,15 @@
         }
       }
       &.npa-button--secondary, &.npa-button--bob {
-        --npa-button-color: var(--npa-color-space-7);
-        --npa-button-border-color: var(--npa-color-space-7);
-        --npa-button-background-color: var(--npa-color-white);
-        --npa-button-hover-color: var(--npa-color-space-8);
-        --npa-button-hover-border-color: var(--npa-color-space-8);
-        --npa-button-hover-background-color: var(--npa-color-action-1);
-        --npa-button-active-color: var(--npa-color-space-13);
-        --npa-button-active-border-color: var(--npa-color-space-8);
-        --npa-button-active-background-color: var(--npa-color-action-2);
-        --npa-button-disabled-color: var(--npa-color-space-3);
-        --npa-button-disabled-border-color: var(--npa-color-space-2);
-        --npa-button-disabled-background-color: var(--npa-color-white);
+        --npa-button-color: var(--npa-color-action-6);
+        --npa-button-border-color: var(--npa-color-action-6);
+        --npa-button-background-color: transparent;
+        --npa-button-hover-color: var(--npa-color-action-5);
+        --npa-button-hover-border-color: var(--npa-color-action-5);
+        --npa-button-hover-background-color: transparent;
+        --npa-button-active-color: var(--npa-color-action-4);
+        --npa-button-active-border-color: var(--npa-color-action-4);
+        --npa-button-active-background-color: transparent;
       }
       &.npa-button--borderless {
         --npa-button-color: var(--npa-color-space-7);
@@ -176,7 +176,7 @@
 
   // ###### CHECKBOX #################################################################
   $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
-  $checkboxIndeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(96, 167, 236)"/></svg>';
+  $checkboxIndeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(156, 200, 242)"/></svg>';
   INPUT[type=checkbox] {
     & + LABEL {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
@@ -186,10 +186,6 @@
       &:disabled, &.disabled {
         &.npa-checkbox--indeterminate {
           &:checked + LABEL {
-            &:before {
-              --npa-component-border: 1px solid;
-              border-color: var(--npa-selection-checked-disabled-border-color);
-            }
             &:after {
               --npa-checkbox-indeterminate: url('#{$checkboxIndeterminateDisabled}');
             }
@@ -198,7 +194,6 @@
       }
 
       &.npa-checkbox--indeterminate {
-        border-color: var(--npa-component-border-color);
         &:checked + LABEL {
           &:after {
             --npa-checkbox-indeterminate: url('#{$checkboxIndeterminate}');

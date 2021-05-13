@@ -1,28 +1,24 @@
 @import '../../global/mixins';
-@import '../../global/fonts/Inter';
+@import '../../global/fonts/Montserrat';
 @import '../../global/fonts/Stratio-Icon';
 @import '../../global/components/components';
 
 @import './backroom/variables/common';
-@import './backroom/variables/sass';
 @import './backroom/components';
 @import './backroom/font-sizes';
-@import '../space-light/backroom/colors';
-@import '../space-light/backroom/template-base';
 
 HTML {
-  &#npa-stratio-web-tpl, &.npa-stratio-web-tpl {
-    // font-size: getRelativeSize($fontSizeRoot, $viewportWidthReferenceInPX);
+  &.npa-pagonxt-tpl {
     font-size: $fontSizeRoot + px;
     line-height: $fontLineHeightFactor;
 
     * {
-      font-family: Inter, sans-serif;
-      color: $colorSpace13;
+      font-family: $fontName, sans-serif;
+      color: var(--npa-color-text-default);
       outline: none;
     }
 
-    @extend %npa-inter-typography-definition;
+    @extend %npa-montserrat-typography-definition;
 
     @include createFontDefinition($fontSizesText, $fontSizeRoot, $fontLineHeightFactor) {
       // ###### HEADERS
@@ -32,11 +28,14 @@ HTML {
       .npa--bold {
         font-weight: bold;
       }
+      .npa--italic {
+        font-style: italic;
+      }
 
       // ###### DEFAULT SIZE
       .npa-font--default {
         font-size: 1rem;
-        line-height: $fontLineHeightFactor + rem;
+        line-height: $fontLineHeightFactor;
       }
     }
 

@@ -1,4 +1,5 @@
 @import '../../../global/mixins';
+@import '../../../global/exportable/app.mixins';
 @import './font-sizes';
 
 %npa-components-template {
@@ -405,6 +406,32 @@
     &.npa-tab--small {
       @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
       --npa-tab-height: 30px;
+    }
+  }
+
+  // ###### TABLE ####################################################################
+  .npa-table {
+    .npa-table__header {
+      .npa-table__header-cell {
+        SPAN {
+          @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
+    }
+    .npa-table__body {
+      .npa-table__viewport {
+        .npa-table__row {
+          .npa-table__cell {
+            .npa-table__cell-value {
+              @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+            }
+          }
+        }
+      }
+    }
+
+    &, .npa-table__viewport {
+      @include styleScrollbar(var(--npa-color-space-2));
     }
   }
 

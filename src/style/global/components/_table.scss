@@ -1,0 +1,52 @@
+%npa-table {
+  .npa-table {
+    --npa-table-default-height: var(--npa-table-height);
+
+    --npa-table-default-column-gap: var(--npa-table-column-gap);
+    --npa-table-default-column-padding: var(--npa-table-column-padding);
+
+    --npa-table-header-default-height: var(--npa-table-header-height);
+    --npa-table-header-default-border-width: var(--npa-table-header-border-width);
+    --npa-table-header-default-border-style: var(--npa-table-header-border-style);
+    --npa-table-header-default-border-color: var(--npa-table-header-border-color);
+
+    --npa-table-header-cell-default-align: var(--npa-table-header-cell-align);
+    --npa-table-header-cell-default-justify: var(--npa-table-header-cell-justify);
+    --npa-table-header-cell-default-icon-size: var(--npa-table-header-cell-icon-size);
+    --npa-table-header-cell-default-icon-spacing: var(--npa-table-header-cell-icon-spacing);
+    --npa-table-header-cell-default-text-transform: var(--npa-table-header-cell-text-transform);
+    --npa-table-header-cell-default-color: var(--npa-table-header-cell-color);
+    --npa-table-header-cell-default-icon-color: var(--npa-table-header-cell-icon-color);
+
+    --npa-table-body-default-height: var(--npa-table-body-height);
+    --npa-table-body-default-spinner-top-spacing: var(--npa-table-body-spinner-top-spacing);
+
+    --npa-table-row-default-height: var(--npa-table-row-height);
+
+    --npa-table-row-default-background-color: var(--npa-table-row-background-color);
+    --npa-table-row-default-border-width: var(--npa-table-row-border-width);
+    --npa-table-row-default-border-style: var(--npa-table-row-border-style);
+    --npa-table-row-default-border-color: var(--npa-table-row-border-color);
+
+    --npa-table-row-default-hover-background-color: var(--npa-table-row-hover-background-color);
+    --npa-table-row-default-hover-border-width: var(--npa-table-row-hover-border-width);
+    --npa-table-row-default-hover-border-style: var(--npa-table-row-hover-border-style);
+    --npa-table-row-default-hover-border-color: var(--npa-table-row-hover-border-color);
+
+    --npa-table-row-default-spinner-container-height: var(--npa-table-row-spinner-container-height);
+    --npa-table-row-default-spinner-padding: var(--npa-table-row-spinner-padding);
+
+    --npa-table-row-cell-default-align: var(--npa-table-row-cell-align);
+    --npa-table-row-cell-default-justify: var(--npa-table-row-cell-justify);
+    --npa-table-row-cell-default-icon-spacing: var(--npa-table-row-cell-icon-spacing);
+    --npa-table-row-cell-default-color: var(--npa-table-row-cell-color);
+
+    //# NPA TABLE ACTIONS:
+    --npa-table-actions-default-align: center;
+    --npa-table-actions-default-justify: normal;
+    --npa-table-actions-default-spacing: 12px;
+
+    --npa-table-actions-trigger-dropdown-default-color: var(--npa-color-space-8);
+    --npa-table-actions-trigger-dropdown-default-hover-color: var(--npa-color-space-17);
+  }
+}

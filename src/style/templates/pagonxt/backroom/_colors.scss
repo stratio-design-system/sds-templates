@@ -1,0 +1,25 @@
+@import 'exportable/app.colors';
+
+$colorsAvailable: (
+  -white: $colorWhite,
+  -black: $colorBlack,
+  action-3: $colorAction3,
+  action-4: $colorAction4,
+  action-5: $colorAction5,
+  action-6: $colorAction6,
+  action-7: $colorAction7,
+  action-8: $colorAction8,
+  neutral-4: $colorNeutral4,
+  neutral-5: $colorNeutral5,
+  neutral-6: $colorNeutral6,
+  neutral-7: $colorNeutral7,
+  neutral-8: $colorNeutral8,
+  neutral-9: $colorNeutral9,
+  neutral-10: $colorNeutral10,
+  coral-6: $colorCoral6,
+  coral-7: $colorCoral7,
+  coral-8: $colorCoral8,
+  peach-6: $colorPeach6,
+  peach-7: $colorPeach7,
+  peach-8: $colorPeach8
+);

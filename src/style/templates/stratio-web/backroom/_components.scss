@@ -1,141 +1,460 @@
 @import '../../../global/mixins';
+@import '../../../global/exportable/app.mixins';
 @import './variables/sass';
 
 @import './font-sizes';
 
 %npa-components-template {
+  // ###### ALERT ####################################################################
+  .npa-alert {
+    .npa-alert__header {
+      .npa-alert__title {
+        @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
+      }
+    }
+    &:not(.npa-alert--connection-lost) {
+      border-left: var(--npa-spacing-relative-4) solid var(--npa-color-action-6);
+    }
+    &.npa-alert--success {
+      border-left: var(--npa-spacing-relative-4) solid var(--npa-success-color);
+      --npa-alert-title-icon-color: var(--npa-success-color);
+    }
+    &.npa-alert--warning {
+      border-left: var(--npa-spacing-relative-4) solid var(--npa-warning-color);
+      --npa-alert-title-icon-color: var(--npa-warning-color);
+    }
+    &.npa-alert--critical {
+      border-left: var(--npa-spacing-relative-4) solid var(--npa-error-color);
+      --npa-alert-title-icon-color: var(--npa-error-color);
+    }
+    &.npa-alert--connection-lost{
+      --npa-alert-background-color: var(--npa-color-space-7);
+      --npa-alert-border-color: var(--npa-color-space-7);
+      --npa-alert-body-text-color: var(--npa-color-white);
+      --npa-alert-title-icon-color: var(--npa-color-white);
+      --npa-alert-title-text-color: var(--npa-color-white);
+    }
+  }
+
+  // ###### BADGE ####################################################################
+  .npa-badge {
+    .npa-badge__box {
+      @include defineFontSizeElement(10, $fontSizeRoot, $fontLineHeightFactor);
+    }
+
+    &.npa-badge--alone {
+      --npa-badge-position: relative;
+    }
+
+    &.npa-badge--large {
+      .npa-badge__box {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        --npa-badge-min-width: var(--npa-spacing-relative-24);
+        --npa-badge-min-height: var(--npa-spacing-relative-24);
+        --npa-badge-padding: #{getRemRelativeSize(6, $fontSizeRoot)} #{getRemRelativeSize(5, $fontSizeRoot)};
+        --npa-badge-text-top: 0;
+      }
+    }
+    &.npa-badge--small {
+      .npa-badge__box {
+        @include defineFontSizeElement(8, $fontSizeRoot, $fontLineHeightFactor);
+        --npa-badge-min-width: var(--npa-spacing-relative-16);
+        --npa-badge-min-height: var(--npa-spacing-relative-16);
+        --npa-badge-padding: #{getRemRelativeSize(3, $fontSizeRoot)} #{getRemRelativeSize(2, $fontSizeRoot)};
+        --npa-badge-text-top: #{getRemRelativeSize(1, $fontSizeRoot)};
+      }
+    }
+    &.npa-badge--x-small {
+      .npa-badge__box {
+        font-size: 0;
+        --npa-badge-min-width: #{getRemRelativeSize(6, $fontSizeRoot)};
+        --npa-badge-min-height: #{getRemRelativeSize(6, $fontSizeRoot)};
+        --npa-badge-padding: 0;
+        --npa-badge-text-top: #{getRemRelativeSize(1, $fontSizeRoot)};
+      }
+    }
+
+    &.npa-badge--info {
+      --npa-badge-background-color: var(--npa-color-action-6);
+      --npa-badge-border-color: var(--npa-color-action-6);
+    }
+    &.npa-badge--success {
+      --npa-badge-background-color: var(--npa-success-color);
+      --npa-badge-border-color: var(--npa-success-color);
+    }
+    &.npa-badge--warning {
+      --npa-badge-background-color: var(--npa-warning-color);
+      --npa-badge-border-color: var(--npa-warning-color);
+    }
+    &.npa-badge--critical {
+      --npa-badge-background-color: var(--npa-error-color);
+      --npa-badge-border-color: var(--npa-error-color);
+    }
+  }
+
+  // ###### BREADCRUMB ###############################################################
+  .npa-breadcrumb {
+    .npa-breadcrumb__link {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    }
+    .npa-breadcrumb__separator {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+    .npa-breadcrumb__dropdown-trigger {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+
+    &.npa-breadcrumb--small {
+      --npa-component-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+      .npa-breadcrumb__link {
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      .npa-breadcrumb__dropdown-trigger {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        top: 0;
+      }
+    }
+  }
+
+  // ###### BUTTON ###################################################################
+  BUTTON {
+    &.npa-button {
+      --npa-component-padding-horizontal: #{getRemRelativeSize(20, $fontSizeRoot)};
+      --npa-component-icon-left-spacer: var(--npa-spacing-relative-8);
+      padding-top: 2px;
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: 1;
+      &.npa-button--small {
+        --npa-component-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        line-height: 1;
+        I.npa-icon {
+          --npa-button-icon-spacer: var(--npa-spacing-relative-4);
+        }
+      }
+      &.npa-button--icon-left, &.npa-button--icon-right, &.npa-button--icon-only {
+        I.npa-icon {
+          top: #{getRemRelativeSize(-1, $fontSizeRoot)};
+        }
+      }
+      &.npa-button--secondary, &.npa-button--bob {
+        --npa-button-color: var(--npa-color-space-7);
+        --npa-button-border-color: var(--npa-color-space-7);
+        --npa-button-background-color: var(--npa-color-white);
+        --npa-button-hover-color: var(--npa-color-space-8);
+        --npa-button-hover-border-color: var(--npa-color-space-8);
+        --npa-button-hover-background-color: var(--npa-color-action-1);
+        --npa-button-active-color: var(--npa-color-space-13);
+        --npa-button-active-border-color: var(--npa-color-space-8);
+        --npa-button-active-background-color: var(--npa-color-action-2);
+        --npa-button-disabled-color: var(--npa-color-space-3);
+        --npa-button-disabled-border-color: var(--npa-color-space-2);
+        --npa-button-disabled-background-color: var(--npa-color-white);
+      }
+      &.npa-button--borderless {
+        --npa-button-color: var(--npa-color-space-7);
+        --npa-button-border-color: var(--npa-color-white);
+        --npa-button-background-color: var(--npa-color-white);
+        --npa-button-hover-color: var(--npa-color-space-8);
+        --npa-button-hover-border-color: var(--npa-color-action-1);
+        --npa-button-hover-background-color: var(--npa-color-action-1);
+        --npa-button-active-color: var(--npa-color-space-13);
+        --npa-button-active-border-color: var(--npa-color-action-2);
+        --npa-button-active-background-color: var(--npa-color-action-2);
+      }
+      &.npa-button--critical {
+        --npa-button-color: var(--npa-color-white);
+        --npa-button-border-color: var(--npa-error-color);
+        --npa-button-background-color: var(--npa-error-color);
+        --npa-button-hover-color: var(--npa-color-white);
+        --npa-button-hover-border-color: var(--npa-color-coral-7);
+        --npa-button-hover-background-color: var(--npa-color-coral-7);
+        --npa-button-active-color: var(--npa-color-white);
+        --npa-button-active-border-color: var(--npa-color-coral-8);
+        --npa-button-active-background-color: var(--npa-color-coral-8);
+      }
+    }
+  }
+
+  // ###### CHECKBOX #################################################################
+  $checkboxIndeterminate: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(7, 118, 223)"/></svg>';
+  $checkboxIndeterminateDisabled: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="2" fill="rgb(96, 167, 236)"/></svg>';
+  INPUT[type=checkbox] {
+    & + LABEL {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--npa-selection-icon-size) + #{getRemRelativeSize(1, $fontSizeRoot)});
+    }
+    &:not(.npa-switch) {
+      &:disabled, &.disabled {
+        &.npa-checkbox--indeterminate {
+          &:checked + LABEL {
+            &:before {
+              --npa-component-border: #{getRemRelativeSize(1, $fontSizeRoot)} solid;
+              border-color: var(--npa-selection-checked-disabled-border-color);
+            }
+            &:after {
+              --npa-checkbox-indeterminate: url('#{$checkboxIndeterminateDisabled}');
+            }
+          }
+        }
+      }
+
+      &.npa-checkbox--indeterminate {
+        border-color: var(--npa-component-border-color);
+        &:checked + LABEL {
+          &:after {
+            --npa-checkbox-indeterminate: url('#{$checkboxIndeterminate}');
+          }
+        }
+      }
+    }
+  }
+
+  // ###### DATEPICKER ###############################################################
+  .npa-calendar {
+    .npa-calendar__nav {
+      DIV {
+        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+        I {
+          @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
+    }
+    .npa-calendar__container {
+      .npa-calendar__body {
+        .npa-calendar__date {
+          @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+          --npa-button-disabled-color: var(--npa-color-space-4);
+          --npa-button-disabled-background-color: transparent;
+          --npa-button-disabled-border-color: transparent;
+          --npa-component-focus-box-shadow: none;
+          --npa-component-border-radius: var(--npa-spacing-relative-40);
+          &.npa-calendar__date--selected {
+            .npa-button {
+              --npa-button-color: var(--npa-color-space-13);
+              --npa-button-background-color: var(--npa-color-action-2);
+              --npa-button-hover-color: var(--npa-color-space-13);
+              --npa-button-hover-background-color: var(--npa-color-action-2);
+            }
+          }
+          &.npa-calendar__date--success {
+            .npa-button {
+              font-weight: bold;
+              --npa-button-color: var(--npa-color-space-17);
+              --npa-button-hover-color: var(--npa-color-space-17);
+            }
+          }
+          &.npa-calendar__date--current-day:not(.npa-calendar__date--selected) {
+            .npa-button {
+              --npa-button-color: var(--npa-color-white);
+              --npa-button-background-color: var(--npa-color-action-6);
+              --npa-button-hover-color: var(--npa-color-white);
+              --npa-button-hover-background-color: var(--npa-color-action-6);
+            }
+          }
+          &.npa-calendar__date--critical:not(.npa-calendar__date--selected):not(.npa-calendar__date--current-day) {
+            .npa-button {
+              font-weight: bold;
+              --npa-button-color: var(--npa-error-color);
+              --npa-button-background-color: var(--npa-color-coral-1);
+              --npa-button-hover-color: var(--npa-error-color);
+              --npa-button-hover-background-color: var(--npa-color-coral-2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ###### INPUT ####################################################################
+  INPUT, SPAN, DIV {
+    &.npa-input {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      &.npa-input--small {
+        --npa-component-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+        --npa-component-padding-horizontal: var(--npa-spacing-relative-8);
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      &.npa-input--placeholder-color {
+        color: var(--npa-component-placeholder-color);
+      }
+    }
+  }
+
+  // ###### LABEL ####################################################################
   LABEL {
     &.npa-label, &.npa-label.npa-label--small {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
-  INPUT, SPAN, DIV {
-    &.npa-input {
-      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-      &.npa-input--small {
-        --npa-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
-        --npa-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
-        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+  // ###### LINK #####################################################################
+  A.npa-link {
+    &.npa-link-small {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+  }
+
+  // ###### MODAL ####################################################################
+  .npa-modal {
+    .npa-modal__box {
+      .npa-modal__header {
+        @include defineFontSizeElement(20, $fontSizeRoot, $fontLineHeightFactor);
+        font-weight: bold;
+        .npa-modal__status-icon, .npa-modal__close-control {
+          @include defineFontSizeElement(17, $fontSizeRoot, $fontLineHeightFactor);
+        }
+        .npa-modal__full-window-icon {
+          @include defineFontSizeElement(22, $fontSizeRoot, $fontLineHeightFactor);
+        }
       }
     }
   }
 
-  INPUT[type=radio], INPUT[type=checkbox] {
-    & + LABEL {
-      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+  // ###### NOTIFICATION #############################################################
+  .npa-notification {
+    &.npa-notification--success {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-success-color);
+      --npa-notification-background-color: var(--npa-success-color);
+    }
+    &.npa-notification--warning {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-warning-color);
+      --npa-notification-background-color: var(--npa-warning-color);
+    }
+    &.npa-notification--critical {
+      --npa-notification-text-color: var(--npa-color-white);
+      --npa-notification-border-color: var(--npa-error-color);
+      --npa-notification-background-color: var(--npa-error-color);
     }
   }
 
+  // ###### RADIO Button #############################################################
+  INPUT[type=radio] {
+    & + LABEL {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+      line-height: calc(var(--npa-selection-icon-size) + #{getRemRelativeSize(1, $fontSizeRoot)});
+    }
+  }
+
+  // ###### REPORT ###################################################################
   SPAN, DIV {
     &.npa-report {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
     }
   }
 
-  TEXTAREA.npa-textarea {
-    padding-top: calc((var(--npa-component-height) - (#{getRemRelativeSize(16, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
-    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-    &.npa-textarea--small {
-      --npa-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
-      --npa-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
-      padding-top: calc((var(--npa-component-height) - (#{getRemRelativeSize(14, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    }
-  }
-
-  SELECT, SPAN, DIV {
-    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-    &.npa-select--small {
-      --npa-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
-      --npa-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    }
-    &.npa-select--filter {
-      --npa-component-height: fit-content;
-      --npa-component-width: fit-content;
-      --npa-component-padding-vertical: 0;
-    }
-    &.npa-select--placeholder {
-      color: var(--npa-component-placeholder-color);
-    }
-  }
-
-  BUTTON {
-    &.npa-button {
-      --npa-component-padding-horizontal: #{getRemRelativeSize(20, $fontSizeRoot)};
-      --npa-component-icon-left-spacer: #{getRemRelativeSize(8, $fontSizeRoot)};
-      --npa-component-border-radius: #{getRemRelativeSize(20, $fontSizeRoot)};
-      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-      &.npa-button--small {
-        --npa-component-height: #{getRemRelativeSize(32, $fontSizeRoot)};
-        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-        I.npa-icon {
-          --npa-button-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+  // ###### SELECT ###################################################################
+  LABEL.npa-label {
+    & + SELECT, & + INPUT {
+      &.npa-select {
+        @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+        &.npa-select--small {
+          --npa-component-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+          --npa-component-padding-horizontal: var(--npa-spacing-relative-8);
+          --npa-select-filter-padding-right: var(--npa-spacing-relative-8);
+          @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        }
+        &.npa-select--filter {
+          --npa-component-height: fit-content;
+          --npa-component-width: fit-content;
+          --npa-component-padding-horizontal: 0;
+          padding-right: calc(var(--npa-select-filter-padding-right) + var(--npa-select-chevron-width));
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+          box-shadow: none;
+          &:focus, &:focus.error, &.focus, &.focus.error {
+            background-color: transparent;
+            box-shadow: none;
+          }
+          &:disabled, &.disabled {
+            background-color: transparent;
+            box-shadow: none;
+          }
         }
       }
-      &.npa-button--secondary, &.npa-button--bob {
-        --npa-button-color: var(--npa-color-action);
-        --npa-button-border-color: var(--npa-color-action);
-        --npa-button-background-color: transparent;
-        --npa-button-hover-color: var(--npa-color-action-120);
-        --npa-button-hover-border-color: var(--npa-color-action-120);
-        --npa-button-hover-background-color: var(--npa-color-space-5);
-        --npa-button-active-color: var(--npa-color-action-150);
-        --npa-button-active-border-color: var(--npa-color-action-150);
-        --npa-button-active-background-color: var(--npa-color-space-10);
-      }
-      &.npa-button--third {
-        --npa-button-color: var(--npa-color-space-80);
-        --npa-button-border-color: var(--npa-color-space-5);
-        --npa-button-background-color: var(--npa-color-space-5);
-        --npa-button-hover-color: var(--npa-color-space);
-        --npa-button-hover-border-color: var(--npa-color-space-10);
-        --npa-button-hover-background-color: var(--npa-color-space-10);
-        --npa-button-active-color: var(--npa-color-space-110);
-        --npa-button-active-border-color: var(--npa-color-space-5);
-        --npa-button-active-background-color: var(--npa-color-space-5);
-      }
-      &.npa-button--critical {
-        --npa-button-color: var(--npa-color-neutral-full);
-        --npa-button-border-color: var(--npa-color-critical);
-        --npa-button-background-color: var(--npa-color-critical);
-        --npa-button-hover-color: var(--npa-color-neutral-full);
-        --npa-button-hover-border-color: var(--npa-color-critical-120);
-        --npa-button-hover-background-color: var(--npa-color-critical-120);
-        --npa-button-active-color: var(--npa-color-neutral-full);
-        --npa-button-active-border-color: var(--npa-color-critical-140);
-        --npa-button-active-background-color: var(--npa-color-critical-140);
-      }
-      //&.npa-button--icon-only {
-      //  --npa-component-padding-horizontal: #{getRemRelativeSize(11, $fontSizeRoot)};
-      //  --npa-component-padding-vertical: #{getRemRelativeSize(9, $fontSizeRoot)};
-      //  I.npa-icon {
-      //    margin: #{getRemRelativeSize(2, $fontSizeRoot)} 0;
-      //  }
-      //  &.npa-button--small {
-      //    --npa-component-padding-horizontal: #{getRemRelativeSize(7, $fontSizeRoot)};
-      //    --npa-component-padding-vertical: #{getRemRelativeSize(7, $fontSizeRoot)};
-      //    I.npa-icon {
-      //      margin: 0;
-      //    }
-      //  }
-      //}
     }
   }
 
+  // ###### SPINNER ##################################################################
+  .npa-spinner {
+    &.npa-spinner--inline {
+      --npa-spinner-display: inline-flex;
+    }
+    &.npa-spinner--inherit {
+      --npa-spinner-display: inherit;
+    }
+    &.npa-spinner--12 {
+      --npa-spinner-size: #{getRemRelativeSize(12, $fontSizeRoot)};
+      --npa-spinner-line-width: 7px;
+    }
+    &.npa-spinner--16 {
+      --npa-spinner-size: #{getRemRelativeSize(16, $fontSizeRoot)};
+      --npa-spinner-line-width: 6px;
+    }
+    &.npa-spinner--20 {
+      --npa-spinner-size: #{getRemRelativeSize(20, $fontSizeRoot)};
+      --npa-spinner-line-width: 5px;
+    }
+    &.npa-spinner--80 {
+      --npa-spinner-size: #{getRemRelativeSize(80, $fontSizeRoot)};
+      --npa-spinner-line-width: 3px;
+    }
+    &.npa-spinner--inverse {
+      --npa-spinner-color: var(--npa-color-white);
+    }
+  }
+
+  // ###### TAB ######################################################################
+  .npa-tab {
+    @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    &.npa-tab--small {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+      --npa-tab-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+    }
+  }
+
+  // ###### TABLE ####################################################################
+  .npa-table {
+    .npa-table__header {
+      .npa-table__header-cell {
+        SPAN {
+          @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
+    }
+    .npa-table__body {
+      .npa-table__viewport {
+        .npa-table__row {
+          .npa-table__cell {
+            .npa-table__cell-value {
+              @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+            }
+          }
+        }
+      }
+    }
+
+    &, .npa-table__viewport {
+      @include styleScrollbar(var(--npa-color-space-2));
+    }
+  }
+
+  // ###### TAG ######################################################################
   SPAN, DIV {
     &.npa-tag {
-      --npa-component-padding-horizontal: #{getRemRelativeSize(8, $fontSizeRoot)};
-      font-size: getRemRelativeSize(16, $fontSizeRoot);
-      line-height: calc(var(--npa-tag-height) - #{getRemRelativeSize(2, $fontSizeRoot)});
+      --npa-component-padding-horizontal: var(--npa-spacing-relative-8);
+      font-size: getRemRelativeSize(14, $fontSizeRoot);
+      line-height: calc(var(--npa-tag-height) - 2px);
       &.npa-tag--medium {
-        --npa-component-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
-        --npa-tag-height: #{getRemRelativeSize(24, $fontSizeRoot)};
-        font-size: getRemRelativeSize(14, $fontSizeRoot);
+        --npa-component-icon-spacer: var(--npa-spacing-relative-4);
+        --npa-tag-height: var(--npa-spacing-relative-24);
+        font-size: getRemRelativeSize(12, $fontSizeRoot);
       }
       &.npa-tag--small {
-        --npa-component-icon-spacer: #{getRemRelativeSize(4, $fontSizeRoot)};
+        --npa-component-icon-spacer: var(--npa-spacing-relative-4);
         --npa-tag-height: #{getRemRelativeSize(18, $fontSizeRoot)};
         font-size: getRemRelativeSize(14, $fontSizeRoot);
       }
@@ -162,93 +481,128 @@
     }
   }
 
-  .npa-spinner {
-    &.npa-spinner--inline {
-      --npa-spinner-display: inline-flex;
+  // ###### TAG INPUT ################################################################
+  .npa-tag-input {
+    &.npa-input, &.npa-input.npa-input--small {
+      --npa-component-padding-vertical: 0;
+      --npa-component-padding-horizontal: 0;
     }
-    &.npa-spinner--inherit {
-      --npa-spinner-display: inherit;
+    INPUT {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
     }
-    &.npa-spinner--12 {
-      --npa-spinner-size: #{getRemRelativeSize(12, $fontSizeRoot)};
-      --npa-spinner-line-width: 7px;
-    }
-    &.npa-spinner--16 {
-      --npa-spinner-size: #{getRemRelativeSize(16, $fontSizeRoot)};
-      --npa-spinner-line-width: 6px;
-    }
-    &.npa-spinner--20 {
-      --npa-spinner-size: #{getRemRelativeSize(20, $fontSizeRoot)};
-      --npa-spinner-line-width: 5px;
-    }
-    &.npa-spinner--80 {
-      --npa-spinner-size: #{getRemRelativeSize(80, $fontSizeRoot)};
-      --npa-spinner-line-width: 3px;
-    }
-    &.npa-spinner--inverse {
-      --npa-spinner-color: var(--npa-color-neutral-full);
-    }
-  }
-
-  .npa-notification {
-    &.npa-notification--success {
-      --npa-notification-text-color: var(--npa-color-neutral-full);
-      --npa-notification-border-color: var(--npa-color-success);
-      --npa-notification-background-color: var(--npa-color-success);
-    }
-    &.npa-notification--warning {
-      --npa-notification-text-color: var(--npa-color-neutral-full);
-      --npa-notification-border-color: var(--npa-color-warning);
-      --npa-notification-background-color: var(--npa-color-warning);
-    }
-    &.npa-notification--critical {
-      --npa-notification-text-color: var(--npa-color-neutral-full);
-      --npa-notification-border-color: var(--npa-color-critical);
-      --npa-notification-background-color: var(--npa-color-critical);
-    }
-  }
-
-  A.npa-link {
-    &.npa-link-small {
-      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-    }
-  }
-
-  .npa-alert {
-    .npa-alert__header {
-      .npa-alert__title {
-        @include defineFontSizeElement(18, $fontSizeRoot, $fontLineHeightFactor);
+    &.npa-input--small {
+      INPUT {
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
       }
     }
-    &:not(.npa-alert--connection-lost) {
-      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--npa-color-action);
+
+    &.disabled {
+      .npa-tag-input__input {
+        cursor: not-allowed;
+      }
     }
-    &.npa-alert--success {
-      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--npa-color-success);
-      --npa-alert-title-icon-color: var(--npa-color-success);
-    }
-    &.npa-alert--warning {
-      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--npa-color-warning);
-      --npa-alert-title-icon-color: var(--npa-color-warning);
-    }
-    &.npa-alert--critical {
-      border-left: #{getRemRelativeSize(4, $fontSizeRoot)} solid var(--npa-color-critical);
-      --npa-alert-title-icon-color: var(--npa-color-critical);
-    }
-    &.npa-alert--connection-lost{
-      --npa-alert-background-color: var(--npa-color-space-70);
-      --npa-alert-border-color: var(--npa-color-space-70);
-      --npa-alert-body-text-color: var(--npa-color-neutral-full);
-      --npa-alert-title-icon-color: var(--npa-color-neutral-full);
-      --npa-alert-title-text-color: var(--npa-color-neutral-full);
+
+    .npa-tag {
+      &.critical {
+        --npa-tag-text-color: var(--npa-error-color);
+        INPUT {
+          color: var(--npa-error-color);
+        }
+      }
     }
   }
 
-  .npa-tab {
+  // ###### TEXTAREA #################################################################
+  TEXTAREA.npa-textarea {
+    padding-top: calc((var(--npa-component-height) - (#{getRemRelativeSize(16, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
     @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
-    &.npa-tab--small {
+    &.npa-textarea--small {
+      --npa-component-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+      --npa-component-padding-horizontal: var(--npa-spacing-relative-8);
+      padding-top: calc((var(--npa-component-height) - (#{getRemRelativeSize(14, $fontSizeRoot)} * #{$fontLineHeightFactor})) / 2);
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      --npa-tab-height: #{getRemRelativeSize(30, $fontSizeRoot)};
+    }
+  }
+
+  // ###### TOOLTIP ##################################################################
+  .npa-tooltip {
+    .npa-tooltip__box {
+      @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+    }
+    &.npa-tooltip--light {
+      --npa-tooltip-color: var(--npa-color-space-7);
+      --npa-tooltip-background-color: white;
+      --npa-tooltip-border-color: var(--npa-color-space-4);
+      .npa-tooltip__arrow:after {
+        content: '';
+        position: absolute;
+        top: #{getRemRelativeSize(-6.2, $fontSizeRoot)};
+        left: #{getRemRelativeSize(-7, $fontSizeRoot)};
+        width: 0;
+        height: 0;
+        border: #{getRemRelativeSize(7, $fontSizeRoot)} solid transparent;
+      }
+      .npa-tooltip__arrow--top {
+        &:after {
+          border-top-color: var(--npa-tooltip-background-color);
+          top: #{getRemRelativeSize(-8.2, $fontSizeRoot)};
+        }
+      }
+      .npa-tooltip__arrow--bottom {
+        &:after {
+          border-bottom-color: var(--npa-tooltip-background-color);
+        }
+      }
+      .npa-tooltip__arrow--left {
+        &:after {
+          border-left-color: var(--npa-tooltip-background-color);
+          top: #{getRemRelativeSize(-7, $fontSizeRoot)};
+          left: #{getRemRelativeSize(-8, $fontSizeRoot)};
+        }
+      }
+      .npa-tooltip__arrow--right {
+        &:after {
+          border-right-color: var(--npa-tooltip-background-color);
+          top: #{getRemRelativeSize(-7, $fontSizeRoot)};
+          left: #{getRemRelativeSize(-6, $fontSizeRoot)};
+        }
+      }
+    }
+    &.npa-tooltip--small {
+      .npa-tooltip__box {
+        @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+        --npa-tooltip-default-height: var(--npa-spacing-relative-24);
+        .npa-tooltip__text {
+          position: relative;
+          top: #{getRemRelativeSize(1, $fontSizeRoot)};
+        }
+      }
+      .npa-tooltip__arrow:after {
+        content: '';
+        position: absolute;
+        top: #{getRemRelativeSize(-8.2, $fontSizeRoot)};
+        left: #{getRemRelativeSize(-7, $fontSizeRoot)};
+        width: 0;
+        height: 0;
+      }
+      .npa-tooltip__arrow--bottom {
+        &:after {
+          top: #{getRemRelativeSize(-6, $fontSizeRoot)};
+          left: #{getRemRelativeSize(-7, $fontSizeRoot)};
+        }
+      }
+      .npa-tooltip__arrow--left {
+        &:after {
+          top: #{getRemRelativeSize(-7, $fontSizeRoot)};
+          left: #{getRemRelativeSize(-8, $fontSizeRoot)};
+        }
+      }
+      .npa-tooltip__arrow--right {
+        &:after {
+          top: #{getRemRelativeSize(-7, $fontSizeRoot)};
+          left: #{getRemRelativeSize(-6, $fontSizeRoot)};
+        }
+      }
     }
   }
 }
