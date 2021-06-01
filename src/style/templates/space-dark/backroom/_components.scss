@@ -259,6 +259,15 @@
     }
   }
 
+  // ###### DROPDOWN #################################################################
+  .npa-dropdown {
+    &.select {
+      .npa-dropdown__options-container {
+        @include styleScrollbar(var(--npa-color-space-2));
+      }
+    }
+  }
+
   // ###### INPUT ####################################################################
   INPUT, SPAN, DIV {
     &.npa-input {
@@ -320,6 +329,29 @@
       --npa-notification-text-color: var(--npa-color-white);
       --npa-notification-border-color: var(--npa-error-color);
       --npa-notification-background-color: var(--npa-error-color);
+    }
+  }
+
+  // ###### PAGINATION ###############################################################
+  .npa-pagination {
+    .npa-pagination__page-navigator-label, .npa-pagination__items-per-page-label, .npa-pagination__items-per-page-control {
+      @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
+    }
+    .npa-pagination__page-navigator {
+      A, SPAN.npa-pagination__left-navigation-control, SPAN.npa-pagination__right-navigation-control {
+        @include defineFontSizeElement(20, $fontSizeRoot, $fontLineHeightFactor);
+        line-height: 1;
+      }
+    }
+    &.npa-pagination--small {
+      .npa-pagination__page-navigator-label, .npa-pagination__items-per-page-label, .npa-pagination__items-per-page-control {
+        @include defineFontSizeElement(12, $fontSizeRoot, $fontLineHeightFactor);
+      }
+      .npa-pagination__page-navigator {
+        A, SPAN.npa-pagination__left-navigation-control, SPAN.npa-pagination__right-navigation-control {
+          @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
+        }
+      }
     }
   }
 
@@ -476,6 +508,7 @@
 
   // ###### TAG INPUT ################################################################
   .npa-tag-input {
+    @include styleScrollbar(var(--npa-color-space-2));
     &.npa-input, &.npa-input.npa-input--small {
       --npa-component-padding-vertical: 0;
       --npa-component-padding-horizontal: 0;

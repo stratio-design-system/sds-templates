@@ -114,6 +114,9 @@
   --npa-icon-arrow-bottom: '#{$arrowDownIcon}';
   --npa-icon-checkbox-checked: '#{$checkboxCheckedIcon}';
 
+  $npaIconCross: 'data:image/svg+xml; utf8, <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="rgb(39, 50, 61)"/></svg>';
+  --npa-icon-cross: url('#{$npaIconCross}');
+
   // ################################################################################################
   // ###### COMPONENTS ##############################################################################
   // ################################################################################################
@@ -133,9 +136,11 @@
   --npa-alert-border-radius: var(--npa-component-border-radius);
   --npa-alert-box-shadow: var(--npa-component-box-shadow);
 
-  --npa-alert-close-control-color: var(--npa-color-space-8);
-  --npa-alert-close-control-top: -15px;
-  --npa-alert-close-control-right: -15px;
+  --npa-alert-close-control-icon: var(--npa-icon-cross);
+  --npa-alert-close-control-width: 10px;
+  --npa-alert-close-control-height: 10px;
+  --npa-alert-close-control-top: -12px;
+  --npa-alert-close-control-right: -12px;
 
   --npa-alert-header-separation: 12px;
   --npa-alert-title-icon-separation: 12px;
@@ -255,7 +260,8 @@
   --npa-dropdown-option-hover-color: var(--npa-color-neutral-10);
   --npa-dropdown-option-hover-background-color: var(--npa-color-action-3);
 
-  --npa-dropdown-option-selected-background-color: var(--npa-color-neutral-4);
+  --npa-dropdown-option-selected-color: var(--npa-color-text-default);
+  --npa-dropdown-option-selected-background-color: var(--npa-color-background-option-selected);
 
   --npa-dropdown-option-icon-right-size: 14px;
   --npa-dropdown-option-icon-right-spacer: 40px;
@@ -284,7 +290,6 @@
   --npa-modal-z-indez: 1;
   --npa-modal-border: none;
   --npa-modal-border-radius: 0;
-
   --npa-modal-border-color: unset;
   --npa-modal-background-color: var(--npa-color-white);
   --npa-modal-padding: 24px;
@@ -293,8 +298,13 @@
 
   --npa-modal-close-control-color: var(--npa-color-space-17);
 
+  --npa-modal-header-height: 70px;
   --npa-modal-header-separator-color: var(--npa-color-space-3);
   --npa-modal-header-color: var(--npa-color-space-17);
+  --npa-modal-header-full-window-border: var(--npa-component-border) var(--npa-color-space-3);
+  --npa-modal-header-box-shadow: 0 3px 9px 0 rgba(var(--npa-color-neutral-12-rgb), 0.10);
+
+  --npa-modal-body-overflow: auto;
 
   // ###### NOTIFICATION
   --npa-notification-position: fixed;
@@ -318,6 +328,23 @@
   --npa-notification-close-control-separation: 50px;
 
   --npa-notification-inside-link-color: var(--npa-color-action-6);
+
+  // ###### PAGINATION
+  --npa-pagination-items-per-page-width: 200px;
+  --npa-pagination-items-per-page-vertical-correction: -1px;
+  --npa-pagination-items-per-page-separation: var(--npa-spacing-16);
+  --npa-pagination-items-per-page-color: var(--npa-color-space-13);
+
+  --npa-pagination-items-per-page-select-color: var(--npa-color-space-8);
+
+  --npa-pagination-navigator-separation: var(--npa-spacing-32);
+
+  --npa-pagination-navigator-label-separation: var(--npa-spacing-16);
+  --npa-pagination-navigator-label-color: var(--npa-color-space-13);
+
+  --npa-pagination-navigator-controls-separation: var(--npa-spacing-12);
+  --npa-pagination-navigator-controls--disabled-color: var(--npa-color-space-4);
+  --npa-pagination-navigator-controls--disabled-cursor: not-allowed;
 
   // ###### RADIO Button
   $radioChecked: 'data:image/svg+xml; utf8, <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3" fill="white"/></svg>';
@@ -459,6 +486,13 @@
   --npa-tag-disabled-background-color: var(--npa-color-space-2);
 
   --npa-tag-height: 30px;
+
+  // ###### TAG INPUT
+  --npa-tag-input-height: var(--npa-component-height);
+
+  --npa-tag-input-placeholder-separation: var(--npa-spacing-8);
+  --npa-tag-input-placeholder-color: var(--npa-component-placeholder-color);
+  --npa-tag-input-placeholder-disabled-color: var(--npa-component-placeholder-disabled-color);
 
   // ###### TEXTAREA
   --npa-textarea-resize: vertical;

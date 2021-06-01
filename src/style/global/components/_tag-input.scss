@@ -1,5 +1,11 @@
 %npa-tag-input {
   .npa-tag-input {
+    --npa-tag-input-default-height: var(--npa-component-height);
+
+    --npa-tag-input-default-placeholder-separation: var(--npa-spacing-8);
+    --npa-tag-input-default-placeholder-color: var(--npa-component-placeholder-color);
+    --npa-tag-input-default-placeholder-disabled-color: var(--npa-component-placeholder-disabled-color);
+
     &.npa-input {
       height: fit-content;
     }

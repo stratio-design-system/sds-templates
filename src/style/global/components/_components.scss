@@ -10,6 +10,7 @@
 @import './link';
 @import './modal';
 @import './notification';
+@import './pagination';
 @import './radio';
 @import './report';
 @import './select';
@@ -36,6 +37,7 @@
   @extend %npa-link;
   @extend %npa-modal;
   @extend %npa-notification;
+  @extend %npa-pagination;
   @extend %npa-radio;
   @extend %npa-report;
   @extend %npa-select;

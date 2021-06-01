@@ -1,0 +1,19 @@
+%npa-pagination {
+  .npa-pagination {
+    --npa-pagination-default-items-per-page-width: var(--npa-pagination-items-per-page-width);
+    --npa-pagination-default-items-per-page-vertical-correction: var(--npa-pagination-items-per-page-vertical-correction);
+    --npa-pagination-default-items-per-page-separation: var(--npa-pagination-items-per-page-separation);
+    --npa-pagination-default-items-per-page-color: var(--npa-pagination-items-per-page-color);
+
+    --npa-pagination-default-items-per-page-select-color: var(--npa-pagination-items-per-page-select-color);
+
+    --npa-pagination-default-navigator-separation: var(--npa-pagination-navigator-separation);
+
+    --npa-pagination-default-navigator-label-separation: var(--npa-pagination-navigator-label-separation);
+    --npa-pagination-default-navigator-label-color: var(--npa-pagination-navigator-label-color);
+
+    --npa-pagination-default-navigator-controls-separation: var(--npa-pagination-navigator-controls-separation);
+    --npa-pagination-default-navigator-controls--disabled-color: var(--npa-pagination-navigator-controls--disabled-color);
+    --npa-pagination-default-navigator-controls--disabled-cursor: var(--npa-pagination-navigator-controls--disabled-cursor);
+  }
+}

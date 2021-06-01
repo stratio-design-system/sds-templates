@@ -5,12 +5,12 @@
     --npa-modal-default-overlay-height: var(--npa-modal-overlay-height);
     --npa-modal-default-overlay-background-color: var(--npa-modal-overlay-background-color);
 
+    --npa-modal-default-margin: var(--npa-modal-margin);
     --npa-modal-default-z-indez: var(--npa-modal-z-indez);
     --npa-modal-default-border: var(--npa-modal-border);
     --npa-modal-default-border-radius: var(--npa-modal-border-radius);
-    --npa-modal-default-box-shadow: var(--npa-component-box-shadow);
-
     --npa-modal-default-border-color: var(--npa-modal-border-color);
+    --npa-modal-default-box-shadow: var(--npa-component-box-shadow);
     --npa-modal-default-background-color: var(--npa-modal-background-color);
     --npa-modal-default-padding: var(--npa-modal-padding);
     --npa-modal-default-spacing: var(--npa-modal-spacing);
@@ -18,8 +18,13 @@
 
     --npa-modal-default-close-control-color: var(--npa-modal-close-control-color);
 
+    --npa-modal-default-header-height: var(--npa-modal-header-height);
     --npa-modal-default-header-separator-color: var(--npa-modal-header-separator-color);
     --npa-modal-default-header-color: var(--npa-modal-header-color);
+    --npa-modal-default-header-full-window-border: var(--npa-modal-header-full-window-border);
+    --npa-modal-default-header-box-shadow: var(--npa-modal-header-box-shadow);
+
+    --npa-modal-default-body-overflow: var(--npa-modal-body-overflow);
 
     .npa-modal__box {
       .npa-modal__header {
