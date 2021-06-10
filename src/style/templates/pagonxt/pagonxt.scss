@@ -17,6 +17,9 @@ HTML {
       color: var(--npa-color-text-default);
       outline: none;
     }
+    .npa-dropdown, .npa-dropdown * {
+      color: var(--npa-color-neutral-10);
+    }
 
     @extend %npa-montserrat-typography-definition;
 

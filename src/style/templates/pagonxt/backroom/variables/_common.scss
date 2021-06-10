@@ -417,30 +417,30 @@
   --npa-table-header-height: 40px;
   --npa-table-header-border-width: 0 0 1px 0;
   --npa-table-header-border-style: solid;
-  --npa-table-header-border-color: var(--npa-color-space-6);
+  --npa-table-header-border-color: none;
 
   --npa-table-header-cell-align: center;
   --npa-table-header-cell-justify: normal;
   --npa-table-header-cell-icon-size: var(--npa-spacing-12);
   --npa-table-header-cell-icon-spacing: var(--npa-spacing-8);
-  --npa-table-header-cell-text-transform: none;
-  --npa-table-header-cell-color: var(--npa-color-space-8);
-  --npa-table-header-cell-icon-color: var(--npa-color-space-8);
+  --npa-table-header-cell-text-transform: uppercase;
+  --npa-table-header-cell-color: var(--npa-color-neutral-6);
+  --npa-table-header-cell-icon-color: var(--npa-color-neutral-6);
 
   --npa-table-body-height: calc(100% - var(--npa-table-header-height) - 1px);
   --npa-table-body-spinner-top-spacing: var(--npa-spacing-40);
 
   --npa-table-row-height: var(--npa-spacing-40);
 
-  --npa-table-row-background-color: var(--npa-color-white);
+  --npa-table-row-background-color: transparent;
   --npa-table-row-border-width: 0 0 1px 0;
   --npa-table-row-border-style: solid;
-  --npa-table-row-border-color: var(--npa-color-space-3);
+  --npa-table-row-border-color: var(--npa-color-neutral-8);
 
-  --npa-table-row-hover-background-color: var(--npa-color-action-1);
+  --npa-table-row-hover-background-color: var(--npa-color-neutral-9);
   --npa-table-row-hover-border-width: 0 0 1px 0;
   --npa-table-row-hover-border-style: solid;
-  --npa-table-row-hover-border-color: var(--npa-color-space-3);
+  --npa-table-row-hover-border-color: var(--npa-color-neutral-8);
 
   --npa-table-row-spinner-container-height: var(--npa-spacing-40);
   --npa-table-row-spinner-padding: var(--npa-spacing-12);
@@ -448,7 +448,7 @@
   --npa-table-row-cell-align: center;
   --npa-table-row-cell-justify: normal;
   --npa-table-row-cell-icon-spacing: var(--npa-spacing-8);
-  --npa-table-row-cell-color: var(--npa-color-space-17);
+  --npa-table-row-cell-color: var(--npa-color-white);
 
   //# NPA TABLE ACTIONS:
   --npa-table-actions-default-align: center;

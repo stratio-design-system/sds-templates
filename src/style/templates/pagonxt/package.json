@@ -1,6 +1,6 @@
 {
   "name": "@stratiods/pagonxt",
-  "version": "5.1.10",
+  "version": "5.1.17",
   "description": "SDS Templates :: Santander PagoNxt Template",
   "main": "index.js",
   "types": "index.d.ts",
