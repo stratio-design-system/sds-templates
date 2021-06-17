@@ -463,7 +463,7 @@
     }
 
     &, .npa-table__viewport {
-      @include styleScrollbar(var(--npa-color-space-2));
+      @include styleScrollbar(var(--npa-color-action-5));
     }
   }
 
