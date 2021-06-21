@@ -17,7 +17,7 @@ HTML {
       color: var(--npa-color-text-default);
       outline: none;
     }
-    .npa-dropdown, .npa-dropdown * {
+    .npa-dropdown, .npa-dropdown *, .npa-pagination option {
       color: var(--npa-color-neutral-10);
     }
 
