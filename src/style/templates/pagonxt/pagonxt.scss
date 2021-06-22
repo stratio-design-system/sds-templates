@@ -20,6 +20,9 @@ HTML {
     .npa-dropdown, .npa-dropdown *, .npa-pagination option {
       color: var(--npa-color-neutral-10);
     }
+    .npa-pagination select{
+      color: var(--npa-color-neutral-4)!important;
+    }
 
     @extend %npa-montserrat-typography-definition;
 
