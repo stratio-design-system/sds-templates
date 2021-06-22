@@ -150,14 +150,14 @@
         --npa-button-active-background-color: transparent;
       }
       &.npa-button--borderless {
-        --npa-button-color: var(--npa-color-space-7);
+        --npa-button-color: var(--npa-color-neutral-4);
         --npa-button-border-color: transparent;
         --npa-button-background-color: transparent;
-        --npa-button-hover-color: var(--npa-color-space-8);
-        --npa-button-hover-border-color: var(--npa-color-action-1);
-        --npa-button-hover-background-color: var(--npa-color-action-1);
-        --npa-button-active-color: var(--npa-color-space-13);
-        --npa-button-active-border-color: var(--npa-color-action-2);
+        --npa-button-hover-color: var(--npa-color-neutral-4);
+        --npa-button-hover-border-color: var(--npa-color-neutral-4);
+        --npa-button-hover-background-color: transparent;
+        --npa-button-active-color: var(--npa-color-neutral-4);
+        --npa-button-active-border-color: transparent;
         --npa-button-active-background-color: var(--npa-color-action-2);
         --npa-button-disabled-background-color: transparent;
         --npa-button-disabled-border-color: transparent;
@@ -338,7 +338,7 @@
   .npa-pagination {
     .npa-pagination__page-navigator-label, .npa-pagination__items-per-page-label, .npa-pagination__items-per-page-control {
       @include defineFontSizeElement(14, $fontSizeRoot, $fontLineHeightFactor);
-      color: var(--npa-color-neutral-4);
+      color: var(--npa-color-neutral-4)!important;
     }
     .npa-pagination__page-navigator {
       A, SPAN.npa-pagination__left-navigation-control, SPAN.npa-pagination__right-navigation-control {
