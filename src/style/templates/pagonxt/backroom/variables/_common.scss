@@ -333,17 +333,17 @@
   --npa-pagination-items-per-page-width: 200px;
   --npa-pagination-items-per-page-vertical-correction: -1px;
   --npa-pagination-items-per-page-separation: var(--npa-spacing-16);
-  --npa-pagination-items-per-page-color: var(--npa-color-space-13);
+  --npa-pagination-items-per-page-color: var(--npa-color-white);
 
-  --npa-pagination-items-per-page-select-color: var(--npa-color-space-8);
+  --npa-pagination-items-per-page-select-color: var(--npa-color-white);
 
   --npa-pagination-navigator-separation: var(--npa-spacing-32);
 
   --npa-pagination-navigator-label-separation: var(--npa-spacing-16);
-  --npa-pagination-navigator-label-color: var(--npa-color-space-13);
+  --npa-pagination-navigator-label-color: var(--npa-color-white);
 
   --npa-pagination-navigator-controls-separation: var(--npa-spacing-12);
-  --npa-pagination-navigator-controls--disabled-color: var(--npa-color-space-4);
+  --npa-pagination-navigator-controls--disabled-color: var(--npa-color-neutral-8);
   --npa-pagination-navigator-controls--disabled-cursor: not-allowed;
 
   // ###### RADIO Button
