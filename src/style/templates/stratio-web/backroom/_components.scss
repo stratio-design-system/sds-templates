@@ -121,6 +121,7 @@
     &.npa-button {
       --npa-component-padding-horizontal: #{getRemRelativeSize(20, $fontSizeRoot)};
       --npa-component-icon-left-spacer: var(--npa-spacing-relative-8);
+      --npa-component-border-radius: #{getRemRelativeSize(20, $fontSizeRoot)};
       padding-top: 2px;
       @include defineFontSizeElement(16, $fontSizeRoot, $fontLineHeightFactor);
       line-height: 1;
@@ -138,18 +139,18 @@
         }
       }
       &.npa-button--secondary, &.npa-button--bob {
-        --npa-button-color: var(--npa-color-space-7);
-        --npa-button-border-color: var(--npa-color-space-7);
-        --npa-button-background-color: var(--npa-color-white);
-        --npa-button-hover-color: var(--npa-color-space-8);
-        --npa-button-hover-border-color: var(--npa-color-space-8);
-        --npa-button-hover-background-color: var(--npa-color-action-1);
-        --npa-button-active-color: var(--npa-color-space-13);
-        --npa-button-active-border-color: var(--npa-color-space-8);
-        --npa-button-active-background-color: var(--npa-color-action-2);
+        --npa-button-color: var(--npa-color-action-6);
+        --npa-button-border-color: var(--npa-color-action-6);
+        --npa-button-background-color: transparent;
+        --npa-button-hover-color: var(--npa-color-action-7);
+        --npa-button-hover-border-color: var(--npa-color-action-7);
+        --npa-button-hover-background-color: var(--npa-color-space-1);
+        --npa-button-active-color: var(--npa-color-action-8);
+        --npa-button-active-border-color: var(--npa-color-action-8);
+        --npa-button-active-background-color: var(--npa-color-space-2);
         --npa-button-disabled-color: var(--npa-color-space-3);
         --npa-button-disabled-border-color: var(--npa-color-space-2);
-        --npa-button-disabled-background-color: var(--npa-color-white);
+        --npa-button-disabled-background-color: transparent;
       }
       &.npa-button--borderless {
         --npa-button-color: var(--npa-color-space-7);
